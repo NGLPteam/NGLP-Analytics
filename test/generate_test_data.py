@@ -251,7 +251,7 @@ class DataGenerator:
             for key in struct.substructs.keys():
                 substruct = struct.substruct(key)
                 data[key] = recurse(substruct, path + [key])
-                return data
+            return data
 
         path = []
         data = recurse(self.model.__seamless_struct__, path)
