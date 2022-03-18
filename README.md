@@ -105,3 +105,10 @@ optionally supply `--build-arg PORT=8001` to the build stage to change its port,
 docker build -t nglp-analytics .
 docker run -it -p 8000:8000 --name nglp-analytics nglp-analytics
 ```
+
+### Starting app with docker-compose
+You can run a stack of kafka+zookeper together with the analytics services with `docker-compose run`. You will still need to configure your .env file as per the instructions above, pointing to the instance of ElasticSearch to connect to.
+
+Alternatively, you can also feed in the `docker-compose-es.yml` file to spin up a dockerised instance of ElasticSearch (Open Distro's release). There is a custom `.env` file setup for this docker-compose setup (`env.docker`), so all you need to do is run the following:
+
+`docker-compose -f docker-compose.yml -f docker-compose-es.yml up`
