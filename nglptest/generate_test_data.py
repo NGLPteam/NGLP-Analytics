@@ -301,87 +301,91 @@ class DataGenerator:
             minutes = (diff.seconds % 3600) // 60
             seconds = diff.seconds % 60
             print("Time taken: {:0>2d}:{:0>2d}:{:0>2d}".format(hours, minutes, seconds))
+            self.filename = self.event_type + "-" + '{date:%Y-%m-%d_%H:%M:%S}'.format(date=datetime.datetime.now())
+            self.set_filename()
 
 
     def write_workflow_data(self, join_events=True):
-        print(f"Starting data generation for {self.event_type}")
-        start = datetime.datetime.now()
-        print(f"Start time: {start}")
-        count = 0
-        pulse = self.number_of_records // 100 if self.number_of_records > 100 else 1
+        for val in self.container:
+            print(f"Starting data generation for {self.event_type}")
+            start = datetime.datetime.now()
+            print(f"Start time: {start}")
+            count = 0
+            pulse = self.number_of_records // 100 if self.number_of_records > 100 else 1
 
-        with open(self.filename, 'w') as output:
-            output.write('[')
-            for i in range(self.number_of_records):
-                if i > 0:
-                    output.write(',')
+            with open(self.filename, 'w') as output:
+                output.write('[')
+                for i in range(self.number_of_records):
+                    if i > 0:
+                        output.write(',')
 
-                distance = random.randint(1, len(WORKFLOW))
-                workflow_start = self.fake.date_time_between(start_date="-1y")
-                object_id = None
-                container = None
-                entries = []
-                for j in range(0, distance):
-                    workflow_status = WORKFLOW[j]
-                    data = next(self.generate_data())
-                    data["event"] = workflow_status
-                    data['occurred_at'] = datetime.datetime.strftime(workflow_start, "%Y-%m-%dT%H:%M:%SZ")
+                    distance = random.randint(1, len(WORKFLOW))
+                    workflow_start = self.fake.date_time_between(start_date="-1y")
+                    object_id = None
+                    container = None
+                    entries = []
+                    for j in range(0, distance):
+                        workflow_status = WORKFLOW[j]
+                        data = next(self.generate_data())
+                        data["event"] = workflow_status
+                        data['occurred_at'] = datetime.datetime.strftime(workflow_start, "%Y-%m-%dT%H:%M:%SZ")
 
-                    if object_id is not None:
-                        data["object_id"] = object_id
-                    else:
-                        object_id = data["object_id"]
+                        if object_id is not None:
+                            data["object_id"] = object_id
+                        else:
+                            object_id = data["object_id"]
 
-                    if container is not None:
-                        data["container"] = container
-                    else:
-                        container = data.get("container")
+                        if container is not None:
+                            data["container"] = container
+                        else:
+                            container = data.get("container")
 
-                    workflow_start = self.fake.date_time_between(start_date=workflow_start)
-                    entries.append(data)
+                        workflow_start = self.fake.date_time_between(start_date=workflow_start)
+                        entries.append(data)
 
-                if join_events:
-                    for j in range(len(entries)):
-                        entry = entries[j]
+                    if join_events:
+                        for j in range(len(entries)):
+                            entry = entries[j]
 
-                        # if there is a following event
-                        if len(entries) > j + 1:
-                            followed_by = entries[j + 1]
-                            if "workflow" not in entry:
-                                entry["workflow"] = {"followed_by" : {}}
-                            entry["workflow"]["followed_by"] = {
-                                "state" : followed_by["event"],
-                                "date": followed_by["occurred_at"]
-                            }
+                            # if there is a following event
+                            if len(entries) > j + 1:
+                                followed_by = entries[j + 1]
+                                if "workflow" not in entry:
+                                    entry["workflow"] = {"followed_by" : {}}
+                                entry["workflow"]["followed_by"] = {
+                                    "state" : followed_by["event"],
+                                    "date": followed_by["occurred_at"]
+                                }
 
-                        # if there is a previous event
-                        if j > 0:
-                            follows = entries[j - 1]
-                            if "workflow" not in entry:
-                                entry["workflow"] = {"follows" : {}}
-                            entry["workflow"]["follows"] = {
-                                "state" : follows["event"],
-                                "transition_time": int((datetime.datetime.strptime(entry["occurred_at"], "%Y-%m-%dT%H:%M:%SZ") - datetime.datetime.strptime(follows["occurred_at"], "%Y-%m-%dT%H:%M:%SZ")).total_seconds())
-                            }
+                            # if there is a previous event
+                            if j > 0:
+                                follows = entries[j - 1]
+                                if "workflow" not in entry:
+                                    entry["workflow"] = {"follows" : {}}
+                                entry["workflow"]["follows"] = {
+                                    "state" : follows["event"],
+                                    "transition_time": int((datetime.datetime.strptime(entry["occurred_at"], "%Y-%m-%dT%H:%M:%SZ") - datetime.datetime.strptime(follows["occurred_at"], "%Y-%m-%dT%H:%M:%SZ")).total_seconds())
+                                }
 
-                workflow_set = ",\n".join([json.dumps(e, indent=2) for e in entries])
-                output.write(workflow_set)
+                    workflow_set = ",\n".join([json.dumps(e, indent=2) for e in entries])
+                    output.write(workflow_set)
 
-                count += 1
-                print('.', end="", flush=True) if count % pulse == 0 else ''
-            output.write(']')
+                    count += 1
+                    print('.', end="", flush=True) if count % pulse == 0 else ''
+                output.write(']')
 
-        end = datetime.datetime.now()
-        print()
-        print("Data generation completed.")
-        print(f"File name: {self.filename}")
-        print(f"Count: {count}")
-        print(f"End time: {end}")
-        diff = end - start
-        hours = diff.days * 24 + diff.seconds // 3600
-        minutes = (diff.seconds % 3600) // 60
-        seconds = diff.seconds % 60
-        print("Time taken: {:0>2d}:{:0>2d}:{:0>2d}".format(hours, minutes, seconds))
+            end = datetime.datetime.now()
+            print()
+            print("Data generation completed.")
+            print(f"File name: {self.filename}")
+            print(f"Count: {count}")
+            print(f"End time: {end}")
+            diff = end - start
+            hours = diff.days * 24 + diff.seconds // 3600
+            minutes = (diff.seconds % 3600) // 60
+            seconds = diff.seconds % 60
+            print("Time taken: {:0>2d}:{:0>2d}:{:0>2d}".format(hours, minutes, seconds))
+            self.set_filename()
 
 
 
