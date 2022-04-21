@@ -24,6 +24,14 @@ body {
     color: $white;
   }
 
+  h3 {
+    line-height: inherit;
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;
+  }
+
   .data-label {
     font-size: 30px;
     line-height: 75px;

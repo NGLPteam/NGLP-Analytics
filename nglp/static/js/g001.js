@@ -40,16 +40,16 @@ if (parcelRequire == null) {
 
   $parcel$global["parcelRequire94c2"] = parcelRequire;
 }
-function $0ace6cd118fdb36a$export$9099ad97b570f7c(self) {
+function $f483f7288df68fd0$export$9099ad97b570f7c(self) {
     if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     return self;
 }
 
-function $1d4692efe908bac5$export$9099ad97b570f7c(instance, Constructor) {
+function $10cfaf3f2f812eb4$export$9099ad97b570f7c(instance, Constructor) {
     if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
 }
 
-function $6b21f555626aa41c$var$_defineProperties(target, props) {
+function $67866ae5f3a26802$var$_defineProperties(target, props) {
     for(var i = 0; i < props.length; i++){
         var descriptor = props[i];
         descriptor.enumerable = descriptor.enumerable || false;
@@ -58,13 +58,13 @@ function $6b21f555626aa41c$var$_defineProperties(target, props) {
         Object.defineProperty(target, descriptor.key, descriptor);
     }
 }
-function $6b21f555626aa41c$export$9099ad97b570f7c(Constructor, protoProps, staticProps) {
-    if (protoProps) $6b21f555626aa41c$var$_defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) $6b21f555626aa41c$var$_defineProperties(Constructor, staticProps);
+function $67866ae5f3a26802$export$9099ad97b570f7c(Constructor, protoProps, staticProps) {
+    if (protoProps) $67866ae5f3a26802$var$_defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) $67866ae5f3a26802$var$_defineProperties(Constructor, staticProps);
     return Constructor;
 }
 
-function $0726ab3728f86779$export$9099ad97b570f7c(obj, key, value) {
+function $9b036347ace9941e$export$9099ad97b570f7c(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
         value: value,
         enumerable: true,
@@ -75,54 +75,54 @@ function $0726ab3728f86779$export$9099ad97b570f7c(obj, key, value) {
     return obj;
 }
 
-function $6f1885a119f0af4a$var$getPrototypeOf(o) {
-    $6f1885a119f0af4a$var$getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function getPrototypeOf(o1) {
+function $da23c25529bb1df4$var$getPrototypeOf(o) {
+    $da23c25529bb1df4$var$getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function getPrototypeOf(o1) {
         return o1.__proto__ || Object.getPrototypeOf(o1);
     };
-    return $6f1885a119f0af4a$var$getPrototypeOf(o);
+    return $da23c25529bb1df4$var$getPrototypeOf(o);
 }
-function $6f1885a119f0af4a$export$9099ad97b570f7c(o) {
-    return $6f1885a119f0af4a$var$getPrototypeOf(o);
+function $da23c25529bb1df4$export$9099ad97b570f7c(o) {
+    return $da23c25529bb1df4$var$getPrototypeOf(o);
 }
 
 
-function $b593bef4e8d65d9f$export$9099ad97b570f7c(object, property) {
+function $295bc66aeaa93a59$export$9099ad97b570f7c(object, property) {
     while(!Object.prototype.hasOwnProperty.call(object, property)){
-        object = $6f1885a119f0af4a$export$9099ad97b570f7c(object);
+        object = $da23c25529bb1df4$export$9099ad97b570f7c(object);
         if (object === null) break;
     }
     return object;
 }
 
 
-function $59ef20e355e8922b$var$get(target, property, receiver) {
-    if (typeof Reflect !== "undefined" && Reflect.get) $59ef20e355e8922b$var$get = Reflect.get;
-    else $59ef20e355e8922b$var$get = function get(target1, property1, receiver1) {
-        var base = $b593bef4e8d65d9f$export$9099ad97b570f7c(target1, property1);
+function $17c4d4a7c863d924$var$get(target, property, receiver) {
+    if (typeof Reflect !== "undefined" && Reflect.get) $17c4d4a7c863d924$var$get = Reflect.get;
+    else $17c4d4a7c863d924$var$get = function get(target1, property1, receiver1) {
+        var base = $295bc66aeaa93a59$export$9099ad97b570f7c(target1, property1);
         if (!base) return;
         var desc = Object.getOwnPropertyDescriptor(base, property1);
         if (desc.get) return desc.get.call(receiver1 || target1);
         return desc.value;
     };
-    return $59ef20e355e8922b$var$get(target, property, receiver);
+    return $17c4d4a7c863d924$var$get(target, property, receiver);
 }
-function $59ef20e355e8922b$export$9099ad97b570f7c(target, property, reciever) {
-    return $59ef20e355e8922b$var$get(target, property, reciever);
+function $17c4d4a7c863d924$export$9099ad97b570f7c(target, property, reciever) {
+    return $17c4d4a7c863d924$var$get(target, property, reciever);
 }
 
-function $36386457df3576da$var$setPrototypeOf(o, p) {
-    $36386457df3576da$var$setPrototypeOf = Object.setPrototypeOf || function setPrototypeOf(o1, p1) {
+function $d2fa334d58492cc2$var$setPrototypeOf(o, p) {
+    $d2fa334d58492cc2$var$setPrototypeOf = Object.setPrototypeOf || function setPrototypeOf(o1, p1) {
         o1.__proto__ = p1;
         return o1;
     };
-    return $36386457df3576da$var$setPrototypeOf(o, p);
+    return $d2fa334d58492cc2$var$setPrototypeOf(o, p);
 }
-function $36386457df3576da$export$9099ad97b570f7c(o, p) {
-    return $36386457df3576da$var$setPrototypeOf(o, p);
+function $d2fa334d58492cc2$export$9099ad97b570f7c(o, p) {
+    return $d2fa334d58492cc2$var$setPrototypeOf(o, p);
 }
 
 
-function $cb9ce7a7602b77d1$export$9099ad97b570f7c(subClass, superClass) {
+function $bca7673885229bfd$export$9099ad97b570f7c(subClass, superClass) {
     if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
     subClass.prototype = Object.create(superClass && superClass.prototype, {
         constructor: {
@@ -131,40 +131,40 @@ function $cb9ce7a7602b77d1$export$9099ad97b570f7c(subClass, superClass) {
             configurable: true
         }
     });
-    if (superClass) $36386457df3576da$export$9099ad97b570f7c(subClass, superClass);
+    if (superClass) $d2fa334d58492cc2$export$9099ad97b570f7c(subClass, superClass);
 }
 
 
-function $870d9c554f775ab9$export$9099ad97b570f7c(obj) {
+function $26bfa0c7921eea07$export$9099ad97b570f7c(obj) {
     return obj && obj.constructor === Symbol ? "symbol" : typeof obj;
 }
 
 
-function $968cbe9a7612a00d$export$9099ad97b570f7c(self, call) {
-    if (call && ($870d9c554f775ab9$export$9099ad97b570f7c(call) === "object" || typeof call === "function")) return call;
-    return $0ace6cd118fdb36a$export$9099ad97b570f7c(self);
+function $6981eb4a4ce0a3e0$export$9099ad97b570f7c(self, call) {
+    if (call && ($26bfa0c7921eea07$export$9099ad97b570f7c(call) === "object" || typeof call === "function")) return call;
+    return $f483f7288df68fd0$export$9099ad97b570f7c(self);
 }
 
-function $dc707e5b58b75f7a$export$9099ad97b570f7c(arr) {
+function $5dd06483043aa0c9$export$9099ad97b570f7c(arr) {
     if (Array.isArray(arr)) return arr;
 }
 
 
-function $9849c3158b9a2728$export$9099ad97b570f7c(iter) {
+function $f953e420d03d510c$export$9099ad97b570f7c(iter) {
     if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
 }
 
 
-function $0222784b69dbfd43$export$9099ad97b570f7c() {
+function $76c445b1cd8e0a95$export$9099ad97b570f7c() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
 
-function $3fd025669e1dbd56$export$9099ad97b570f7c(arr, i) {
-    return $dc707e5b58b75f7a$export$9099ad97b570f7c(arr) || $9849c3158b9a2728$export$9099ad97b570f7c(arr, i) || $0222784b69dbfd43$export$9099ad97b570f7c();
+function $d1ea3085410a42e5$export$9099ad97b570f7c(arr, i) {
+    return $5dd06483043aa0c9$export$9099ad97b570f7c(arr) || $f953e420d03d510c$export$9099ad97b570f7c(arr, i) || $76c445b1cd8e0a95$export$9099ad97b570f7c();
 }
 
-function $960b9d880449f042$export$9099ad97b570f7c(arr) {
+function $126bb3c74c493c98$export$9099ad97b570f7c(arr) {
     if (Array.isArray(arr)) {
         for(var i = 0, arr2 = new Array(arr.length); i < arr.length; i++)arr2[i] = arr[i];
         return arr2;
@@ -173,30 +173,30 @@ function $960b9d880449f042$export$9099ad97b570f7c(arr) {
 
 
 
-function $af05cca3b5e4897b$export$9099ad97b570f7c() {
+function $63b64529301afb9b$export$9099ad97b570f7c() {
     throw new TypeError("Invalid attempt to spread non-iterable instance");
 }
 
 
-function $631c5afe36f33b96$export$9099ad97b570f7c(arr) {
-    return $960b9d880449f042$export$9099ad97b570f7c(arr) || $9849c3158b9a2728$export$9099ad97b570f7c(arr) || $af05cca3b5e4897b$export$9099ad97b570f7c();
+function $0862162e48b32d5b$export$9099ad97b570f7c(arr) {
+    return $126bb3c74c493c98$export$9099ad97b570f7c(arr) || $f953e420d03d510c$export$9099ad97b570f7c(arr) || $63b64529301afb9b$export$9099ad97b570f7c();
 }
 
 
 
-var $aa95204b620a0ef2$export$4048ae5fe51d81b7 = window.$;
+var $99b6183ba65dae12$export$4048ae5fe51d81b7 = window.$;
 
 
 
 
-var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
+var $8d94b5f2509b6cf5$var$Aggregation = /*#__PURE__*/ function() {
     "use strict";
-    function $1f5712c12abeeb70$var$Aggregation(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $1f5712c12abeeb70$var$Aggregation);
+    function $8d94b5f2509b6cf5$var$Aggregation(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $8d94b5f2509b6cf5$var$Aggregation);
         this.name = params.name;
         this.aggs = params.aggs || [];
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($1f5712c12abeeb70$var$Aggregation, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Aggregation, [
         {
             key: "addAggregation",
             value: function addAggregation(agg) {
@@ -229,7 +229,7 @@ var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
                 if (this.aggs.length > 0) {
                     obj[this.name]["aggs"] = {
                     };
-                    for(var i = 0; i < this.aggs.length; i++)$aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(obj[this.name]["aggs"], this.aggs[i].objectify());
+                    for(var i = 0; i < this.aggs.length; i++)$99b6183ba65dae12$export$4048ae5fe51d81b7.extend(obj[this.name]["aggs"], this.aggs[i].objectify());
                 }
                 return obj;
             }
@@ -249,7 +249,7 @@ var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
                         var raw = {
                         };
                         raw[name] = agg;
-                        var oa = $1f5712c12abeeb70$export$8b446892c82de644.aggregationFactory(subtype, {
+                        var oa = $8d94b5f2509b6cf5$export$8b446892c82de644.aggregationFactory(subtype, {
                             raw: raw
                         });
                         if (oa) this.addAggregation(oa);
@@ -259,17 +259,17 @@ var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $1f5712c12abeeb70$var$Aggregation;
+    return $8d94b5f2509b6cf5$var$Aggregation;
 }();
-$0726ab3728f86779$export$9099ad97b570f7c($1f5712c12abeeb70$var$Aggregation, "type", "aggregation");
-var $1f5712c12abeeb70$var$Filter = /*#__PURE__*/ function() {
+$9b036347ace9941e$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Aggregation, "type", "aggregation");
+var $8d94b5f2509b6cf5$var$Filter = /*#__PURE__*/ function() {
     "use strict";
-    function $1f5712c12abeeb70$var$Filter(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $1f5712c12abeeb70$var$Filter);
+    function $8d94b5f2509b6cf5$var$Filter(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $8d94b5f2509b6cf5$var$Filter);
         this.field = params.field;
         this.type_name = params.type_name;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($1f5712c12abeeb70$var$Filter, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Filter, [
         {
             key: "matches",
             value: function matches(other) {
@@ -298,15 +298,15 @@ var $1f5712c12abeeb70$var$Filter = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $1f5712c12abeeb70$var$Filter;
+    return $8d94b5f2509b6cf5$var$Filter;
 }();
-$0726ab3728f86779$export$9099ad97b570f7c($1f5712c12abeeb70$var$Filter, "type", "filter");
-function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
+$9b036347ace9941e$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Filter, "type", "filter");
+function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
     if (clazz.__proto__ === null) return false;
     if (clazz.__proto__ === ref) return true;
-    else return $1f5712c12abeeb70$var$_classExtends(clazz.__proto__, ref);
+    else return $8d94b5f2509b6cf5$var$_classExtends(clazz.__proto__, ref);
 }
-/** @namespace */ var $1f5712c12abeeb70$export$8b446892c82de644 = {
+/** @namespace */ var $8d94b5f2509b6cf5$export$8b446892c82de644 = {
     /////////////////////////////////////////////////////
     // fixed properties, like special characters, etc
     // The reserved characters in elasticsearch query strings
@@ -388,18 +388,18 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     requestMethod: "get",
     // add request headers (such as Auth) if you need to
     requestHeaders: false,
-    Filter: $1f5712c12abeeb70$var$Filter,
-    Aggregation: $1f5712c12abeeb70$var$Aggregation,
+    Filter: $8d94b5f2509b6cf5$var$Filter,
+    Aggregation: $8d94b5f2509b6cf5$var$Aggregation,
     ////////////////////////////////////////////////////
     ////////////////////////////////////////////////////
     // object factories
     aggregationFactory: function aggregationFactory(type, params) {
         var _iteratorNormalCompletion = true, _didIteratorError = false, _iteratorError = undefined;
         try {
-            for(var _iterator = Object.entries($1f5712c12abeeb70$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
-                var _value = $3fd025669e1dbd56$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
-                if ($1f5712c12abeeb70$var$_classExtends($1f5712c12abeeb70$export$8b446892c82de644[key], $1f5712c12abeeb70$var$Aggregation)) {
-                    if ($1f5712c12abeeb70$export$8b446892c82de644[key].type === type) return new $1f5712c12abeeb70$export$8b446892c82de644[key](params);
+            for(var _iterator = Object.entries($8d94b5f2509b6cf5$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
+                var _value = $d1ea3085410a42e5$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
+                if ($8d94b5f2509b6cf5$var$_classExtends($8d94b5f2509b6cf5$export$8b446892c82de644[key], $8d94b5f2509b6cf5$var$Aggregation)) {
+                    if ($8d94b5f2509b6cf5$export$8b446892c82de644[key].type === type) return new $8d94b5f2509b6cf5$export$8b446892c82de644[key](params);
                 }
             }
         } catch (err) {
@@ -419,14 +419,14 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     },
     filterFactory: function filterFactory(type, params) {
         // query string is a special case
-        if (type === "query_string") return new $1f5712c12abeeb70$export$8b446892c82de644.QueryString(params);
+        if (type === "query_string") return new $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString(params);
         var _iteratorNormalCompletion = true, _didIteratorError = false, _iteratorError = undefined;
         try {
             // otherwise auto-detect
-            for(var _iterator = Object.entries($1f5712c12abeeb70$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
-                var _value = $3fd025669e1dbd56$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
-                if ($1f5712c12abeeb70$var$_classExtends($1f5712c12abeeb70$export$8b446892c82de644[key], $1f5712c12abeeb70$var$Filter)) {
-                    if ($1f5712c12abeeb70$export$8b446892c82de644[key].type === type) return new $1f5712c12abeeb70$export$8b446892c82de644[key](params);
+            for(var _iterator = Object.entries($8d94b5f2509b6cf5$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
+                var _value = $d1ea3085410a42e5$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
+                if ($8d94b5f2509b6cf5$var$_classExtends($8d94b5f2509b6cf5$export$8b446892c82de644[key], $8d94b5f2509b6cf5$var$Filter)) {
+                    if ($8d94b5f2509b6cf5$export$8b446892c82de644[key].type === type) return new $8d94b5f2509b6cf5$export$8b446892c82de644[key](params);
                 }
             }
         } catch (err) {
@@ -463,33 +463,33 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
      */ Query: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             if (!params) params = {
             };
             // properties that can be set directly (thought note that they may need to be read via their getters)
             this.filtered = false; // this is no longer present in es5.x+
             this.trackTotalHits = true; // FIXME: hard code this for the moment, we can introduce the ability to vary it later
-            this.size = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.size, false);
-            this.from = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.from, false);
-            this.fields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.fields, []);
-            this.aggs = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.aggs, []);
-            this.must = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.must, []);
-            this.mustNot = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.mustNot, []);
+            this.size = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.size, false);
+            this.from = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.from, false);
+            this.fields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.fields, []);
+            this.aggs = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.aggs, []);
+            this.must = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.must, []);
+            this.mustNot = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.mustNot, []);
             // defaults from properties that will be set through their setters (see the bottom
             // of the function)
             this.queryString = false;
             this.sort = [];
             // ones that we haven't used yet, so are awaiting implementation
             // NOTE: once we implement these, they also need to be considered in merge()
-            this.source = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.source, false);
-            this.should = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.should, []);
-            this.partialFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.partialField, false);
-            this.scriptFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.scriptFields, false);
-            this.minimumShouldMatch = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.minimumShouldMatch, false);
-            this.partialFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.partialFields, false);
-            this.scriptFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.scriptFields, false);
+            this.source = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.source, false);
+            this.should = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.should, []);
+            this.partialFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.partialField, false);
+            this.scriptFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.scriptFields, false);
+            this.minimumShouldMatch = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.minimumShouldMatch, false);
+            this.partialFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.partialFields, false);
+            this.scriptFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.scriptFields, false);
             // for old versions of ES, so are not necessarily going to be implemented
-            this.facets = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.facets, []);
+            this.facets = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.facets, []);
             ///////////////////////////////////////////////////////////
             // final part of construction - set the dynamic properties
             // via their setters
@@ -498,7 +498,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
             // finally, if we're given a raw query, parse it
             if (params.raw) this.parse(params.raw);
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 /////////////////////////////////////////////////
                 // getters and setters
@@ -518,16 +518,16 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
             {
                 key: "addField",
                 value: function addField(field) {
-                    if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(field, this.fields) === -1) this.fields.push(field);
+                    if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(field, this.fields) === -1) this.fields.push(field);
                 }
             },
             {
                 key: "setQueryString",
                 value: function setQueryString(params) {
                     var qs = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.QueryString)) {
-                        if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.isPlainObject(params)) qs = new $1f5712c12abeeb70$export$8b446892c82de644.QueryString(params);
-                        else qs = new $1f5712c12abeeb70$export$8b446892c82de644.QueryString({
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString)) {
+                        if ($99b6183ba65dae12$export$4048ae5fe51d81b7.isPlainObject(params)) qs = new $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString(params);
+                        else qs = new $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString({
                             queryString: params
                         });
                     }
@@ -553,7 +553,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     this.sort = [];
                     // ensure we have a list of sort options
                     var sorts = params;
-                    if (!$aa95204b620a0ef2$export$4048ae5fe51d81b7.isArray(params)) sorts = [
+                    if (!$99b6183ba65dae12$export$4048ae5fe51d81b7.isArray(params)) sorts = [
                         params
                     ];
                     // add each one
@@ -565,7 +565,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 value: function addSortBy(params) {
                     // ensure we have an instance of es.Sort
                     var sort = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.Sort)) sort = new $1f5712c12abeeb70$export$8b446892c82de644.Sort(params);
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.Sort)) sort = new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort(params);
                     // prevent repeated sort options being added
                     for(var i = 0; i < this.sort.length; i++){
                         var so = this.sort[i];
@@ -580,7 +580,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 value: function prependSortBy(params) {
                     // ensure we have an instance of es.Sort
                     var sort = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.Sort)) sort = new $1f5712c12abeeb70$export$8b446892c82de644.Sort(params);
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.Sort)) sort = new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort(params);
                     this.removeSortBy(sort);
                     this.sort.unshift(sort);
                 }
@@ -590,7 +590,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 value: function removeSortBy(params) {
                     // ensure we have an instance of es.Sort
                     var sort = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.Sort)) sort = new $1f5712c12abeeb70$export$8b446892c82de644.Sort(params);
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.Sort)) sort = new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort(params);
                     var removes = [];
                     for(var i = 0; i < this.sort.length; i++){
                         var so = this.sort[i];
@@ -857,7 +857,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     var bool = {
                     };
                     // query string
-                    if (this.queryString && include_query_string) $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(query_part, this.queryString.objectify());
+                    if (this.queryString && include_query_string) $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(query_part, this.queryString.objectify());
                     if (include_filters) {
                         // add any MUST filters
                         if (this.must.length > 0) {
@@ -910,7 +910,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         };
                         for(var i = 0; i < this.aggs.length; i++){
                             var agg = this.aggs[i];
-                            $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(q.aggs, agg.objectify());
+                            $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(q.aggs, agg.objectify());
                         }
                     }
                     // add the source filters
@@ -937,7 +937,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     function parseBool(bool, target) {
                         if (bool.must) for(var i = 0; i < bool.must.length; i++){
                             var type = Object.keys(bool.must[i])[0];
-                            var fil = $1f5712c12abeeb70$export$8b446892c82de644.filterFactory(type, {
+                            var fil = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
                                 raw: bool.must[i]
                             });
                             if (fil && type !== "query_string") target.addMust(fil);
@@ -946,7 +946,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         }
                         if (bool.must_not) for(var i = 0; i < bool.must_not.length; i++){
                             var type = Object.keys(bool.must_not[i])[0];
-                            var fil = $1f5712c12abeeb70$export$8b446892c82de644.filterFactory(type, {
+                            var fil = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
                                 raw: bool.must_not[i]
                             });
                             if (fil) target.addMustNot(fil);
@@ -960,7 +960,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                                 parseBool(q.bool, target);
                                 continue;
                             }
-                            var impl = $1f5712c12abeeb70$export$8b446892c82de644.filterFactory(type, {
+                            var impl = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
                                 raw: q[type]
                             });
                             if (impl) {
@@ -986,7 +986,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     if (obj.stored_fields) this.fields = obj.stored_fields;
                     if (obj.sort) for(var i = 0; i < obj.sort.length; i++){
                         var so = obj.sort[i];
-                        this.addSortBy(new $1f5712c12abeeb70$export$8b446892c82de644.Sort({
+                        this.addSortBy(new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort({
                             raw: so
                         }));
                     }
@@ -1000,7 +1000,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             var raw = {
                             };
                             raw[name] = agg;
-                            var oa = $1f5712c12abeeb70$export$8b446892c82de644.aggregationFactory(type, {
+                            var oa = $8d94b5f2509b6cf5$export$8b446892c82de644.aggregationFactory(type, {
                                 raw: raw
                             });
                             if (oa) this.addAggregation(oa);
@@ -1026,7 +1026,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
             {
                 key: "clone",
                 value: function clone() {
-                    return new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+                    return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
                         raw: Object.assign({
                         }, this.objectify())
                     });
@@ -1040,17 +1040,17 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     QueryString: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             this.queryString = params.queryString || false;
             this.defaultField = params.defaultField || false;
             this.defaultOperator = params.defaultOperator || "OR";
             this.fuzzify = params.fuzzify || false; // * or ~
-            this.escapeSet = params.escapeSet || $1f5712c12abeeb70$export$8b446892c82de644.specialCharsSubSet;
-            this.pairs = params.pairs || $1f5712c12abeeb70$export$8b446892c82de644.characterPairs;
-            this.unEscapeSet = params.unEscapeSet || $1f5712c12abeeb70$export$8b446892c82de644.specialChars;
+            this.escapeSet = params.escapeSet || $8d94b5f2509b6cf5$export$8b446892c82de644.specialCharsSubSet;
+            this.pairs = params.pairs || $8d94b5f2509b6cf5$export$8b446892c82de644.characterPairs;
+            this.unEscapeSet = params.unEscapeSet || $8d94b5f2509b6cf5$export$8b446892c82de644.specialChars;
             if (params.raw) this.parse(params.raw);
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 key: "objectify",
                 value: function objectify() {
@@ -1153,12 +1153,12 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     Sort: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             this.field = params.field || "_score";
             this.order = params.order || "desc";
             if (params.raw) this.parse(params.raw);
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 key: "objectify",
                 value: function objectify() {
@@ -1185,11 +1185,11 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     TermsAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.size = params.size || 10;
                 // set the ordering for the first time
@@ -1202,7 +1202,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     // provide a method to set and normalise the ordering in future
                     key: "setOrdering",
@@ -1222,13 +1222,13 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             }
                         };
                         body.order[this.orderBy] = this.orderDir;
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation.type);
                         this.field = body.field;
                         if (body.size) this.size = body.size;
                         if (body.order) {
@@ -1239,59 +1239,59 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "terms");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "terms");
         return _class;
     }(),
     CardinalityAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
-                _this.field = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.field, false);
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
+                _this.field = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.field, false);
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             field: this.field
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.CardinalityAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.CardinalityAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.CardinalityAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.CardinalityAggregation.type);
                         this.field = body.field;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "cardinality");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "cardinality");
         return _class;
     }(),
     RangeAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.ranges = params.ranges || [];
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1299,31 +1299,31 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             field: this.field,
                             ranges: this.ranges
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.RangeAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.RangeAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.RangeAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.RangeAggregation.type);
                         this.field = body.field;
                         this.ranges = body.ranges;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "range");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "range");
         return _class;
     }(),
     GeoDistanceAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.lat = params.lat || false;
                 _this.lon = params.lon || false;
@@ -1333,7 +1333,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1347,13 +1347,13 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             distance_type: this.distance_type,
                             ranges: this.ranges
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.GeoDistanceAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.GeoDistanceAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.GeoDistanceAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.GeoDistanceAggregation.type);
                         this.field = body.field;
                         // FIXME: only handles the lat/lon object - but there are several forms
                         // this origin could take
@@ -1367,24 +1367,24 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geo_distance");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geo_distance");
         return _class;
     }(),
     GeohashGridAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.precision = params.precision || 3;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1392,108 +1392,108 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             field: this.field,
                             precision: this.precision
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.GeohashGridAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.GeohashGridAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.GeohashGridAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.GeohashGridAggregation.type);
                         this.field = body.field;
                         this.precision = body.precision;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geohash_grid");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geohash_grid");
         return _class;
     }(),
     StatsAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             field: this.field
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.StatsAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.StatsAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.StatsAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.StatsAggregation.type);
                         this.field = body.field;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "stats");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "stats");
         return _class;
     }(),
     SumAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             field: this.field
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.SumAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.SumAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.SumAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.SumAggregation.type);
                         this.field = body.field;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "sum");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "sum");
         return _class;
     }(),
     DateHistogramAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.interval = params.interval || "month";
                 _this.format = params.format || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1502,13 +1502,13 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             interval: this.interval
                         };
                         if (this.format) body["format"] = this.format;
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.DateHistogramAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.DateHistogramAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.DateHistogramAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.DateHistogramAggregation.type);
                         this.field = body.field;
                         if (body.interval) this.interval = body.interval;
                         if (body.format) this.format = body.format;
@@ -1516,44 +1516,44 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "date_histogram");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "date_histogram");
         return _class;
     }(),
     FiltersAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.filters = params.filters || {
                 };
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             filters: this.filters
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.FiltersAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.FiltersAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.FiltersAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.FiltersAggregation.type);
                         this.filters = body.filters;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "filters");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "filters");
         return _class;
     }(),
     ///////////////////////////////////////////////////
@@ -1561,17 +1561,17 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     TermFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.filter handled by superclass
                 _this.value = params.value || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
@@ -1604,22 +1604,22 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "term");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "term");
         return _class;
     }(),
     ExistsFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1639,25 +1639,25 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "exists");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "exists");
         return _class;
     }(),
     TermsFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.field handled by superclass
                 _this.values = params.values || false;
                 _this.execution = params.execution || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
@@ -1668,7 +1668,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         if (other.values) {
                             if (other.values.length !== this.values.length) return false;
                             for(var i = 0; i < other.values.length; i++){
-                                if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(other.values[i], this.values) === -1) return false;
+                                if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(other.values[i], this.values) === -1) return false;
                             }
                         }
                         return true;
@@ -1700,21 +1700,21 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     key: "add_term",
                     value: function add_term(term) {
                         if (!this.values) this.values = [];
-                        if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(term, this.values) === -1) this.values.push(term);
+                        if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(term, this.values) === -1) this.values.push(term);
                     }
                 },
                 {
                     key: "has_term",
                     value: function has_term(term) {
                         if (!this.values) return false;
-                        return $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(term, this.values) >= 0;
+                        return $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(term, this.values) >= 0;
                     }
                 },
                 {
                     key: "remove_term",
                     value: function remove_term(term) {
                         if (!this.values) return;
-                        var idx = $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(term, this.values);
+                        var idx = $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(term, this.values);
                         if (idx >= 0) this.values.splice(idx, 1);
                     }
                 },
@@ -1738,23 +1738,23 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "terms");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "terms");
         return _class;
     }(),
     RangeFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.field handled by superclass
-                _this.lt = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.lt, false);
-                _this.lte = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.lte, false);
-                _this.gte = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.gte, false);
-                _this.format = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.format, false);
+                _this.lt = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.lt, false);
+                _this.lte = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.lte, false);
+                _this.gte = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.gte, false);
+                _this.format = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.format, false);
                 // normalise the values to strings
                 if (_this.lt) _this.lt = _this.lt.toString();
                 if (_this.lte) _this.lte = _this.lte.toString();
@@ -1762,12 +1762,12 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
                         // ask the parent object first
-                        var pm = $59ef20e355e8922b$export$9099ad97b570f7c($6f1885a119f0af4a$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
+                        var pm = $17c4d4a7c863d924$export$9099ad97b570f7c($da23c25529bb1df4$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
                         if (!pm) return false;
                         // ranges (if set) must match
                         if (other.lt) {
@@ -1814,18 +1814,18 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "range");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "range");
         return _class;
     }(),
     GeoDistanceRangeFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.field is handled by superclass
                 _this.lt = params.lt || false;
                 _this.gte = params.gte || false;
@@ -1835,7 +1835,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1860,8 +1860,8 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         }
                         function splitUnits(str) {
                             var unit = false;
-                            for(var i = 0; i < $1f5712c12abeeb70$export$8b446892c82de644.distanceUnits.length; i++){
-                                var cu = $1f5712c12abeeb70$export$8b446892c82de644.distanceUnits[i];
+                            for(var i = 0; i < $8d94b5f2509b6cf5$export$8b446892c82de644.distanceUnits.length; i++){
+                                var cu = $8d94b5f2509b6cf5$export$8b446892c82de644.distanceUnits[i];
                                 if (endsWith(str, cu)) {
                                     str = str.substring(0, str.length - cu.length);
                                     unit = str.substring(str.length - cu.length);
@@ -1894,29 +1894,29 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geo_distance_range");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geo_distance_range");
         return _class;
     }(),
     GeoBoundingBoxFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.top_left = params.top_left || false;
                 _this.bottom_right = params.bottom_right || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
                         // ask the parent object first
-                        var pm = $59ef20e355e8922b$export$9099ad97b570f7c($6f1885a119f0af4a$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
+                        var pm = $17c4d4a7c863d924$export$9099ad97b570f7c($da23c25529bb1df4$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
                         if (!pm) return false;
                         if (other.top_left && other.top_left !== this.top_left) return false;
                         if (other.bottom_right && other.bottom_right !== this.bottom_right) return false;
@@ -1948,8 +1948,8 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geo_bounding_box");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geo_bounding_box");
         return _class;
     }(),
     ////////////////////////////////////////////////////
@@ -1957,10 +1957,10 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     Result: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             this.data = params.raw;
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 key: "buckets",
                 value: function buckets(agg_name) {
@@ -2009,11 +2009,11 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
         // serialise the query
         var querystring = JSON.stringify(queryobj);
         // prep the callbacks (they are connected)
-        var error_callback = $1f5712c12abeeb70$export$8b446892c82de644.queryError(error);
-        var success_callback = $1f5712c12abeeb70$export$8b446892c82de644.querySuccess(success, error_callback);
+        var error_callback = $8d94b5f2509b6cf5$export$8b446892c82de644.queryError(error);
+        var success_callback = $8d94b5f2509b6cf5$export$8b446892c82de644.querySuccess(success, error_callback);
         var ajax = {
             url: search_url,
-            headers: $1f5712c12abeeb70$export$8b446892c82de644.requestHeaders,
+            headers: $8d94b5f2509b6cf5$export$8b446892c82de644.requestHeaders,
             dataType: datatype,
             success: success_callback,
             error: error_callback,
@@ -2021,17 +2021,17 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
         };
         if (datatype !== "jsonp") ajax.jsonp = false;
         // make the call to the elasticsearch web service
-        if ($1f5712c12abeeb70$export$8b446892c82de644.requestMethod === "get") {
+        if ($8d94b5f2509b6cf5$export$8b446892c82de644.requestMethod === "get") {
             ajax.type = "get";
             ajax.data = {
                 source: querystring,
                 source_content_type: "application/json"
             };
-            $aa95204b620a0ef2$export$4048ae5fe51d81b7.ajax(ajax);
-        } else if ($1f5712c12abeeb70$export$8b446892c82de644.requestMethod === "post") {
+            $99b6183ba65dae12$export$4048ae5fe51d81b7.ajax(ajax);
+        } else if ($8d94b5f2509b6cf5$export$8b446892c82de644.requestMethod === "post") {
             ajax.type = "post";
             ajax.data = querystring;
-            $aa95204b620a0ef2$export$4048ae5fe51d81b7.ajax(ajax);
+            $99b6183ba65dae12$export$4048ae5fe51d81b7.ajax(ajax);
         } else throw "es.requestMethod must be either 'get' or 'post";
     },
     querySuccess: function querySuccess(callback, error_callback) {
@@ -2040,7 +2040,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 error_callback(data);
                 return;
             }
-            var result = new $1f5712c12abeeb70$export$8b446892c82de644.Result({
+            var result = new $8d94b5f2509b6cf5$export$8b446892c82de644.Result({
                 raw: data
             });
             callback(result);
@@ -2061,14 +2061,14 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
 
 
 
-var $5d52b179cd0026b5$export$137cea99ac96085 = window.moment;
+var $bccd1ba82d89ceaa$export$137cea99ac96085 = window.moment;
 
 
 
 
 
 
-function $988cca1a6a01f734$export$f628537ca2c78f9d(params, key, def) {
+function $d48cc3604bf30e24$export$f628537ca2c78f9d(params, key, def) {
     function _getDefault() {
         if (typeof def === 'function') return def();
         return def;
@@ -2077,7 +2077,7 @@ function $988cca1a6a01f734$export$f628537ca2c78f9d(params, key, def) {
     if (!params.hasOwnProperty(key)) return _getDefault();
     return params[key];
 }
-function $988cca1a6a01f734$export$6e23017c375e3c2b() {
+function $d48cc3604bf30e24$export$6e23017c375e3c2b() {
     var params = {
     };
     var url = window.location.href;
@@ -2110,19 +2110,19 @@ function $988cca1a6a01f734$export$6e23017c375e3c2b() {
     if (fragment) params['#'] = fragment;
     return params;
 }
-function $988cca1a6a01f734$export$16a194923490d008(obj) {
+function $d48cc3604bf30e24$export$16a194923490d008(obj) {
     for(var key in obj){
         if (obj.hasOwnProperty(key)) return false;
     }
     return true;
 }
-function $988cca1a6a01f734$export$367047a567f2342b(obj, fn, args, context_params) {
+function $d48cc3604bf30e24$export$367047a567f2342b(obj, fn, args, context_params) {
     return function() {
         if (args) {
             var params = {
             };
             for(var i = 0; i < args.length; i++)if (arguments.length > i) params[args[i]] = arguments[i];
-            if (context_params) params = $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(params, context_params);
+            if (context_params) params = $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(params, context_params);
             obj[fn](params);
         } else {
             var slice = Array.prototype.slice;
@@ -2132,7 +2132,7 @@ function $988cca1a6a01f734$export$367047a567f2342b(obj, fn, args, context_params
         }
     };
 }
-function $988cca1a6a01f734$export$866a93d0ccff8292(obj, fn, conditional, preventDefault) {
+function $d48cc3604bf30e24$export$866a93d0ccff8292(obj, fn, conditional, preventDefault) {
     if (preventDefault === undefined) preventDefault = true;
     return function(event) {
         if (conditional) {
@@ -2142,30 +2142,30 @@ function $988cca1a6a01f734$export$866a93d0ccff8292(obj, fn, conditional, prevent
         obj[fn](this, event);
     };
 }
-var $988cca1a6a01f734$export$a25557390a09e78a = /*#__PURE__*/ function() {
+var $d48cc3604bf30e24$export$a25557390a09e78a = /*#__PURE__*/ function() {
     "use strict";
-    function $988cca1a6a01f734$export$a25557390a09e78a(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $988cca1a6a01f734$export$a25557390a09e78a);
+    function $d48cc3604bf30e24$export$a25557390a09e78a(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $d48cc3604bf30e24$export$a25557390a09e78a);
         var _this = this;
-        $0726ab3728f86779$export$9099ad97b570f7c(this, "_finalise", function() {
+        $9b036347ace9941e$export$9099ad97b570f7c(this, "_finalise", function() {
             if (_this.finished) return;
             _this.finished = true;
             _this.functions.carryOn();
         });
-        this.list = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "list");
-        this.successCallbackArgs = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "successCallbackArgs");
-        this.errorCallbackArgs = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "errorCallbackArgs");
+        this.list = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "list");
+        this.successCallbackArgs = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "successCallbackArgs");
+        this.errorCallbackArgs = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "errorCallbackArgs");
         this.functions = {
-            action: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "action"),
-            success: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "success"),
-            carryOn: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "carryOn"),
-            error: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "error")
+            action: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "action"),
+            success: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "success"),
+            carryOn: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "carryOn"),
+            error: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "error")
         };
         this.checkList = [];
         this.finished = false;
         for(var i = 0; i < this.list.length; i++)this.checkList.push(0);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($988cca1a6a01f734$export$a25557390a09e78a, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($d48cc3604bf30e24$export$a25557390a09e78a, [
         {
             key: "process",
             value: function process(params) {
@@ -2174,8 +2174,8 @@ var $988cca1a6a01f734$export$a25557390a09e78a = /*#__PURE__*/ function() {
                     var context = {
                         index: i
                     };
-                    var success_callback = $988cca1a6a01f734$export$367047a567f2342b(this, "_actionSuccess", this.successCallbackArgs, context);
-                    var error_callback = $988cca1a6a01f734$export$367047a567f2342b(this, "_actionError", this.successCallbackArgs, context);
+                    var success_callback = $d48cc3604bf30e24$export$367047a567f2342b(this, "_actionSuccess", this.successCallbackArgs, context);
+                    var error_callback = $d48cc3604bf30e24$export$367047a567f2342b(this, "_actionError", this.successCallbackArgs, context);
                     var complete_callback = false;
                     this.functions.action({
                         entry: this.list[i],
@@ -2216,20 +2216,20 @@ var $988cca1a6a01f734$export$a25557390a09e78a = /*#__PURE__*/ function() {
         {
             key: "_isComplete",
             value: function _isComplete() {
-                return $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(0, this.checkList) === -1;
+                return $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(0, this.checkList) === -1;
             }
         }
     ]);
-    return $988cca1a6a01f734$export$a25557390a09e78a;
+    return $d48cc3604bf30e24$export$a25557390a09e78a;
 }();
-function $988cca1a6a01f734$export$60c5182d88d767f8(block, element, modifier) {
+function $d48cc3604bf30e24$export$60c5182d88d767f8(block, element, modifier) {
     var bemClass = block;
     if (element) bemClass += "__" + element;
     if (modifier) bemClass += "--" + modifier;
     return bemClass;
 }
-function $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
+function $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
     var cl = namespace;
     if (field) cl += "_" + field;
     if (instance_name) {
@@ -2239,9 +2239,9 @@ function $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_na
     }
     return cl;
 }
-function $988cca1a6a01f734$export$5be7444ab39fbaa3(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
-    var styles = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_name);
+function $d48cc3604bf30e24$export$5be7444ab39fbaa3(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
+    var styles = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, field, instance_name);
     var jsClasses = "";
     var bits = styles.split(" ");
     for(var i = 0; i < bits.length; i++){
@@ -2250,37 +2250,37 @@ function $988cca1a6a01f734$export$5be7444ab39fbaa3(namespace, field, instance_na
     }
     return jsClasses;
 }
-function $988cca1a6a01f734$export$e516ebba864be69d(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
-    var styles = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_name);
-    var js = $988cca1a6a01f734$export$5be7444ab39fbaa3(namespace, field, instance_name);
+function $d48cc3604bf30e24$export$e516ebba864be69d(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
+    var styles = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, field, instance_name);
+    var js = $d48cc3604bf30e24$export$5be7444ab39fbaa3(namespace, field, instance_name);
     return styles + " " + js;
 }
-function $988cca1a6a01f734$export$b1157bd4df096bce(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
+function $d48cc3604bf30e24$export$b1157bd4df096bce(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
     var sel = ".js-" + namespace;
     if (instance_name) sel += "_" + instance_name;
     if (field) sel += "_" + field;
     return sel;
 }
-function $988cca1a6a01f734$export$bf52b203d82ff901(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
+function $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
     var id = namespace;
     if (instance_name) id += "_" + instance_name;
     if (field) id += "_" + field;
     return id;
 }
-function $988cca1a6a01f734$export$5d5492dec79280f1(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
-    return "#" + $988cca1a6a01f734$export$bf52b203d82ff901(namespace, field, instance_name);
+function $d48cc3604bf30e24$export$5d5492dec79280f1(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
+    return "#" + $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, field, instance_name);
 }
-function $988cca1a6a01f734$var$_normaliseInstanceName(instance_name) {
+function $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name) {
     if (typeof instance_name === "string") return instance_name;
     // FIXME: check this doesn't cause a circular import issue
-    if (instance_name instanceof $97ca9eea36c86bb4$export$ea71c44d9cb0d048) return instance_name.id;
-    if (instance_name instanceof $97ca9eea36c86bb4$export$a695173e2ecfa9b) return instance_name.component.id;
+    if (instance_name instanceof $6cf4dc301226cb87$export$ea71c44d9cb0d048) return instance_name.id;
+    if (instance_name instanceof $6cf4dc301226cb87$export$a695173e2ecfa9b) return instance_name.component.id;
 }
-function $988cca1a6a01f734$export$5e20d0a3120d6c07(unsafe, def) {
+function $d48cc3604bf30e24$export$5e20d0a3120d6c07(unsafe, def) {
     if (def === undefined) def = "";
     if (unsafe === undefined || unsafe == null) return def;
     try {
@@ -2290,17 +2290,17 @@ function $988cca1a6a01f734$export$5e20d0a3120d6c07(unsafe, def) {
         return def;
     }
 }
-function $988cca1a6a01f734$export$63ba8ea1e92c906(unsafe) {
+function $d48cc3604bf30e24$export$63ba8ea1e92c906(unsafe) {
     return unsafe.replace(/&/g, "_").replace(/</g, "_").replace(/>/g, "_").replace(/"/g, "_").replace(/'/g, "_").replace(/\./gi, '_').replace(/\:/gi, '_').replace(/\s/gi, "_");
 }
-function $988cca1a6a01f734$export$48334dba1de70fbe(params) {
-    var reflectNonNumbers = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "reflectNonNumbers", false);
-    var prefix = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "prefix", "");
-    var zeroPadding = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "zeroPadding", false);
-    var decimalPlaces = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "decimalPlaces", false);
-    var thousandsSeparator = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "thousandsSeparator", false);
-    var decimalSeparator = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "decimalSeparator", ".");
-    var suffix = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "suffix", "");
+function $d48cc3604bf30e24$export$48334dba1de70fbe(params) {
+    var reflectNonNumbers = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "reflectNonNumbers", false);
+    var prefix = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "prefix", "");
+    var zeroPadding = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "zeroPadding", false);
+    var decimalPlaces = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "decimalPlaces", false);
+    var thousandsSeparator = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "thousandsSeparator", false);
+    var decimalSeparator = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "decimalSeparator", ".");
+    var suffix = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "suffix", "");
     return function(number) {
         // ensure this is really a number
         var num = parseFloat(number);
@@ -2325,7 +2325,7 @@ function $988cca1a6a01f734$export$48334dba1de70fbe(params) {
         else return prefix + bits[0] + decimalSeparator + bits[1] + suffix;
     };
 }
-function $988cca1a6a01f734$export$bf454bbe620fa941(params) {
+function $d48cc3604bf30e24$export$bf454bbe620fa941(params) {
     var commaRx = new RegExp(",", "g");
     return function(num) {
         num = num.trim();
@@ -2334,21 +2334,21 @@ function $988cca1a6a01f734$export$bf454bbe620fa941(params) {
         return parseFloat(num);
     };
 }
-function $988cca1a6a01f734$export$b4cd8de5710bc55c(selector, event, caller, targetFunction, delay, conditional, preventDefault) {
+function $d48cc3604bf30e24$export$b4cd8de5710bc55c(selector, event, caller, targetFunction, delay, conditional, preventDefault) {
     if (preventDefault === undefined) preventDefault = true;
     // if the caller has an inner component (i.e. it is a Renderer), use the component's id
     // otherwise, if it has a namespace (which is true of Renderers or Templates) use that
     if (caller.component && caller.component.id) event = event + "." + caller.component.id;
     else if (caller.namespace) event = event + "." + caller.namespace;
     // create the closure to be called on the event
-    var clos = $988cca1a6a01f734$export$866a93d0ccff8292(caller, targetFunction, conditional, preventDefault);
+    var clos = $d48cc3604bf30e24$export$866a93d0ccff8292(caller, targetFunction, conditional, preventDefault);
     // now bind the closure directly or with delay
     // if the caller has an inner component (i.e. it is a Renderer) use the components jQuery selector
     // otherwise, if it has an inner, use the selector on that.
     if (delay) {
         if (caller.component) caller.component.jq(selector).bindWithDelay(event, clos, delay);
         else if (caller.edge) caller.edge.jq(selector).bindWithDelay(event, clos, delay);
-        else $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector).bindWithDelay(event, clos, delay);
+        else $99b6183ba65dae12$export$4048ae5fe51d81b7(selector).bindWithDelay(event, clos, delay);
     } else {
         if (caller.component) {
             var element = caller.component.jq(selector);
@@ -2359,13 +2359,13 @@ function $988cca1a6a01f734$export$b4cd8de5710bc55c(selector, event, caller, targ
             element.off(event);
             element.on(event, clos);
         } else {
-            var element = $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector);
+            var element = $99b6183ba65dae12$export$4048ae5fe51d81b7(selector);
             element.off(event);
             element.on(event, clos);
         }
     }
 }
-function $988cca1a6a01f734$export$27450a6de0750f89(selector, event, caller) {
+function $d48cc3604bf30e24$export$27450a6de0750f89(selector, event, caller) {
     // if the caller has an inner component (i.e. it is a Renderer), use the component's id
     // otherwise, if it has a namespace (which is true of Renderers or Templates) use that
     if (caller.component && caller.component.id) event = event + "." + caller.component.id;
@@ -2377,7 +2377,7 @@ function $988cca1a6a01f734$export$27450a6de0750f89(selector, event, caller) {
         var element = caller.edge.jq(selector);
         element.off(event);
     } else {
-        var element = $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector);
+        var element = $99b6183ba65dae12$export$4048ae5fe51d81b7(selector);
         element.off(event);
     }
 }
@@ -2385,31 +2385,31 @@ function $988cca1a6a01f734$export$27450a6de0750f89(selector, event, caller) {
 
 
 
-var $e2d80b3b87810ca2$export$15b4933e9118d714 = /*#__PURE__*/ function() {
+var $e11cce7d2432c447$export$15b4933e9118d714 = /*#__PURE__*/ function() {
     "use strict";
-    function $e2d80b3b87810ca2$export$15b4933e9118d714() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $e2d80b3b87810ca2$export$15b4933e9118d714);
+    function $e11cce7d2432c447$export$15b4933e9118d714() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $e11cce7d2432c447$export$15b4933e9118d714);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($e2d80b3b87810ca2$export$15b4933e9118d714, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($e11cce7d2432c447$export$15b4933e9118d714, [
         {
             key: "doQuery",
             value: function doQuery(params) {
             }
         }
     ]);
-    return $e2d80b3b87810ca2$export$15b4933e9118d714;
+    return $e11cce7d2432c447$export$15b4933e9118d714;
 }();
 
 
 
-var $2f87dfa78e983121$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdapter) {
+var $c08f5147382318be$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdapter) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($2f87dfa78e983121$export$4ddc7050cc680aeb, QueryAdapter);
-    function $2f87dfa78e983121$export$4ddc7050cc680aeb() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $2f87dfa78e983121$export$4ddc7050cc680aeb);
-        return $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($2f87dfa78e983121$export$4ddc7050cc680aeb).apply(this, arguments));
+    $bca7673885229bfd$export$9099ad97b570f7c($c08f5147382318be$export$4ddc7050cc680aeb, QueryAdapter);
+    function $c08f5147382318be$export$4ddc7050cc680aeb() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $c08f5147382318be$export$4ddc7050cc680aeb);
+        return $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($c08f5147382318be$export$4ddc7050cc680aeb).apply(this, arguments));
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($2f87dfa78e983121$export$4ddc7050cc680aeb, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($c08f5147382318be$export$4ddc7050cc680aeb, [
         {
             key: "doQuery",
             value: function doQuery(params) {
@@ -2418,7 +2418,7 @@ var $2f87dfa78e983121$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdap
                 var success = params.success;
                 var error = params.error;
                 if (!query) query = edge.currentQuery;
-                $1f5712c12abeeb70$export$8b446892c82de644.doQuery({
+                $8d94b5f2509b6cf5$export$8b446892c82de644.doQuery({
                     search_url: edge.searchUrl,
                     queryobj: query.objectify(),
                     datatype: edge.datatype,
@@ -2428,38 +2428,38 @@ var $2f87dfa78e983121$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdap
             }
         }
     ]);
-    return $2f87dfa78e983121$export$4ddc7050cc680aeb;
-}($e2d80b3b87810ca2$export$15b4933e9118d714);
+    return $c08f5147382318be$export$4ddc7050cc680aeb;
+}($e11cce7d2432c447$export$15b4933e9118d714);
 
 
 
 
-var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$22ad9a5707a07e9c(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$22ad9a5707a07e9c);
+    function $6cf4dc301226cb87$export$22ad9a5707a07e9c(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$22ad9a5707a07e9c);
         /////////////////////////////////////////////
         // parameters that can be set via params arg
         // the jquery selector for the element where the edge will be deployed
-        this.selector = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "selector", "body");
+        this.selector = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "selector", "body");
         // the base search url which will respond to elasticsearch queries.  Generally ends with _search
-        this.searchUrl = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "searchUrl", false);
+        this.searchUrl = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "searchUrl", false);
         // datatype for ajax requests to use - overall recommend using jsonp and proxying ES requests
         // through a back end that can provide that
-        this.datatype = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "datatype", "jsonp");
+        this.datatype = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "datatype", "jsonp");
         // dictionary of queries to be run before the primary query is executed
         // {"<preflight id>" : new es.Query(....)}
         // results will appear with the same ids in this.preflightResults
         // preflight queries are /not/ subject to the base query
-        this.preflightQueries = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "preflightQueries", false);
+        this.preflightQueries = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "preflightQueries", false);
         // query that forms the basis of all queries that are assembled and run
         // Note that baseQuery is inviolable - it's requirements will always be enforced
-        this.baseQuery = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "baseQuery", false);
+        this.baseQuery = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "baseQuery", false);
         // query to use to initialise the search.  Use this to set your opening
         // values for things like page size, initial search terms, etc.  Any request to
         // reset the interface will return to this query
-        this.openingQuery = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "openingQuery", function() {
-            return typeof $1f5712c12abeeb70$export$8b446892c82de644 !== 'undefined' ? new $1f5712c12abeeb70$export$8b446892c82de644.Query() : false;
+        this.openingQuery = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "openingQuery", function() {
+            return typeof $8d94b5f2509b6cf5$export$8b446892c82de644 !== 'undefined' ? new $8d94b5f2509b6cf5$export$8b446892c82de644.Query() : false;
         });
         // dictionary of functions that will generate secondary queries which also need to be
         // run at the point that cycle() is called.  These functions and their resulting
@@ -2468,37 +2468,37 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         // secondary queries are not subject the base query, although the functions
         // may of course apply the base query too if they wish
         // {"<secondary id>" : function() }
-        this.secondaryQueries = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "secondaryQueries", false);
+        this.secondaryQueries = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "secondaryQueries", false);
         // dictionary mapping keys to urls that will be used for search.  These should be
         // the same keys as used in secondaryQueries, if those secondary queries should be
         // issued against different urls than the primary search_url.
-        this.secondaryUrls = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "secondaryUrls", false);
+        this.secondaryUrls = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "secondaryUrls", false);
         // should the init process do a search
-        this.initialSearch = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "initialSearch", true);
+        this.initialSearch = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "initialSearch", true);
         // list of static files (e.g. data files) to be loaded at startup, and made available
         // on the object for use by components
         // {"id" : "<internal id to give the file>", "url" : "<file url>", "processor" : edges.csv.newObjectByRow, "datatype" : "text", "opening" : <function to be run after processing for initial state>}
-        this.staticFiles = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "staticFiles", []);
+        this.staticFiles = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "staticFiles", []);
         // should the search url be synchronised with the browser's url bar after search
         // and should queries be retrieved from the url on init
-        this.manageUrl = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "manageUrl", false);
+        this.manageUrl = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "manageUrl", false);
         // query parameter in which the query for this edge instance will be stored
-        this.urlQuerySource = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "urlQuerySource", "source");
+        this.urlQuerySource = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "urlQuerySource", "source");
         // options to be passed to es.Query.objectify when prepping the query to be placed in the URL
-        this.urlQueryOptions = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "urlQueryOptions", false);
+        this.urlQueryOptions = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "urlQueryOptions", false);
         // template object that will be used to draw the frame for the edge.  May be left
         // blank, in which case the edge will assume that the elements are already rendered
         // on the page by the caller
-        this.template = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "template", false);
+        this.template = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "template", false);
         // list of all the components that are involved in this edge
-        this.components = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "components", []);
+        this.components = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "components", []);
         // the query adapter
-        this.queryAdapter = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "queryAdapter", function() {
-            return new $2f87dfa78e983121$export$4ddc7050cc680aeb();
+        this.queryAdapter = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "queryAdapter", function() {
+            return new $c08f5147382318be$export$4ddc7050cc680aeb();
         });
         // list of callbacks to be run synchronously with the edge instance as the argument
         // (these bind at the same points as all the events are triggered, and are keyed the same way)
-        this.callbacks = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "callbacks", {
+        this.callbacks = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "callbacks", {
         });
         /////////////////////////////////////////////
         // operational properties
@@ -2538,21 +2538,21 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         // now kick off the edge
         this.startup();
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$22ad9a5707a07e9c, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$22ad9a5707a07e9c, [
         {
             //////////////////////////////////////////////////
             // Startup
             key: "startup",
             value: function startup() {
                 // obtain the jquery context for all our operations
-                this.context = $aa95204b620a0ef2$export$4048ae5fe51d81b7(this.selector);
+                this.context = $99b6183ba65dae12$export$4048ae5fe51d81b7(this.selector);
                 // trigger the edges:init event
                 this.trigger("edges:pre-init");
                 // if we are to manage the URL, attempt to pull a query from it
                 if (this.manageUrl) {
-                    var urlParams = $988cca1a6a01f734$export$6e23017c375e3c2b();
+                    var urlParams = $d48cc3604bf30e24$export$6e23017c375e3c2b();
                     if (this.urlQuerySource in urlParams) {
-                        this.urlQuery = new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+                        this.urlQuery = new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
                             raw: urlParams[this.urlQuerySource]
                         });
                         delete urlParams[this.urlQuerySource];
@@ -2671,7 +2671,7 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                     return;
                 }
                 var that = this;
-                var pg = new $988cca1a6a01f734$export$a25557390a09e78a({
+                var pg = new $d48cc3604bf30e24$export$a25557390a09e78a({
                     list: this.staticFiles,
                     action: function action(params) {
                         var entry = params.entry;
@@ -2680,7 +2680,7 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                         var id = entry.id;
                         var url = entry.url;
                         var datatype = edges.getParam(entry.datatype, "text");
-                        $aa95204b620a0ef2$export$4048ae5fe51d81b7.ajax({
+                        $99b6183ba65dae12$export$4048ae5fe51d81b7.ajax({
                             type: "get",
                             url: url,
                             dataType: datatype,
@@ -2739,13 +2739,13 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                     });
                 }
                 var that = this;
-                var pg = new $988cca1a6a01f734$export$a25557390a09e78a({
+                var pg = new $d48cc3604bf30e24$export$a25557390a09e78a({
                     list: entries,
                     action: function action(params) {
                         var entry = params.entry;
                         var success = params.success_callback;
                         var error = params.error_callback;
-                        $1f5712c12abeeb70$export$8b446892c82de644.doQuery({
+                        $8d94b5f2509b6cf5$export$8b446892c82de644.doQuery({
                             search_url: that.searchUrl,
                             queryobj: entry.query.objectify(),
                             datatype: that.datatype,
@@ -2785,10 +2785,10 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                 };
                 this.queryAdapter.doQuery({
                     edge: this,
-                    success: $988cca1a6a01f734$export$367047a567f2342b(this, "querySuccess", [
+                    success: $d48cc3604bf30e24$export$367047a567f2342b(this, "querySuccess", [
                         "result"
                     ], context),
-                    error: $988cca1a6a01f734$export$367047a567f2342b(this, "queryFail", [
+                    error: $d48cc3604bf30e24$export$367047a567f2342b(this, "queryFail", [
                         "response"
                     ], context)
                 });
@@ -2816,13 +2816,13 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                     this.realisedSecondaryQueries[key] = entry.query;
                 }
                 var that = this;
-                var pg = new $988cca1a6a01f734$export$a25557390a09e78a({
+                var pg = new $d48cc3604bf30e24$export$a25557390a09e78a({
                     list: entries,
                     action: function action(params) {
                         var entry = params.entry;
                         var success = params.success_callback;
                         var error = params.error_callback;
-                        $1f5712c12abeeb70$export$8b446892c82de644.doQuery({
+                        $8d94b5f2509b6cf5$export$8b446892c82de644.doQuery({
                             search_url: entry.searchUrl,
                             queryobj: entry.query.objectify(),
                             datatype: that.datatype,
@@ -2871,14 +2871,14 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
             key: "cloneBaseQuery",
             value: function cloneBaseQuery() {
                 if (this.baseQuery) return this.baseQuery.clone();
-                return new $1f5712c12abeeb70$export$8b446892c82de644.Query();
+                return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query();
             }
         },
         {
             key: "cloneOpeningQuery",
             value: function cloneOpeningQuery() {
                 if (this.openingQuery) return this.openingQuery.clone();
-                return new $1f5712c12abeeb70$export$8b446892c82de644.Query();
+                return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query();
             }
         },
         {
@@ -2940,9 +2940,9 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         {
             key: "fullQueryArgs",
             value: function fullQueryArgs() {
-                var args = $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(true, {
+                var args = $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(true, {
                 }, this.urlParams);
-                $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(args, this.urlQueryArg());
+                $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(args, this.urlQueryArg());
                 return args;
             }
         },
@@ -3075,35 +3075,35 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         {
             key: "jq",
             value: function jq(selector) {
-                return $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector, this.context);
+                return $99b6183ba65dae12$export$4048ae5fe51d81b7(selector, this.context);
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$22ad9a5707a07e9c;
+    return $6cf4dc301226cb87$export$22ad9a5707a07e9c;
 }();
-var $97ca9eea36c86bb4$export$93af88fe68eea917 = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$93af88fe68eea917 = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$93af88fe68eea917() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$93af88fe68eea917);
+    function $6cf4dc301226cb87$export$93af88fe68eea917() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$93af88fe68eea917);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$93af88fe68eea917, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$93af88fe68eea917, [
         {
             key: "draw",
             value: function draw(edge) {
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$93af88fe68eea917;
+    return $6cf4dc301226cb87$export$93af88fe68eea917;
 }();
-var $97ca9eea36c86bb4$export$ea71c44d9cb0d048 = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$ea71c44d9cb0d048 = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$ea71c44d9cb0d048(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$ea71c44d9cb0d048);
-        this.id = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "id");
-        this.renderer = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "renderer");
-        this.category = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "category", false);
+    function $6cf4dc301226cb87$export$ea71c44d9cb0d048(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$ea71c44d9cb0d048);
+        this.id = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "id");
+        this.renderer = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "renderer");
+        this.category = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "category", false);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$ea71c44d9cb0d048, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$ea71c44d9cb0d048, [
         {
             key: "init",
             value: function init(edge) {
@@ -3149,14 +3149,14 @@ var $97ca9eea36c86bb4$export$ea71c44d9cb0d048 = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$ea71c44d9cb0d048;
+    return $6cf4dc301226cb87$export$ea71c44d9cb0d048;
 }();
-var $97ca9eea36c86bb4$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$a695173e2ecfa9b() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    function $6cf4dc301226cb87$export$a695173e2ecfa9b() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$a695173e2ecfa9b);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$a695173e2ecfa9b, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$a695173e2ecfa9b, [
         {
             key: "init",
             value: function init(component) {
@@ -3179,7 +3179,7 @@ var $97ca9eea36c86bb4$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$a695173e2ecfa9b;
+    return $6cf4dc301226cb87$export$a695173e2ecfa9b;
 }();
 
 
@@ -3187,13 +3187,13 @@ var $97ca9eea36c86bb4$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
 
 
 var _finalBuckets;
-var $9cbb252f768bd5d6$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component) {
+var $ae46249d8a2a7b6d$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($9cbb252f768bd5d6$export$7decb792461ef5a9, Component);
-    function $9cbb252f768bd5d6$export$7decb792461ef5a9(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $9cbb252f768bd5d6$export$7decb792461ef5a9);
+    $bca7673885229bfd$export$9099ad97b570f7c($ae46249d8a2a7b6d$export$7decb792461ef5a9, Component);
+    function $ae46249d8a2a7b6d$export$7decb792461ef5a9(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $ae46249d8a2a7b6d$export$7decb792461ef5a9);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($9cbb252f768bd5d6$export$7decb792461ef5a9).call(this, params));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($ae46249d8a2a7b6d$export$7decb792461ef5a9).call(this, params));
         // actual data series that the renderer will render
         // data series is of the form
         // [
@@ -3207,19 +3207,19 @@ var $9cbb252f768bd5d6$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component
         //
         // For example
         // [{ key: "power output", values: [{label: 1980, value: 100}, {label: 1981, value: 200}]
-        _this.dataSeries = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "dataSeries", false);
+        _this.dataSeries = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "dataSeries", false);
         // function which will generate the data series, which will be
         // written to this.dataSeries if that is not provided
-        _this.dataFunction = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "dataFunction", false);
+        _this.dataFunction = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "dataFunction", false);
         // should we enforce a rectangular shape on the data series for when there is
         // more than one series to be displayed?
-        _this.rectangulate = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "rectangulate", false);
+        _this.rectangulate = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "rectangulate", false);
         // function which will sort the values of a series, used when rectangulate is
         // set to true
-        _this.seriesSort = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "seriesSort", false);
+        _this.seriesSort = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "seriesSort", false);
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($9cbb252f768bd5d6$export$7decb792461ef5a9, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($ae46249d8a2a7b6d$export$7decb792461ef5a9, [
         {
             key: "synchronise",
             value: function synchronise() {
@@ -3261,9 +3261,9 @@ var $9cbb252f768bd5d6$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component
             }
         }
     ]);
-    return $9cbb252f768bd5d6$export$7decb792461ef5a9;
-}($97ca9eea36c86bb4$export$ea71c44d9cb0d048);
-function $9cbb252f768bd5d6$export$8c0eec9b15d1897d(params) {
+    return $ae46249d8a2a7b6d$export$7decb792461ef5a9;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
+function $ae46249d8a2a7b6d$export$8c0eec9b15d1897d(params) {
     var agg = params.agg;
     var seriesName = params.seriesName;
     return function(component) {
@@ -3285,7 +3285,7 @@ function $9cbb252f768bd5d6$export$8c0eec9b15d1897d(params) {
         ];
     };
 }
-function $9cbb252f768bd5d6$export$d99c821b0fb86668(params) {
+function $ae46249d8a2a7b6d$export$d99c821b0fb86668(params) {
     var histogramAgg = params.histogramAgg;
     var termsAgg = params.termsAgg;
     var seriesNameMap = params.seriesNameMap;
@@ -3319,9 +3319,9 @@ function $9cbb252f768bd5d6$export$d99c821b0fb86668(params) {
         return dataSeries;
     };
 }
-function $9cbb252f768bd5d6$export$4c2a251a86bb620b(params) {
-    var aggs = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "aggs", []);
-    var seriesName = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "seriesName", "series");
+function $ae46249d8a2a7b6d$export$4c2a251a86bb620b(params) {
+    var aggs = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "aggs", []);
+    var seriesName = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "seriesName", "series");
     return function(component) {
         // for each aggregation, get the results and add them to the data series
         var data_series = [];
@@ -3341,7 +3341,7 @@ function $9cbb252f768bd5d6$export$4c2a251a86bb620b(params) {
                     for(var j = 0; j < nested.length; j++){
                         var nest = nested[j];
                         var bs = recurse(agg[key].aggs, nest);
-                        (_finalBuckets = finalBuckets).push.apply(_finalBuckets, $631c5afe36f33b96$export$9099ad97b570f7c(bs));
+                        (_finalBuckets = finalBuckets).push.apply(_finalBuckets, $0862162e48b32d5b$export$9099ad97b570f7c(bs));
                     }
                 }
             }
@@ -3368,16 +3368,16 @@ function $9cbb252f768bd5d6$export$4c2a251a86bb620b(params) {
 
 
 
-var $3bc6b949b00e2a58$export$8698b599d6b7d9a0 = window.nv;
+var $b76ad79e27dc7523$export$8698b599d6b7d9a0 = window.nv;
 
 
-var $e4a0ccd89c102736$export$6343839093e1c21d = window.d3;
+var $f5a419d63f8f3762$export$6343839093e1c21d = window.d3;
 
 
 
 
 
-function $530e6b01b500d249$export$af206d707775bac7(data_series) {
+function $fdccde0d4dd41d73$export$af206d707775bac7(data_series) {
     var new_series = [];
     for(var i = 0; i < data_series.length; i++){
         var os = data_series[i];
@@ -3396,7 +3396,7 @@ function $530e6b01b500d249$export$af206d707775bac7(data_series) {
     }
     return new_series;
 }
-function $530e6b01b500d249$export$e89b2486fe14568(dataSeries) {
+function $fdccde0d4dd41d73$export$e89b2486fe14568(dataSeries) {
     if (!dataSeries) return false;
     if (dataSeries.length === 0) return false;
     var emptyCount = 0;
@@ -3407,7 +3407,7 @@ function $530e6b01b500d249$export$e89b2486fe14568(dataSeries) {
     if (emptyCount === dataSeries.length) return false;
     return true;
 }
-function $530e6b01b500d249$export$e85e6981b6330071(params) {
+function $fdccde0d4dd41d73$export$e85e6981b6330071(params) {
     var axisSelector = params.axisSelector;
     var maxWidth = params.maxWidth;
     var maxHeight = params.maxHeight;
@@ -3418,21 +3418,21 @@ function $530e6b01b500d249$export$e85e6981b6330071(params) {
     ];
     var minChunkSize = params.minHyphenSize || 3;
     function _isMidWord(currentLine, remainder) {
-        var leftChar = $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(currentLine[currentLine.length - 1], wordBreaks) === -1;
-        var rightChar = $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(remainder[0], wordBreaks) === -1;
+        var leftChar = $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(currentLine[currentLine.length - 1], wordBreaks) === -1;
+        var rightChar = $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(remainder[0], wordBreaks) === -1;
         return leftChar && rightChar;
     }
     function _toPrevSpace(currentLine) {
         for(var i = currentLine.length - 1; i >= 0; i--){
             var char = currentLine[i];
-            if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return currentLine.length - i;
+            if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return currentLine.length - i;
         }
         return -1;
     }
     function _toNextSpace(remainder) {
         for(var i = 0; i < remainder.length; i++){
             var char = remainder[i];
-            if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return i + 1;
+            if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return i + 1;
         }
         return -1;
     }
@@ -3532,46 +3532,46 @@ function $530e6b01b500d249$export$e85e6981b6330071(params) {
 }
 
 
-var $5ff819424c6735fc$export$1b75c0a6cacf635c = /*#__PURE__*/ function(Renderer) {
+var $f29180d7a0e96438$export$1b75c0a6cacf635c = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($5ff819424c6735fc$export$1b75c0a6cacf635c, Renderer);
-    function $5ff819424c6735fc$export$1b75c0a6cacf635c(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $5ff819424c6735fc$export$1b75c0a6cacf635c);
+    $bca7673885229bfd$export$9099ad97b570f7c($f29180d7a0e96438$export$1b75c0a6cacf635c, Renderer);
+    function $f29180d7a0e96438$export$1b75c0a6cacf635c(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $f29180d7a0e96438$export$1b75c0a6cacf635c);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($5ff819424c6735fc$export$1b75c0a6cacf635c).call(this, params));
-        _this.xTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xTickFormat", ",.2f");
-        _this.yTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yTickFormat", ",.2f");
-        _this.stacked = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "stacked", false);
-        _this.groupSpacing = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "groupSpacing", 0.1);
-        _this.transitionDuration = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "transitionDuration", 500);
-        _this.controls = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "controls", false);
-        _this.barColor = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "barColor", false);
-        _this.color = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "color", false);
-        _this.showLegend = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showLegend", true);
-        _this.xAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xAxisLabel", "");
-        _this.yAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yAxisLabel", "");
-        _this.yAxisLabelDistance = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yAxisLabelDistance", 0);
-        _this.marginTop = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginTop", 30);
-        _this.marginRight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginRight", 20);
-        _this.marginBottom = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginBottom", 50);
-        _this.marginLeft = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginLeft", 60);
-        _this.hideIfNoData = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "hideIfNoData", false);
-        _this.onHide = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onHide", false);
-        _this.onShow = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onShow", false);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($f29180d7a0e96438$export$1b75c0a6cacf635c).call(this, params));
+        _this.xTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xTickFormat", ",.2f");
+        _this.yTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yTickFormat", ",.2f");
+        _this.stacked = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "stacked", false);
+        _this.groupSpacing = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "groupSpacing", 0.1);
+        _this.transitionDuration = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "transitionDuration", 500);
+        _this.controls = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "controls", false);
+        _this.barColor = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "barColor", false);
+        _this.color = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "color", false);
+        _this.showLegend = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showLegend", true);
+        _this.xAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xAxisLabel", "");
+        _this.yAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yAxisLabel", "");
+        _this.yAxisLabelDistance = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yAxisLabelDistance", 0);
+        _this.marginTop = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginTop", 30);
+        _this.marginRight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginRight", 20);
+        _this.marginBottom = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginBottom", 50);
+        _this.marginLeft = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginLeft", 60);
+        _this.hideIfNoData = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "hideIfNoData", false);
+        _this.onHide = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onHide", false);
+        _this.onShow = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onShow", false);
         _this.namespace = "edges-nvd3-multibar";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($5ff819424c6735fc$export$1b75c0a6cacf635c, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($f29180d7a0e96438$export$1b75c0a6cacf635c, [
         {
             key: "draw",
             value: function draw() {
                 // first sort out the data series
                 var data_series = this.component.dataSeries;
                 if (!data_series) data_series = [];
-                data_series = $530e6b01b500d249$export$af206d707775bac7(this.component.dataSeries);
+                data_series = $fdccde0d4dd41d73$export$af206d707775bac7(this.component.dataSeries);
                 // now decide if we are going to continue
                 if (this.hideIfNoData) {
-                    if (!$530e6b01b500d249$export$e89b2486fe14568(data_series)) {
+                    if (!$fdccde0d4dd41d73$export$e89b2486fe14568(data_series)) {
                         this.component.context.html("");
                         this.component.context.hide();
                         if (this.onHide) this.onHide();
@@ -3580,12 +3580,12 @@ var $5ff819424c6735fc$export$1b75c0a6cacf635c = /*#__PURE__*/ function(Renderer)
                     this.component.context.show();
                     if (this.onShow) this.onShow();
                 }
-                var svgId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "svg", this);
-                var svgSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "svg", this);
+                var svgId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "svg", this);
+                var svgSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "svg", this);
                 this.component.context.html('<svg id="' + svgId + '"></svg>');
                 var that = this;
-                $3bc6b949b00e2a58$export$8698b599d6b7d9a0.addGraph(function() {
-                    var chart = $3bc6b949b00e2a58$export$8698b599d6b7d9a0.models.multiBarChart().showControls(that.controls).margin({
+                $b76ad79e27dc7523$export$8698b599d6b7d9a0.addGraph(function() {
+                    var chart = $b76ad79e27dc7523$export$8698b599d6b7d9a0.models.multiBarChart().showControls(that.controls).margin({
                         top: that.marginTop,
                         right: that.marginRight,
                         bottom: that.marginBottom,
@@ -3594,27 +3594,27 @@ var $5ff819424c6735fc$export$1b75c0a6cacf635c = /*#__PURE__*/ function(Renderer)
                     chart.xAxis.axisLabel(that.xAxisLabel);
                     if (that.xTickFormat) {
                         var fn = that.xTickFormat;
-                        if (typeof that.xTickFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.xTickFormat);
+                        if (typeof that.xTickFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.xTickFormat);
                         chart.xAxis.tickFormat(fn);
                     }
                     chart.yAxis.axisLabel(that.yAxisLabel).axisLabelDistance(that.yAxisLabelDistance);
                     if (that.yTickFormat) {
                         var fn = that.yTickFormat;
-                        if (typeof that.yTickFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.yTickFormat);
+                        if (typeof that.yTickFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.yTickFormat);
                         chart.yAxis.tickFormat(fn);
                     }
                     if (that.barColor) chart.barColor(that.barColor);
                     if (that.color) chart.color(that.color);
                     chart.showLegend(that.showLegend);
-                    $e4a0ccd89c102736$export$6343839093e1c21d.select(svgSelector).datum(data_series).transition().duration(that.transitionDuration).call(chart);
-                    $3bc6b949b00e2a58$export$8698b599d6b7d9a0.utils.windowResize(chart.update);
+                    $f5a419d63f8f3762$export$6343839093e1c21d.select(svgSelector).datum(data_series).transition().duration(that.transitionDuration).call(chart);
+                    $b76ad79e27dc7523$export$8698b599d6b7d9a0.utils.windowResize(chart.update);
                     return chart;
                 });
             }
         }
     ]);
-    return $5ff819424c6735fc$export$1b75c0a6cacf635c;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $f29180d7a0e96438$export$1b75c0a6cacf635c;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
@@ -3622,7 +3622,7 @@ var $5ff819424c6735fc$export$1b75c0a6cacf635c = /*#__PURE__*/ function(Renderer)
 
 
 
-function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
+function $2de4fa00a47777f3$export$9b1f0f098143fb9(locations) {
     return {
         lat: locations[0].lat,
         lon: locations[0].lon
@@ -3630,10 +3630,10 @@ function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
 }
 
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */ /* Geohash encoding/decoding and associated functions   (c) Chris Veness 2014-2019 / MIT Licence  */ /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */ const $90ee7c08a8dfb756$var$base32 = '0123456789bcdefghjkmnpqrstuvwxyz'; // (geohash-specific) Base32 map
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */ /* Geohash encoding/decoding and associated functions   (c) Chris Veness 2014-2019 / MIT Licence  */ /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */ const $be7a76b3305d5aac$var$base32 = '0123456789bcdefghjkmnpqrstuvwxyz'; // (geohash-specific) Base32 map
 /**
  * Geohash: Gustavo Niemeyer’s geocoding system.
- */ class $90ee7c08a8dfb756$var$Geohash {
+ */ class $be7a76b3305d5aac$var$Geohash {
     /**
      * Encodes latitude/longitude to geohash, either to specified precision or to automatically
      * evaluated precision.
@@ -3651,8 +3651,8 @@ function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
         if (typeof precision == 'undefined') {
             // refine geohash until it matches precision of supplied lat/lon
             for(let p = 1; p <= 12; p++){
-                const hash = $90ee7c08a8dfb756$var$Geohash.encode(lat, lon, p);
-                const posn = $90ee7c08a8dfb756$var$Geohash.decode(hash);
+                const hash = $be7a76b3305d5aac$var$Geohash.encode(lat, lon, p);
+                const posn = $be7a76b3305d5aac$var$Geohash.decode(hash);
                 if (posn.lat == lat && posn.lon == lon) return hash;
             }
             precision = 12; // set to maximum
@@ -3692,7 +3692,7 @@ function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
             evenBit = !evenBit;
             if ((++bit) == 5) {
                 // 5 bits gives us a character: append it and start over
-                geohash += $90ee7c08a8dfb756$var$base32.charAt(idx);
+                geohash += $be7a76b3305d5aac$var$base32.charAt(idx);
                 bit = 0;
                 idx = 0;
             }
@@ -3710,7 +3710,7 @@ function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
      * @example
      *     const latlon = Geohash.decode('u120fxw'); // => { lat: 52.205, lon: 0.1188 }
      */ static decode(geohash) {
-        const bounds = $90ee7c08a8dfb756$var$Geohash.bounds(geohash); // <-- the hard work
+        const bounds = $be7a76b3305d5aac$var$Geohash.bounds(geohash); // <-- the hard work
         // now just determine the centre of the cell...
         const latMin = bounds.sw.lat, lonMin = bounds.sw.lon;
         const latMax = bounds.ne.lat, lonMax = bounds.ne.lon;
@@ -3739,7 +3739,7 @@ function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
         let lonMin = -180, lonMax = 180;
         for(let i = 0; i < geohash.length; i++){
             const chr = geohash.charAt(i);
-            const idx = $90ee7c08a8dfb756$var$base32.indexOf(chr);
+            const idx = $be7a76b3305d5aac$var$base32.indexOf(chr);
             if (idx == -1) throw new Error('Invalid geohash');
             for(let n = 4; n >= 0; n--){
                 const bitN = idx >> n & 1;
@@ -3822,9 +3822,9 @@ function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
         let parent = geohash.slice(0, -1); // hash without last character
         const type = geohash.length % 2;
         // check for edge-cases which don't share common prefix
-        if (border[direction][type].indexOf(lastCh) != -1 && parent != '') parent = $90ee7c08a8dfb756$var$Geohash.adjacent(parent, direction);
+        if (border[direction][type].indexOf(lastCh) != -1 && parent != '') parent = $be7a76b3305d5aac$var$Geohash.adjacent(parent, direction);
         // append letter for direction to parent
-        return parent + $90ee7c08a8dfb756$var$base32.charAt(neighbour[direction][type].indexOf(lastCh));
+        return parent + $be7a76b3305d5aac$var$base32.charAt(neighbour[direction][type].indexOf(lastCh));
     }
     /**
      * Returns all 8 adjacent cells to specified geohash.
@@ -3834,36 +3834,36 @@ function $d9a3a55214484321$export$9b1f0f098143fb9(locations) {
      * @throws  Invalid geohash.
      */ static neighbours(geohash) {
         return {
-            'n': $90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 'n'),
-            'ne': $90ee7c08a8dfb756$var$Geohash.adjacent($90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 'n'), 'e'),
-            'e': $90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 'e'),
-            'se': $90ee7c08a8dfb756$var$Geohash.adjacent($90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 's'), 'e'),
-            's': $90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 's'),
-            'sw': $90ee7c08a8dfb756$var$Geohash.adjacent($90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 's'), 'w'),
-            'w': $90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 'w'),
-            'nw': $90ee7c08a8dfb756$var$Geohash.adjacent($90ee7c08a8dfb756$var$Geohash.adjacent(geohash, 'n'), 'w')
+            'n': $be7a76b3305d5aac$var$Geohash.adjacent(geohash, 'n'),
+            'ne': $be7a76b3305d5aac$var$Geohash.adjacent($be7a76b3305d5aac$var$Geohash.adjacent(geohash, 'n'), 'e'),
+            'e': $be7a76b3305d5aac$var$Geohash.adjacent(geohash, 'e'),
+            'se': $be7a76b3305d5aac$var$Geohash.adjacent($be7a76b3305d5aac$var$Geohash.adjacent(geohash, 's'), 'e'),
+            's': $be7a76b3305d5aac$var$Geohash.adjacent(geohash, 's'),
+            'sw': $be7a76b3305d5aac$var$Geohash.adjacent($be7a76b3305d5aac$var$Geohash.adjacent(geohash, 's'), 'w'),
+            'w': $be7a76b3305d5aac$var$Geohash.adjacent(geohash, 'w'),
+            'nw': $be7a76b3305d5aac$var$Geohash.adjacent($be7a76b3305d5aac$var$Geohash.adjacent(geohash, 'n'), 'w')
         };
     }
 }
-var /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */ $90ee7c08a8dfb756$export$9099ad97b570f7c = $90ee7c08a8dfb756$var$Geohash;
+var /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */ $be7a76b3305d5aac$export$9099ad97b570f7c = $be7a76b3305d5aac$var$Geohash;
 
 
-var $6ca84bc2e35e6866$export$c57445924c23547b = /*#__PURE__*/ function(Component) {
+var $7ac4d4ec044faea2$export$c57445924c23547b = /*#__PURE__*/ function(Component) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($6ca84bc2e35e6866$export$c57445924c23547b, Component);
-    function $6ca84bc2e35e6866$export$c57445924c23547b(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $6ca84bc2e35e6866$export$c57445924c23547b);
+    $bca7673885229bfd$export$9099ad97b570f7c($7ac4d4ec044faea2$export$c57445924c23547b, Component);
+    function $7ac4d4ec044faea2$export$c57445924c23547b(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $7ac4d4ec044faea2$export$c57445924c23547b);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($6ca84bc2e35e6866$export$c57445924c23547b).call(this, params));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($7ac4d4ec044faea2$export$c57445924c23547b).call(this, params));
         //////////////////////////////////
         // parameters that can be passed in
         // field in the data which is the geo_point type
-        _this.geoHashAggregation = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "geoHashAggregation", "geohash");
-        _this.calculateCentre = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "calculateCentre", function() {
-            return $d9a3a55214484321$export$9b1f0f098143fb9;
+        _this.geoHashAggregation = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "geoHashAggregation", "geohash");
+        _this.calculateCentre = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "calculateCentre", function() {
+            return $2de4fa00a47777f3$export$9b1f0f098143fb9;
         });
-        _this.geoBoundingBoxFilterField = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "geoBoundingBoxFilterField", "location");
-        _this.zoomToPrecisionMap = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "zoomToPrecisionMap", {
+        _this.geoBoundingBoxFilterField = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "geoBoundingBoxFilterField", "location");
+        _this.zoomToPrecisionMap = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "zoomToPrecisionMap", {
             0: 1,
             3: 2,
             5: 3,
@@ -3889,7 +3889,7 @@ var $6ca84bc2e35e6866$export$c57445924c23547b = /*#__PURE__*/ function(Component
         _this.currentBottomRight = false;
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($6ca84bc2e35e6866$export$c57445924c23547b, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($7ac4d4ec044faea2$export$c57445924c23547b, [
         {
             key: "synchronise",
             value: function synchronise() {
@@ -3903,7 +3903,7 @@ var $6ca84bc2e35e6866$export$c57445924c23547b = /*#__PURE__*/ function(Component
                     var agg = this.edge.result.aggregation(this.geoHashAggregation);
                     for(var i = 0; i < agg.buckets.length; i++){
                         var bucket = agg.buckets[i];
-                        var latlon = $90ee7c08a8dfb756$export$9099ad97b570f7c.decode(bucket.key);
+                        var latlon = $be7a76b3305d5aac$export$9099ad97b570f7c.decode(bucket.key);
                         latlon["count"] = bucket.doc_count;
                         this.locations.push(latlon);
                     }
@@ -3926,10 +3926,10 @@ var $6ca84bc2e35e6866$export$c57445924c23547b = /*#__PURE__*/ function(Component
                     bottom_right: bottom_right
                 })) return;
                 var nq = this.edge.cloneQuery();
-                nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.GeoBoundingBoxFilter({
+                nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.GeoBoundingBoxFilter({
                     field: this.geoBoundingBoxFilterField
                 }));
-                nq.addMust(new $1f5712c12abeeb70$export$8b446892c82de644.GeoBoundingBoxFilter({
+                nq.addMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.GeoBoundingBoxFilter({
                     field: this.geoBoundingBoxFilterField,
                     top_left: top_left,
                     bottom_right: bottom_right
@@ -3995,32 +3995,32 @@ var $6ca84bc2e35e6866$export$c57445924c23547b = /*#__PURE__*/ function(Component
             }
         }
     ]);
-    return $6ca84bc2e35e6866$export$c57445924c23547b;
-}($97ca9eea36c86bb4$export$ea71c44d9cb0d048);
+    return $7ac4d4ec044faea2$export$c57445924c23547b;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
 
 
 
 
 
-var $f1c53da3377f3130$export$3b99b33fd41e6e1b = 6371008.8;
-var $f1c53da3377f3130$export$6090225ba4bd5c27 = {
-    centimeters: $f1c53da3377f3130$export$3b99b33fd41e6e1b * 100,
-    centimetres: $f1c53da3377f3130$export$3b99b33fd41e6e1b * 100,
-    degrees: $f1c53da3377f3130$export$3b99b33fd41e6e1b / 111325,
-    feet: $f1c53da3377f3130$export$3b99b33fd41e6e1b * 3.28084,
-    inches: $f1c53da3377f3130$export$3b99b33fd41e6e1b * 39.37,
-    kilometers: $f1c53da3377f3130$export$3b99b33fd41e6e1b / 1000,
-    kilometres: $f1c53da3377f3130$export$3b99b33fd41e6e1b / 1000,
-    meters: $f1c53da3377f3130$export$3b99b33fd41e6e1b,
-    metres: $f1c53da3377f3130$export$3b99b33fd41e6e1b,
-    miles: $f1c53da3377f3130$export$3b99b33fd41e6e1b / 1609.344,
-    millimeters: $f1c53da3377f3130$export$3b99b33fd41e6e1b * 1000,
-    millimetres: $f1c53da3377f3130$export$3b99b33fd41e6e1b * 1000,
-    nauticalmiles: $f1c53da3377f3130$export$3b99b33fd41e6e1b / 1852,
+var $06fd7bba89ea2716$export$3b99b33fd41e6e1b = 6371008.8;
+var $06fd7bba89ea2716$export$6090225ba4bd5c27 = {
+    centimeters: $06fd7bba89ea2716$export$3b99b33fd41e6e1b * 100,
+    centimetres: $06fd7bba89ea2716$export$3b99b33fd41e6e1b * 100,
+    degrees: $06fd7bba89ea2716$export$3b99b33fd41e6e1b / 111325,
+    feet: $06fd7bba89ea2716$export$3b99b33fd41e6e1b * 3.28084,
+    inches: $06fd7bba89ea2716$export$3b99b33fd41e6e1b * 39.37,
+    kilometers: $06fd7bba89ea2716$export$3b99b33fd41e6e1b / 1000,
+    kilometres: $06fd7bba89ea2716$export$3b99b33fd41e6e1b / 1000,
+    meters: $06fd7bba89ea2716$export$3b99b33fd41e6e1b,
+    metres: $06fd7bba89ea2716$export$3b99b33fd41e6e1b,
+    miles: $06fd7bba89ea2716$export$3b99b33fd41e6e1b / 1609.344,
+    millimeters: $06fd7bba89ea2716$export$3b99b33fd41e6e1b * 1000,
+    millimetres: $06fd7bba89ea2716$export$3b99b33fd41e6e1b * 1000,
+    nauticalmiles: $06fd7bba89ea2716$export$3b99b33fd41e6e1b / 1852,
     radians: 1,
-    yards: $f1c53da3377f3130$export$3b99b33fd41e6e1b * 1.0936
+    yards: $06fd7bba89ea2716$export$3b99b33fd41e6e1b * 1.0936
 };
-var $f1c53da3377f3130$export$da3eb65231fe0ad8 = {
+var $06fd7bba89ea2716$export$da3eb65231fe0ad8 = {
     centimeters: 100,
     centimetres: 100,
     degrees: 1 / 111325,
@@ -4034,10 +4034,10 @@ var $f1c53da3377f3130$export$da3eb65231fe0ad8 = {
     millimeters: 1000,
     millimetres: 1000,
     nauticalmiles: 1 / 1852,
-    radians: 1 / $f1c53da3377f3130$export$3b99b33fd41e6e1b,
+    radians: 1 / $06fd7bba89ea2716$export$3b99b33fd41e6e1b,
     yards: 1.0936133
 };
-var $f1c53da3377f3130$export$fb8fc03e58e95277 = {
+var $06fd7bba89ea2716$export$fb8fc03e58e95277 = {
     acres: 0.000247105,
     centimeters: 10000,
     centimetres: 10000,
@@ -4053,7 +4053,7 @@ var $f1c53da3377f3130$export$fb8fc03e58e95277 = {
     millimetres: 1000000,
     yards: 1.195990046
 };
-function $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options) {
+function $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options) {
     if (options === void 0) options = {
     };
     var feat = {
@@ -4066,47 +4066,47 @@ function $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options) {
     feat.geometry = geom;
     return feat;
 }
-function $f1c53da3377f3130$export$6927473f28f5208a(type, coordinates, _options) {
+function $06fd7bba89ea2716$export$6927473f28f5208a(type, coordinates, _options) {
     if (_options === void 0) _options = {
     };
     switch(type){
         case "Point":
-            return $f1c53da3377f3130$export$8502864bca7c3201(coordinates).geometry;
+            return $06fd7bba89ea2716$export$8502864bca7c3201(coordinates).geometry;
         case "LineString":
-            return $f1c53da3377f3130$export$aca513e25ac14bc1(coordinates).geometry;
+            return $06fd7bba89ea2716$export$aca513e25ac14bc1(coordinates).geometry;
         case "Polygon":
-            return $f1c53da3377f3130$export$c9f721cf0a01d8ec(coordinates).geometry;
+            return $06fd7bba89ea2716$export$c9f721cf0a01d8ec(coordinates).geometry;
         case "MultiPoint":
-            return $f1c53da3377f3130$export$309bf52fb89f3663(coordinates).geometry;
+            return $06fd7bba89ea2716$export$309bf52fb89f3663(coordinates).geometry;
         case "MultiLineString":
-            return $f1c53da3377f3130$export$e599217661506027(coordinates).geometry;
+            return $06fd7bba89ea2716$export$e599217661506027(coordinates).geometry;
         case "MultiPolygon":
-            return $f1c53da3377f3130$export$4ecb90d6abcf292a(coordinates).geometry;
+            return $06fd7bba89ea2716$export$4ecb90d6abcf292a(coordinates).geometry;
         default:
             throw new Error(type + " is invalid");
     }
 }
-function $f1c53da3377f3130$export$8502864bca7c3201(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$8502864bca7c3201(coordinates, properties, options) {
     if (options === void 0) options = {
     };
     if (!coordinates) throw new Error("coordinates is required");
     if (!Array.isArray(coordinates)) throw new Error("coordinates must be an Array");
     if (coordinates.length < 2) throw new Error("coordinates must be at least 2 numbers long");
-    if (!$f1c53da3377f3130$export$1b423f7fa395bc1f(coordinates[0]) || !$f1c53da3377f3130$export$1b423f7fa395bc1f(coordinates[1])) throw new Error("coordinates must contain numbers");
+    if (!$06fd7bba89ea2716$export$1b423f7fa395bc1f(coordinates[0]) || !$06fd7bba89ea2716$export$1b423f7fa395bc1f(coordinates[1])) throw new Error("coordinates must contain numbers");
     var geom = {
         type: "Point",
         coordinates: coordinates
     };
-    return $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options);
+    return $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options);
 }
-function $f1c53da3377f3130$export$176cb2c78829af0(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$176cb2c78829af0(coordinates, properties, options) {
     if (options === void 0) options = {
     };
-    return $f1c53da3377f3130$export$7c422acbc10e74d2(coordinates.map(function(coords) {
-        return $f1c53da3377f3130$export$8502864bca7c3201(coords, properties);
+    return $06fd7bba89ea2716$export$7c422acbc10e74d2(coordinates.map(function(coords) {
+        return $06fd7bba89ea2716$export$8502864bca7c3201(coords, properties);
     }), options);
 }
-function $f1c53da3377f3130$export$c9f721cf0a01d8ec(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$c9f721cf0a01d8ec(coordinates, properties, options) {
     if (options === void 0) options = {
     };
     for(var _i = 0, coordinates_1 = coordinates; _i < coordinates_1.length; _i++){
@@ -4121,16 +4121,16 @@ function $f1c53da3377f3130$export$c9f721cf0a01d8ec(coordinates, properties, opti
         type: "Polygon",
         coordinates: coordinates
     };
-    return $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options);
+    return $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options);
 }
-function $f1c53da3377f3130$export$38859cbb8a8596d1(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$38859cbb8a8596d1(coordinates, properties, options) {
     if (options === void 0) options = {
     };
-    return $f1c53da3377f3130$export$7c422acbc10e74d2(coordinates.map(function(coords) {
-        return $f1c53da3377f3130$export$c9f721cf0a01d8ec(coords, properties);
+    return $06fd7bba89ea2716$export$7c422acbc10e74d2(coordinates.map(function(coords) {
+        return $06fd7bba89ea2716$export$c9f721cf0a01d8ec(coords, properties);
     }), options);
 }
-function $f1c53da3377f3130$export$aca513e25ac14bc1(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$aca513e25ac14bc1(coordinates, properties, options) {
     if (options === void 0) options = {
     };
     if (coordinates.length < 2) throw new Error("coordinates must be an array of two or more positions");
@@ -4138,16 +4138,16 @@ function $f1c53da3377f3130$export$aca513e25ac14bc1(coordinates, properties, opti
         type: "LineString",
         coordinates: coordinates
     };
-    return $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options);
+    return $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options);
 }
-function $f1c53da3377f3130$export$b73fd69eb064be2e(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$b73fd69eb064be2e(coordinates, properties, options) {
     if (options === void 0) options = {
     };
-    return $f1c53da3377f3130$export$7c422acbc10e74d2(coordinates.map(function(coords) {
-        return $f1c53da3377f3130$export$aca513e25ac14bc1(coords, properties);
+    return $06fd7bba89ea2716$export$7c422acbc10e74d2(coordinates.map(function(coords) {
+        return $06fd7bba89ea2716$export$aca513e25ac14bc1(coords, properties);
     }), options);
 }
-function $f1c53da3377f3130$export$7c422acbc10e74d2(features, options) {
+function $06fd7bba89ea2716$export$7c422acbc10e74d2(features, options) {
     if (options === void 0) options = {
     };
     var fc = {
@@ -4158,107 +4158,107 @@ function $f1c53da3377f3130$export$7c422acbc10e74d2(features, options) {
     fc.features = features;
     return fc;
 }
-function $f1c53da3377f3130$export$e599217661506027(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$e599217661506027(coordinates, properties, options) {
     if (options === void 0) options = {
     };
     var geom = {
         type: "MultiLineString",
         coordinates: coordinates
     };
-    return $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options);
+    return $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options);
 }
-function $f1c53da3377f3130$export$309bf52fb89f3663(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$309bf52fb89f3663(coordinates, properties, options) {
     if (options === void 0) options = {
     };
     var geom = {
         type: "MultiPoint",
         coordinates: coordinates
     };
-    return $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options);
+    return $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options);
 }
-function $f1c53da3377f3130$export$4ecb90d6abcf292a(coordinates, properties, options) {
+function $06fd7bba89ea2716$export$4ecb90d6abcf292a(coordinates, properties, options) {
     if (options === void 0) options = {
     };
     var geom = {
         type: "MultiPolygon",
         coordinates: coordinates
     };
-    return $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options);
+    return $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options);
 }
-function $f1c53da3377f3130$export$9666a975c039faf3(geometries, properties, options) {
+function $06fd7bba89ea2716$export$9666a975c039faf3(geometries, properties, options) {
     if (options === void 0) options = {
     };
     var geom = {
         type: "GeometryCollection",
         geometries: geometries
     };
-    return $f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties, options);
+    return $06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties, options);
 }
-function $f1c53da3377f3130$export$f9488fbfb886385d(num, precision) {
+function $06fd7bba89ea2716$export$f9488fbfb886385d(num, precision) {
     if (precision === void 0) precision = 0;
     if (precision && !(precision >= 0)) throw new Error("precision must be a positive number");
     var multiplier = Math.pow(10, precision || 0);
     return Math.round(num * multiplier) / multiplier;
 }
-function $f1c53da3377f3130$export$a7371587dd3e0f79(radians, units) {
+function $06fd7bba89ea2716$export$a7371587dd3e0f79(radians, units) {
     if (units === void 0) units = "kilometers";
-    var factor = $f1c53da3377f3130$export$6090225ba4bd5c27[units];
+    var factor = $06fd7bba89ea2716$export$6090225ba4bd5c27[units];
     if (!factor) throw new Error(units + " units is invalid");
     return radians * factor;
 }
-function $f1c53da3377f3130$export$6c073b3d621feb4b(distance, units) {
+function $06fd7bba89ea2716$export$6c073b3d621feb4b(distance, units) {
     if (units === void 0) units = "kilometers";
-    var factor = $f1c53da3377f3130$export$6090225ba4bd5c27[units];
+    var factor = $06fd7bba89ea2716$export$6090225ba4bd5c27[units];
     if (!factor) throw new Error(units + " units is invalid");
     return distance / factor;
 }
-function $f1c53da3377f3130$export$4945b7cf3cb41899(distance, units) {
-    return $f1c53da3377f3130$export$2bc59cfe0926807d($f1c53da3377f3130$export$6c073b3d621feb4b(distance, units));
+function $06fd7bba89ea2716$export$4945b7cf3cb41899(distance, units) {
+    return $06fd7bba89ea2716$export$2bc59cfe0926807d($06fd7bba89ea2716$export$6c073b3d621feb4b(distance, units));
 }
-function $f1c53da3377f3130$export$7ad1874be920d57b(bearing) {
+function $06fd7bba89ea2716$export$7ad1874be920d57b(bearing) {
     var angle = bearing % 360;
     if (angle < 0) angle += 360;
     return angle;
 }
-function $f1c53da3377f3130$export$2bc59cfe0926807d(radians) {
+function $06fd7bba89ea2716$export$2bc59cfe0926807d(radians) {
     var degrees = radians % (2 * Math.PI);
     return degrees * 180 / Math.PI;
 }
-function $f1c53da3377f3130$export$3df9f87a6fcd617d(degrees) {
+function $06fd7bba89ea2716$export$3df9f87a6fcd617d(degrees) {
     var radians = degrees % 360;
     return radians * Math.PI / 180;
 }
-function $f1c53da3377f3130$export$89c2cc3b6c94cff3(length, originalUnit, finalUnit) {
+function $06fd7bba89ea2716$export$89c2cc3b6c94cff3(length, originalUnit, finalUnit) {
     if (originalUnit === void 0) originalUnit = "kilometers";
     if (finalUnit === void 0) finalUnit = "kilometers";
     if (!(length >= 0)) throw new Error("length must be a positive number");
-    return $f1c53da3377f3130$export$a7371587dd3e0f79($f1c53da3377f3130$export$6c073b3d621feb4b(length, originalUnit), finalUnit);
+    return $06fd7bba89ea2716$export$a7371587dd3e0f79($06fd7bba89ea2716$export$6c073b3d621feb4b(length, originalUnit), finalUnit);
 }
-function $f1c53da3377f3130$export$a6884fee1809ec64(area, originalUnit, finalUnit) {
+function $06fd7bba89ea2716$export$a6884fee1809ec64(area, originalUnit, finalUnit) {
     if (originalUnit === void 0) originalUnit = "meters";
     if (finalUnit === void 0) finalUnit = "kilometers";
     if (!(area >= 0)) throw new Error("area must be a positive number");
-    var startFactor = $f1c53da3377f3130$export$fb8fc03e58e95277[originalUnit];
+    var startFactor = $06fd7bba89ea2716$export$fb8fc03e58e95277[originalUnit];
     if (!startFactor) throw new Error("invalid original units");
-    var finalFactor = $f1c53da3377f3130$export$fb8fc03e58e95277[finalUnit];
+    var finalFactor = $06fd7bba89ea2716$export$fb8fc03e58e95277[finalUnit];
     if (!finalFactor) throw new Error("invalid final units");
     return area / startFactor * finalFactor;
 }
-function $f1c53da3377f3130$export$1b423f7fa395bc1f(num) {
+function $06fd7bba89ea2716$export$1b423f7fa395bc1f(num) {
     return !isNaN(num) && num !== null && !Array.isArray(num);
 }
-function $f1c53da3377f3130$export$9ee30c9ec6e8e509(input) {
+function $06fd7bba89ea2716$export$9ee30c9ec6e8e509(input) {
     return !!input && input.constructor === Object;
 }
-function $f1c53da3377f3130$export$62aae204e048857f(bbox) {
+function $06fd7bba89ea2716$export$62aae204e048857f(bbox) {
     if (!bbox) throw new Error("bbox is required");
     if (!Array.isArray(bbox)) throw new Error("bbox must be an Array");
     if (bbox.length !== 4 && bbox.length !== 6) throw new Error("bbox must be an Array of 4 or 6 numbers");
     bbox.forEach(function(num) {
-        if (!$f1c53da3377f3130$export$1b423f7fa395bc1f(num)) throw new Error("bbox must only contain numbers");
+        if (!$06fd7bba89ea2716$export$1b423f7fa395bc1f(num)) throw new Error("bbox must only contain numbers");
     });
 }
-function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
+function $06fd7bba89ea2716$export$f4624eca17ac14c9(id) {
     if (!id) throw new Error("id is required");
     if ([
         "string",
@@ -4278,13 +4278,13 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
  * var line = turf.lineString([[-74, 40], [-78, 42], [-82, 35]], {color: 'red'});
  *
  * var lineCloned = turf.clone(line);
- */ function $de1dbe698a1ef99a$var$clone(geojson) {
+ */ function $3cfd6d70d7301277$var$clone(geojson) {
     if (!geojson) throw new Error("geojson is required");
     switch(geojson.type){
         case "Feature":
-            return $de1dbe698a1ef99a$var$cloneFeature(geojson);
+            return $3cfd6d70d7301277$var$cloneFeature(geojson);
         case "FeatureCollection":
-            return $de1dbe698a1ef99a$var$cloneFeatureCollection(geojson);
+            return $3cfd6d70d7301277$var$cloneFeatureCollection(geojson);
         case "Point":
         case "LineString":
         case "Polygon":
@@ -4292,7 +4292,7 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
         case "MultiLineString":
         case "MultiPolygon":
         case "GeometryCollection":
-            return $de1dbe698a1ef99a$var$cloneGeometry(geojson);
+            return $3cfd6d70d7301277$var$cloneGeometry(geojson);
         default:
             throw new Error("unknown GeoJSON type");
     }
@@ -4303,7 +4303,7 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
  * @private
  * @param {Feature<any>} geojson GeoJSON Feature
  * @returns {Feature<any>} cloned Feature
- */ function $de1dbe698a1ef99a$var$cloneFeature(geojson) {
+ */ function $3cfd6d70d7301277$var$cloneFeature(geojson) {
     var cloned = {
         type: "Feature"
     };
@@ -4319,8 +4319,8 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
         }
     });
     // Add properties & geometry last
-    cloned.properties = $de1dbe698a1ef99a$var$cloneProperties(geojson.properties);
-    cloned.geometry = $de1dbe698a1ef99a$var$cloneGeometry(geojson.geometry);
+    cloned.properties = $3cfd6d70d7301277$var$cloneProperties(geojson.properties);
+    cloned.geometry = $3cfd6d70d7301277$var$cloneGeometry(geojson.geometry);
     return cloned;
 }
 /**
@@ -4329,7 +4329,7 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
  * @private
  * @param {Object} properties GeoJSON Properties
  * @returns {Object} cloned Properties
- */ function $de1dbe698a1ef99a$var$cloneProperties(properties) {
+ */ function $3cfd6d70d7301277$var$cloneProperties(properties) {
     var cloned = {
     };
     if (!properties) return cloned;
@@ -4343,7 +4343,7 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
                 return item;
             });
             else // handle generic Object
-            cloned[key] = $de1dbe698a1ef99a$var$cloneProperties(value);
+            cloned[key] = $3cfd6d70d7301277$var$cloneProperties(value);
         } else cloned[key] = value;
     });
     return cloned;
@@ -4354,7 +4354,7 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
  * @private
  * @param {FeatureCollection<any>} geojson GeoJSON Feature Collection
  * @returns {FeatureCollection<any>} cloned Feature Collection
- */ function $de1dbe698a1ef99a$var$cloneFeatureCollection(geojson) {
+ */ function $3cfd6d70d7301277$var$cloneFeatureCollection(geojson) {
     var cloned = {
         type: "FeatureCollection"
     };
@@ -4370,7 +4370,7 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
     });
     // Add features
     cloned.features = geojson.features.map(function(feature) {
-        return $de1dbe698a1ef99a$var$cloneFeature(feature);
+        return $3cfd6d70d7301277$var$cloneFeature(feature);
     });
     return cloned;
 }
@@ -4380,18 +4380,18 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
  * @private
  * @param {Geometry<any>} geometry GeoJSON Geometry
  * @returns {Geometry<any>} cloned Geometry
- */ function $de1dbe698a1ef99a$var$cloneGeometry(geometry) {
+ */ function $3cfd6d70d7301277$var$cloneGeometry(geometry) {
     var geom = {
         type: geometry.type
     };
     if (geometry.bbox) geom.bbox = geometry.bbox;
     if (geometry.type === "GeometryCollection") {
         geom.geometries = geometry.geometries.map(function(g) {
-            return $de1dbe698a1ef99a$var$cloneGeometry(g);
+            return $3cfd6d70d7301277$var$cloneGeometry(g);
         });
         return geom;
     }
-    geom.coordinates = $de1dbe698a1ef99a$var$deepSlice(geometry.coordinates);
+    geom.coordinates = $3cfd6d70d7301277$var$deepSlice(geometry.coordinates);
     return geom;
 }
 /**
@@ -4400,14 +4400,14 @@ function $f1c53da3377f3130$export$f4624eca17ac14c9(id) {
  * @private
  * @param {Coordinates} coords Coordinates
  * @returns {Coordinates} all coordinates sliced
- */ function $de1dbe698a1ef99a$var$deepSlice(coords) {
+ */ function $3cfd6d70d7301277$var$deepSlice(coords) {
     var cloned = coords;
     if (typeof cloned[0] !== "object") return cloned.slice();
     return cloned.map(function(coord) {
-        return $de1dbe698a1ef99a$var$deepSlice(coord);
+        return $3cfd6d70d7301277$var$deepSlice(coord);
     });
 }
-var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
+var $3cfd6d70d7301277$export$9099ad97b570f7c = $3cfd6d70d7301277$var$clone;
 
 
 
@@ -4441,7 +4441,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=multiFeatureIndex
  *   //=geometryIndex
  * });
- */ function $555ced313e66658a$export$cccf52902b81b0d9(geojson, callback, excludeWrapCoord) {
+ */ function $5c76aa7c2c53dcdc$export$cccf52902b81b0d9(geojson, callback, excludeWrapCoord) {
     // Handles null Geometry -- Skips this GeoJSON
     if (geojson === null) return;
     var j, k, l, geometry, stopG, coords, geometryMaybeCollection, wrapShrink = 0, coordIndex = 0, isGeometryCollection, type = geojson.type, isFeatureCollection = type === "FeatureCollection", isFeature = type === "Feature", stop = isFeatureCollection ? geojson.features.length : 1;
@@ -4513,7 +4513,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
                     }
                     break;
                 case "GeometryCollection":
-                    for(j = 0; j < geometry.geometries.length; j++)if ($555ced313e66658a$export$cccf52902b81b0d9(geometry.geometries[j], callback, excludeWrapCoord) === false) return false;
+                    for(j = 0; j < geometry.geometries.length; j++)if ($5c76aa7c2c53dcdc$export$cccf52902b81b0d9(geometry.geometries[j], callback, excludeWrapCoord) === false) return false;
                     break;
                 default:
                     throw new Error("Unknown Geometry Type");
@@ -4568,9 +4568,9 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=geometryIndex
  *   return currentCoord;
  * });
- */ function $555ced313e66658a$export$89a62b3a9bc53ead(geojson, callback, initialValue, excludeWrapCoord) {
+ */ function $5c76aa7c2c53dcdc$export$89a62b3a9bc53ead(geojson, callback, initialValue, excludeWrapCoord) {
     var previousValue = initialValue;
-    $555ced313e66658a$export$cccf52902b81b0d9(geojson, function(currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
+    $5c76aa7c2c53dcdc$export$cccf52902b81b0d9(geojson, function(currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex) {
         if (coordIndex === 0 && initialValue === undefined) previousValue = currentCoord;
         else previousValue = callback(previousValue, currentCoord, coordIndex, featureIndex, multiFeatureIndex, geometryIndex);
     }, excludeWrapCoord);
@@ -4599,7 +4599,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=currentProperties
  *   //=featureIndex
  * });
- */ function $555ced313e66658a$export$7e1319df03985d3a(geojson, callback) {
+ */ function $5c76aa7c2c53dcdc$export$7e1319df03985d3a(geojson, callback) {
     var i;
     switch(geojson.type){
         case "FeatureCollection":
@@ -4653,9 +4653,9 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=featureIndex
  *   return currentProperties
  * });
- */ function $555ced313e66658a$export$6ea47a08cbf96668(geojson, callback, initialValue) {
+ */ function $5c76aa7c2c53dcdc$export$6ea47a08cbf96668(geojson, callback, initialValue) {
     var previousValue = initialValue;
-    $555ced313e66658a$export$7e1319df03985d3a(geojson, function(currentProperties, featureIndex) {
+    $5c76aa7c2c53dcdc$export$7e1319df03985d3a(geojson, function(currentProperties, featureIndex) {
         if (featureIndex === 0 && initialValue === undefined) previousValue = currentProperties;
         else previousValue = callback(previousValue, currentProperties, featureIndex);
     });
@@ -4685,7 +4685,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=currentFeature
  *   //=featureIndex
  * });
- */ function $555ced313e66658a$export$4ec429a16a391dd0(geojson, callback) {
+ */ function $5c76aa7c2c53dcdc$export$4ec429a16a391dd0(geojson, callback) {
     if (geojson.type === "Feature") callback(geojson, 0);
     else if (geojson.type === "FeatureCollection") for(var i = 0; i < geojson.features.length; i++){
         if (callback(geojson.features[i], i) === false) break;
@@ -4730,9 +4730,9 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=featureIndex
  *   return currentFeature
  * });
- */ function $555ced313e66658a$export$aedc0a2449029016(geojson, callback, initialValue) {
+ */ function $5c76aa7c2c53dcdc$export$aedc0a2449029016(geojson, callback, initialValue) {
     var previousValue = initialValue;
-    $555ced313e66658a$export$4ec429a16a391dd0(geojson, function(currentFeature, featureIndex) {
+    $5c76aa7c2c53dcdc$export$4ec429a16a391dd0(geojson, function(currentFeature, featureIndex) {
         if (featureIndex === 0 && initialValue === undefined) previousValue = currentFeature;
         else previousValue = callback(previousValue, currentFeature, featureIndex);
     });
@@ -4752,9 +4752,9 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *
  * var coords = turf.coordAll(features);
  * //= [[26, 37], [36, 53]]
- */ function $555ced313e66658a$export$5a9cfbedf736c6fa(geojson) {
+ */ function $5c76aa7c2c53dcdc$export$5a9cfbedf736c6fa(geojson) {
     var coords = [];
-    $555ced313e66658a$export$cccf52902b81b0d9(geojson, function(coord) {
+    $5c76aa7c2c53dcdc$export$cccf52902b81b0d9(geojson, function(coord) {
         coords.push(coord);
     });
     return coords;
@@ -4788,7 +4788,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=featureBBox
  *   //=featureId
  * });
- */ function $555ced313e66658a$export$110a902f786846fe(geojson, callback) {
+ */ function $5c76aa7c2c53dcdc$export$110a902f786846fe(geojson, callback) {
     var i, j, g, geometry, stopG, geometryMaybeCollection, isGeometryCollection, featureProperties, featureBBox, featureId, featureIndex = 0, isFeatureCollection = geojson.type === "FeatureCollection", isFeature = geojson.type === "Feature", stop = isFeatureCollection ? geojson.features.length : 1;
     // This logic may look a little weird. The reason why it is that way
     // is because it's trying to be fast. GeoJSON supports multiple kinds
@@ -4884,9 +4884,9 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=featureId
  *   return currentGeometry
  * });
- */ function $555ced313e66658a$export$f844129661727632(geojson, callback, initialValue) {
+ */ function $5c76aa7c2c53dcdc$export$f844129661727632(geojson, callback, initialValue) {
     var previousValue = initialValue;
-    $555ced313e66658a$export$110a902f786846fe(geojson, function(currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
+    $5c76aa7c2c53dcdc$export$110a902f786846fe(geojson, function(currentGeometry, featureIndex, featureProperties, featureBBox, featureId) {
         if (featureIndex === 0 && initialValue === undefined) previousValue = currentGeometry;
         else previousValue = callback(previousValue, currentGeometry, featureIndex, featureProperties, featureBBox, featureId);
     });
@@ -4917,8 +4917,8 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=featureIndex
  *   //=multiFeatureIndex
  * });
- */ function $555ced313e66658a$export$72bcd18d498276a5(geojson, callback) {
-    $555ced313e66658a$export$110a902f786846fe(geojson, function(geometry, featureIndex, properties, bbox, id) {
+ */ function $5c76aa7c2c53dcdc$export$72bcd18d498276a5(geojson, callback) {
+    $5c76aa7c2c53dcdc$export$110a902f786846fe(geojson, function(geometry, featureIndex, properties, bbox, id) {
         // Callback for single geometry
         var type = geometry === null ? null : geometry.type;
         switch(type){
@@ -4926,7 +4926,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
             case "Point":
             case "LineString":
             case "Polygon":
-                if (callback($f1c53da3377f3130$export$afb26b2da2b9ec90(geometry, properties, {
+                if (callback($06fd7bba89ea2716$export$afb26b2da2b9ec90(geometry, properties, {
                     bbox: bbox,
                     id: id
                 }), featureIndex, 0) === false) return false;
@@ -4951,7 +4951,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
                 type: geomType,
                 coordinates: coordinate
             };
-            if (callback($f1c53da3377f3130$export$afb26b2da2b9ec90(geom, properties), featureIndex, multiFeatureIndex) === false) return false;
+            if (callback($06fd7bba89ea2716$export$afb26b2da2b9ec90(geom, properties), featureIndex, multiFeatureIndex) === false) return false;
         }
     });
 }
@@ -4996,9 +4996,9 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=multiFeatureIndex
  *   return currentFeature
  * });
- */ function $555ced313e66658a$export$ae6c13ef556a8a6d(geojson, callback, initialValue) {
+ */ function $5c76aa7c2c53dcdc$export$ae6c13ef556a8a6d(geojson, callback, initialValue) {
     var previousValue = initialValue;
-    $555ced313e66658a$export$72bcd18d498276a5(geojson, function(currentFeature, featureIndex, multiFeatureIndex) {
+    $5c76aa7c2c53dcdc$export$72bcd18d498276a5(geojson, function(currentFeature, featureIndex, multiFeatureIndex) {
         if (featureIndex === 0 && multiFeatureIndex === 0 && initialValue === undefined) previousValue = currentFeature;
         else previousValue = callback(previousValue, currentFeature, featureIndex, multiFeatureIndex);
     });
@@ -5038,8 +5038,8 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  * turf.segmentEach(polygon, function () {
  *     total++;
  * });
- */ function $555ced313e66658a$export$3116792cf8372e55(geojson, callback) {
-    $555ced313e66658a$export$72bcd18d498276a5(geojson, function(feature, featureIndex, multiFeatureIndex) {
+ */ function $5c76aa7c2c53dcdc$export$3116792cf8372e55(geojson, callback) {
+    $5c76aa7c2c53dcdc$export$72bcd18d498276a5(geojson, function(feature, featureIndex, multiFeatureIndex) {
         var segmentIndex = 0;
         // Exclude null Geometries
         if (!feature.geometry) return;
@@ -5051,7 +5051,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
         var previousFeatureIndex = 0;
         var previousMultiIndex = 0;
         var prevGeomIndex = 0;
-        if ($555ced313e66658a$export$cccf52902b81b0d9(feature, function(currentCoord, coordIndex, featureIndexCoord, multiPartIndexCoord, geometryIndex) {
+        if ($5c76aa7c2c53dcdc$export$cccf52902b81b0d9(feature, function(currentCoord, coordIndex, featureIndexCoord, multiPartIndexCoord, geometryIndex) {
             // Simulating a meta.coordReduce() since `reduce` operations cannot be stopped by returning `false`
             if (previousCoords === undefined || featureIndex > previousFeatureIndex || multiPartIndexCoord > previousMultiIndex || geometryIndex > prevGeomIndex) {
                 previousCoords = currentCoord;
@@ -5061,7 +5061,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
                 segmentIndex = 0;
                 return;
             }
-            var currentSegment = $f1c53da3377f3130$export$aca513e25ac14bc1([
+            var currentSegment = $06fd7bba89ea2716$export$aca513e25ac14bc1([
                 previousCoords,
                 currentCoord
             ], feature.properties);
@@ -5121,10 +5121,10 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *     previousValue++;
  *     return previousValue;
  * }, initialValue);
- */ function $555ced313e66658a$export$6811769a60e09409(geojson, callback, initialValue) {
+ */ function $5c76aa7c2c53dcdc$export$6811769a60e09409(geojson, callback, initialValue) {
     var previousValue = initialValue;
     var started = false;
-    $555ced313e66658a$export$3116792cf8372e55(geojson, function(currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
+    $5c76aa7c2c53dcdc$export$3116792cf8372e55(geojson, function(currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex) {
         if (started === false && initialValue === undefined) previousValue = currentSegment;
         else previousValue = callback(previousValue, currentSegment, featureIndex, multiFeatureIndex, geometryIndex, segmentIndex);
         started = true;
@@ -5158,10 +5158,10 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=multiFeatureIndex
  *   //=geometryIndex
  * });
- */ function $555ced313e66658a$export$52c668f16718d7ce(geojson, callback) {
+ */ function $5c76aa7c2c53dcdc$export$52c668f16718d7ce(geojson, callback) {
     // validation
     if (!geojson) throw new Error("geojson is required");
-    $555ced313e66658a$export$72bcd18d498276a5(geojson, function(feature, featureIndex, multiFeatureIndex) {
+    $5c76aa7c2c53dcdc$export$72bcd18d498276a5(geojson, function(feature, featureIndex, multiFeatureIndex) {
         if (feature.geometry === null) return;
         var type = feature.geometry.type;
         var coords = feature.geometry.coordinates;
@@ -5171,7 +5171,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
                 break;
             case "Polygon":
                 for(var geometryIndex = 0; geometryIndex < coords.length; geometryIndex++){
-                    if (callback($f1c53da3377f3130$export$aca513e25ac14bc1(coords[geometryIndex], feature.properties), featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
+                    if (callback($06fd7bba89ea2716$export$aca513e25ac14bc1(coords[geometryIndex], feature.properties), featureIndex, multiFeatureIndex, geometryIndex) === false) return false;
                 }
                 break;
         }
@@ -5220,9 +5220,9 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  *   //=geometryIndex
  *   return currentLine
  * });
- */ function $555ced313e66658a$export$319a340e9b60833a(geojson, callback, initialValue) {
+ */ function $5c76aa7c2c53dcdc$export$319a340e9b60833a(geojson, callback, initialValue) {
     var previousValue = initialValue;
-    $555ced313e66658a$export$52c668f16718d7ce(geojson, function(currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
+    $5c76aa7c2c53dcdc$export$52c668f16718d7ce(geojson, function(currentLine, featureIndex, multiFeatureIndex, geometryIndex) {
         if (featureIndex === 0 && initialValue === undefined) previousValue = currentLine;
         else previousValue = callback(previousValue, currentLine, featureIndex, multiFeatureIndex, geometryIndex);
     });
@@ -5261,11 +5261,11 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  * // Last Segment of Last Multi Feature
  * turf.findSegment(multiLine, {multiFeatureIndex: -1, segmentIndex: -1});
  * // => Feature<LineString<[[-50, -30], [-30, -40]]>>
- */ function $555ced313e66658a$export$fbd55df10107631a(geojson, options) {
+ */ function $5c76aa7c2c53dcdc$export$fbd55df10107631a(geojson, options) {
     // Optional Parameters
     options = options || {
     };
-    if (!$f1c53da3377f3130$export$9ee30c9ec6e8e509(options)) throw new Error("options is invalid");
+    if (!$06fd7bba89ea2716$export$9ee30c9ec6e8e509(options)) throw new Error("options is invalid");
     var featureIndex = options.featureIndex || 0;
     var multiFeatureIndex = options.multiFeatureIndex || 0;
     var geometryIndex = options.geometryIndex || 0;
@@ -5304,21 +5304,21 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
             return null;
         case "LineString":
             if (segmentIndex < 0) segmentIndex = coords.length + segmentIndex - 1;
-            return $f1c53da3377f3130$export$aca513e25ac14bc1([
+            return $06fd7bba89ea2716$export$aca513e25ac14bc1([
                 coords[segmentIndex],
                 coords[segmentIndex + 1]
             ], properties, options);
         case "Polygon":
             if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
             if (segmentIndex < 0) segmentIndex = coords[geometryIndex].length + segmentIndex - 1;
-            return $f1c53da3377f3130$export$aca513e25ac14bc1([
+            return $06fd7bba89ea2716$export$aca513e25ac14bc1([
                 coords[geometryIndex][segmentIndex],
                 coords[geometryIndex][segmentIndex + 1], 
             ], properties, options);
         case "MultiLineString":
             if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
             if (segmentIndex < 0) segmentIndex = coords[multiFeatureIndex].length + segmentIndex - 1;
-            return $f1c53da3377f3130$export$aca513e25ac14bc1([
+            return $06fd7bba89ea2716$export$aca513e25ac14bc1([
                 coords[multiFeatureIndex][segmentIndex],
                 coords[multiFeatureIndex][segmentIndex + 1], 
             ], properties, options);
@@ -5326,7 +5326,7 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
             if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
             if (geometryIndex < 0) geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
             if (segmentIndex < 0) segmentIndex = coords[multiFeatureIndex][geometryIndex].length - segmentIndex - 1;
-            return $f1c53da3377f3130$export$aca513e25ac14bc1([
+            return $06fd7bba89ea2716$export$aca513e25ac14bc1([
                 coords[multiFeatureIndex][geometryIndex][segmentIndex],
                 coords[multiFeatureIndex][geometryIndex][segmentIndex + 1], 
             ], properties, options);
@@ -5365,11 +5365,11 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
  * // Last Segment of last Multi-Feature
  * turf.findPoint(multiLine, {multiFeatureIndex: -1, coordIndex: -1});
  * // => Feature<Point<[-30, -40]>>
- */ function $555ced313e66658a$export$6416d7a33c28eb60(geojson, options) {
+ */ function $5c76aa7c2c53dcdc$export$6416d7a33c28eb60(geojson, options) {
     // Optional Parameters
     options = options || {
     };
-    if (!$f1c53da3377f3130$export$9ee30c9ec6e8e509(options)) throw new Error("options is invalid");
+    if (!$06fd7bba89ea2716$export$9ee30c9ec6e8e509(options)) throw new Error("options is invalid");
     var featureIndex = options.featureIndex || 0;
     var multiFeatureIndex = options.multiFeatureIndex || 0;
     var geometryIndex = options.geometryIndex || 0;
@@ -5404,36 +5404,36 @@ var $de1dbe698a1ef99a$export$9099ad97b570f7c = $de1dbe698a1ef99a$var$clone;
     var coords = geometry.coordinates;
     switch(geometry.type){
         case "Point":
-            return $f1c53da3377f3130$export$8502864bca7c3201(coords, properties, options);
+            return $06fd7bba89ea2716$export$8502864bca7c3201(coords, properties, options);
         case "MultiPoint":
             if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
-            return $f1c53da3377f3130$export$8502864bca7c3201(coords[multiFeatureIndex], properties, options);
+            return $06fd7bba89ea2716$export$8502864bca7c3201(coords[multiFeatureIndex], properties, options);
         case "LineString":
             if (coordIndex < 0) coordIndex = coords.length + coordIndex;
-            return $f1c53da3377f3130$export$8502864bca7c3201(coords[coordIndex], properties, options);
+            return $06fd7bba89ea2716$export$8502864bca7c3201(coords[coordIndex], properties, options);
         case "Polygon":
             if (geometryIndex < 0) geometryIndex = coords.length + geometryIndex;
             if (coordIndex < 0) coordIndex = coords[geometryIndex].length + coordIndex;
-            return $f1c53da3377f3130$export$8502864bca7c3201(coords[geometryIndex][coordIndex], properties, options);
+            return $06fd7bba89ea2716$export$8502864bca7c3201(coords[geometryIndex][coordIndex], properties, options);
         case "MultiLineString":
             if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
             if (coordIndex < 0) coordIndex = coords[multiFeatureIndex].length + coordIndex;
-            return $f1c53da3377f3130$export$8502864bca7c3201(coords[multiFeatureIndex][coordIndex], properties, options);
+            return $06fd7bba89ea2716$export$8502864bca7c3201(coords[multiFeatureIndex][coordIndex], properties, options);
         case "MultiPolygon":
             if (multiFeatureIndex < 0) multiFeatureIndex = coords.length + multiFeatureIndex;
             if (geometryIndex < 0) geometryIndex = coords[multiFeatureIndex].length + geometryIndex;
             if (coordIndex < 0) coordIndex = coords[multiFeatureIndex][geometryIndex].length - coordIndex;
-            return $f1c53da3377f3130$export$8502864bca7c3201(coords[multiFeatureIndex][geometryIndex][coordIndex], properties, options);
+            return $06fd7bba89ea2716$export$8502864bca7c3201(coords[multiFeatureIndex][geometryIndex][coordIndex], properties, options);
     }
     throw new Error("geojson is invalid");
 }
 
 
-var $4573a17051f4ecd4$exports = {};
+var $39679496f24848e9$exports = {};
 "use strict";
-var $7a62b681c6829044$exports = {};
+var $f4ce1c29f8386e91$exports = {};
 "use strict";
-$7a62b681c6829044$exports = {
+$f4ce1c29f8386e91$exports = {
     /**
   * Euclidean distance
   */ eudist: function eudist(v1, v2, sqrt) {
@@ -5462,11 +5462,11 @@ $7a62b681c6829044$exports = {
 };
 
 
-var $6fbf1da1bf5d3020$exports = {};
+var $7706bc4af0dbceec$exports = {};
 "use strict";
 
-var $6fbf1da1bf5d3020$var$eudist = $7a62b681c6829044$exports.eudist, $6fbf1da1bf5d3020$var$dist = $7a62b681c6829044$exports.dist;
-$6fbf1da1bf5d3020$exports = {
+var $7706bc4af0dbceec$var$eudist = $f4ce1c29f8386e91$exports.eudist, $7706bc4af0dbceec$var$dist = $f4ce1c29f8386e91$exports.dist;
+$7706bc4af0dbceec$exports = {
     kmrand: function kmrand(data, k) {
         var map = {
         }, ks = [], t = k << 2;
@@ -5486,7 +5486,7 @@ $6fbf1da1bf5d3020$exports = {
     /**
   * K-means++ initial centroid selection
   */ kmpp: function kmpp(data, k) {
-        var distance = data[0].length ? $6fbf1da1bf5d3020$var$eudist : $6fbf1da1bf5d3020$var$dist;
+        var distance = data[0].length ? $7706bc4af0dbceec$var$eudist : $7706bc4af0dbceec$var$dist;
         var ks = [], len = data.length;
         var multi = data[0].length > 0;
         var map = {
@@ -5552,18 +5552,18 @@ $6fbf1da1bf5d3020$exports = {
 };
 
 
-/*jshint esversion: 6 */ var $4573a17051f4ecd4$var$eudist = $7a62b681c6829044$exports.eudist, $4573a17051f4ecd4$var$mandist = $7a62b681c6829044$exports.mandist, $4573a17051f4ecd4$var$dist = $7a62b681c6829044$exports.dist, $4573a17051f4ecd4$var$kmrand = $6fbf1da1bf5d3020$exports.kmrand, $4573a17051f4ecd4$var$kmpp = $6fbf1da1bf5d3020$exports.kmpp;
-var $4573a17051f4ecd4$var$MAX = 10000;
+/*jshint esversion: 6 */ var $39679496f24848e9$var$eudist = $f4ce1c29f8386e91$exports.eudist, $39679496f24848e9$var$mandist = $f4ce1c29f8386e91$exports.mandist, $39679496f24848e9$var$dist = $f4ce1c29f8386e91$exports.dist, $39679496f24848e9$var$kmrand = $7706bc4af0dbceec$exports.kmrand, $39679496f24848e9$var$kmpp = $7706bc4af0dbceec$exports.kmpp;
+var $39679496f24848e9$var$MAX = 10000;
 /**
  * Inits an array with values
- */ function $4573a17051f4ecd4$var$init(len, val, v) {
+ */ function $39679496f24848e9$var$init(len, val, v) {
     v = v || [];
     for(var i = 0; i < len; i++)v[i] = val;
     return v;
 }
-function $4573a17051f4ecd4$var$skmeans(data, k, initial, maxit) {
+function $39679496f24848e9$var$skmeans(data, k, initial, maxit) {
     var ks = [], old = [], idxs = [], dist = [];
-    var conv = false, it = maxit || $4573a17051f4ecd4$var$MAX;
+    var conv = false, it = maxit || $39679496f24848e9$var$MAX;
     var len = data.length, vlen = data[0].length, multi = vlen > 0;
     var count = [];
     if (!initial) {
@@ -5576,18 +5576,18 @@ function $4573a17051f4ecd4$var$skmeans(data, k, initial, maxit) {
                 ks.push(data[idx]);
             }
         }
-    } else if (initial == "kmrand") ks = $4573a17051f4ecd4$var$kmrand(data, k);
-    else if (initial == "kmpp") ks = $4573a17051f4ecd4$var$kmpp(data, k);
+    } else if (initial == "kmrand") ks = $39679496f24848e9$var$kmrand(data, k);
+    else if (initial == "kmpp") ks = $39679496f24848e9$var$kmpp(data, k);
     else ks = initial;
     do {
         // Reset k count
-        $4573a17051f4ecd4$var$init(k, 0, count);
+        $39679496f24848e9$var$init(k, 0, count);
         // For each value in data, find the nearest centroid
         for(var i = 0; i < len; i++){
             var min = Infinity, _idx = 0;
             for(var j = 0; j < k; j++){
                 // Multidimensional or unidimensional
-                var dist = multi ? $4573a17051f4ecd4$var$eudist(data[i], ks[j]) : Math.abs(data[i] - ks[j]);
+                var dist = multi ? $39679496f24848e9$var$eudist(data[i], ks[j]) : Math.abs(data[i] - ks[j]);
                 if (dist <= min) {
                     min = dist;
                     _idx = j;
@@ -5600,7 +5600,7 @@ function $4573a17051f4ecd4$var$skmeans(data, k, initial, maxit) {
         var sum = [], old = [], dif = 0;
         for(var _j = 0; _j < k; _j++){
             // Multidimensional or unidimensional
-            sum[_j] = multi ? $4573a17051f4ecd4$var$init(vlen, 0, sum[_j]) : 0;
+            sum[_j] = multi ? $39679496f24848e9$var$init(vlen, 0, sum[_j]) : 0;
             old[_j] = ks[_j];
         }
         // If multidimensional
@@ -5649,13 +5649,13 @@ function $4573a17051f4ecd4$var$skmeans(data, k, initial, maxit) {
         conv = conv || (--it) <= 0;
     }while (!conv)
     return {
-        it: $4573a17051f4ecd4$var$MAX - it,
+        it: $39679496f24848e9$var$MAX - it,
         k: k,
         idxs: idxs,
         centroids: ks
     };
 }
-$4573a17051f4ecd4$exports = $4573a17051f4ecd4$var$skmeans;
+$39679496f24848e9$exports = $39679496f24848e9$var$skmeans;
 
 
 /**
@@ -5678,7 +5678,7 @@ $4573a17051f4ecd4$exports = $4573a17051f4ecd4$var$skmeans;
  *
  * //addToMap
  * var addToMap = [clustered];
- */ function $e771df19e4bdc08f$var$clustersKmeans(points, options) {
+ */ function $afde46b62500dbb0$var$clustersKmeans(points, options) {
     if (options === void 0) options = {
     };
     // Default Params
@@ -5688,13 +5688,13 @@ $4573a17051f4ecd4$exports = $4573a17051f4ecd4$var$skmeans;
     // fallbacks to count
     if (options.numberOfClusters > count) options.numberOfClusters = count;
     // Clone points to prevent any mutations (enabled by default)
-    if (options.mutate !== true) points = $de1dbe698a1ef99a$export$9099ad97b570f7c(points);
+    if (options.mutate !== true) points = $3cfd6d70d7301277$export$9099ad97b570f7c(points);
     // collect points coordinates
-    var data = $555ced313e66658a$export$5a9cfbedf736c6fa(points);
+    var data = $5c76aa7c2c53dcdc$export$5a9cfbedf736c6fa(points);
     // create seed to avoid skmeans to drift
     var initialCentroids = data.slice(0, options.numberOfClusters);
     // create skmeans clusters
-    var skmeansResult = (/*@__PURE__*/$parcel$interopDefault($4573a17051f4ecd4$exports))(data, options.numberOfClusters, initialCentroids);
+    var skmeansResult = (/*@__PURE__*/$parcel$interopDefault($39679496f24848e9$exports))(data, options.numberOfClusters, initialCentroids);
     // store centroids {clusterId: [number, number]}
     var centroids = {
     };
@@ -5702,19 +5702,19 @@ $4573a17051f4ecd4$exports = $4573a17051f4ecd4$var$skmeans;
         centroids[idx] = coord;
     });
     // add associated cluster number
-    $555ced313e66658a$export$4ec429a16a391dd0(points, function(point, index) {
+    $5c76aa7c2c53dcdc$export$4ec429a16a391dd0(points, function(point, index) {
         var clusterId = skmeansResult.idxs[index];
         point.properties.cluster = clusterId;
         point.properties.centroid = centroids[clusterId];
     });
     return points;
 }
-var $e771df19e4bdc08f$export$9099ad97b570f7c = $e771df19e4bdc08f$var$clustersKmeans;
+var $afde46b62500dbb0$export$9099ad97b570f7c = $afde46b62500dbb0$var$clustersKmeans;
 
 
 
 
-function $31e74cd211a38f3d$export$f838ef719c965add(coord) {
+function $8a3e3dfc4b41d9ff$export$f838ef719c965add(coord) {
     if (!coord) throw new Error("coord is required");
     if (!Array.isArray(coord)) {
         if (coord.type === "Feature" && coord.geometry !== null && coord.geometry.type === "Point") return coord.geometry.coordinates;
@@ -5723,7 +5723,7 @@ function $31e74cd211a38f3d$export$f838ef719c965add(coord) {
     if (Array.isArray(coord) && coord.length >= 2 && !Array.isArray(coord[0]) && !Array.isArray(coord[1])) return coord;
     throw new Error("coord must be GeoJSON Point or an Array of numbers");
 }
-function $31e74cd211a38f3d$export$46fc27be15a5ee5(coords) {
+function $8a3e3dfc4b41d9ff$export$46fc27be15a5ee5(coords) {
     if (Array.isArray(coords)) return coords;
     // Feature
     if (coords.type === "Feature") {
@@ -5734,22 +5734,22 @@ function $31e74cd211a38f3d$export$46fc27be15a5ee5(coords) {
     }
     throw new Error("coords must be GeoJSON Feature, Geometry Object or an Array");
 }
-function $31e74cd211a38f3d$export$3aa59f2d5d9a200d(coordinates) {
-    if (coordinates.length > 1 && $f1c53da3377f3130$export$1b423f7fa395bc1f(coordinates[0]) && $f1c53da3377f3130$export$1b423f7fa395bc1f(coordinates[1])) return true;
-    if (Array.isArray(coordinates[0]) && coordinates[0].length) return $31e74cd211a38f3d$export$3aa59f2d5d9a200d(coordinates[0]);
+function $8a3e3dfc4b41d9ff$export$3aa59f2d5d9a200d(coordinates) {
+    if (coordinates.length > 1 && $06fd7bba89ea2716$export$1b423f7fa395bc1f(coordinates[0]) && $06fd7bba89ea2716$export$1b423f7fa395bc1f(coordinates[1])) return true;
+    if (Array.isArray(coordinates[0]) && coordinates[0].length) return $8a3e3dfc4b41d9ff$export$3aa59f2d5d9a200d(coordinates[0]);
     throw new Error("coordinates must only contain numbers");
 }
-function $31e74cd211a38f3d$export$4ed88b37a51256dc(value, type, name) {
+function $8a3e3dfc4b41d9ff$export$4ed88b37a51256dc(value, type, name) {
     if (!type || !name) throw new Error("type and name required");
     if (!value || value.type !== type) throw new Error("Invalid input to " + name + ": must be a " + type + ", given " + value.type);
 }
-function $31e74cd211a38f3d$export$febdaeaf68aa8370(feature, type, name) {
+function $8a3e3dfc4b41d9ff$export$febdaeaf68aa8370(feature, type, name) {
     if (!feature) throw new Error("No feature passed");
     if (!name) throw new Error(".featureOf() requires a name");
     if (!feature || feature.type !== "Feature" || !feature.geometry) throw new Error("Invalid input to " + name + ", Feature with geometry required");
     if (!feature.geometry || feature.geometry.type !== type) throw new Error("Invalid input to " + name + ": must be a " + type + ", given " + feature.geometry.type);
 }
-function $31e74cd211a38f3d$export$66d9083292e6f231(featureCollection, type, name) {
+function $8a3e3dfc4b41d9ff$export$66d9083292e6f231(featureCollection, type, name) {
     if (!featureCollection) throw new Error("No featureCollection passed");
     if (!name) throw new Error(".collectionOf() requires a name");
     if (!featureCollection || featureCollection.type !== "FeatureCollection") throw new Error("Invalid input to " + name + ", FeatureCollection required");
@@ -5759,11 +5759,11 @@ function $31e74cd211a38f3d$export$66d9083292e6f231(featureCollection, type, name
         if (!feature.geometry || feature.geometry.type !== type) throw new Error("Invalid input to " + name + ": must be a " + type + ", given " + feature.geometry.type);
     }
 }
-function $31e74cd211a38f3d$export$85c1ed911ae13e35(geojson) {
+function $8a3e3dfc4b41d9ff$export$85c1ed911ae13e35(geojson) {
     if (geojson.type === "Feature") return geojson.geometry;
     return geojson;
 }
-function $31e74cd211a38f3d$export$7b6695599253d7ba(geojson, _name) {
+function $8a3e3dfc4b41d9ff$export$7b6695599253d7ba(geojson, _name) {
     if (geojson.type === "FeatureCollection") return "FeatureCollection";
     if (geojson.type === "GeometryCollection") return "GeometryCollection";
     if (geojson.type === "Feature" && geojson.geometry !== null) return geojson.geometry.type;
@@ -5795,25 +5795,25 @@ function $31e74cd211a38f3d$export$7b6695599253d7ba(geojson, _name) {
  * var addToMap = [from, to];
  * from.properties.distance = distance;
  * to.properties.distance = distance;
- */ function $f49c16511da44782$var$distance(from, to, options) {
+ */ function $bdb7acebc872ae62$var$distance(from, to, options) {
     if (options === void 0) options = {
     };
-    var coordinates1 = $31e74cd211a38f3d$export$f838ef719c965add(from);
-    var coordinates2 = $31e74cd211a38f3d$export$f838ef719c965add(to);
-    var dLat = $f1c53da3377f3130$export$3df9f87a6fcd617d(coordinates2[1] - coordinates1[1]);
-    var dLon = $f1c53da3377f3130$export$3df9f87a6fcd617d(coordinates2[0] - coordinates1[0]);
-    var lat1 = $f1c53da3377f3130$export$3df9f87a6fcd617d(coordinates1[1]);
-    var lat2 = $f1c53da3377f3130$export$3df9f87a6fcd617d(coordinates2[1]);
+    var coordinates1 = $8a3e3dfc4b41d9ff$export$f838ef719c965add(from);
+    var coordinates2 = $8a3e3dfc4b41d9ff$export$f838ef719c965add(to);
+    var dLat = $06fd7bba89ea2716$export$3df9f87a6fcd617d(coordinates2[1] - coordinates1[1]);
+    var dLon = $06fd7bba89ea2716$export$3df9f87a6fcd617d(coordinates2[0] - coordinates1[0]);
+    var lat1 = $06fd7bba89ea2716$export$3df9f87a6fcd617d(coordinates1[1]);
+    var lat2 = $06fd7bba89ea2716$export$3df9f87a6fcd617d(coordinates2[1]);
     var a = Math.pow(Math.sin(dLat / 2), 2) + Math.pow(Math.sin(dLon / 2), 2) * Math.cos(lat1) * Math.cos(lat2);
-    return $f1c53da3377f3130$export$a7371587dd3e0f79(2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)), options.units);
+    return $06fd7bba89ea2716$export$a7371587dd3e0f79(2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)), options.units);
 }
-var $f49c16511da44782$export$9099ad97b570f7c = $f49c16511da44782$var$distance;
+var $bdb7acebc872ae62$export$9099ad97b570f7c = $bdb7acebc872ae62$var$distance;
 
 
 
 
-var $3984f99d987a05e7$exports = {};
-parcelRequire.register("jfp1c", function(module, exports) {
+var $ea628a101b201b4b$exports = {};
+parcelRequire.register("hlFcf", function(module, exports) {
 /**
  * DBSCAN - Density based clustering
  *
@@ -5828,7 +5828,7 @@ parcelRequire.register("jfp1c", function(module, exports) {
  * @param {number} minPts
  * @param {function} distanceFunction
  * @returns {DBSCAN}
- */ function $e032d327103da5ea$var$DBSCAN(dataset, epsilon, minPts, distanceFunction) {
+ */ function $ca145a95ea91c3d9$var$DBSCAN(dataset, epsilon, minPts, distanceFunction) {
     /** @type {Array} */ this.dataset = [];
     /** @type {number} */ this.epsilon = 1;
     /** @type {number} */ this.minPts = 2;
@@ -5851,7 +5851,7 @@ parcelRequire.register("jfp1c", function(module, exports) {
  * @param {function} distanceFunction
  * @returns {undefined}
  * @access public
- */ $e032d327103da5ea$var$DBSCAN.prototype.run = function(dataset, epsilon, minPts, distanceFunction) {
+ */ $ca145a95ea91c3d9$var$DBSCAN.prototype.run = function(dataset, epsilon, minPts, distanceFunction) {
     this._init(dataset, epsilon, minPts, distanceFunction);
     for(var pointId = 0; pointId < this._datasetLength; pointId++)// if point is not visited, check if it forms a cluster
     if (this._visited[pointId] !== 1) {
@@ -5879,7 +5879,7 @@ parcelRequire.register("jfp1c", function(module, exports) {
  * @param {function} distance
  * @returns {undefined}
  * @access protected
- */ $e032d327103da5ea$var$DBSCAN.prototype._init = function(dataset, epsilon, minPts, distance) {
+ */ $ca145a95ea91c3d9$var$DBSCAN.prototype._init = function(dataset, epsilon, minPts, distance) {
     if (dataset) {
         if (!(dataset instanceof Array)) throw Error('Dataset must be of type array, ' + typeof dataset + ' given');
         this.dataset = dataset;
@@ -5900,7 +5900,7 @@ parcelRequire.register("jfp1c", function(module, exports) {
  * @param {Array} neighbors
  * @returns {undefined}
  * @access protected
- */ $e032d327103da5ea$var$DBSCAN.prototype._expandCluster = function(clusterId, neighbors) {
+ */ $ca145a95ea91c3d9$var$DBSCAN.prototype._expandCluster = function(clusterId, neighbors) {
     /**
    * It's very important to calculate length of neighbors array each time,
    * as the number of elements changes over time
@@ -5920,7 +5920,7 @@ parcelRequire.register("jfp1c", function(module, exports) {
  *
  * @param {number} pointId
  * @param {number} clusterId
- */ $e032d327103da5ea$var$DBSCAN.prototype._addToCluster = function(pointId, clusterId) {
+ */ $ca145a95ea91c3d9$var$DBSCAN.prototype._addToCluster = function(pointId, clusterId) {
     this.clusters[clusterId].push(pointId);
     this._assigned[pointId] = 1;
 };
@@ -5931,7 +5931,7 @@ parcelRequire.register("jfp1c", function(module, exports) {
  * @param {number} epsilon
  * @returns {Array}
  * @access protected
- */ $e032d327103da5ea$var$DBSCAN.prototype._regionQuery = function(pointId) {
+ */ $ca145a95ea91c3d9$var$DBSCAN.prototype._regionQuery = function(pointId) {
     var neighbors = [];
     for(var id = 0; id < this._datasetLength; id++){
         var dist = this.distance(this.dataset[pointId], this.dataset[id]);
@@ -5945,7 +5945,7 @@ parcelRequire.register("jfp1c", function(module, exports) {
  * @param {Array} b
  * @returns {Array}
  * @access protected
- */ $e032d327103da5ea$var$DBSCAN.prototype._mergeArrays = function(a, b) {
+ */ $ca145a95ea91c3d9$var$DBSCAN.prototype._mergeArrays = function(a, b) {
     var len = b.length;
     for(var i = 0; i < len; i++){
         var P = b[i];
@@ -5960,18 +5960,18 @@ parcelRequire.register("jfp1c", function(module, exports) {
  * @param {Array} q
  * @returns {number}
  * @access protected
- */ $e032d327103da5ea$var$DBSCAN.prototype._euclideanDistance = function(p, q) {
+ */ $ca145a95ea91c3d9$var$DBSCAN.prototype._euclideanDistance = function(p, q) {
     var sum = 0;
     var i = Math.min(p.length, q.length);
     while(i--)sum += (p[i] - q[i]) * (p[i] - q[i]);
     return Math.sqrt(sum);
 };
-if ("object" !== 'undefined' && module.exports) module.exports = $e032d327103da5ea$var$DBSCAN;
+if ("object" !== 'undefined' && module.exports) module.exports = $ca145a95ea91c3d9$var$DBSCAN;
 
 });
 
 
-parcelRequire.register("leUy4", function(module, exports) {
+parcelRequire.register("X5WN7", function(module, exports) {
 /**
  * KMEANS clustering
  *
@@ -5985,7 +5985,7 @@ parcelRequire.register("leUy4", function(module, exports) {
  * @param {number} k - number of clusters
  * @param {function} distance - distance function
  * @returns {KMEANS}
- */ function $f766c52588d566ea$var$KMEANS(dataset, k, distance) {
+ */ function $0b1a1fcd46318e59$var$KMEANS(dataset, k, distance) {
     this.k = 3; // number of clusters
     this.dataset = []; // set of feature vectors
     this.assignments = []; // set of associated clusters for each feature vector
@@ -5994,7 +5994,7 @@ parcelRequire.register("leUy4", function(module, exports) {
 }
 /**
  * @returns {undefined}
- */ $f766c52588d566ea$var$KMEANS.prototype.init = function(dataset, k, distance) {
+ */ $0b1a1fcd46318e59$var$KMEANS.prototype.init = function(dataset, k, distance) {
     this.assignments = [];
     this.centroids = [];
     if (typeof dataset !== 'undefined') this.dataset = dataset;
@@ -6003,7 +6003,7 @@ parcelRequire.register("leUy4", function(module, exports) {
 };
 /**
  * @returns {undefined}
- */ $f766c52588d566ea$var$KMEANS.prototype.run = function(dataset, k) {
+ */ $0b1a1fcd46318e59$var$KMEANS.prototype.run = function(dataset, k) {
     this.init(dataset, k);
     var len = this.dataset.length;
     // initialize centroids
@@ -6043,7 +6043,7 @@ parcelRequire.register("leUy4", function(module, exports) {
  * Generate random centroid
  *
  * @returns {Array}
- */ $f766c52588d566ea$var$KMEANS.prototype.randomCentroid = function() {
+ */ $0b1a1fcd46318e59$var$KMEANS.prototype.randomCentroid = function() {
     var maxId = this.dataset.length - 1;
     var centroid;
     var id;
@@ -6057,7 +6057,7 @@ parcelRequire.register("leUy4", function(module, exports) {
  * Assign points to clusters
  *
  * @returns {boolean}
- */ $f766c52588d566ea$var$KMEANS.prototype.assign = function() {
+ */ $0b1a1fcd46318e59$var$KMEANS.prototype.assign = function() {
     var change = false;
     var len = this.dataset.length;
     var closestCentroid;
@@ -6074,7 +6074,7 @@ parcelRequire.register("leUy4", function(module, exports) {
  * Extract information about clusters
  *
  * @returns {undefined}
- */ $f766c52588d566ea$var$KMEANS.prototype.getClusters = function() {
+ */ $0b1a1fcd46318e59$var$KMEANS.prototype.getClusters = function() {
     var clusters = new Array(this.k);
     var centroidId;
     for(var pointId = 0; pointId < this.assignments.length; pointId++){
@@ -6091,7 +6091,7 @@ parcelRequire.register("leUy4", function(module, exports) {
  * @params {Array.<Array>} set
  * @params {Function} f
  * @returns {number}
- */ $f766c52588d566ea$var$KMEANS.prototype.argmin = function(point, set, f) {
+ */ $0b1a1fcd46318e59$var$KMEANS.prototype.argmin = function(point, set, f) {
     var min = Number.MAX_VALUE;
     var arg = 0;
     var len = set.length;
@@ -6111,7 +6111,7 @@ parcelRequire.register("leUy4", function(module, exports) {
  * @params {number} p
  * @params {number} q
  * @returns {number}
- */ $f766c52588d566ea$var$KMEANS.prototype.distance = function(p, q) {
+ */ $0b1a1fcd46318e59$var$KMEANS.prototype.distance = function(p, q) {
     var sum = 0;
     var i = Math.min(p.length, q.length);
     while(i--){
@@ -6120,16 +6120,16 @@ parcelRequire.register("leUy4", function(module, exports) {
     }
     return Math.sqrt(sum);
 };
-if ("object" !== 'undefined' && module.exports) module.exports = $f766c52588d566ea$var$KMEANS;
+if ("object" !== 'undefined' && module.exports) module.exports = $0b1a1fcd46318e59$var$KMEANS;
 
 });
 
 
-parcelRequire.register("27le5", function(module, exports) {
+parcelRequire.register("jzlHC", function(module, exports) {
 
 /**
  * @requires ./PriorityQueue.js
- */ if ("object" !== 'undefined' && module.exports) var $18acb34d1e5847ae$var$PriorityQueue = (parcelRequire("lxrz4"));
+ */ if ("object" !== 'undefined' && module.exports) var $e3f21ee2256f10d2$var$PriorityQueue = (parcelRequire("hfLBG"));
 /**
  * OPTICS - Ordering points to identify the clustering structure
  *
@@ -6144,7 +6144,7 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {number} minPts
  * @param {function} distanceFunction
  * @returns {OPTICS}
- */ function $18acb34d1e5847ae$var$OPTICS(dataset, epsilon, minPts, distanceFunction) {
+ */ function $e3f21ee2256f10d2$var$OPTICS(dataset, epsilon, minPts, distanceFunction) {
     /** @type {number} */ this.epsilon = 1;
     /** @type {number} */ this.minPts = 1;
     /** @type {function} */ this.distance = this._euclideanDistance;
@@ -6162,7 +6162,7 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {Array} dataset
  * @returns {undefined}
  * @access public
- */ $18acb34d1e5847ae$var$OPTICS.prototype.run = function(dataset, epsilon, minPts, distanceFunction) {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype.run = function(dataset, epsilon, minPts, distanceFunction) {
     this._init(dataset, epsilon, minPts, distanceFunction);
     for(var pointId = 0, l = this.dataset.length; pointId < l; pointId++)if (this._processed[pointId] !== 1) {
         this._processed[pointId] = 1;
@@ -6171,7 +6171,7 @@ parcelRequire.register("27le5", function(module, exports) {
         ]);
         var clusterId = this.clusters.length - 1;
         this._orderedList.push(pointId);
-        var priorityQueue = new $18acb34d1e5847ae$var$PriorityQueue(null, null, 'asc');
+        var priorityQueue = new $e3f21ee2256f10d2$var$PriorityQueue(null, null, 'asc');
         var neighbors = this._regionQuery(pointId);
         // using priority queue assign elements to new cluster
         if (this._distanceToCore(pointId) !== undefined) {
@@ -6186,7 +6186,7 @@ parcelRequire.register("27le5", function(module, exports) {
  *
  * @returns {array}
  * @access public
- */ $18acb34d1e5847ae$var$OPTICS.prototype.getReachabilityPlot = function() {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype.getReachabilityPlot = function() {
     var reachabilityPlot = [];
     for(var i = 0, l = this._orderedList.length; i < l; i++){
         var pointId = this._orderedList[i];
@@ -6208,7 +6208,7 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {function} distance
  * @returns {undefined}
  * @access protected
- */ $18acb34d1e5847ae$var$OPTICS.prototype._init = function(dataset, epsilon, minPts, distance) {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype._init = function(dataset, epsilon, minPts, distance) {
     if (dataset) {
         if (!(dataset instanceof Array)) throw Error('Dataset must be of type array, ' + typeof dataset + ' given');
         this.dataset = dataset;
@@ -6230,7 +6230,7 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {PriorityQueue} queue
  * @returns {undefined}
  * @access protected
- */ $18acb34d1e5847ae$var$OPTICS.prototype._updateQueue = function(pointId, neighbors, queue) {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype._updateQueue = function(pointId, neighbors, queue) {
     var self = this;
     this._coreDistance = this._distanceToCore(pointId);
     neighbors.forEach(function(pointId2) {
@@ -6255,7 +6255,7 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {PriorityQueue} queue
  * @returns {undefined}
  * @access protected
- */ $18acb34d1e5847ae$var$OPTICS.prototype._expandCluster = function(clusterId, queue) {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype._expandCluster = function(clusterId, queue) {
     var queueElements = queue.getElements();
     for(var p = 0, l = queueElements.length; p < l; p++){
         var pointId = queueElements[p];
@@ -6277,7 +6277,7 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {number} pointId
  * @returns {number}
  * @access protected
- */ $18acb34d1e5847ae$var$OPTICS.prototype._distanceToCore = function(pointId) {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype._distanceToCore = function(pointId) {
     var l = this.epsilon;
     for(var coreDistCand = 0; coreDistCand < l; coreDistCand++){
         var neighbors = this._regionQuery(pointId, coreDistCand);
@@ -6292,7 +6292,7 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {number} epsilon
  * @returns {Array}
  * @access protected
- */ $18acb34d1e5847ae$var$OPTICS.prototype._regionQuery = function(pointId, epsilon) {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype._regionQuery = function(pointId, epsilon) {
     epsilon = epsilon || this.epsilon;
     var neighbors = [];
     for(var id = 0, l = this.dataset.length; id < l; id++)if (this.distance(this.dataset[pointId], this.dataset[id]) < epsilon) neighbors.push(id);
@@ -6306,16 +6306,16 @@ parcelRequire.register("27le5", function(module, exports) {
  * @param {Array} q
  * @returns {number}
  * @access protected
- */ $18acb34d1e5847ae$var$OPTICS.prototype._euclideanDistance = function(p, q) {
+ */ $e3f21ee2256f10d2$var$OPTICS.prototype._euclideanDistance = function(p, q) {
     var sum = 0;
     var i = Math.min(p.length, q.length);
     while(i--)sum += (p[i] - q[i]) * (p[i] - q[i]);
     return Math.sqrt(sum);
 };
-if ("object" !== 'undefined' && module.exports) module.exports = $18acb34d1e5847ae$var$OPTICS;
+if ("object" !== 'undefined' && module.exports) module.exports = $e3f21ee2256f10d2$var$OPTICS;
 
 });
-parcelRequire.register("lxrz4", function(module, exports) {
+parcelRequire.register("hfLBG", function(module, exports) {
 /**
  * PriorityQueue
  * Elements in this queue are sorted according to their value
@@ -6335,7 +6335,7 @@ parcelRequire.register("lxrz4", function(module, exports) {
  * @param {Array} priorities
  * @param {string} sorting - asc / desc
  * @returns {PriorityQueue}
- */ function $fae20fd123411556$var$PriorityQueue(elements, priorities, sorting) {
+ */ function $c8f8c41fcf966d64$var$PriorityQueue(elements, priorities, sorting) {
     /** @type {Array} */ this._queue = [];
     /** @type {Array} */ this._priorities = [];
     /** @type {string} */ this._sorting = 'desc';
@@ -6348,7 +6348,7 @@ parcelRequire.register("lxrz4", function(module, exports) {
  * @param {Object} priority
  * @returns {undefined}
  * @access public
- */ $fae20fd123411556$var$PriorityQueue.prototype.insert = function(ele, priority) {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype.insert = function(ele, priority) {
     var indexToInsert = this._queue.length;
     var index = indexToInsert;
     while(index--){
@@ -6365,7 +6365,7 @@ parcelRequire.register("lxrz4", function(module, exports) {
  * @param {Object} ele
  * @returns {undefined}
  * @access public
- */ $fae20fd123411556$var$PriorityQueue.prototype.remove = function(ele) {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype.remove = function(ele) {
     var index = this._queue.length;
     while(index--){
         var ele2 = this._queue[index];
@@ -6382,32 +6382,32 @@ parcelRequire.register("lxrz4", function(module, exports) {
  * @param {function} func
  * @returs {undefined}
  * @access public
- */ $fae20fd123411556$var$PriorityQueue.prototype.forEach = function(func) {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype.forEach = function(func) {
     this._queue.forEach(func);
 };
 /**
  * @returns {Array}
  * @access public
- */ $fae20fd123411556$var$PriorityQueue.prototype.getElements = function() {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype.getElements = function() {
     return this._queue;
 };
 /**
  * @param {number} index
  * @returns {Object}
  * @access public
- */ $fae20fd123411556$var$PriorityQueue.prototype.getElementPriority = function(index) {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype.getElementPriority = function(index) {
     return this._priorities[index];
 };
 /**
  * @returns {Array}
  * @access public
- */ $fae20fd123411556$var$PriorityQueue.prototype.getPriorities = function() {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype.getPriorities = function() {
     return this._priorities;
 };
 /**
  * @returns {Array}
  * @access public
- */ $fae20fd123411556$var$PriorityQueue.prototype.getElementsWithPriorities = function() {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype.getElementsWithPriorities = function() {
     var result = [];
     for(var i = 0, l = this._queue.length; i < l; i++)result.push([
         this._queue[i],
@@ -6422,7 +6422,7 @@ parcelRequire.register("lxrz4", function(module, exports) {
  * @param {Array} priorities
  * @returns {undefined}
  * @access protected
- */ $fae20fd123411556$var$PriorityQueue.prototype._init = function(elements, priorities, sorting) {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype._init = function(elements, priorities, sorting) {
     if (elements && priorities) {
         this._queue = [];
         this._priorities = [];
@@ -6438,7 +6438,7 @@ parcelRequire.register("lxrz4", function(module, exports) {
  * @param {number} index
  * @returns {undefined}
  * @access protected
- */ $fae20fd123411556$var$PriorityQueue.prototype._insertAt = function(ele, priority, index) {
+ */ $c8f8c41fcf966d64$var$PriorityQueue.prototype._insertAt = function(ele, priority, index) {
     if (this._queue.length === index) {
         this._queue.push(ele);
         this._priorities.push(priority);
@@ -6447,18 +6447,18 @@ parcelRequire.register("lxrz4", function(module, exports) {
         this._priorities.splice(index, 0, priority);
     }
 };
-if ("object" !== 'undefined' && module.exports) module.exports = $fae20fd123411556$var$PriorityQueue;
+if ("object" !== 'undefined' && module.exports) module.exports = $c8f8c41fcf966d64$var$PriorityQueue;
 
 });
 
 
 
 
-if ("object" !== 'undefined' && $3984f99d987a05e7$exports) $3984f99d987a05e7$exports = {
-    DBSCAN: (parcelRequire("jfp1c")),
-    KMEANS: (parcelRequire("leUy4")),
-    OPTICS: (parcelRequire("27le5")),
-    PriorityQueue: (parcelRequire("lxrz4"))
+if ("object" !== 'undefined' && $ea628a101b201b4b$exports) $ea628a101b201b4b$exports = {
+    DBSCAN: (parcelRequire("hlFcf")),
+    KMEANS: (parcelRequire("X5WN7")),
+    OPTICS: (parcelRequire("jzlHC")),
+    PriorityQueue: (parcelRequire("hfLBG"))
 };
 
 
@@ -6484,7 +6484,7 @@ if ("object" !== 'undefined' && $3984f99d987a05e7$exports) $3984f99d987a05e7$exp
  *
  * //addToMap
  * var addToMap = [clustered];
- */ function $5d992c419bc57c89$var$clustersDbscan(points, maxDistance, options) {
+ */ function $af33975ec2b83c02$var$clustersDbscan(points, maxDistance, options) {
     // Input validation being handled by Typescript
     // collectionOf(points, 'Point', 'points must consist of a FeatureCollection of only Points');
     // if (maxDistance === null || maxDistance === undefined) throw new Error('maxDistance is required');
@@ -6493,12 +6493,12 @@ if ("object" !== 'undefined' && $3984f99d987a05e7$exports) $3984f99d987a05e7$exp
     if (options === void 0) options = {
     };
     // Clone points to prevent any mutations
-    if (options.mutate !== true) points = $de1dbe698a1ef99a$export$9099ad97b570f7c(points);
+    if (options.mutate !== true) points = $3cfd6d70d7301277$export$9099ad97b570f7c(points);
     // Defaults
     options.minPoints = options.minPoints || 3;
     // create clustered ids
-    var dbscan = new (/*@__PURE__*/$parcel$interopDefault($3984f99d987a05e7$exports)).DBSCAN();
-    var clusteredIds = dbscan.run($555ced313e66658a$export$5a9cfbedf736c6fa(points), $f1c53da3377f3130$export$89c2cc3b6c94cff3(maxDistance, options.units), options.minPoints, $f49c16511da44782$export$9099ad97b570f7c);
+    var dbscan = new (/*@__PURE__*/$parcel$interopDefault($ea628a101b201b4b$exports)).DBSCAN();
+    var clusteredIds = dbscan.run($5c76aa7c2c53dcdc$export$5a9cfbedf736c6fa(points), $06fd7bba89ea2716$export$89c2cc3b6c94cff3(maxDistance, options.units), options.minPoints, $bdb7acebc872ae62$export$9099ad97b570f7c);
     // Tag points to Clusters ID
     var clusterId = -1;
     clusteredIds.forEach(function(clusterIds) {
@@ -6523,17 +6523,17 @@ if ("object" !== 'undefined' && $3984f99d987a05e7$exports) $3984f99d987a05e7$exp
     });
     return points;
 }
-var $5d992c419bc57c89$export$9099ad97b570f7c = $5d992c419bc57c89$var$clustersDbscan;
+var $af33975ec2b83c02$export$9099ad97b570f7c = $af33975ec2b83c02$var$clustersDbscan;
 
 
-function $f420cfbc1c627151$export$9099ad97b570f7c(ids, coords, nodeSize, left, right, depth) {
+function $c58fcea174b96650$export$9099ad97b570f7c(ids, coords, nodeSize, left, right, depth) {
     if (right - left <= nodeSize) return;
     const m = left + right >> 1;
-    $f420cfbc1c627151$var$select(ids, coords, m, left, right, depth % 2);
-    $f420cfbc1c627151$export$9099ad97b570f7c(ids, coords, nodeSize, left, m - 1, depth + 1);
-    $f420cfbc1c627151$export$9099ad97b570f7c(ids, coords, nodeSize, m + 1, right, depth + 1);
+    $c58fcea174b96650$var$select(ids, coords, m, left, right, depth % 2);
+    $c58fcea174b96650$export$9099ad97b570f7c(ids, coords, nodeSize, left, m - 1, depth + 1);
+    $c58fcea174b96650$export$9099ad97b570f7c(ids, coords, nodeSize, m + 1, right, depth + 1);
 }
-function $f420cfbc1c627151$var$select(ids, coords, k, left, right, inc) {
+function $c58fcea174b96650$var$select(ids, coords, k, left, right, inc) {
     while(right > left){
         if (right - left > 600) {
             const n = right - left + 1;
@@ -6543,42 +6543,42 @@ function $f420cfbc1c627151$var$select(ids, coords, k, left, right, inc) {
             const sd = 0.5 * Math.sqrt(z * s * (n - s) / n) * (m - n / 2 < 0 ? -1 : 1);
             const newLeft = Math.max(left, Math.floor(k - m * s / n + sd));
             const newRight = Math.min(right, Math.floor(k + (n - m) * s / n + sd));
-            $f420cfbc1c627151$var$select(ids, coords, k, newLeft, newRight, inc);
+            $c58fcea174b96650$var$select(ids, coords, k, newLeft, newRight, inc);
         }
         const t = coords[2 * k + inc];
         let i = left;
         let j = right;
-        $f420cfbc1c627151$var$swapItem(ids, coords, left, k);
-        if (coords[2 * right + inc] > t) $f420cfbc1c627151$var$swapItem(ids, coords, left, right);
+        $c58fcea174b96650$var$swapItem(ids, coords, left, k);
+        if (coords[2 * right + inc] > t) $c58fcea174b96650$var$swapItem(ids, coords, left, right);
         while(i < j){
-            $f420cfbc1c627151$var$swapItem(ids, coords, i, j);
+            $c58fcea174b96650$var$swapItem(ids, coords, i, j);
             i++;
             j--;
             while(coords[2 * i + inc] < t)i++;
             while(coords[2 * j + inc] > t)j--;
         }
-        if (coords[2 * left + inc] === t) $f420cfbc1c627151$var$swapItem(ids, coords, left, j);
+        if (coords[2 * left + inc] === t) $c58fcea174b96650$var$swapItem(ids, coords, left, j);
         else {
             j++;
-            $f420cfbc1c627151$var$swapItem(ids, coords, j, right);
+            $c58fcea174b96650$var$swapItem(ids, coords, j, right);
         }
         if (j <= k) left = j + 1;
         if (k <= j) right = j - 1;
     }
 }
-function $f420cfbc1c627151$var$swapItem(ids, coords, i, j) {
-    $f420cfbc1c627151$var$swap(ids, i, j);
-    $f420cfbc1c627151$var$swap(coords, 2 * i, 2 * j);
-    $f420cfbc1c627151$var$swap(coords, 2 * i + 1, 2 * j + 1);
+function $c58fcea174b96650$var$swapItem(ids, coords, i, j) {
+    $c58fcea174b96650$var$swap(ids, i, j);
+    $c58fcea174b96650$var$swap(coords, 2 * i, 2 * j);
+    $c58fcea174b96650$var$swap(coords, 2 * i + 1, 2 * j + 1);
 }
-function $f420cfbc1c627151$var$swap(arr, i, j) {
+function $c58fcea174b96650$var$swap(arr, i, j) {
     const tmp = arr[i];
     arr[i] = arr[j];
     arr[j] = tmp;
 }
 
 
-function $b68e3096992e5950$export$9099ad97b570f7c(ids, coords, minX, minY, maxX, maxY, nodeSize) {
+function $59e683003c353186$export$9099ad97b570f7c(ids, coords, minX, minY, maxX, maxY, nodeSize) {
     const stack = [
         0,
         ids.length - 1,
@@ -6618,7 +6618,7 @@ function $b68e3096992e5950$export$9099ad97b570f7c(ids, coords, minX, minY, maxX,
 }
 
 
-function $23571878b1f57164$export$9099ad97b570f7c(ids, coords, qx, qy, r, nodeSize) {
+function $c4c4fa1eea446db7$export$9099ad97b570f7c(ids, coords, qx, qy, r, nodeSize) {
     const stack = [
         0,
         ids.length - 1,
@@ -6631,13 +6631,13 @@ function $23571878b1f57164$export$9099ad97b570f7c(ids, coords, qx, qy, r, nodeSi
         const right = stack.pop();
         const left = stack.pop();
         if (right - left <= nodeSize) {
-            for(let i = left; i <= right; i++)if ($23571878b1f57164$var$sqDist(coords[2 * i], coords[2 * i + 1], qx, qy) <= r2) result.push(ids[i]);
+            for(let i = left; i <= right; i++)if ($c4c4fa1eea446db7$var$sqDist(coords[2 * i], coords[2 * i + 1], qx, qy) <= r2) result.push(ids[i]);
             continue;
         }
         const m = Math.floor((left + right) / 2);
         const x = coords[2 * m];
         const y = coords[2 * m + 1];
-        if ($23571878b1f57164$var$sqDist(x, y, qx, qy) <= r2) result.push(ids[m]);
+        if ($c4c4fa1eea446db7$var$sqDist(x, y, qx, qy) <= r2) result.push(ids[m]);
         const nextAxis = (axis + 1) % 2;
         if (axis === 0 ? qx - r <= x : qy - r <= y) {
             stack.push(left);
@@ -6652,19 +6652,19 @@ function $23571878b1f57164$export$9099ad97b570f7c(ids, coords, qx, qy, r, nodeSi
     }
     return result;
 }
-function $23571878b1f57164$var$sqDist(ax, ay, bx, by) {
+function $c4c4fa1eea446db7$var$sqDist(ax, ay, bx, by) {
     const dx = ax - bx;
     const dy = ay - by;
     return dx * dx + dy * dy;
 }
 
 
-const $0c110fb774b514cc$var$defaultGetX = (p)=>p[0]
+const $1cf2f3289abf70de$var$defaultGetX = (p)=>p[0]
 ;
-const $0c110fb774b514cc$var$defaultGetY = (p)=>p[1]
+const $1cf2f3289abf70de$var$defaultGetY = (p)=>p[1]
 ;
-class $0c110fb774b514cc$export$9099ad97b570f7c {
-    constructor(points, getX = $0c110fb774b514cc$var$defaultGetX, getY = $0c110fb774b514cc$var$defaultGetY, nodeSize = 64, ArrayType = Float64Array){
+class $1cf2f3289abf70de$export$9099ad97b570f7c {
+    constructor(points, getX = $1cf2f3289abf70de$var$defaultGetX, getY = $1cf2f3289abf70de$var$defaultGetY, nodeSize = 64, ArrayType = Float64Array){
         this.nodeSize = nodeSize;
         this.points = points;
         const IndexArrayType = points.length < 65536 ? Uint16Array : Uint32Array;
@@ -6675,18 +6675,18 @@ class $0c110fb774b514cc$export$9099ad97b570f7c {
             coords[2 * i] = getX(points[i]);
             coords[2 * i + 1] = getY(points[i]);
         }
-        $f420cfbc1c627151$export$9099ad97b570f7c(ids, coords, nodeSize, 0, ids.length - 1, 0);
+        $c58fcea174b96650$export$9099ad97b570f7c(ids, coords, nodeSize, 0, ids.length - 1, 0);
     }
     range(minX, minY, maxX, maxY) {
-        return $b68e3096992e5950$export$9099ad97b570f7c(this.ids, this.coords, minX, minY, maxX, maxY, this.nodeSize);
+        return $59e683003c353186$export$9099ad97b570f7c(this.ids, this.coords, minX, minY, maxX, maxY, this.nodeSize);
     }
     within(x, y, r) {
-        return $23571878b1f57164$export$9099ad97b570f7c(this.ids, this.coords, x, y, r, this.nodeSize);
+        return $c4c4fa1eea446db7$export$9099ad97b570f7c(this.ids, this.coords, x, y, r, this.nodeSize);
     }
 }
 
 
-const $260425be1d20237d$var$defaultOptions = {
+const $4548a3b8e0a2dd0b$var$defaultOptions = {
     minZoom: 0,
     maxZoom: 16,
     minPoints: 2,
@@ -6701,14 +6701,14 @@ const $260425be1d20237d$var$defaultOptions = {
     // properties to use for individual points when running the reducer
     map: (props)=>props // props => ({sum: props.my_value})
 };
-const $260425be1d20237d$var$fround = Math.fround || ((tmp)=>(x)=>{
+const $4548a3b8e0a2dd0b$var$fround = Math.fround || ((tmp)=>(x)=>{
         tmp[0] = +x;
         return tmp[0];
     }
 )(new Float32Array(1));
-class $260425be1d20237d$export$9099ad97b570f7c {
+class $4548a3b8e0a2dd0b$export$9099ad97b570f7c {
     constructor(options){
-        this.options = $260425be1d20237d$var$extend(Object.create($260425be1d20237d$var$defaultOptions), options);
+        this.options = $4548a3b8e0a2dd0b$var$extend(Object.create($4548a3b8e0a2dd0b$var$defaultOptions), options);
         this.trees = new Array(this.options.maxZoom + 1);
     }
     load(points) {
@@ -6721,9 +6721,9 @@ class $260425be1d20237d$export$9099ad97b570f7c {
         let clusters = [];
         for(let i = 0; i < points.length; i++){
             if (!points[i].geometry) continue;
-            clusters.push($260425be1d20237d$var$createPointCluster(points[i], i));
+            clusters.push($4548a3b8e0a2dd0b$var$createPointCluster(points[i], i));
         }
-        this.trees[maxZoom + 1] = new $0c110fb774b514cc$export$9099ad97b570f7c(clusters, $260425be1d20237d$var$getX, $260425be1d20237d$var$getY, nodeSize, Float32Array);
+        this.trees[maxZoom + 1] = new $1cf2f3289abf70de$export$9099ad97b570f7c(clusters, $4548a3b8e0a2dd0b$var$getX, $4548a3b8e0a2dd0b$var$getY, nodeSize, Float32Array);
         if (log) console.timeEnd(timerId);
         // cluster points on max zoom, then cluster the results on previous zoom, etc.;
         // results in a cluster hierarchy across zoom levels
@@ -6731,7 +6731,7 @@ class $260425be1d20237d$export$9099ad97b570f7c {
             const now = +Date.now();
             // create a new set of clusters for the zoom and index them with a KD-tree
             clusters = this._cluster(clusters, z);
-            this.trees[z] = new $0c110fb774b514cc$export$9099ad97b570f7c(clusters, $260425be1d20237d$var$getX, $260425be1d20237d$var$getY, nodeSize, Float32Array);
+            this.trees[z] = new $1cf2f3289abf70de$export$9099ad97b570f7c(clusters, $4548a3b8e0a2dd0b$var$getX, $4548a3b8e0a2dd0b$var$getY, nodeSize, Float32Array);
             if (log) console.log('z%d: %d clusters in %dms', z, clusters.length, +Date.now() - now);
         }
         if (log) console.timeEnd('total time');
@@ -6761,11 +6761,11 @@ class $260425be1d20237d$export$9099ad97b570f7c {
             return easternHem.concat(westernHem);
         }
         const tree = this.trees[this._limitZoom(zoom)];
-        const ids = tree.range($260425be1d20237d$var$lngX(minLng), $260425be1d20237d$var$latY(maxLat), $260425be1d20237d$var$lngX(maxLng), $260425be1d20237d$var$latY(minLat));
+        const ids = tree.range($4548a3b8e0a2dd0b$var$lngX(minLng), $4548a3b8e0a2dd0b$var$latY(maxLat), $4548a3b8e0a2dd0b$var$lngX(maxLng), $4548a3b8e0a2dd0b$var$latY(minLat));
         const clusters = [];
         for (const id of ids){
             const c = tree.points[id];
-            clusters.push(c.numPoints ? $260425be1d20237d$var$getClusterJSON(c) : this.points[c.index]);
+            clusters.push(c.numPoints ? $4548a3b8e0a2dd0b$var$getClusterJSON(c) : this.points[c.index]);
         }
         return clusters;
     }
@@ -6782,7 +6782,7 @@ class $260425be1d20237d$export$9099ad97b570f7c {
         const children = [];
         for (const id of ids){
             const c = index.points[id];
-            if (c.parentId === clusterId) children.push(c.numPoints ? $260425be1d20237d$var$getClusterJSON(c) : this.points[c.index]);
+            if (c.parentId === clusterId) children.push(c.numPoints ? $4548a3b8e0a2dd0b$var$getClusterJSON(c) : this.points[c.index]);
         }
         if (children.length === 0) throw new Error(errorMsg);
         return children;
@@ -6842,14 +6842,14 @@ class $260425be1d20237d$export$9099ad97b570f7c {
             const isCluster = c.numPoints;
             let tags, px, py;
             if (isCluster) {
-                tags = $260425be1d20237d$var$getClusterProperties(c);
+                tags = $4548a3b8e0a2dd0b$var$getClusterProperties(c);
                 px = c.x;
                 py = c.y;
             } else {
                 const p = this.points[c.index];
                 tags = p.properties;
-                px = $260425be1d20237d$var$lngX(p.geometry.coordinates[0]);
-                py = $260425be1d20237d$var$latY(p.geometry.coordinates[1]);
+                px = $4548a3b8e0a2dd0b$var$lngX(p.geometry.coordinates[0]);
+                py = $4548a3b8e0a2dd0b$var$latY(p.geometry.coordinates[1]);
             }
             const f = {
                 type: 1,
@@ -6917,7 +6917,7 @@ class $260425be1d20237d$export$9099ad97b570f7c {
                     }
                 }
                 p.parentId = id;
-                clusters.push($260425be1d20237d$var$createCluster(wx / numPoints, wy / numPoints, id, numPoints, clusterProperties));
+                clusters.push($4548a3b8e0a2dd0b$var$createCluster(wx / numPoints, wy / numPoints, id, numPoints, clusterProperties));
             } else {
                 clusters.push(p);
                 if (numPoints > 1) for (const neighborId1 of neighborIds){
@@ -6939,18 +6939,18 @@ class $260425be1d20237d$export$9099ad97b570f7c {
         return (clusterId - this.points.length) % 32;
     }
     _map(point, clone) {
-        if (point.numPoints) return clone ? $260425be1d20237d$var$extend({
+        if (point.numPoints) return clone ? $4548a3b8e0a2dd0b$var$extend({
         }, point.properties) : point.properties;
         const original = this.points[point.index].properties;
         const result = this.options.map(original);
-        return clone && result === original ? $260425be1d20237d$var$extend({
+        return clone && result === original ? $4548a3b8e0a2dd0b$var$extend({
         }, result) : result;
     }
 }
-function $260425be1d20237d$var$createCluster(x, y, id, numPoints, properties) {
+function $4548a3b8e0a2dd0b$var$createCluster(x, y, id, numPoints, properties) {
     return {
-        x: $260425be1d20237d$var$fround(x),
-        y: $260425be1d20237d$var$fround(y),
+        x: $4548a3b8e0a2dd0b$var$fround(x),
+        y: $4548a3b8e0a2dd0b$var$fround(y),
         zoom: Infinity,
         id: id,
         parentId: -1,
@@ -6958,34 +6958,34 @@ function $260425be1d20237d$var$createCluster(x, y, id, numPoints, properties) {
         properties: properties
     };
 }
-function $260425be1d20237d$var$createPointCluster(p, id) {
+function $4548a3b8e0a2dd0b$var$createPointCluster(p, id) {
     const [x, y] = p.geometry.coordinates;
     return {
-        x: $260425be1d20237d$var$fround($260425be1d20237d$var$lngX(x)),
-        y: $260425be1d20237d$var$fround($260425be1d20237d$var$latY(y)),
+        x: $4548a3b8e0a2dd0b$var$fround($4548a3b8e0a2dd0b$var$lngX(x)),
+        y: $4548a3b8e0a2dd0b$var$fround($4548a3b8e0a2dd0b$var$latY(y)),
         zoom: Infinity,
         index: id,
         parentId: -1 // parent cluster id
     };
 }
-function $260425be1d20237d$var$getClusterJSON(cluster) {
+function $4548a3b8e0a2dd0b$var$getClusterJSON(cluster) {
     return {
         type: 'Feature',
         id: cluster.id,
-        properties: $260425be1d20237d$var$getClusterProperties(cluster),
+        properties: $4548a3b8e0a2dd0b$var$getClusterProperties(cluster),
         geometry: {
             type: 'Point',
             coordinates: [
-                $260425be1d20237d$var$xLng(cluster.x),
-                $260425be1d20237d$var$yLat(cluster.y)
+                $4548a3b8e0a2dd0b$var$xLng(cluster.x),
+                $4548a3b8e0a2dd0b$var$yLat(cluster.y)
             ]
         }
     };
 }
-function $260425be1d20237d$var$getClusterProperties(cluster) {
+function $4548a3b8e0a2dd0b$var$getClusterProperties(cluster) {
     const count = cluster.numPoints;
     const abbrev = count >= 10000 ? `${Math.round(count / 1000)}k` : count >= 1000 ? `${Math.round(count / 100) / 10}k` : count;
-    return $260425be1d20237d$var$extend($260425be1d20237d$var$extend({
+    return $4548a3b8e0a2dd0b$var$extend($4548a3b8e0a2dd0b$var$extend({
     }, cluster.properties), {
         cluster: true,
         cluster_id: cluster.id,
@@ -6994,39 +6994,39 @@ function $260425be1d20237d$var$getClusterProperties(cluster) {
     });
 }
 // longitude/latitude to spherical mercator in [0..1] range
-function $260425be1d20237d$var$lngX(lng) {
+function $4548a3b8e0a2dd0b$var$lngX(lng) {
     return lng / 360 + 0.5;
 }
-function $260425be1d20237d$var$latY(lat) {
+function $4548a3b8e0a2dd0b$var$latY(lat) {
     const sin = Math.sin(lat * Math.PI / 180);
     const y = 0.5 - 0.25 * Math.log((1 + sin) / (1 - sin)) / Math.PI;
     return y < 0 ? 0 : y > 1 ? 1 : y;
 }
 // spherical mercator to longitude/latitude
-function $260425be1d20237d$var$xLng(x) {
+function $4548a3b8e0a2dd0b$var$xLng(x) {
     return (x - 0.5) * 360;
 }
-function $260425be1d20237d$var$yLat(y) {
+function $4548a3b8e0a2dd0b$var$yLat(y) {
     const y2 = (180 - y * 360) * Math.PI / 180;
     return 360 * Math.atan(Math.exp(y2)) / Math.PI - 90;
 }
-function $260425be1d20237d$var$extend(dest, src) {
+function $4548a3b8e0a2dd0b$var$extend(dest, src) {
     for(const id in src)dest[id] = src[id];
     return dest;
 }
-function $260425be1d20237d$var$getX(p) {
+function $4548a3b8e0a2dd0b$var$getX(p) {
     return p.x;
 }
-function $260425be1d20237d$var$getY(p) {
+function $4548a3b8e0a2dd0b$var$getY(p) {
     return p.y;
 }
 
 
-var $75317cff1a6fcfba$exports = {};
+var $65be1c1f2fe5b535$exports = {};
 'use strict';
 // do not edit .js files directly - edit src/index.jst
-var $75317cff1a6fcfba$var$envHasBigInt64Array = typeof BigInt64Array !== 'undefined';
-$75317cff1a6fcfba$exports = function equal(a, b) {
+var $65be1c1f2fe5b535$var$envHasBigInt64Array = typeof BigInt64Array !== 'undefined';
+$65be1c1f2fe5b535$exports = function equal(a, b) {
     if (a === b) return true;
     if (a && b && typeof a == 'object' && typeof b == 'object') {
         if (a.constructor !== b.constructor) return false;
@@ -7085,7 +7085,7 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */ function $3e67a706eb58e4f4$var$__rest(s, e) {
+***************************************************************************** */ function $abe5479307b3aef5$var$__rest(s, e) {
     var t = {
     };
     for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
@@ -7106,7 +7106,7 @@ PERFORMANCE OF THIS SOFTWARE.
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */ class $3e67a706eb58e4f4$export$4b200d2f979b5b40 {
+ */ class $abe5479307b3aef5$export$4b200d2f979b5b40 {
     constructor({ markers: markers1 , position: position1  }){
         this.markers = markers1;
         if (position1) {
@@ -7158,24 +7158,24 @@ PERFORMANCE OF THIS SOFTWARE.
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */ const $3e67a706eb58e4f4$export$9b4c6f0182d220fc = (map, mapCanvasProjection, markers1, viewportPadding)=>{
-    const extendedMapBounds = $3e67a706eb58e4f4$export$34b9e5c7ac7df7bb(map.getBounds(), mapCanvasProjection, viewportPadding);
+ */ const $abe5479307b3aef5$export$9b4c6f0182d220fc = (map, mapCanvasProjection, markers1, viewportPadding)=>{
+    const extendedMapBounds = $abe5479307b3aef5$export$34b9e5c7ac7df7bb(map.getBounds(), mapCanvasProjection, viewportPadding);
     return markers1.filter((marker)=>extendedMapBounds.contains(marker.getPosition())
     );
 };
 /**
  * Extends a bounds by a number of pixels in each direction.
- */ const $3e67a706eb58e4f4$export$34b9e5c7ac7df7bb = (bounds, projection, pixels)=>{
-    const { northEast: northEast , southWest: southWest  } = $3e67a706eb58e4f4$var$latLngBoundsToPixelBounds(bounds, projection);
-    const extendedPixelBounds = $3e67a706eb58e4f4$export$13fae14bb855bb55({
+ */ const $abe5479307b3aef5$export$34b9e5c7ac7df7bb = (bounds, projection, pixels)=>{
+    const { northEast: northEast , southWest: southWest  } = $abe5479307b3aef5$var$latLngBoundsToPixelBounds(bounds, projection);
+    const extendedPixelBounds = $abe5479307b3aef5$export$13fae14bb855bb55({
         northEast: northEast,
         southWest: southWest
     }, pixels);
-    return $3e67a706eb58e4f4$export$933460cf3ebd15f3(extendedPixelBounds, projection);
+    return $abe5479307b3aef5$export$933460cf3ebd15f3(extendedPixelBounds, projection);
 };
 /**
  * @hidden
- */ const $3e67a706eb58e4f4$export$780307dfca60319a = (p1, p2)=>{
+ */ const $abe5479307b3aef5$export$780307dfca60319a = (p1, p2)=>{
     const R = 6371; // Radius of the Earth in km
     const dLat = (p2.lat - p1.lat) * Math.PI / 180;
     const dLon = (p2.lng - p1.lng) * Math.PI / 180;
@@ -7185,7 +7185,7 @@ PERFORMANCE OF THIS SOFTWARE.
 };
 /**
  * @hidden
- */ const $3e67a706eb58e4f4$var$latLngBoundsToPixelBounds = (bounds, projection)=>{
+ */ const $abe5479307b3aef5$var$latLngBoundsToPixelBounds = (bounds, projection)=>{
     return {
         northEast: projection.fromLatLngToDivPixel(bounds.getNorthEast()),
         southWest: projection.fromLatLngToDivPixel(bounds.getSouthWest())
@@ -7193,7 +7193,7 @@ PERFORMANCE OF THIS SOFTWARE.
 };
 /**
  * @hidden
- */ const $3e67a706eb58e4f4$export$13fae14bb855bb55 = ({ northEast: northEast , southWest: southWest  }, pixels)=>{
+ */ const $abe5479307b3aef5$export$13fae14bb855bb55 = ({ northEast: northEast , southWest: southWest  }, pixels)=>{
     northEast.x += pixels;
     northEast.y -= pixels;
     southWest.x -= pixels;
@@ -7205,7 +7205,7 @@ PERFORMANCE OF THIS SOFTWARE.
 };
 /**
  * @hidden
- */ const $3e67a706eb58e4f4$export$933460cf3ebd15f3 = ({ northEast: northEast , southWest: southWest  }, projection)=>{
+ */ const $abe5479307b3aef5$export$933460cf3ebd15f3 = ({ northEast: northEast , southWest: southWest  }, projection)=>{
     const bounds = new google.maps.LatLngBounds();
     bounds.extend(projection.fromDivPixelToLatLng(northEast));
     bounds.extend(projection.fromDivPixelToLatLng(southWest));
@@ -7227,7 +7227,7 @@ PERFORMANCE OF THIS SOFTWARE.
  * limitations under the License.
  */ /**
  * @hidden
- */ class $3e67a706eb58e4f4$export$cc72e4132fdd891 {
+ */ class $abe5479307b3aef5$export$cc72e4132fdd891 {
     constructor({ maxZoom: maxZoom = 16  }){
         this.maxZoom = maxZoom;
     }
@@ -7243,7 +7243,7 @@ PERFORMANCE OF THIS SOFTWARE.
      * }
      * ```
      */ noop({ markers: markers  }) {
-        return $3e67a706eb58e4f4$export$5f8ba94b9c81aa67(markers);
+        return $abe5479307b3aef5$export$5f8ba94b9c81aa67(markers);
     }
 }
 /**
@@ -7251,14 +7251,14 @@ PERFORMANCE OF THIS SOFTWARE.
  * viewport. This is a common optimization.
  *
  * @hidden
- */ class $3e67a706eb58e4f4$export$9c53a56baa246b22 extends $3e67a706eb58e4f4$export$cc72e4132fdd891 {
+ */ class $abe5479307b3aef5$export$9c53a56baa246b22 extends $abe5479307b3aef5$export$cc72e4132fdd891 {
     constructor(_a){
-        var { viewportPadding: $3e67a706eb58e4f4$var$viewportPadding = 60  } = _a, options = $3e67a706eb58e4f4$var$__rest(_a, [
+        var { viewportPadding: $abe5479307b3aef5$var$viewportPadding = 60  } = _a, options = $abe5479307b3aef5$var$__rest(_a, [
             "viewportPadding"
         ]);
         super(options);
         this.viewportPadding = 60;
-        this.viewportPadding = $3e67a706eb58e4f4$var$viewportPadding;
+        this.viewportPadding = $abe5479307b3aef5$var$viewportPadding;
     }
     calculate({ markers: markers , map: map , mapCanvasProjection: mapCanvasProjection ,  }) {
         if (map.getZoom() >= this.maxZoom) return {
@@ -7271,7 +7271,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
         return {
             clusters: this.cluster({
-                markers: $3e67a706eb58e4f4$export$9b4c6f0182d220fc(map, mapCanvasProjection, markers, this.viewportPadding),
+                markers: $abe5479307b3aef5$export$9b4c6f0182d220fc(map, mapCanvasProjection, markers, this.viewportPadding),
                 map: map,
                 mapCanvasProjection: mapCanvasProjection
             })
@@ -7280,8 +7280,8 @@ PERFORMANCE OF THIS SOFTWARE.
 }
 /**
  * @hidden
- */ const $3e67a706eb58e4f4$export$5f8ba94b9c81aa67 = (markers2)=>{
-    const clusters = markers2.map((marker)=>new $3e67a706eb58e4f4$export$4b200d2f979b5b40({
+ */ const $abe5479307b3aef5$export$5f8ba94b9c81aa67 = (markers2)=>{
+    const clusters = markers2.map((marker)=>new $abe5479307b3aef5$export$4b200d2f979b5b40({
             position: marker.getPosition(),
             markers: [
                 marker
@@ -7310,16 +7310,16 @@ PERFORMANCE OF THIS SOFTWARE.
  *
  * The Grid algorithm does not implement caching and markers may flash as the
  * viewport changes. Instead use {@link SuperClusterAlgorithm}.
- */ class $3e67a706eb58e4f4$export$d823936fa88b8fbf extends $3e67a706eb58e4f4$export$9c53a56baa246b22 {
+ */ class $abe5479307b3aef5$export$d823936fa88b8fbf extends $abe5479307b3aef5$export$9c53a56baa246b22 {
     constructor(_a1){
-        var { maxDistance: $3e67a706eb58e4f4$var$maxDistance = 40000 , gridSize: $3e67a706eb58e4f4$var$gridSize = 40  } = _a1, options1 = $3e67a706eb58e4f4$var$__rest(_a1, [
+        var { maxDistance: $abe5479307b3aef5$var$maxDistance = 40000 , gridSize: $abe5479307b3aef5$var$gridSize = 40  } = _a1, options1 = $abe5479307b3aef5$var$__rest(_a1, [
             "maxDistance",
             "gridSize"
         ]);
         super(options1);
         this.clusters = [];
-        this.maxDistance = $3e67a706eb58e4f4$var$maxDistance;
-        this.gridSize = $3e67a706eb58e4f4$var$gridSize;
+        this.maxDistance = $abe5479307b3aef5$var$maxDistance;
+        this.gridSize = $abe5479307b3aef5$var$gridSize;
     }
     cluster({ markers: markers , map: map , mapCanvasProjection: mapCanvasProjection ,  }) {
         this.clusters = [];
@@ -7333,15 +7333,15 @@ PERFORMANCE OF THIS SOFTWARE.
         let cluster = null;
         for(let i = 0; i < this.clusters.length; i++){
             const candidate = this.clusters[i];
-            const distance = $3e67a706eb58e4f4$export$780307dfca60319a(candidate.bounds.getCenter().toJSON(), marker.getPosition().toJSON());
+            const distance = $abe5479307b3aef5$export$780307dfca60319a(candidate.bounds.getCenter().toJSON(), marker.getPosition().toJSON());
             if (distance < maxDistance) {
                 maxDistance = distance;
                 cluster = candidate;
             }
         }
-        if (cluster && $3e67a706eb58e4f4$export$34b9e5c7ac7df7bb(cluster.bounds, projection, this.gridSize).contains(marker.getPosition())) cluster.push(marker);
+        if (cluster && $abe5479307b3aef5$export$34b9e5c7ac7df7bb(cluster.bounds, projection, this.gridSize).contains(marker.getPosition())) cluster.push(marker);
         else {
-            const cluster1 = new $3e67a706eb58e4f4$export$4b200d2f979b5b40({
+            const cluster1 = new $abe5479307b3aef5$export$4b200d2f979b5b40({
                 markers: [
                     marker
                 ]
@@ -7366,9 +7366,9 @@ PERFORMANCE OF THIS SOFTWARE.
  * limitations under the License.
  */ /**
  * Noop algorithm does not generate any clusters or filter markers by the an extended viewport.
- */ class $3e67a706eb58e4f4$export$364ff8cea68ab62f extends $3e67a706eb58e4f4$export$cc72e4132fdd891 {
+ */ class $abe5479307b3aef5$export$364ff8cea68ab62f extends $abe5479307b3aef5$export$cc72e4132fdd891 {
     constructor(_a2){
-        var options2 = $3e67a706eb58e4f4$var$__rest(_a2, []);
+        var options2 = $abe5479307b3aef5$var$__rest(_a2, []);
         super(options2);
     }
     calculate({ markers: markers , map: map , mapCanvasProjection: mapCanvasProjection ,  }) {
@@ -7406,19 +7406,19 @@ PERFORMANCE OF THIS SOFTWARE.
  * viewport changes. Instead use {@link SuperClusterAlgorithm}.
  *
  * @see https://www.npmjs.com/package/@turf/clusters-kmeans
- */ class $3e67a706eb58e4f4$export$b708ab62db44cc4 extends $3e67a706eb58e4f4$export$9c53a56baa246b22 {
+ */ class $abe5479307b3aef5$export$b708ab62db44cc4 extends $abe5479307b3aef5$export$9c53a56baa246b22 {
     constructor(_a3){
-        var { numberOfClusters: $3e67a706eb58e4f4$var$numberOfClusters  } = _a3, options3 = $3e67a706eb58e4f4$var$__rest(_a3, [
+        var { numberOfClusters: $abe5479307b3aef5$var$numberOfClusters  } = _a3, options3 = $abe5479307b3aef5$var$__rest(_a3, [
             "numberOfClusters"
         ]);
         super(options3);
-        this.numberOfClusters = $3e67a706eb58e4f4$var$numberOfClusters;
+        this.numberOfClusters = $abe5479307b3aef5$var$numberOfClusters;
     }
     cluster({ markers: markers , map: map  }) {
         const clusters = [];
         if (markers.length === 0) return clusters;
-        const points = $f1c53da3377f3130$export$7c422acbc10e74d2(markers.map((marker)=>{
-            return $f1c53da3377f3130$export$8502864bca7c3201([
+        const points = $06fd7bba89ea2716$export$7c422acbc10e74d2(markers.map((marker)=>{
+            return $06fd7bba89ea2716$export$8502864bca7c3201([
                 marker.getPosition().lng(),
                 marker.getPosition().lat()
             ]);
@@ -7426,10 +7426,10 @@ PERFORMANCE OF THIS SOFTWARE.
         let numberOfClusters;
         if (this.numberOfClusters instanceof Function) numberOfClusters = this.numberOfClusters(markers.length, map.getZoom());
         else numberOfClusters = this.numberOfClusters;
-        $e771df19e4bdc08f$export$9099ad97b570f7c(points, {
+        $afde46b62500dbb0$export$9099ad97b570f7c(points, {
             numberOfClusters: numberOfClusters
         }).features.forEach((point, i)=>{
-            if (!clusters[point.properties.cluster]) clusters[point.properties.cluster] = new $3e67a706eb58e4f4$export$4b200d2f979b5b40({
+            if (!clusters[point.properties.cluster]) clusters[point.properties.cluster] = new $abe5479307b3aef5$export$4b200d2f979b5b40({
                 position: {
                     lng: point.properties.centroid[0],
                     lat: point.properties.centroid[1]
@@ -7455,7 +7455,7 @@ PERFORMANCE OF THIS SOFTWARE.
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */ const $3e67a706eb58e4f4$var$DEFAULT_INTERNAL_DBSCAN_OPTION = {
+ */ const $abe5479307b3aef5$var$DEFAULT_INTERNAL_DBSCAN_OPTION = {
     units: "kilometers",
     mutate: false,
     minPoints: 1
@@ -7470,33 +7470,33 @@ PERFORMANCE OF THIS SOFTWARE.
  * viewport changes. Instead use {@link SuperClusterAlgorithm}.
  *
  * @see https://www.npmjs.com/package/@turf/clusters-dbscan
- */ class $3e67a706eb58e4f4$export$ad8e4ddb40f55457 extends $3e67a706eb58e4f4$export$9c53a56baa246b22 {
+ */ class $abe5479307b3aef5$export$ad8e4ddb40f55457 extends $abe5479307b3aef5$export$9c53a56baa246b22 {
     constructor(_a4){
-        var { maxDistance: $3e67a706eb58e4f4$var$maxDistance = 200 , minPoints: $3e67a706eb58e4f4$var$minPoints = $3e67a706eb58e4f4$var$DEFAULT_INTERNAL_DBSCAN_OPTION.minPoints  } = _a4, options4 = $3e67a706eb58e4f4$var$__rest(_a4, [
+        var { maxDistance: $abe5479307b3aef5$var$maxDistance = 200 , minPoints: $abe5479307b3aef5$var$minPoints = $abe5479307b3aef5$var$DEFAULT_INTERNAL_DBSCAN_OPTION.minPoints  } = _a4, options4 = $abe5479307b3aef5$var$__rest(_a4, [
             "maxDistance",
             "minPoints"
         ]);
         super(options4);
-        this.maxDistance = $3e67a706eb58e4f4$var$maxDistance;
+        this.maxDistance = $abe5479307b3aef5$var$maxDistance;
         this.options = Object.assign(Object.assign({
-        }, $3e67a706eb58e4f4$var$DEFAULT_INTERNAL_DBSCAN_OPTION), {
-            minPoints: $3e67a706eb58e4f4$var$minPoints
+        }, $abe5479307b3aef5$var$DEFAULT_INTERNAL_DBSCAN_OPTION), {
+            minPoints: $abe5479307b3aef5$var$minPoints
         });
     }
     cluster({ markers: markers , mapCanvasProjection: mapCanvasProjection ,  }) {
-        const points = $f1c53da3377f3130$export$7c422acbc10e74d2(markers.map((marker)=>{
+        const points = $06fd7bba89ea2716$export$7c422acbc10e74d2(markers.map((marker)=>{
             const projectedPoint = mapCanvasProjection.fromLatLngToContainerPixel(marker.getPosition());
-            return $f1c53da3377f3130$export$8502864bca7c3201([
+            return $06fd7bba89ea2716$export$8502864bca7c3201([
                 projectedPoint.x,
                 projectedPoint.y
             ]);
         }));
         const grouped = [];
-        $5d992c419bc57c89$export$9099ad97b570f7c(points, this.maxDistance, this.options).features.forEach((point, i)=>{
+        $af33975ec2b83c02$export$9099ad97b570f7c(points, this.maxDistance, this.options).features.forEach((point, i)=>{
             if (!grouped[point.properties.cluster]) grouped[point.properties.cluster] = [];
             grouped[point.properties.cluster].push(markers[i]);
         });
-        return grouped.map((markers2)=>new $3e67a706eb58e4f4$export$4b200d2f979b5b40({
+        return grouped.map((markers2)=>new $abe5479307b3aef5$export$4b200d2f979b5b40({
                 markers: markers2
             })
         );
@@ -7520,18 +7520,18 @@ PERFORMANCE OF THIS SOFTWARE.
  * A very fast JavaScript algorithm for geospatial point clustering using KD trees.
  *
  * @see https://www.npmjs.com/package/supercluster for more information on options.
- */ class $3e67a706eb58e4f4$export$8a0a8f828f6f237c extends $3e67a706eb58e4f4$export$cc72e4132fdd891 {
+ */ class $abe5479307b3aef5$export$8a0a8f828f6f237c extends $abe5479307b3aef5$export$cc72e4132fdd891 {
     constructor(_a5){
-        var { maxZoom: $3e67a706eb58e4f4$var$maxZoom , radius: $3e67a706eb58e4f4$var$radius = 60  } = _a5, options5 = $3e67a706eb58e4f4$var$__rest(_a5, [
+        var { maxZoom: $abe5479307b3aef5$var$maxZoom , radius: $abe5479307b3aef5$var$radius = 60  } = _a5, options5 = $abe5479307b3aef5$var$__rest(_a5, [
             "maxZoom",
             "radius"
         ]);
         super({
-            maxZoom: $3e67a706eb58e4f4$var$maxZoom
+            maxZoom: $abe5479307b3aef5$var$maxZoom
         });
-        this.superCluster = new $260425be1d20237d$export$9099ad97b570f7c(Object.assign({
+        this.superCluster = new $4548a3b8e0a2dd0b$export$9099ad97b570f7c(Object.assign({
             maxZoom: this.maxZoom,
-            radius: $3e67a706eb58e4f4$var$radius
+            radius: $abe5479307b3aef5$var$radius
         }, options5));
         this.state = {
             zoom: null
@@ -7539,7 +7539,7 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     calculate(input) {
         let changed = false;
-        if (!(/*@__PURE__*/$parcel$interopDefault($75317cff1a6fcfba$exports))(input.markers, this.markers)) {
+        if (!(/*@__PURE__*/$parcel$interopDefault($65be1c1f2fe5b535$exports))(input.markers, this.markers)) {
             changed = true;
             // TODO use proxy to avoid copy?
             this.markers = [
@@ -7567,7 +7567,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
         if (!changed) {
             if (this.state.zoom > this.maxZoom && state.zoom > this.maxZoom) ;
-            else changed = changed || !(/*@__PURE__*/$parcel$interopDefault($75317cff1a6fcfba$exports))(this.state, state);
+            else changed = changed || !(/*@__PURE__*/$parcel$interopDefault($65be1c1f2fe5b535$exports))(this.state, state);
         }
         this.state = state;
         if (changed) this.clusters = this.cluster(input);
@@ -7585,7 +7585,7 @@ PERFORMANCE OF THIS SOFTWARE.
         ], map.getZoom()).map(this.transformCluster.bind(this));
     }
     transformCluster({ geometry: { coordinates: [lng, lat] ,  } , properties: properties ,  }) {
-        if (properties.cluster) return new $3e67a706eb58e4f4$export$4b200d2f979b5b40({
+        if (properties.cluster) return new $abe5479307b3aef5$export$4b200d2f979b5b40({
             markers: this.superCluster.getLeaves(properties.cluster_id, Infinity).map((leaf)=>leaf.properties.marker
             ),
             position: new google.maps.LatLng({
@@ -7595,7 +7595,7 @@ PERFORMANCE OF THIS SOFTWARE.
         });
         else {
             const marker = properties.marker;
-            return new $3e67a706eb58e4f4$export$4b200d2f979b5b40({
+            return new $abe5479307b3aef5$export$4b200d2f979b5b40({
                 markers: [
                     marker
                 ],
@@ -7620,7 +7620,7 @@ PERFORMANCE OF THIS SOFTWARE.
  * limitations under the License.
  */ /**
  * Provides statistics on all clusters in the current render cycle for use in {@link Renderer.render}.
- */ class $3e67a706eb58e4f4$export$4a881b7a0aba36e2 {
+ */ class $abe5479307b3aef5$export$4a881b7a0aba36e2 {
     constructor(markers2, clusters){
         this.markers = {
             sum: markers2.length
@@ -7640,7 +7640,7 @@ PERFORMANCE OF THIS SOFTWARE.
         };
     }
 }
-class $3e67a706eb58e4f4$export$ee0e2b10e0cbe53 {
+class $abe5479307b3aef5$export$ee0e2b10e0cbe53 {
     /**
      * The default render function for the library used by {@link MarkerClusterer}.
      *
@@ -7721,20 +7721,20 @@ class $3e67a706eb58e4f4$export$ee0e2b10e0cbe53 {
  * @param type2 The Type to extend with.
  * @ignore
  */ // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function $3e67a706eb58e4f4$var$extend(type1, type2) {
+function $abe5479307b3aef5$var$extend(type1, type2) {
     /* istanbul ignore next */ // eslint-disable-next-line prefer-const
     for(let property in type2.prototype)type1.prototype[property] = type2.prototype[property];
 }
 /**
  * @ignore
- */ class $3e67a706eb58e4f4$var$OverlayViewSafe {
+ */ class $abe5479307b3aef5$var$OverlayViewSafe {
     constructor(){
         // MarkerClusterer implements google.maps.OverlayView interface. We use the
         // extend function to extend MarkerClusterer with google.maps.OverlayView
         // because it might not always be available when the code is defined so we
         // look for it at the last possible moment. If it doesn't exist now then
         // there is no point going ahead :)
-        $3e67a706eb58e4f4$var$extend($3e67a706eb58e4f4$var$OverlayViewSafe, google.maps.OverlayView);
+        $abe5479307b3aef5$var$extend($abe5479307b3aef5$var$OverlayViewSafe, google.maps.OverlayView);
     }
 }
 /**
@@ -7751,14 +7751,14 @@ function $3e67a706eb58e4f4$var$extend(type1, type2) {
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */ var $3e67a706eb58e4f4$export$f0bbe6a8e683fb51;
+ */ var $abe5479307b3aef5$export$f0bbe6a8e683fb51;
 (function(MarkerClustererEvents) {
     MarkerClustererEvents["CLUSTERING_BEGIN"] = "clusteringbegin";
     MarkerClustererEvents["CLUSTERING_END"] = "clusteringend";
     MarkerClustererEvents["CLUSTER_CLICK"] = "click";
-})($3e67a706eb58e4f4$export$f0bbe6a8e683fb51 || ($3e67a706eb58e4f4$export$f0bbe6a8e683fb51 = {
+})($abe5479307b3aef5$export$f0bbe6a8e683fb51 || ($abe5479307b3aef5$export$f0bbe6a8e683fb51 = {
 }));
-const $3e67a706eb58e4f4$export$f9d00dffdebb53c = (_, cluster, map)=>{
+const $abe5479307b3aef5$export$f9d00dffdebb53c = (_, cluster, map)=>{
     map.fitBounds(cluster.bounds);
 };
 /**
@@ -7766,9 +7766,9 @@ const $3e67a706eb58e4f4$export$f9d00dffdebb53c = (_, cluster, map)=>{
  * of markers. See {@link MarkerClustererOptions} for more details.
  *
  * <iframe src="https://googlemaps.github.io/js-three/public/anchor/index.html"></iframe>
- */ class $3e67a706eb58e4f4$export$ecdea5c1dab96b8d extends $3e67a706eb58e4f4$var$OverlayViewSafe {
-    constructor({ map: map , markers: markers3 = [] , algorithm: algorithm = new $3e67a706eb58e4f4$export$8a0a8f828f6f237c({
-    }) , renderer: renderer = new $3e67a706eb58e4f4$export$ee0e2b10e0cbe53() , onClusterClick: onClusterClick = $3e67a706eb58e4f4$export$f9d00dffdebb53c ,  }){
+ */ class $abe5479307b3aef5$export$ecdea5c1dab96b8d extends $abe5479307b3aef5$var$OverlayViewSafe {
+    constructor({ map: map , markers: markers3 = [] , algorithm: algorithm = new $abe5479307b3aef5$export$8a0a8f828f6f237c({
+    }) , renderer: renderer = new $abe5479307b3aef5$export$ee0e2b10e0cbe53() , onClusterClick: onClusterClick = $abe5479307b3aef5$export$f9d00dffdebb53c ,  }){
         super();
         this.markers = [
             ...markers3
@@ -7816,7 +7816,7 @@ const $3e67a706eb58e4f4$export$f9d00dffdebb53c = (_, cluster, map)=>{
      */ render() {
         const map1 = this.getMap();
         if (map1 instanceof google.maps.Map && this.getProjection()) {
-            google.maps.event.trigger(this, $3e67a706eb58e4f4$export$f0bbe6a8e683fb51.CLUSTERING_BEGIN, this);
+            google.maps.event.trigger(this, $abe5479307b3aef5$export$f0bbe6a8e683fb51.CLUSTERING_BEGIN, this);
             const { clusters: clusters1 , changed: changed  } = this.algorithm.calculate({
                 markers: this.markers,
                 map: map1,
@@ -7830,7 +7830,7 @@ const $3e67a706eb58e4f4$export$f9d00dffdebb53c = (_, cluster, map)=>{
                 this.clusters = clusters1;
                 this.renderClusters();
             }
-            google.maps.event.trigger(this, $3e67a706eb58e4f4$export$f0bbe6a8e683fb51.CLUSTERING_END, this);
+            google.maps.event.trigger(this, $abe5479307b3aef5$export$f0bbe6a8e683fb51.CLUSTERING_END, this);
         }
     }
     onAdd() {
@@ -7850,14 +7850,14 @@ const $3e67a706eb58e4f4$export$f9d00dffdebb53c = (_, cluster, map)=>{
     }
     renderClusters() {
         // generate stats to pass to renderers
-        const stats = new $3e67a706eb58e4f4$export$4a881b7a0aba36e2(this.markers, this.clusters);
+        const stats = new $abe5479307b3aef5$export$4a881b7a0aba36e2(this.markers, this.clusters);
         const map1 = this.getMap();
         this.clusters.forEach((cluster)=>{
             if (cluster.markers.length === 1) cluster.marker = cluster.markers[0];
             else {
                 cluster.marker = this.renderer.render(cluster, stats);
                 if (this.onClusterClick) cluster.marker.addListener("click", /* istanbul ignore next */ (event)=>{
-                    google.maps.event.trigger(this, $3e67a706eb58e4f4$export$f0bbe6a8e683fb51.CLUSTER_CLICK, cluster);
+                    google.maps.event.trigger(this, $abe5479307b3aef5$export$f0bbe6a8e683fb51.CLUSTER_CLICK, cluster);
                     this.onClusterClick(event, cluster, map1);
                 });
             }
@@ -7867,37 +7867,37 @@ const $3e67a706eb58e4f4$export$f9d00dffdebb53c = (_, cluster, map)=>{
 }
 
 
-var $07f55cd4ae490028$export$b2f13e228c542ebb = window.google;
+var $5cab7f24a6cc18af$export$b2f13e228c542ebb = window.google;
 
 
-var $a6afb27f79910c9a$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) {
+var $eec1dd49d0c67d6b$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($a6afb27f79910c9a$export$a0bd1dffd4b583c, Renderer);
-    function $a6afb27f79910c9a$export$a0bd1dffd4b583c(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $a6afb27f79910c9a$export$a0bd1dffd4b583c);
+    $bca7673885229bfd$export$9099ad97b570f7c($eec1dd49d0c67d6b$export$a0bd1dffd4b583c, Renderer);
+    function $eec1dd49d0c67d6b$export$a0bd1dffd4b583c(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $eec1dd49d0c67d6b$export$a0bd1dffd4b583c);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($a6afb27f79910c9a$export$a0bd1dffd4b583c).call(this, params));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($eec1dd49d0c67d6b$export$a0bd1dffd4b583c).call(this, params));
         /////////////////////////////////////////////
         // parameters that can be passed in
         // what should the renderer do if there are no geopoints
         // can be one of:
         // render - render the map anyway, with no geopoints on it
         // hide - hide the map and display the mapHiddenText
-        _this.onNoGeoPoints = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onNoGeoPoints", "render");
+        _this.onNoGeoPoints = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onNoGeoPoints", "render");
         // text to render if the map has no geo points and the behaviour is "hide"
-        _this.mapHiddenText = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "mapHiddenText", "No map data available");
+        _this.mapHiddenText = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "mapHiddenText", "No map data available");
         // initial zoom level
-        _this.initialZoom = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "initialZoom", 2);
+        _this.initialZoom = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "initialZoom", 2);
         // initial map type
-        _this.mapType = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "mapType", "hybrid");
-        _this.labelFunction = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "labelFunction", false);
+        _this.mapType = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "mapType", "hybrid");
+        _this.labelFunction = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "labelFunction", false);
         // should we be using the google maps clustering features
-        _this.cluster = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "cluster", false);
-        _this.reQueryOnBoundsChange = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "reQueryOnBoundsChange", false);
-        _this.clusterIcons = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "clusterIcons", {
+        _this.cluster = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "cluster", false);
+        _this.reQueryOnBoundsChange = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "reQueryOnBoundsChange", false);
+        _this.clusterIcons = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "clusterIcons", {
             0: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png"
         });
-        _this.renderCluster = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "renderCluster", false);
+        _this.renderCluster = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "renderCluster", false);
         /////////////////////////////////////////////
         // internal state
         _this.namespace = "edges-google-map-view";
@@ -7911,7 +7911,7 @@ var $a6afb27f79910c9a$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) 
         _this.skipIdleEvent = 2;
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($a6afb27f79910c9a$export$a0bd1dffd4b583c, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($eec1dd49d0c67d6b$export$a0bd1dffd4b583c, [
         {
             key: "draw",
             value: function draw() {
@@ -7923,20 +7923,20 @@ var $a6afb27f79910c9a$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) 
                     }
                 }
                 this.skipIdleEvent = 2;
-                var centre = new $07f55cd4ae490028$export$b2f13e228c542ebb.maps.LatLng(this.component.centre.lat, this.component.centre.lon);
+                var centre = new $5cab7f24a6cc18af$export$b2f13e228c542ebb.maps.LatLng(this.component.centre.lat, this.component.centre.lon);
                 if (!this.map) {
-                    var canvasClass = $988cca1a6a01f734$export$e516ebba864be69d(this.namespace, "canvas", this);
-                    var canvasSelector = $988cca1a6a01f734$export$b1157bd4df096bce(this.namespace, "canvas", this);
+                    var canvasClass = $d48cc3604bf30e24$export$e516ebba864be69d(this.namespace, "canvas", this);
+                    var canvasSelector = $d48cc3604bf30e24$export$b1157bd4df096bce(this.namespace, "canvas", this);
                     this.component.context.html('<div class="' + canvasClass + '"></div>');
                     var element = this.component.jq(canvasSelector)[0];
                     var mapTypeId = this.mapType;
-                    if (this.mapType === "hybrid") mapTypeId = $07f55cd4ae490028$export$b2f13e228c542ebb.maps.MapTypeId.HYBRID;
+                    if (this.mapType === "hybrid") mapTypeId = $5cab7f24a6cc18af$export$b2f13e228c542ebb.maps.MapTypeId.HYBRID;
                     var mapOptions = {
                         zoom: this.initialZoom,
                         center: centre,
                         mapTypeId: mapTypeId
                     };
-                    this.map = new $07f55cd4ae490028$export$b2f13e228c542ebb.maps.Map(element, mapOptions);
+                    this.map = new $5cab7f24a6cc18af$export$b2f13e228c542ebb.maps.Map(element, mapOptions);
                     // make sure we set the centre right
                     this.map.setCenter(centre);
                 }
@@ -7949,7 +7949,7 @@ var $a6afb27f79910c9a$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) 
                 this.markers = [];
                 for(var i = 0; i < this.component.locations.length; i++){
                     var loc = this.component.locations[i];
-                    var myLatlng = new $07f55cd4ae490028$export$b2f13e228c542ebb.maps.LatLng(loc.lat, loc.lon);
+                    var myLatlng = new $5cab7f24a6cc18af$export$b2f13e228c542ebb.maps.LatLng(loc.lat, loc.lon);
                     var properties = {
                         position: myLatlng
                     };
@@ -7963,7 +7963,7 @@ var $a6afb27f79910c9a$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) 
                         text: this.labelFunction(loc)
                     } // e.g. loc.count.toString()
                     ;
-                    var marker = new $07f55cd4ae490028$export$b2f13e228c542ebb.maps.Marker(properties);
+                    var marker = new $5cab7f24a6cc18af$export$b2f13e228c542ebb.maps.Marker(properties);
                     this.markers.push(marker);
                 }
                 if (this.cluster) {
@@ -7972,10 +7972,10 @@ var $a6afb27f79910c9a$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) 
                         markers: this.markers
                     };
                     if (this.renderCluster) props["renderer"] = this.renderCluster;
-                    this.markerCluster = new $3e67a706eb58e4f4$export$ecdea5c1dab96b8d(props);
+                    this.markerCluster = new $abe5479307b3aef5$export$ecdea5c1dab96b8d(props);
                 }
                 if (this.reQueryOnBoundsChange) {
-                    var onBoundsChanged = $988cca1a6a01f734$export$367047a567f2342b(this, "boundsChanged");
+                    var onBoundsChanged = $d48cc3604bf30e24$export$367047a567f2342b(this, "boundsChanged");
                     this.map.addListener("idle", onBoundsChanged);
                 }
             }
@@ -8021,22 +8021,22 @@ var $a6afb27f79910c9a$export$a0bd1dffd4b583c = /*#__PURE__*/ function(Renderer) 
             }
         }
     ]);
-    return $a6afb27f79910c9a$export$a0bd1dffd4b583c;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $eec1dd49d0c67d6b$export$a0bd1dffd4b583c;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
 
 
 
-var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component) {
+var $2c48e414d79136ba$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($eb9467bf48f108cb$export$845e14b82c9a4f95, Component);
-    function $eb9467bf48f108cb$export$845e14b82c9a4f95(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $eb9467bf48f108cb$export$845e14b82c9a4f95);
+    $bca7673885229bfd$export$9099ad97b570f7c($2c48e414d79136ba$export$845e14b82c9a4f95, Component);
+    function $2c48e414d79136ba$export$845e14b82c9a4f95(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $2c48e414d79136ba$export$845e14b82c9a4f95);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($eb9467bf48f108cb$export$845e14b82c9a4f95).call(this, params));
-        $0726ab3728f86779$export$9099ad97b570f7c($0ace6cd118fdb36a$export$9099ad97b570f7c(_this), /////////////////////////////////////////////////
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($2c48e414d79136ba$export$845e14b82c9a4f95).call(this, params));
+        $9b036347ace9941e$export$9099ad97b570f7c($f483f7288df68fd0$export$9099ad97b570f7c(_this), /////////////////////////////////////////////////
         // query handlers for getting the full list of terms to display
         "listAll", function() {
             // to list all possible terms, build off the base query
@@ -8051,26 +8051,26 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
                 orderDir: _this.orderDir,
                 size: _this.size
             };
-            bq.addAggregation(new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation(params1));
+            bq.addAggregation(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation(params1));
             _this.latestQuery = bq;
             // issue the query to elasticsearch
             _this.edge.queryAdapter.doQuery({
                 edge: _this.edge,
                 query: bq,
-                success: $988cca1a6a01f734$export$367047a567f2342b($0ace6cd118fdb36a$export$9099ad97b570f7c(_this), "listAllQuerySuccess", [
+                success: $d48cc3604bf30e24$export$367047a567f2342b($f483f7288df68fd0$export$9099ad97b570f7c(_this), "listAllQuerySuccess", [
                     "result"
                 ]),
-                error: $988cca1a6a01f734$export$367047a567f2342b($0ace6cd118fdb36a$export$9099ad97b570f7c(_this), "listAllQueryFail")
+                error: $d48cc3604bf30e24$export$367047a567f2342b($f483f7288df68fd0$export$9099ad97b570f7c(_this), "listAllQueryFail")
             });
         });
-        $0726ab3728f86779$export$9099ad97b570f7c($0ace6cd118fdb36a$export$9099ad97b570f7c(_this), "doUpdate", function() {
+        $9b036347ace9941e$export$9099ad97b570f7c($f483f7288df68fd0$export$9099ad97b570f7c(_this), "doUpdate", function() {
             // is an update already happening?
             if (_this.updating) return;
             _this.udpating = true;
             // to list all current terms, build off the current query
             var bq = _this.edge.cloneQuery();
             // remove any constraint on this field, and clear the aggregations and set size to 0 for performance
-            bq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+            bq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                 field: _this.field
             }));
             bq.clearAggregations();
@@ -8083,19 +8083,19 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
                 orderDir: _this.orderDir,
                 size: _this.size
             };
-            bq.addAggregation(new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation(params1));
+            bq.addAggregation(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation(params1));
             _this.latestQuery = bq;
             // issue the query to elasticsearch
             _this.edge.queryAdapter.doQuery({
                 edge: _this.edge,
                 query: bq,
-                success: $988cca1a6a01f734$export$367047a567f2342b($0ace6cd118fdb36a$export$9099ad97b570f7c(_this), "doUpdateQuerySuccess", [
+                success: $d48cc3604bf30e24$export$367047a567f2342b($f483f7288df68fd0$export$9099ad97b570f7c(_this), "doUpdateQuerySuccess", [
                     "result"
                 ]),
-                error: $988cca1a6a01f734$export$367047a567f2342b($0ace6cd118fdb36a$export$9099ad97b570f7c(_this), "doUpdateQueryFail")
+                error: $d48cc3604bf30e24$export$367047a567f2342b($f483f7288df68fd0$export$9099ad97b570f7c(_this), "doUpdateQueryFail")
             });
         });
-        $0726ab3728f86779$export$9099ad97b570f7c($0ace6cd118fdb36a$export$9099ad97b570f7c(_this), //////////////////////////////////////////
+        $9b036347ace9941e$export$9099ad97b570f7c($f483f7288df68fd0$export$9099ad97b570f7c(_this), //////////////////////////////////////////
         // "private" functions for internal use
         "_translate", function(term) {
             if (_this.valueMap) {
@@ -8104,31 +8104,31 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
             return term;
         });
         // field upon which to build the selector
-        _this.field = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "field");
+        _this.field = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "field");
         // whether the facet should be displayed at all (e.g. you may just want the data for a callback)
-        _this.active = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "active", true);
+        _this.active = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "active", true);
         // whether this component updates itself on every request, or whether it is static
         // throughout its lifecycle.  One of "update" or "static"
-        _this.lifecycle = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "lifecycle", "static");
+        _this.lifecycle = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "lifecycle", "static");
         // if the update type is "update", then how should this component update the facet values
         // * mergeInitial - always keep the initial list in the original order, and merge the bucket counts onto the correct terms
         // * fresh - just use the values in the most recent aggregation, ignoring the initial values
-        _this.updateType = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "updateType", "mergeInitial");
+        _this.updateType = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "updateType", "mergeInitial");
         // which ordering to use term/count and asc/desc
-        _this.orderBy = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "orderBy", "term");
-        _this.orderDir = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "orderDir", "asc");
+        _this.orderBy = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "orderBy", "term");
+        _this.orderDir = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "orderDir", "asc");
         // number of results that we should display - remember that this will only
         // be used once, so should be large enough to gather all the values that might
         // be in the index
-        _this.size = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "size", 10);
+        _this.size = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "size", 10);
         // provide a map of values for terms to displayable terms, or a function
         // which can be used to translate terms to displyable values
-        _this.valueMap = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueMap", false);
-        _this.valueFunction = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueFunction", false);
+        _this.valueMap = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueMap", false);
+        _this.valueFunction = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueFunction", false);
         // should we try to synchronise the term counts from an equivalent aggregation on the
         // primary query?  You can turn this off if you aren't displaying counts or otherwise
         // modifying the display based on the counts
-        _this.syncCounts = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "syncCounts", true);
+        _this.syncCounts = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "syncCounts", true);
         //////////////////////////////////////////
         // properties used to store internal state
         // a place to store the raw result from the last query made for data
@@ -8138,7 +8138,7 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
         // will be issues which will populate this with the values
         // of the form
         // [{term: "<value>", display: "<display value>", count: <number of records>}]
-        _this.terms = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "terms", false);
+        _this.terms = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "terms", false);
         // values of terms that have been selected from this.terms
         // this is just a plain list of the values
         _this.selected = [];
@@ -8147,12 +8147,12 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
         _this.reQueryAfterListAll = false;
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($eb9467bf48f108cb$export$845e14b82c9a4f95, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($2c48e414d79136ba$export$845e14b82c9a4f95, [
         {
             key: "init",
             value: function init(edge) {
                 // first kick the request up to the superclass
-                $59ef20e355e8922b$export$9099ad97b570f7c($6f1885a119f0af4a$export$9099ad97b570f7c($eb9467bf48f108cb$export$845e14b82c9a4f95.prototype), "init", this).call(this, edge);
+                $17c4d4a7c863d924$export$9099ad97b570f7c($da23c25529bb1df4$export$9099ad97b570f7c($2c48e414d79136ba$export$845e14b82c9a4f95.prototype), "init", this).call(this, edge);
                 // now trigger a request for the terms to present, if not explicitly provided
                 if (!this.terms) {
                     if (this.edge.openingQuery || this.edge.urlQuery) this.reQueryAfterListAll = true;
@@ -8167,7 +8167,7 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
                 this.selected = [];
                 // extract all the filter values that pertain to this selector
                 if (this.edge.currentQuery) {
-                    var filters = this.edge.currentQuery.listMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    var filters = this.edge.currentQuery.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                     for(var i = 0; i < filters.length; i++)for(var j = 0; j < filters[i].values.length; j++){
@@ -8258,7 +8258,7 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
         {
             key: "setupEvent",
             value: function setupEvent() {
-                if (this.lifecycle === "update") this.edge.context.on("edges:pre-query", $988cca1a6a01f734$export$866a93d0ccff8292(this, "doUpdate"));
+                if (this.lifecycle === "update") this.edge.context.on("edges:pre-query", $d48cc3604bf30e24$export$866a93d0ccff8292(this, "doUpdate"));
             }
         },
         {
@@ -8288,10 +8288,10 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
             key: "selectTerms",
             value: function selectTerms(params) {
                 var terms = params.terms;
-                var clearOthers = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "clearOthers", false);
+                var clearOthers = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "clearOthers", false);
                 var nq = this.edge.cloneQuery();
                 // first find out if there was a terms filter already in place
-                var filters = nq.listMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                var filters = nq.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: this.field
                 }));
                 // if there is, just add the term to it
@@ -8306,11 +8306,11 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
                     }
                     // if all we did was remove terms that we're then going to re-add, just do nothing
                     if (filter.has_terms() && hadTermAlready === terms.length) return false;
-                    else if (!filter.has_terms()) nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    else if (!filter.has_terms()) nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                 } else // otherwise, set the Terms Filter
-                nq.addMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                nq.addMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: this.field,
                     values: terms
                 }));
@@ -8336,13 +8336,13 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
             value: function removeFilter(term) {
                 var nq = this.edge.cloneQuery();
                 // first find out if there was a terms filter already in place
-                var filters = nq.listMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                var filters = nq.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: this.field
                 }));
                 if (filters.length > 0) {
                     var filter = filters[0];
                     if (filter.has_term(term)) filter.remove_term(term);
-                    if (!filter.has_terms()) nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    if (!filter.has_terms()) nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                 }
@@ -8355,10 +8355,10 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
         {
             key: "clearFilters",
             value: function clearFilters(params) {
-                var triggerQuery = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "triggerQuery", true);
+                var triggerQuery = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "triggerQuery", true);
                 if (this.selected.length > 0) {
                     var nq = this.edge.cloneQuery();
-                    nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                     this.edge.pushQuery(nq);
@@ -8367,40 +8367,40 @@ var $eb9467bf48f108cb$export$845e14b82c9a4f95 = /*#__PURE__*/ function(Component
             }
         }
     ]);
-    return $eb9467bf48f108cb$export$845e14b82c9a4f95;
-}($97ca9eea36c86bb4$export$ea71c44d9cb0d048);
+    return $2c48e414d79136ba$export$845e14b82c9a4f95;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
 
 
 
 
 
 
-var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component) {
+var $58e70bcc9ea9714f$export$6175c660df807dd = /*#__PURE__*/ function(Component) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($1d641f1513d3a449$export$6175c660df807dd, Component);
-    function $1d641f1513d3a449$export$6175c660df807dd(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $1d641f1513d3a449$export$6175c660df807dd);
+    $bca7673885229bfd$export$9099ad97b570f7c($58e70bcc9ea9714f$export$6175c660df807dd, Component);
+    function $58e70bcc9ea9714f$export$6175c660df807dd(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $58e70bcc9ea9714f$export$6175c660df807dd);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($1d641f1513d3a449$export$6175c660df807dd).call(this, params));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($58e70bcc9ea9714f$export$6175c660df807dd).call(this, params));
         // field upon which to build the selector
-        _this.field = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "field");
+        _this.field = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "field");
         // whether the facet should be displayed at all (e.g. you may just want the data for a callback)
-        _this.active = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "active", true);
+        _this.active = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "active", true);
         // if the update type is "update", then how should this component update the facet values
         // * mergeInitial - always keep the initial list in the original order, and merge the bucket counts onto the correct terms
         // * fresh - just use the values in the most recent aggregation, ignoring the initial values
-        _this.updateType = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "updateType", "mergeInitial");
+        _this.updateType = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "updateType", "mergeInitial");
         // which ordering to use term/count and asc/desc
-        _this.orderBy = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "orderBy", "term");
-        _this.orderDir = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "orderDir", "asc");
+        _this.orderBy = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "orderBy", "term");
+        _this.orderDir = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "orderDir", "asc");
         // number of results that we should display - remember that this will only
         // be used once, so should be large enough to gather all the values that might
         // be in the index
-        _this.size = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "size", 10);
+        _this.size = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "size", 10);
         // provide a map of values for terms to displayable terms, or a function
         // which can be used to translate terms to displyable values
-        _this.valueMap = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueMap", false);
-        _this.valueFunction = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueFunction", false);
+        _this.valueMap = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueMap", false);
+        _this.valueFunction = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueFunction", false);
         //////////////////////////////////////////
         // properties used to store internal state
         // a place to store the raw result from the last query made for data
@@ -8419,12 +8419,12 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
         _this.reQueryAfterListAll = false;
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($1d641f1513d3a449$export$6175c660df807dd, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($58e70bcc9ea9714f$export$6175c660df807dd, [
         {
             key: "init",
             value: function init(edge) {
                 // first kick the request up to the superclass
-                $59ef20e355e8922b$export$9099ad97b570f7c($6f1885a119f0af4a$export$9099ad97b570f7c($1d641f1513d3a449$export$6175c660df807dd.prototype), "init", this).call(this, edge);
+                $17c4d4a7c863d924$export$9099ad97b570f7c($da23c25529bb1df4$export$9099ad97b570f7c($58e70bcc9ea9714f$export$6175c660df807dd.prototype), "init", this).call(this, edge);
                 // now trigger a request for the terms to present, if not explicitly provided
                 if (this.updateType) {
                     if (this.edge.openingQuery || this.edge.urlQuery) this.reQueryAfterListAll = true;
@@ -8445,7 +8445,7 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
                 this.terms = [];
                 // extract all the filter values that pertain to this selector
                 if (this.edge.currentQuery) {
-                    var filters = this.edge.currentQuery.listMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    var filters = this.edge.currentQuery.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                     for(var i = 0; i < filters.length; i++)for(var j = 0; j < filters[i].values.length; j++){
@@ -8510,16 +8510,16 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
                     orderDir: this.orderDir,
                     size: this.size
                 };
-                bq.addAggregation(new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation(params));
+                bq.addAggregation(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation(params));
                 this.latestQuery = bq;
                 // issue the query to elasticsearch
                 this.edge.queryAdapter.doQuery({
                     edge: this.edge,
                     query: bq,
-                    success: $988cca1a6a01f734$export$367047a567f2342b(this, "listAllQuerySuccess", [
+                    success: $d48cc3604bf30e24$export$367047a567f2342b(this, "listAllQuerySuccess", [
                         "result"
                     ]),
-                    error: $988cca1a6a01f734$export$367047a567f2342b(this, "listAllQueryFail")
+                    error: $d48cc3604bf30e24$export$367047a567f2342b(this, "listAllQueryFail")
                 });
             }
         },
@@ -8558,7 +8558,7 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
         {
             key: "setupEvent",
             value: function setupEvent() {
-                this.edge.context.on("edges:pre-query", $988cca1a6a01f734$export$866a93d0ccff8292(this, "doUpdate"));
+                this.edge.context.on("edges:pre-query", $d48cc3604bf30e24$export$866a93d0ccff8292(this, "doUpdate"));
             }
         },
         {
@@ -8572,7 +8572,7 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
                 // to list all current terms, build off the current query
                 var bq = this.edge.cloneQuery();
                 // remove any constraint on this field, and clear the aggregations and set size to 0 for performance
-                bq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                bq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: this.field
                 }));
                 bq.clearAggregations();
@@ -8585,16 +8585,16 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
                     orderDir: this.orderDir,
                     size: this.size
                 };
-                bq.addAggregation(new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation(params));
+                bq.addAggregation(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation(params));
                 this.latestQuery = bq;
                 // issue the query to elasticsearch
                 this.edge.queryAdapter.doQuery({
                     edge: this.edge,
                     query: bq,
-                    success: $988cca1a6a01f734$export$367047a567f2342b(this, "doUpdateQuerySuccess", [
+                    success: $d48cc3604bf30e24$export$367047a567f2342b(this, "doUpdateQuerySuccess", [
                         "result"
                     ]),
-                    error: $988cca1a6a01f734$export$367047a567f2342b(this, "doUpdateQueryFail")
+                    error: $d48cc3604bf30e24$export$367047a567f2342b(this, "doUpdateQueryFail")
                 });
             }
         },
@@ -8623,10 +8623,10 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
             key: "selectTerms",
             value: function selectTerms(params) {
                 var terms = params.terms;
-                var clearOthers = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "clearOthers", false);
+                var clearOthers = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "clearOthers", false);
                 var nq = this.edge.cloneQuery();
                 // first find out if there was a terms filter already in place
-                var filters = nq.listMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                var filters = nq.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: this.field
                 }));
                 // if there is, just add the term to it
@@ -8641,11 +8641,11 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
                     }
                     // if all we did was remove terms that we're then going to re-add, just do nothing
                     if (filter.has_terms() && hadTermAlready === terms.length) return false;
-                    else if (!filter.has_terms()) nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    else if (!filter.has_terms()) nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                 } else // otherwise, set the Terms Filter
-                nq.addMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                nq.addMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: this.field,
                     values: terms
                 }));
@@ -8672,13 +8672,13 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
             value: function removeFilter(term) {
                 var nq = this.edge.cloneQuery();
                 // first find out if there was a terms filter already in place
-                var filters = nq.listMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                var filters = nq.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: this.field
                 }));
                 if (filters.length > 0) {
                     var filter = filters[0];
                     if (filter.has_term(term)) filter.remove_term(term);
-                    if (!filter.has_terms()) nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    if (!filter.has_terms()) nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                 }
@@ -8692,10 +8692,10 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
         {
             key: "clearFilters",
             value: function clearFilters(params) {
-                var triggerQuery = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "triggerQuery", true);
+                var triggerQuery = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "triggerQuery", true);
                 if (this.selected.length > 0) {
                     var nq = this.edge.cloneQuery();
-                    nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                    nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                         field: this.field
                     }));
                     this.edge.pushQuery(nq);
@@ -8718,41 +8718,41 @@ var $1d641f1513d3a449$export$6175c660df807dd = /*#__PURE__*/ function(Component)
             }
         }
     ]);
-    return $1d641f1513d3a449$export$6175c660df807dd;
-}($97ca9eea36c86bb4$export$ea71c44d9cb0d048);
+    return $58e70bcc9ea9714f$export$6175c660df807dd;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
 
 
 
 
 
-var $908df9636949411c$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer) {
+var $135bcb32af9eb45d$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($908df9636949411c$export$4b392426dd40333d, Renderer);
-    function $908df9636949411c$export$4b392426dd40333d(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $908df9636949411c$export$4b392426dd40333d);
+    $bca7673885229bfd$export$9099ad97b570f7c($135bcb32af9eb45d$export$4b392426dd40333d, Renderer);
+    function $135bcb32af9eb45d$export$4b392426dd40333d(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $135bcb32af9eb45d$export$4b392426dd40333d);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($908df9636949411c$export$4b392426dd40333d).call(this));
-        _this.title = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "title", "Select");
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($135bcb32af9eb45d$export$4b392426dd40333d).call(this));
+        _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", "Select");
         // whether the facet should be open or closed
         // can be initialised and is then used to track internal state
-        _this.open = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "open", false);
-        _this.togglable = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "togglable", true);
+        _this.open = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "open", false);
+        _this.togglable = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "togglable", true);
         // whether the count should be displayed along with the term
         // defaults to false because count may be confusing to the user in an OR selector
-        _this.showCount = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showCount", false);
-        _this.countFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "countFormat", false);
+        _this.showCount = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showCount", false);
+        _this.countFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "countFormat", false);
         // whether counts of 0 should prevent the value being rendered
-        _this.hideEmpty = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "hideEmpty", false);
-        _this.openIcon = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "openIcon", "glyphicon glyphicon-plus");
-        _this.closeIcon = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "closeIcon", "glyphicon glyphicon-minus");
+        _this.hideEmpty = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "hideEmpty", false);
+        _this.openIcon = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "openIcon", "glyphicon glyphicon-plus");
+        _this.closeIcon = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "closeIcon", "glyphicon glyphicon-minus");
         // don't display the facet at all if there is no data to display
-        _this.hideIfNoData = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "hideIfNoData", true);
-        _this.layout = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "layout", "left");
+        _this.hideIfNoData = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "hideIfNoData", true);
+        _this.layout = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "layout", "left");
         // namespace to use in the page
         _this.namespace = "edges-bs3-checkboxortermselector";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($908df9636949411c$export$4b392426dd40333d, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($135bcb32af9eb45d$export$4b392426dd40333d, [
         {
             key: "draw",
             value: function draw() {
@@ -8764,28 +8764,28 @@ var $908df9636949411c$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer)
                     return;
                 }
                 // sort out all the classes that we're going to be using
-                var countClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "count", this);
-                var checkboxClass = $988cca1a6a01f734$export$e516ebba864be69d(namespace, "selector", this);
-                var facetClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "facet", this);
-                var headerClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "header", this);
-                var bodyClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "body", this);
-                var listClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "list", this);
-                var labelClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "label", this);
-                var toggleId = $988cca1a6a01f734$export$bf52b203d82ff901(namespace, "toggle", this);
-                var resultsId = $988cca1a6a01f734$export$bf52b203d82ff901(namespace, "results", this);
+                var countClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "count", this);
+                var checkboxClass = $d48cc3604bf30e24$export$e516ebba864be69d(namespace, "selector", this);
+                var facetClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "facet", this);
+                var headerClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "header", this);
+                var bodyClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "body", this);
+                var listClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "list", this);
+                var labelClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "label", this);
+                var toggleId = $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, "toggle", this);
+                var resultsId = $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, "results", this);
                 // this is what's displayed in the body if there are no results or the page is loading
                 var results = "<li class='loading'>Loading choices...</li>";
                 if (ts.edge.result) results = "<li>No data to show</li>";
                 // if we want the active filters, render them
                 var filterFrag = "";
                 if (ts.selected.length > 0) {
-                    var resultClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "result", this);
+                    var resultClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "result", this);
                     for(var i = 0; i < ts.selected.length; i++){
                         var filt = ts.selected[i];
                         var def = this._getFilterDef(filt);
                         if (def) {
                             var display = this.component.translate(filt);
-                            var id = $988cca1a6a01f734$export$63ba8ea1e92c906(filt);
+                            var id = $d48cc3604bf30e24$export$63ba8ea1e92c906(filt);
                             var count = "";
                             if (this.showCount) {
                                 var cv = def.count;
@@ -8793,8 +8793,8 @@ var $908df9636949411c$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer)
                                 count = ' <span class="' + countClass + '">(' + cv + ')</span>';
                             }
                             filterFrag += '<li>\
-                        <input class="' + checkboxClass + '" data-key="' + $988cca1a6a01f734$export$5e20d0a3120d6c07(filt) + '" id="' + id + '" type="checkbox" name="' + id + '" checked="checked">\
-                        <label for="' + id + '" class="' + labelClass + '">' + $988cca1a6a01f734$export$5e20d0a3120d6c07(display) + count + '</label>\
+                        <input class="' + checkboxClass + '" data-key="' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(filt) + '" id="' + id + '" type="checkbox" name="' + id + '" checked="checked">\
+                        <label for="' + id + '" class="' + labelClass + '">' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(display) + count + '</label>\
                     </li>';
                         }
                     }
@@ -8810,10 +8810,10 @@ var $908df9636949411c$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer)
                         if (active) continue;
                         var count = "";
                         if (this.showCount) count = ' <span class="' + countClass + '">(' + val.count + ')</span>';
-                        var id = $988cca1a6a01f734$export$63ba8ea1e92c906(val.term);
+                        var id = $d48cc3604bf30e24$export$63ba8ea1e92c906(val.term);
                         results += '<li>\
-                    <input class="' + checkboxClass + '" data-key="' + $988cca1a6a01f734$export$5e20d0a3120d6c07(val.term) + '" id="' + id + '" type="checkbox" name="' + id + '"' + checked + '>\
-                    <label for="' + id + '" class="' + labelClass + '">' + $988cca1a6a01f734$export$5e20d0a3120d6c07(val.display) + count + '</label>\
+                    <input class="' + checkboxClass + '" data-key="' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(val.term) + '" id="' + id + '" type="checkbox" name="' + id + '"' + checked + '>\
+                    <label for="' + id + '" class="' + labelClass + '">' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(val.display) + count + '</label>\
                 </li>';
                     }
                 }
@@ -8831,17 +8831,17 @@ var $908df9636949411c$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer)
                 ts.context.html(frag);
                 // trigger all the post-render set-up functions
                 this.setUIOpen();
-                var checkboxSelector = $988cca1a6a01f734$export$b1157bd4df096bce(namespace, "selector", this);
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(checkboxSelector, "change", this, "filterToggle");
-                var toggleSelector = $988cca1a6a01f734$export$5d5492dec79280f1(namespace, "toggle", this);
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(toggleSelector, "click", this, "toggleOpen");
+                var checkboxSelector = $d48cc3604bf30e24$export$b1157bd4df096bce(namespace, "selector", this);
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(checkboxSelector, "change", this, "filterToggle");
+                var toggleSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(namespace, "toggle", this);
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(toggleSelector, "click", this, "toggleOpen");
             }
         },
         {
             key: "headerLayout",
             value: function headerLayout(params) {
                 var toggleId = params.toggleId;
-                var iconClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "icon", this);
+                var iconClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "icon", this);
                 if (this.layout === "left") {
                     var tog = this.title;
                     if (this.togglable) tog = '<a href="#" id="' + toggleId + '"><i class="' + this.openIcon + '"></i>&nbsp;' + tog + "</a>";
@@ -8858,8 +8858,8 @@ var $908df9636949411c$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer)
             key: "setUIOpen",
             value: function setUIOpen() {
                 // the selectors that we're going to use
-                var resultsSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "results", this);
-                var toggleSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "toggle", this);
+                var resultsSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "results", this);
+                var toggleSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "toggle", this);
                 var results = this.component.jq(resultsSelector);
                 var toggle = this.component.jq(toggleSelector);
                 var openBits = this.openIcon.split(" ");
@@ -8904,40 +8904,40 @@ var $908df9636949411c$export$4b392426dd40333d = /*#__PURE__*/ function(Renderer)
             }
         }
     ]);
-    return $908df9636949411c$export$4b392426dd40333d;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $135bcb32af9eb45d$export$4b392426dd40333d;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
 
 
-var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer) {
+var $2039d36394fce070$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($29578ea610930bce$export$d3ad1026b19abbfd, Renderer);
-    function $29578ea610930bce$export$d3ad1026b19abbfd(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $29578ea610930bce$export$d3ad1026b19abbfd);
+    $bca7673885229bfd$export$9099ad97b570f7c($2039d36394fce070$export$d3ad1026b19abbfd, Renderer);
+    function $2039d36394fce070$export$d3ad1026b19abbfd(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $2039d36394fce070$export$d3ad1026b19abbfd);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($29578ea610930bce$export$d3ad1026b19abbfd).call(this));
-        _this.title = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "title", "Select");
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($2039d36394fce070$export$d3ad1026b19abbfd).call(this));
+        _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", "Select");
         // whether the facet should be open or closed
         // can be initialised and is then used to track internal state
-        _this.open = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "open", false);
-        _this.togglable = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "togglable", true);
+        _this.open = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "open", false);
+        _this.togglable = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "togglable", true);
         // whether the count should be displayed along with the term
         // defaults to false because count may be confusing to the user in an OR selector
-        _this.showCount = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showCount", false);
-        _this.countFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "countFormat", false);
-        _this.fixedTerms = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "fixedTerms", []);
-        _this.openIcon = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "openIcon", "glyphicon glyphicon-plus");
-        _this.closeIcon = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "closeIcon", "glyphicon glyphicon-minus");
+        _this.showCount = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showCount", false);
+        _this.countFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "countFormat", false);
+        _this.fixedTerms = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "fixedTerms", []);
+        _this.openIcon = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "openIcon", "glyphicon glyphicon-plus");
+        _this.closeIcon = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "closeIcon", "glyphicon glyphicon-minus");
         // don't display the facet at all if there is no data to display
-        _this.hideIfNoData = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "hideIfNoData", true);
-        _this.layout = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "layout", "left");
+        _this.hideIfNoData = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "hideIfNoData", true);
+        _this.layout = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "layout", "left");
         // namespace to use in the page
         _this.namespace = "edges-bs3-fixedselectioncheckboxortermselector";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($29578ea610930bce$export$d3ad1026b19abbfd, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($2039d36394fce070$export$d3ad1026b19abbfd, [
         {
             key: "draw",
             value: function draw() {
@@ -8949,15 +8949,15 @@ var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
                     return;
                 }
                 // sort out all the classes that we're going to be using
-                var countClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "count", this);
-                var checkboxClass = $988cca1a6a01f734$export$e516ebba864be69d(namespace, "selector", this);
-                var facetClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "facet", this);
-                var headerClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "header", this);
-                var bodyClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "body", this);
-                var listClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "list", this);
-                var labelClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, "label", this);
-                var toggleId = $988cca1a6a01f734$export$bf52b203d82ff901(namespace, "toggle", this);
-                var resultsId = $988cca1a6a01f734$export$bf52b203d82ff901(namespace, "results", this);
+                var countClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "count", this);
+                var checkboxClass = $d48cc3604bf30e24$export$e516ebba864be69d(namespace, "selector", this);
+                var facetClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "facet", this);
+                var headerClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "header", this);
+                var bodyClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "body", this);
+                var listClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "list", this);
+                var labelClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, "label", this);
+                var toggleId = $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, "toggle", this);
+                var resultsId = $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, "results", this);
                 var results = "";
                 for(var i = 0; i < this.fixedTerms.length; i++){
                     var ft = this.fixedTerms[i];
@@ -8971,19 +8971,19 @@ var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
                             if (active) checked = " checked=\"checked\" ";
                             var count = "";
                             if (this.showCount) count = ' <span class="' + countClass + '">(' + this._formatCount(val.count) + ')</span>';
-                            var id = $988cca1a6a01f734$export$63ba8ea1e92c906(val.term);
+                            var id = $d48cc3604bf30e24$export$63ba8ea1e92c906(val.term);
                             results += '<li>\
-                        <input class="' + checkboxClass + '" data-key="' + $988cca1a6a01f734$export$5e20d0a3120d6c07(val.term) + '" id="' + id + '" type="checkbox" name="' + id + '"' + checked + '>\
-                        <label for="' + id + '" class="' + labelClass + '" id="' + id + '_label"">' + $988cca1a6a01f734$export$5e20d0a3120d6c07(val.display) + count + '</label>\
+                        <input class="' + checkboxClass + '" data-key="' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(val.term) + '" id="' + id + '" type="checkbox" name="' + id + '"' + checked + '>\
+                        <label for="' + id + '" class="' + labelClass + '" id="' + id + '_label"">' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(val.display) + count + '</label>\
                     </li>';
                         }
                     }
                     if (!found) {
                         var display = this.component.translate(ft);
-                        var id = $988cca1a6a01f734$export$63ba8ea1e92c906(ft);
+                        var id = $d48cc3604bf30e24$export$63ba8ea1e92c906(ft);
                         results += '<li>\
-                    <input class="' + checkboxClass + '" data-key="' + $988cca1a6a01f734$export$5e20d0a3120d6c07(ft) + '" id="' + id + '" type="checkbox" name="' + id + '" disabled="disabled">\
-                    <label for="' + id + '" class="' + labelClass + '">' + $988cca1a6a01f734$export$5e20d0a3120d6c07(display) + '</label>\
+                    <input class="' + checkboxClass + '" data-key="' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(ft) + '" id="' + id + '" type="checkbox" name="' + id + '" disabled="disabled">\
+                    <label for="' + id + '" class="' + labelClass + '">' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(display) + '</label>\
                 </li>';
                     }
                 }
@@ -9006,10 +9006,10 @@ var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
                 ts.context.html(frag);
                 // trigger all the post-render set-up functions
                 this.setUIOpen();
-                var checkboxSelector = $988cca1a6a01f734$export$b1157bd4df096bce(namespace, "selector", this);
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(checkboxSelector, "change", this, "filterToggle");
-                var toggleSelector = $988cca1a6a01f734$export$5d5492dec79280f1(namespace, "toggle", this);
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(toggleSelector, "click", this, "toggleOpen");
+                var checkboxSelector = $d48cc3604bf30e24$export$b1157bd4df096bce(namespace, "selector", this);
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(checkboxSelector, "change", this, "filterToggle");
+                var toggleSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(namespace, "toggle", this);
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(toggleSelector, "click", this, "toggleOpen");
             }
         },
         {
@@ -9023,7 +9023,7 @@ var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
             key: "headerLayout",
             value: function headerLayout(params) {
                 var toggleId = params.toggleId;
-                var iconClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "icon", this);
+                var iconClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "icon", this);
                 if (this.layout === "left") {
                     var tog = this.title;
                     if (this.togglable) tog = '<a href="#" id="' + toggleId + '"><i class="' + this.openIcon + '"></i>&nbsp;' + tog + "</a>";
@@ -9040,8 +9040,8 @@ var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
             key: "setUIOpen",
             value: function setUIOpen() {
                 // the selectors that we're going to use
-                var resultsSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "results", this);
-                var toggleSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "toggle", this);
+                var resultsSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "results", this);
+                var toggleSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "toggle", this);
                 var results = this.component.jq(resultsSelector);
                 var toggle = this.component.jq(toggleSelector);
                 var openBits = this.openIcon.split(" ");
@@ -9080,8 +9080,8 @@ var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
             }
         }
     ]);
-    return $29578ea610930bce$export$d3ad1026b19abbfd;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $2039d36394fce070$export$d3ad1026b19abbfd;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
@@ -9090,45 +9090,45 @@ var $29578ea610930bce$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
 
 
 
-var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer) {
+var $8ff5b3d2c2ab6201$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($bd1d5a355545d6ff$export$6d5fb309d07d7299, Renderer);
-    function $bd1d5a355545d6ff$export$6d5fb309d07d7299(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $bd1d5a355545d6ff$export$6d5fb309d07d7299);
+    $bca7673885229bfd$export$9099ad97b570f7c($8ff5b3d2c2ab6201$export$6d5fb309d07d7299, Renderer);
+    function $8ff5b3d2c2ab6201$export$6d5fb309d07d7299(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $8ff5b3d2c2ab6201$export$6d5fb309d07d7299);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($bd1d5a355545d6ff$export$6d5fb309d07d7299).call(this, params));
-        _this.title = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "title", false);
-        _this.showValues = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showValues", true);
-        _this.toolTips = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "toolTips", true);
-        _this.controls = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "controls", false);
-        _this.stacked = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "stacked", false);
-        _this.legend = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "legend", true);
-        _this.color = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "color", false);
-        _this.barColor = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "barColor", false);
-        _this.noDataMessage = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "noDataMessage", false);
-        _this.transitionDuration = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "transitionDuration", 500);
-        _this.marginTop = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginTop", 30);
-        _this.marginRight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginRight", 50);
-        _this.marginBottom = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginBottom", 50);
-        _this.marginLeft = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginLeft", 200);
-        _this.yTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yTickFormat", ",.0f");
-        _this.xTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xTickFormat", false);
-        _this.valueFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueFormat", false);
-        _this.showXAxis = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showXAxis", true);
-        _this.showYAxis, $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showYAxes", true);
-        _this.xAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xAxisLabel", false);
-        _this.yAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yAxisLabel", false);
-        _this.xAxisLabelWrap = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xAxisLabelWrap", false);
-        _this.tooltipGenerator = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "tooltipGenerator", false);
-        _this.dynamicHeight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "dynamicHeight", false);
-        _this.barHeight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "barHeight", 0);
-        _this.reserveAbove = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "reserveAbove", 0);
-        _this.reserveBelow = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "reserveBelow", 0);
-        _this.groupSpacing = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "groupSpacing", false);
-        _this.hideIfNoData = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "hideIfNoData", false);
-        _this.onHide = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onHide", false);
-        _this.onShow = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onShow", false);
-        _this.onUpdate = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onUpdate", false);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($8ff5b3d2c2ab6201$export$6d5fb309d07d7299).call(this, params));
+        _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", false);
+        _this.showValues = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showValues", true);
+        _this.toolTips = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "toolTips", true);
+        _this.controls = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "controls", false);
+        _this.stacked = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "stacked", false);
+        _this.legend = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "legend", true);
+        _this.color = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "color", false);
+        _this.barColor = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "barColor", false);
+        _this.noDataMessage = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "noDataMessage", false);
+        _this.transitionDuration = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "transitionDuration", 500);
+        _this.marginTop = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginTop", 30);
+        _this.marginRight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginRight", 50);
+        _this.marginBottom = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginBottom", 50);
+        _this.marginLeft = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginLeft", 200);
+        _this.yTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yTickFormat", ",.0f");
+        _this.xTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xTickFormat", false);
+        _this.valueFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueFormat", false);
+        _this.showXAxis = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showXAxis", true);
+        _this.showYAxis, $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showYAxes", true);
+        _this.xAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xAxisLabel", false);
+        _this.yAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yAxisLabel", false);
+        _this.xAxisLabelWrap = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xAxisLabelWrap", false);
+        _this.tooltipGenerator = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "tooltipGenerator", false);
+        _this.dynamicHeight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "dynamicHeight", false);
+        _this.barHeight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "barHeight", 0);
+        _this.reserveAbove = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "reserveAbove", 0);
+        _this.reserveBelow = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "reserveBelow", 0);
+        _this.groupSpacing = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "groupSpacing", false);
+        _this.hideIfNoData = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "hideIfNoData", false);
+        _this.onHide = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onHide", false);
+        _this.onShow = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onShow", false);
+        _this.onUpdate = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onUpdate", false);
         _this.namespace = "edges-nvd3-horizontal-multibar";
         _this.draw = function() {
             // no need for data conversion on this graph type
@@ -9139,7 +9139,7 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
             if (!data_series) data_series = [];
             // now decide if we are going to continue
             if (_this.hideIfNoData) {
-                if (!$530e6b01b500d249$export$e89b2486fe14568(data_series)) {
+                if (!$fdccde0d4dd41d73$export$e89b2486fe14568(data_series)) {
                     _this.component.context.html("");
                     _this.component.context.hide();
                     if (_this.onHide) _this.onHide();
@@ -9160,15 +9160,15 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
             }
             var title = "";
             if (_this.title !== false) {
-                var titleClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(_this.namespace, "title", $0ace6cd118fdb36a$export$9099ad97b570f7c(_this));
+                var titleClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(_this.namespace, "title", $f483f7288df68fd0$export$9099ad97b570f7c(_this));
                 title = "<h4 class=\"".concat(titleClass, "\">").concat(_this.title, "</h4>");
             }
-            var svgId = $988cca1a6a01f734$export$bf52b203d82ff901(_this.namespace, "svg", $0ace6cd118fdb36a$export$9099ad97b570f7c(_this));
-            var svgSelector = $988cca1a6a01f734$export$5d5492dec79280f1(_this.namespace, "svg", $0ace6cd118fdb36a$export$9099ad97b570f7c(_this));
+            var svgId = $d48cc3604bf30e24$export$bf52b203d82ff901(_this.namespace, "svg", $f483f7288df68fd0$export$9099ad97b570f7c(_this));
+            var svgSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(_this.namespace, "svg", $f483f7288df68fd0$export$9099ad97b570f7c(_this));
             _this.component.context.html(title + '<div ' + customAttributes + '><svg id="' + svgId + '"></svg></div>');
-            var that = $0ace6cd118fdb36a$export$9099ad97b570f7c(_this);
-            $3bc6b949b00e2a58$export$8698b599d6b7d9a0.addGraph(function() {
-                var chart = $3bc6b949b00e2a58$export$8698b599d6b7d9a0.models.multiBarHorizontalChart().x(function(d) {
+            var that = $f483f7288df68fd0$export$9099ad97b570f7c(_this);
+            $b76ad79e27dc7523$export$8698b599d6b7d9a0.addGraph(function() {
+                var chart = $b76ad79e27dc7523$export$8698b599d6b7d9a0.models.multiBarHorizontalChart().x(function(d) {
                     return d.label;
                 }).y(function(d) {
                     return d.value;
@@ -9182,20 +9182,20 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
                 if (that.stacked) chart.multibar.stacked(that.stacked);
                 if (that.yTickFormat) {
                     var fn = that.yTickFormat;
-                    if (typeof that.yTickFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.yTickFormat);
+                    if (typeof that.yTickFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.yTickFormat);
                     chart.yAxis.tickFormat(fn);
                 }
                 if (that.yAxisLabel) chart.yAxis.axisLabel(that.yAxisLabel);
                 if (that.xTickFormat) {
                     var fn = that.xTickFormat;
-                    if (typeof that.xTickFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.xTickFormat);
+                    if (typeof that.xTickFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.xTickFormat);
                     chart.xAxis.tickFormat(fn);
                 }
                 if (that.xAxisLabel) chart.xAxis.axisLabel(that.xAxisLabel);
                 if (that.valueFormat) {
                     // set it on the chart
                     var fn = that.valueFormat;
-                    if (typeof that.valueFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.valueFormat);
+                    if (typeof that.valueFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.valueFormat);
                     chart.valueFormat(fn);
                     // set it on the tooltip
                     chart.tooltip.valueFormatter(fn);
@@ -9204,8 +9204,8 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
                 if (that.color) chart.color(that.color);
                 if (that.tooltipGenerator) chart.tooltip.contentGenerator(that.tooltipGenerator);
                 if (that.groupSpacing) chart.groupSpacing(that.groupSpacing);
-                $e4a0ccd89c102736$export$6343839093e1c21d.select(svgSelector).datum(data_series).transition().duration(that.transitionDuration).call(chart);
-                if (that.xAxisLabelWrap) $530e6b01b500d249$export$e85e6981b6330071({
+                $f5a419d63f8f3762$export$6343839093e1c21d.select(svgSelector).datum(data_series).transition().duration(that.transitionDuration).call(chart);
+                if (that.xAxisLabelWrap) $fdccde0d4dd41d73$export$e85e6981b6330071({
                     axisSelector: svgSelector + " .nv-x.nv-axis",
                     maxWidth: that.marginLeft - 5,
                     maxHeight: that.barHeight
@@ -9213,42 +9213,42 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
                 if (that.onUpdate) that.onUpdate();
                 function updateChart() {
                     chart.update();
-                    if (that.xAxisLabelWrap) $530e6b01b500d249$export$e85e6981b6330071({
+                    if (that.xAxisLabelWrap) $fdccde0d4dd41d73$export$e85e6981b6330071({
                         axisSelector: svgSelector + " .nv-x.nv-axis",
                         maxWidth: that.marginLeft - 5,
                         maxHeight: that.barHeight
                     });
                     if (that.onUpdate) that.onUpdate();
                 }
-                $3bc6b949b00e2a58$export$8698b599d6b7d9a0.utils.windowResize(updateChart);
+                $b76ad79e27dc7523$export$8698b599d6b7d9a0.utils.windowResize(updateChart);
                 return chart;
             });
         };
         return _this;
     }
-    return $bd1d5a355545d6ff$export$6d5fb309d07d7299;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $8ff5b3d2c2ab6201$export$6d5fb309d07d7299;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
 
 
-var $e78f2dafe7eed7ae$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer) {
+var $26b66f4c4ad5f83b$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($e78f2dafe7eed7ae$export$dda19d2613327857, Renderer);
-    function $e78f2dafe7eed7ae$export$dda19d2613327857(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $e78f2dafe7eed7ae$export$dda19d2613327857);
+    $bca7673885229bfd$export$9099ad97b570f7c($26b66f4c4ad5f83b$export$dda19d2613327857, Renderer);
+    function $26b66f4c4ad5f83b$export$dda19d2613327857(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $26b66f4c4ad5f83b$export$dda19d2613327857);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($e78f2dafe7eed7ae$export$dda19d2613327857).call(this));
-        _this.includeHeaderRow = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "includeHeaderRow", true);
-        _this.valueFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueFormat", false);
-        _this.labelFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "labelFormat", false);
-        _this.headerFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "headerFormat", false);
-        _this.seriesOrderFunction = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "seriesOrderFunction", false);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($26b66f4c4ad5f83b$export$dda19d2613327857).call(this));
+        _this.includeHeaderRow = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "includeHeaderRow", true);
+        _this.valueFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueFormat", false);
+        _this.labelFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "labelFormat", false);
+        _this.headerFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "headerFormat", false);
+        _this.seriesOrderFunction = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "seriesOrderFunction", false);
         _this.namespace = "edges-bs3-chartdatatable";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($e78f2dafe7eed7ae$export$dda19d2613327857, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($26b66f4c4ad5f83b$export$dda19d2613327857, [
         {
             key: "draw",
             value: function draw() {
@@ -9270,7 +9270,7 @@ var $e78f2dafe7eed7ae$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer)
                     var row = tableData.body[i];
                     bodyFrag += "<tr><td>" + row.join("</td><td>") + "</td></tr>";
                 }
-                var tableClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "table", this);
+                var tableClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "table", this);
                 var frag = "\n            <table class=\"".concat(tableClass, "\">\n                ").concat(headFrag, "\n                <tbody>").concat(bodyFrag, "</tbody>\n            </table>\n        ");
                 this.component.context.html(frag);
             }
@@ -9324,11 +9324,11 @@ var $e78f2dafe7eed7ae$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer)
             }
         }
     ]);
-    return $e78f2dafe7eed7ae$export$dda19d2613327857;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $26b66f4c4ad5f83b$export$dda19d2613327857;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
-function $3102f9a7574bfd6e$export$8e8129eda99077(sheetName, paletteSelector) {
+function $4002aa3570a5e3f8$export$8e8129eda99077(sheetName, paletteSelector) {
     if (!paletteSelector) paletteSelector = "#palette";
     var palette = {
     };
@@ -9349,26 +9349,26 @@ function $3102f9a7574bfd6e$export$8e8129eda99077(sheetName, paletteSelector) {
 
 
 
-var $34b4e253a08af533$export$2a05ec748c9cb22d = /*#__PURE__*/ function(Renderer) {
+var $beec1707b43a9eb2$export$2a05ec748c9cb22d = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($34b4e253a08af533$export$2a05ec748c9cb22d, Renderer);
-    function $34b4e253a08af533$export$2a05ec748c9cb22d(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $34b4e253a08af533$export$2a05ec748c9cb22d);
+    $bca7673885229bfd$export$9099ad97b570f7c($beec1707b43a9eb2$export$2a05ec748c9cb22d, Renderer);
+    function $beec1707b43a9eb2$export$2a05ec748c9cb22d(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $beec1707b43a9eb2$export$2a05ec748c9cb22d);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($34b4e253a08af533$export$2a05ec748c9cb22d).call(this, params));
-        _this.title = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "title", false);
-        _this.countFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "countFormat", false);
-        _this.noResultsText = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "noResultsText", "No data to display");
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($beec1707b43a9eb2$export$2a05ec748c9cb22d).call(this, params));
+        _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", false);
+        _this.countFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "countFormat", false);
+        _this.noResultsText = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "noResultsText", "No data to display");
         _this.namespace = "edges-html-relativesizebars";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($34b4e253a08af533$export$2a05ec748c9cb22d, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($beec1707b43a9eb2$export$2a05ec748c9cb22d, [
         {
             key: "draw",
             value: function draw() {
                 var title = "";
                 if (this.title !== false) {
-                    var titleClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "title", this);
+                    var titleClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "title", this);
                     title = "<h4 class=\"".concat(titleClass, "\">").concat(this.title, "</h4>");
                 }
                 var data_series = this.component.dataSeries;
@@ -9397,7 +9397,7 @@ var $34b4e253a08af533$export$2a05ec748c9cb22d = /*#__PURE__*/ function(Renderer)
                     var label = "".concat(value.label, " (").concat(count, ")");
                     rows += "<tr><td>\n                <progress value=\"".concat(prog, "\" max=\"100\">").concat(prog, "</progress><br>\n                ").concat(label, "\n            </td></tr>");
                 }
-                var tableClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "table", this);
+                var tableClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "table", this);
                 var frag = "".concat(title, "<br><table class=\"").concat(tableClass, "\">").concat(rows, "</table>");
                 this.component.context.html(frag);
             }
@@ -9411,47 +9411,47 @@ var $34b4e253a08af533$export$2a05ec748c9cb22d = /*#__PURE__*/ function(Renderer)
             }
         }
     ]);
-    return $34b4e253a08af533$export$2a05ec748c9cb22d;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $beec1707b43a9eb2$export$2a05ec748c9cb22d;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
 
 
 
-var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component) {
+var $bcaf9e61a70b299d$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($cae255fdf19eeff1$export$eac301b83a14e1b7, Component);
-    function $cae255fdf19eeff1$export$eac301b83a14e1b7(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $cae255fdf19eeff1$export$eac301b83a14e1b7);
+    $bca7673885229bfd$export$9099ad97b570f7c($bcaf9e61a70b299d$export$eac301b83a14e1b7, Component);
+    function $bcaf9e61a70b299d$export$eac301b83a14e1b7(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $bcaf9e61a70b299d$export$eac301b83a14e1b7);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($cae255fdf19eeff1$export$eac301b83a14e1b7).call(this, params));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($bcaf9e61a70b299d$export$eac301b83a14e1b7).call(this, params));
         ///////////////////////////////////////////////
         // fields that can be passed in, and their defaults
         // free text to prefix entry boxes with
         // this.display = getParam(params, "display", false);
         // list of field objects, which provide the field itself, and the display name.  e.g.
         // [{field : "monitor.rioxxterms:publication_date", display: "Publication Date"}]
-        _this.fields = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "fields", []);
+        _this.fields = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "fields", []);
         // map from field name (as in this.field[n].field) to a function which will provide
         // the earliest allowed date for that field.  e.g.
         // {"monitor.rioxxterms:publication_date" : earliestDate}
-        _this.earliest = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "earliest", {
+        _this.earliest = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "earliest", {
         });
         // map from field name (as in this.field[n].field) to a function which will provide
         // the latest allowed date for that field.  e.g.
         // {"monitor.rioxxterms:publication_date" : latestDate}
-        _this.latest = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "latest", {
+        _this.latest = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "latest", {
         });
-        _this.autoLookupRange = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "autoLookupRange", false);
+        _this.autoLookupRange = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "autoLookupRange", false);
         // category for this component, defaults to "selector"
-        _this.category = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "category", "selector");
+        _this.category = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "category", "selector");
         // default earliest date to use in all cases (defaults to start of the unix epoch)
-        _this.defaultEarliest = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "defaultEarliest", new Date(0));
+        _this.defaultEarliest = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "defaultEarliest", new Date(0));
         // default latest date to use in all cases (defaults to now)
-        _this.defaultLatest = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "defaultLatest", new Date());
+        _this.defaultLatest = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "defaultLatest", new Date());
         // use this to force a latest date, even if the auto lookup on the range is set
-        _this.forceLatest = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "forceLatest", false);
+        _this.forceLatest = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "forceLatest", false);
         ///////////////////////////////////////////////
         // fields used to track internal state
         _this.currentField = false;
@@ -9462,11 +9462,11 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
         };
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($cae255fdf19eeff1$export$eac301b83a14e1b7, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($bcaf9e61a70b299d$export$eac301b83a14e1b7, [
         {
             key: "init",
             value: function init(edge) {
-                $59ef20e355e8922b$export$9099ad97b570f7c($6f1885a119f0af4a$export$9099ad97b570f7c($cae255fdf19eeff1$export$eac301b83a14e1b7.prototype), "init", this).call(this, edge);
+                $17c4d4a7c863d924$export$9099ad97b570f7c($da23c25529bb1df4$export$9099ad97b570f7c($bcaf9e61a70b299d$export$eac301b83a14e1b7.prototype), "init", this).call(this, edge);
                 // set the initial field
                 this.currentField = this.fields[0].field;
                 // track the last field, for query building purposes
@@ -9500,7 +9500,7 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
                 }
                 for(var i = 0; i < this.fields.length; i++){
                     var field = this.fields[i].field;
-                    var filters = this.edge.currentQuery.listMust(new $1f5712c12abeeb70$export$8b446892c82de644.RangeFilter({
+                    var filters = this.edge.currentQuery.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
                         field: field
                     }));
                     if (filters.length > 0) {
@@ -9567,7 +9567,7 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
                     var removeCount = 0;
                     for(var i = 0; i < this.fields.length; i++){
                         var fieldName = this.fields[i].field;
-                        removeCount += nq.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.RangeFilter({
+                        removeCount += nq.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
                             field: fieldName
                         }));
                     }
@@ -9586,7 +9586,7 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
                         };
                         if (this.toDate) range["lte"] = this.formatDateForQuery(this.toDate);
                         if (this.fromDate) range["gte"] = this.formatDateForQuery(this.fromDate);
-                        nq.addMust(new $1f5712c12abeeb70$export$8b446892c82de644.RangeFilter(range));
+                        nq.addMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter(range));
                     }
                     // push the new query and trigger the search
                     this.edge.pushQuery(nq);
@@ -9599,7 +9599,7 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
         {
             key: "formatDateForQuery",
             value: function formatDateForQuery(date) {
-                var zeroPadder = $988cca1a6a01f734$export$48334dba1de70fbe({
+                var zeroPadder = $d48cc3604bf30e24$export$48334dba1de70fbe({
                     zeroPadding: 2
                 });
                 return date.getUTCFullYear() + "-" + zeroPadder(date.getUTCMonth() + 1) + "-" + zeroPadder(date.getUTCDate());
@@ -9635,7 +9635,7 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
                     // remove any range constraints
                     for(var i = 0; i < that.fields.length; i++){
                         var field = that.fields[i];
-                        query.removeMust(new $1f5712c12abeeb70$export$8b446892c82de644.RangeFilter({
+                        query.removeMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
                             field: field.field
                         }));
                     }
@@ -9644,7 +9644,7 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
                     // add the new aggregation(s) which will actually get the data
                     for(var i = 0; i < that.fields.length; i++){
                         var field = that.fields[i].field;
-                        query.addAggregation(new $1f5712c12abeeb70$export$8b446892c82de644.StatsAggregation({
+                        query.addAggregation(new $8d94b5f2509b6cf5$export$8b446892c82de644.StatsAggregation({
                             name: field,
                             field: field
                         }));
@@ -9658,26 +9658,26 @@ var $cae255fdf19eeff1$export$eac301b83a14e1b7 = /*#__PURE__*/ function(Component
             }
         }
     ]);
-    return $cae255fdf19eeff1$export$eac301b83a14e1b7;
-}($97ca9eea36c86bb4$export$ea71c44d9cb0d048);
+    return $bcaf9e61a70b299d$export$eac301b83a14e1b7;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
 
 
 
 
 
 
-var $0fdc25b451091025$export$4d567bc36d967c12 = /*#__PURE__*/ function(Renderer) {
+var $d626902615431ef9$export$4d567bc36d967c12 = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($0fdc25b451091025$export$4d567bc36d967c12, Renderer);
-    function $0fdc25b451091025$export$4d567bc36d967c12(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $0fdc25b451091025$export$4d567bc36d967c12);
+    $bca7673885229bfd$export$9099ad97b570f7c($d626902615431ef9$export$4d567bc36d967c12, Renderer);
+    function $d626902615431ef9$export$4d567bc36d967c12(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $d626902615431ef9$export$4d567bc36d967c12);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($0fdc25b451091025$export$4d567bc36d967c12).call(this, params));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($d626902615431ef9$export$4d567bc36d967c12).call(this, params));
         ///////////////////////////////////////////////////
         // parameters that can be passed in
-        _this.dateFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "dateFormat", "MMMM D, YYYY");
-        _this.useSelect2 = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "useSelect2", false);
-        _this.ranges = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "ranges", false);
+        _this.dateFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "dateFormat", "MMMM D, YYYY");
+        _this.useSelect2 = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "useSelect2", false);
+        _this.ranges = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "ranges", false);
         ///////////////////////////////////////////////////
         // parameters for tracking internal state
         _this.dre = false;
@@ -9689,17 +9689,17 @@ var $0fdc25b451091025$export$4d567bc36d967c12 = /*#__PURE__*/ function(Renderer)
         _this.namespace = "edges-bs3-multidaterangecombineselector";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($0fdc25b451091025$export$4d567bc36d967c12, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($d626902615431ef9$export$4d567bc36d967c12, [
         {
             key: "draw",
             value: function draw() {
                 var dre = this.component;
-                var selectClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "select", this);
-                var inputClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "input", this);
-                var prefixClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "prefix", this);
-                this.selectId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, dre.id + "_date-type", this);
-                this.rangeId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, dre.id + "_range", this);
-                var pluginId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, dre.id + "_plugin", this);
+                var selectClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "select", this);
+                var inputClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "input", this);
+                var prefixClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "prefix", this);
+                this.selectId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, dre.id + "_date-type", this);
+                this.rangeId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, dre.id + "_range", this);
+                var pluginId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, dre.id + "_plugin", this);
                 var frag = '<div class="form-inline">';
                 if (dre.fields.length > 1) {
                     var options = "";
@@ -9716,11 +9716,11 @@ var $0fdc25b451091025$export$4d567bc36d967c12 = /*#__PURE__*/ function(Renderer)
         </div>';
                 frag += "</div>";
                 dre.context.html(frag);
-                var selectIdSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, dre.id + "_date-type", this);
-                var rangeIdSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, dre.id + "_range", this);
+                var selectIdSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, dre.id + "_date-type", this);
+                var rangeIdSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, dre.id + "_range", this);
                 this.selectJq = dre.jq(selectIdSelector);
                 this.rangeJq = dre.jq(rangeIdSelector);
-                var cb = $988cca1a6a01f734$export$367047a567f2342b(this, "updateDateRange", [
+                var cb = $d48cc3604bf30e24$export$367047a567f2342b(this, "updateDateRange", [
                     "start",
                     "end"
                 ]);
@@ -9733,14 +9733,14 @@ var $0fdc25b451091025$export$4d567bc36d967c12 = /*#__PURE__*/ function(Renderer)
                 if (this.ranges) props["ranges"] = this.ranges;
                 // clear out any old version of the plugin, as these are appended to the document
                 // and not kept within the div controlled by this renderer
-                var pluginSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, dre.id + "_plugin", this);
+                var pluginSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, dre.id + "_plugin", this);
                 $(pluginSelector).remove();
                 this.rangeJq.daterangepicker(props, cb);
                 this.drp = this.rangeJq.data("daterangepicker");
                 this.drp.container.attr("id", pluginId).addClass("show-calendar");
                 this.prepDates();
                 if (this.useSelect2) this.selectJq.select2();
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(selectIdSelector, "change", this, "typeChanged");
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(selectIdSelector, "change", this, "typeChanged");
             }
         },
         {
@@ -9798,32 +9798,32 @@ var $0fdc25b451091025$export$4d567bc36d967c12 = /*#__PURE__*/ function(Renderer)
                 var fr = this.component.fromDate;
                 var to = this.component.toDate;
                 if (min) {
-                    this.drp.minDate = $5d52b179cd0026b5$export$137cea99ac96085(min);
-                    this.drp.setStartDate($5d52b179cd0026b5$export$137cea99ac96085(min));
+                    this.drp.minDate = $bccd1ba82d89ceaa$export$137cea99ac96085(min);
+                    this.drp.setStartDate($bccd1ba82d89ceaa$export$137cea99ac96085(min));
                 } else {
-                    this.drp.minDate = $5d52b179cd0026b5$export$137cea99ac96085(this.component.defaultEarliest);
-                    this.drp.setStartDate($5d52b179cd0026b5$export$137cea99ac96085(this.component.defaultEarliest));
+                    this.drp.minDate = $bccd1ba82d89ceaa$export$137cea99ac96085(this.component.defaultEarliest);
+                    this.drp.setStartDate($bccd1ba82d89ceaa$export$137cea99ac96085(this.component.defaultEarliest));
                 }
                 if (max) {
-                    this.drp.maxDate = $5d52b179cd0026b5$export$137cea99ac96085(max);
-                    this.drp.setEndDate($5d52b179cd0026b5$export$137cea99ac96085(max));
+                    this.drp.maxDate = $bccd1ba82d89ceaa$export$137cea99ac96085(max);
+                    this.drp.setEndDate($bccd1ba82d89ceaa$export$137cea99ac96085(max));
                 } else {
-                    this.drp.maxDate = $5d52b179cd0026b5$export$137cea99ac96085(this.component.defaultLatest);
-                    this.drp.setEndDate($5d52b179cd0026b5$export$137cea99ac96085(this.component.defaultLatest));
+                    this.drp.maxDate = $bccd1ba82d89ceaa$export$137cea99ac96085(this.component.defaultLatest);
+                    this.drp.setEndDate($bccd1ba82d89ceaa$export$137cea99ac96085(this.component.defaultLatest));
                 }
                 if (fr) {
                     // if from lies before the min date, extend the min range
-                    if (fr < this.drp.minDate) this.drp.minDate = $5d52b179cd0026b5$export$137cea99ac96085(fr);
+                    if (fr < this.drp.minDate) this.drp.minDate = $bccd1ba82d89ceaa$export$137cea99ac96085(fr);
                     // if from lies after the max date, extend the max range
-                    if (fr > this.drp.maxDate) this.drp.maxDate = $5d52b179cd0026b5$export$137cea99ac96085(fr);
-                    this.drp.setStartDate($5d52b179cd0026b5$export$137cea99ac96085(fr));
+                    if (fr > this.drp.maxDate) this.drp.maxDate = $bccd1ba82d89ceaa$export$137cea99ac96085(fr);
+                    this.drp.setStartDate($bccd1ba82d89ceaa$export$137cea99ac96085(fr));
                 }
                 if (to) {
                     // if to lies before the min date, extend the min range
-                    if (to < this.drp.minDate) this.drp.minDate = $5d52b179cd0026b5$export$137cea99ac96085(to);
+                    if (to < this.drp.minDate) this.drp.minDate = $bccd1ba82d89ceaa$export$137cea99ac96085(to);
                     // if to lies after the max date, extend the max range
-                    if (to > this.drp.maxDate) this.drp.maxDate = $5d52b179cd0026b5$export$137cea99ac96085(to);
-                    this.drp.setEndDate($5d52b179cd0026b5$export$137cea99ac96085(to));
+                    if (to > this.drp.maxDate) this.drp.maxDate = $bccd1ba82d89ceaa$export$137cea99ac96085(to);
+                    this.drp.setEndDate($bccd1ba82d89ceaa$export$137cea99ac96085(to));
                 }
                 this.dateRangeDisplay({
                     start: this.drp.startDate,
@@ -9832,8 +9832,8 @@ var $0fdc25b451091025$export$4d567bc36d967c12 = /*#__PURE__*/ function(Renderer)
             }
         }
     ]);
-    return $0fdc25b451091025$export$4d567bc36d967c12;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $d626902615431ef9$export$4d567bc36d967c12;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 $parcel$global.nglp = {
@@ -9847,10 +9847,10 @@ nglp.g001.init = function(params) {
     };
     var selector = params.selector || "#g001";
     var search_url = params.searchUrl;
-    var countFormat = $988cca1a6a01f734$export$48334dba1de70fbe({
+    var countFormat = $d48cc3604bf30e24$export$48334dba1de70fbe({
         thousandsSeparator: ","
     });
-    var palette = $3102f9a7574bfd6e$export$8e8129eda99077("g001.css");
+    var palette = $4002aa3570a5e3f8$export$8e8129eda99077("g001.css");
     var interactionValueMap = {
         "investigation": "VIEWS",
         "export": "EXPORTS",
@@ -9867,15 +9867,27 @@ nglp.g001.init = function(params) {
         "export",
         "request"
     ];
-    var initialDateRange = $ad933a42022349ce$var$getInitialDateRange();
-    nglp.g001.active[selector] = new $97ca9eea36c86bb4$export$22ad9a5707a07e9c({
+    var initialDateRange = $9aa3b42083a3eab8$var$getInitialDateRange();
+    var baseQuery = false;
+    if (params.containers) baseQuery = new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
+        must: [
+            new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                field: "container.exact",
+                values: params.containers
+            })
+        ]
+    });
+    nglp.g001.active[selector] = new $6cf4dc301226cb87$export$22ad9a5707a07e9c({
         selector: selector,
-        template: new nglp.g001.G001Template(),
+        template: new nglp.g001.G001Template({
+            containers: params.containers
+        }),
         searchUrl: search_url,
         manageUrl: false,
-        openingQuery: new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+        baseQuery: baseQuery,
+        openingQuery: new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
             must: [
-                new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: "event.exact",
                     values: [
                         "request",
@@ -9883,19 +9895,19 @@ nglp.g001.init = function(params) {
                         "export"
                     ]
                 }),
-                new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: "object_type.exact",
                     values: [
                         "article",
                         "file"
                     ]
                 }),
-                new $1f5712c12abeeb70$export$8b446892c82de644.RangeFilter({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
                     field: "occurred_at",
                     gte: initialDateRange.gte,
                     lte: initialDateRange.lte
                 }),
-                new $1f5712c12abeeb70$export$8b446892c82de644.GeoBoundingBoxFilter({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.GeoBoundingBoxFilter({
                     field: "location",
                     top_left: {
                         "lat": 90,
@@ -9909,27 +9921,27 @@ nglp.g001.init = function(params) {
             ],
             size: 0,
             aggs: [
-                new $1f5712c12abeeb70$export$8b446892c82de644.DateHistogramAggregation({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.DateHistogramAggregation({
                     name: "occurred_at",
                     field: "occurred_at",
                     interval: "1M",
                     aggs: [
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
                             name: "events",
                             field: "event.exact"
                         })
                     ]
                 }),
-                new $1f5712c12abeeb70$export$8b446892c82de644.GeohashGridAggregation({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.GeohashGridAggregation({
                     name: "geo",
                     field: "location",
                     precision: 5 // NOTE: this needs to tie up with the zoomToPrecisionMap in the component
                 }),
-                new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
                     name: "events",
                     field: "event.exact",
                     aggs: [
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
                             name: "formats",
                             field: "format.exact",
                             size: 3
@@ -9939,7 +9951,7 @@ nglp.g001.init = function(params) {
             ]
         }),
         components: [
-            new $cae255fdf19eeff1$export$eac301b83a14e1b7({
+            new $bcaf9e61a70b299d$export$eac301b83a14e1b7({
                 id: "g001-date-range",
                 fields: [
                     {
@@ -9950,22 +9962,22 @@ nglp.g001.init = function(params) {
                 autoLookupRange: true,
                 forceLatest: true,
                 defaultLatest: new Date(),
-                renderer: new $0fdc25b451091025$export$4d567bc36d967c12({
+                renderer: new $d626902615431ef9$export$4d567bc36d967c12({
                     ranges: {
                         'Last Year': [
-                            $5d52b179cd0026b5$export$137cea99ac96085().subtract(1, "year"),
-                            $5d52b179cd0026b5$export$137cea99ac96085()
+                            $bccd1ba82d89ceaa$export$137cea99ac96085().subtract(1, "year"),
+                            $bccd1ba82d89ceaa$export$137cea99ac96085()
                         ],
                         'Last 30 Days': [
-                            $5d52b179cd0026b5$export$137cea99ac96085().subtract(29, 'days'),
-                            $5d52b179cd0026b5$export$137cea99ac96085()
+                            $bccd1ba82d89ceaa$export$137cea99ac96085().subtract(29, 'days'),
+                            $bccd1ba82d89ceaa$export$137cea99ac96085()
                         ]
                     }
                 })
             }),
-            new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+            new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
                 id: "g001-interactions-chart",
-                dataFunction: $9cbb252f768bd5d6$export$d99c821b0fb86668({
+                dataFunction: $ae46249d8a2a7b6d$export$d99c821b0fb86668({
                     histogramAgg: "occurred_at",
                     termsAgg: "events",
                     seriesNameMap: interactionValueMap
@@ -9978,7 +9990,7 @@ nglp.g001.init = function(params) {
                         return 0;
                     });
                 },
-                renderer: new $5ff819424c6735fc$export$1b75c0a6cacf635c({
+                renderer: new $f29180d7a0e96438$export$1b75c0a6cacf635c({
                     xTickFormat: function xTickFormat(d) {
                         return d3.time.format('%b %y')(new Date(d));
                     },
@@ -9994,9 +10006,9 @@ nglp.g001.init = function(params) {
                     groupSpacing: 0.7
                 })
             }),
-            new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+            new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
                 id: "g001-interactions-table",
-                dataFunction: $9cbb252f768bd5d6$export$d99c821b0fb86668({
+                dataFunction: $ae46249d8a2a7b6d$export$d99c821b0fb86668({
                     histogramAgg: "occurred_at",
                     termsAgg: "events"
                 }),
@@ -10008,7 +10020,7 @@ nglp.g001.init = function(params) {
                         return 0;
                     });
                 },
-                renderer: new $e78f2dafe7eed7ae$export$dda19d2613327857({
+                renderer: new $26b66f4c4ad5f83b$export$dda19d2613327857({
                     labelFormat: function labelFormat(d) {
                         return d3.time.format('%b %y')(new Date(d));
                     },
@@ -10026,7 +10038,7 @@ nglp.g001.init = function(params) {
                     }
                 })
             }),
-            new $6ca84bc2e35e6866$export$c57445924c23547b({
+            new $7ac4d4ec044faea2$export$c57445924c23547b({
                 id: "g001-interactions-map",
                 geoHashAggregation: "geo",
                 zoomToPrecisionMap: {
@@ -10034,28 +10046,28 @@ nglp.g001.init = function(params) {
                     3: 7,
                     5: 9
                 },
-                renderer: new $a6afb27f79910c9a$export$a0bd1dffd4b583c({
+                renderer: new $eec1dd49d0c67d6b$export$a0bd1dffd4b583c({
                     cluster: true,
                     labelFunction: function(loc) {
                         // be very careful changing this, the MapPointRenderer relies on this as the way
                         // to find out what the count of the nested cluster is
                         return loc.count.toString();
                     },
-                    renderCluster: new $ad933a42022349ce$var$MapPointRenderer(),
+                    renderCluster: new $9aa3b42083a3eab8$var$MapPointRenderer(),
                     reQueryOnBoundsChange: true,
                     clusterIcons: {
                         0: "/static/img/m1.png"
                     }
                 })
             }),
-            new $1d641f1513d3a449$export$6175c660df807dd({
+            new $58e70bcc9ea9714f$export$6175c660df807dd({
                 id: "g001-interactions",
                 field: "event.exact",
                 updateType: "fresh",
                 orderBy: "term",
                 orderDir: "asc",
                 valueMap: interactionValueMap,
-                renderer: new $29578ea610930bce$export$d3ad1026b19abbfd({
+                renderer: new $2039d36394fce070$export$d3ad1026b19abbfd({
                     title: "Interactions",
                     open: true,
                     togglable: false,
@@ -10064,7 +10076,7 @@ nglp.g001.init = function(params) {
                     fixedTerms: presentationOrder
                 })
             }),
-            new $1d641f1513d3a449$export$6175c660df807dd({
+            new $58e70bcc9ea9714f$export$6175c660df807dd({
                 id: "g001-format",
                 field: "format.exact",
                 updateType: "fresh",
@@ -10073,7 +10085,7 @@ nglp.g001.init = function(params) {
                 valueFunction: function(v) {
                     return v.toUpperCase();
                 },
-                renderer: new $908df9636949411c$export$4b392426dd40333d({
+                renderer: new $135bcb32af9eb45d$export$4b392426dd40333d({
                     title: "Format",
                     open: true,
                     togglable: false,
@@ -10081,9 +10093,9 @@ nglp.g001.init = function(params) {
                     countFormat: countFormat
                 })
             }),
-            new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+            new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
                 id: "g001-top-downloads",
-                dataFunction: $9cbb252f768bd5d6$export$4c2a251a86bb620b({
+                dataFunction: $ae46249d8a2a7b6d$export$4c2a251a86bb620b({
                     aggs: [
                         {
                             events: {
@@ -10098,14 +10110,14 @@ nglp.g001.init = function(params) {
                     ],
                     seriesName: "request"
                 }),
-                renderer: new $34b4e253a08af533$export$2a05ec748c9cb22d({
+                renderer: new $beec1707b43a9eb2$export$2a05ec748c9cb22d({
                     title: "Downloads",
                     countFormat: countFormat
                 })
             }),
-            new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+            new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
                 id: "g001-top-exports",
-                dataFunction: $9cbb252f768bd5d6$export$4c2a251a86bb620b({
+                dataFunction: $ae46249d8a2a7b6d$export$4c2a251a86bb620b({
                     aggs: [
                         {
                             events: {
@@ -10120,7 +10132,7 @@ nglp.g001.init = function(params) {
                     ],
                     seriesName: "export"
                 }),
-                renderer: new $34b4e253a08af533$export$2a05ec748c9cb22d({
+                renderer: new $beec1707b43a9eb2$export$2a05ec748c9cb22d({
                     title: "Exports",
                     countFormat: countFormat
                 })
@@ -10130,11 +10142,12 @@ nglp.g001.init = function(params) {
 };
 nglp.g001.G001Template = /*#__PURE__*/ (function(Template) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Template);
-    function _class() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+    $bca7673885229bfd$export$9099ad97b570f7c(_class, Template);
+    function _class(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this));
+        _this.containers = params.containers;
         _this.edge = false;
         _this.showing = "chart";
         _this.hidden = {
@@ -10142,19 +10155,21 @@ nglp.g001.G001Template = /*#__PURE__*/ (function(Template) {
         _this.namespace = "g001-template";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+    $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
         {
             key: "draw",
             value: function draw(edge) {
                 this.edge = edge;
-                var checkboxId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "show-as-table");
-                var printId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "print");
-                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G001: Article  Downloads for  Unit Administrators</h1>\n                    <h2>Article downloads by format, including landing page and metadata exports in aggregate</h2>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"".concat(printId, "\" href=\"#\">Print this view</a>\n                        </li>-->\n                    </ul>\n                    <form class=\"navbar-form navbar-right\">\n                        <div class=\"form-group\" id=\"g001-date-range\"></div>\n                    </form>\n                </div>\n            </nav>\n        </div>\n    </div>\n    \n    <div class=\"container\">\n            <div class=\"row report-area justify-content-between\">\n                <div class=\"col-md-3\">\n                    <div class=\"facet\" id=\"g001-interactions\"></div>\n                    <div class=\"facet facet-format\" id=\"g001-format\"></div>\n                </div>\n                <div class=\"col-md-9\">\n                    <p class=\"showtable\"><input type=\"checkbox\" name=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "_label\">Show as table</label></p>\n                    <div class=\"data-area\" id=\"g001-interactions-chart\"></div>\n                    <div class=\"data-area\" id=\"g001-interactions-table\" style=\"display:none\">TABLE HERE</div>\n                    <div class=\"data-area\" id=\"g001-interactions-map\"></div>\n                    <div class=\"data-area\" class=\"row formats-header\">\n                        <h3 class=\"data-label\">Top 3 Formats</h3>\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div id=\"g001-top-downloads\"></div>\n                            </div>\n                            <div class=\"col-md-4 offset-md-1\">\n                                <div id=\"g001-top-exports\"></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n    </div>\n</div>");
+                var checkboxId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "show-as-table");
+                var printId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "print");
+                var containersFrag = "";
+                if (this.containers) containersFrag = "<h3>Showing data for ".concat(this.containers.join(", "), "</h3>");
+                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G001: Article  Downloads for  Unit Administrators</h1>\n                    <h2>Article downloads by format, including landing page and metadata exports in aggregate</h2>\n                    ".concat(containersFrag, "\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"").concat(printId, "\" href=\"#\">Print this view</a>\n                        </li>-->\n                    </ul>\n                    <form class=\"navbar-form navbar-right\">\n                        <div class=\"form-group\" id=\"g001-date-range\"></div>\n                    </form>\n                </div>\n            </nav>\n        </div>\n    </div>\n    \n    <div class=\"container\">\n            <div class=\"row report-area justify-content-between\">\n                <div class=\"col-md-3\">\n                    <div class=\"facet\" id=\"g001-interactions\"></div>\n                    <div class=\"facet facet-format\" id=\"g001-format\"></div>\n                </div>\n                <div class=\"col-md-9\">\n                    <p class=\"showtable\"><input type=\"checkbox\" name=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "_label\">Show as table</label></p>\n                    <div class=\"data-area\" id=\"g001-interactions-chart\"></div>\n                    <div class=\"data-area\" id=\"g001-interactions-table\" style=\"display:none\">TABLE HERE</div>\n                    <div class=\"data-area\" id=\"g001-interactions-map\"></div>\n                    <div class=\"data-area\" class=\"row formats-header\">\n                        <h3 class=\"data-label\">Top 3 Formats</h3>\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div id=\"g001-top-downloads\"></div>\n                            </div>\n                            <div class=\"col-md-4 offset-md-1\">\n                                <div id=\"g001-top-exports\"></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n    </div>\n</div>");
                 edge.context.html(frame);
-                var checkboxSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "show-as-table");
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(checkboxSelector, "change", this, "toggleTable");
-                var printBtn = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "print");
-                $aa95204b620a0ef2$export$4048ae5fe51d81b7(printBtn).on("click", function(e) {
+                var checkboxSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "show-as-table");
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(checkboxSelector, "change", this, "toggleTable");
+                var printBtn = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "print");
+                $99b6183ba65dae12$export$4048ae5fe51d81b7(printBtn).on("click", function(e) {
                     e.preventDefault();
                     // window.print();
                     var win = window.open('', '', 'left=0,top=0,toolbar=0,status =0');
@@ -10190,13 +10205,13 @@ nglp.g001.G001Template = /*#__PURE__*/ (function(Template) {
         }
     ]);
     return _class;
-})($97ca9eea36c86bb4$export$93af88fe68eea917);
-var $ad933a42022349ce$var$MapPointRenderer = /*#__PURE__*/ function() {
+})($6cf4dc301226cb87$export$93af88fe68eea917);
+var $9aa3b42083a3eab8$var$MapPointRenderer = /*#__PURE__*/ function() {
     "use strict";
-    function $ad933a42022349ce$var$MapPointRenderer(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $ad933a42022349ce$var$MapPointRenderer);
+    function $9aa3b42083a3eab8$var$MapPointRenderer(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $9aa3b42083a3eab8$var$MapPointRenderer);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($ad933a42022349ce$var$MapPointRenderer, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($9aa3b42083a3eab8$var$MapPointRenderer, [
         {
             key: "render",
             value: function render(cluster, stats) {
@@ -10215,10 +10230,10 @@ var $ad933a42022349ce$var$MapPointRenderer = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $ad933a42022349ce$var$MapPointRenderer;
+    return $9aa3b42083a3eab8$var$MapPointRenderer;
 }();
-function $ad933a42022349ce$var$getInitialDateRange() {
-    var now = $5d52b179cd0026b5$export$137cea99ac96085();
+function $9aa3b42083a3eab8$var$getInitialDateRange() {
+    var now = $bccd1ba82d89ceaa$export$137cea99ac96085();
     var lte = now.format("YYYY-MM-DD");
     var gte = now.subtract(1, "years").format("YYYY-MM-DD");
     return {
@@ -10226,7 +10241,7 @@ function $ad933a42022349ce$var$getInitialDateRange() {
         lte: lte
     };
 }
-var $ad933a42022349ce$export$9099ad97b570f7c = nglp;
+var $9aa3b42083a3eab8$export$9099ad97b570f7c = nglp;
 
 })();
 //# sourceMappingURL=g001.js.map

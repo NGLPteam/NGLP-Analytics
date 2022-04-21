@@ -174,15 +174,22 @@ nglp.g014.init = function (params) {
         })
     ]
 
+    let baseQueryMusts = [
+        new es.TermsFilter({field: "source.identifier.exact", values: [source]})
+    ]
+    if (params.containers) {
+       baseQueryMusts.push(
+           new es.TermsFilter({field: "container.exact", values: params.containers})
+       )
+    }
+
     nglp.g014.active[selector] = new Edge({
         selector: selector,
-        template: new nglp.g014.G014Template({stateProgression: stateProgression}),
+        template: new nglp.g014.G014Template({stateProgression: stateProgression, containers: params.containers}),
         searchUrl: search_url,
         manageUrl : false,
         baseQuery: new es.Query({
-            must : [
-                new es.TermsFilter({field: "source.identifier.exact", values: [source]})
-            ]
+            must : baseQueryMusts
         }),
         openingQuery: new es.Query({
             must : [
@@ -274,6 +281,7 @@ nglp.g014.G014Template = class extends Template {
         this.namespace = "g014-template";
 
         this.stateProgression = getParam(params, "stateProgression", []);
+        this.containers = getParam(params, "containers", false);
     }
 
     draw(edge) {
@@ -315,6 +323,11 @@ nglp.g014.G014Template = class extends Template {
             `
         }
 
+        let containersFrag = "";
+        if (this.containers) {
+            containersFrag = `<h3>Showing data for ${this.containers.join(", ")}</h3>`;
+        }
+
         let frame = `
 <div id="divToPrint">
     <div class="header header--main">
@@ -322,6 +335,7 @@ nglp.g014.G014Template = class extends Template {
             <div class="row">
                 <div class="col-md-12">
                     <h1>G014: Progress of articles through the editorial workflow</h1>
+                    ${containersFrag}
                 </div>
             </div>
         </div>

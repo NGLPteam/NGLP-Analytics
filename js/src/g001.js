@@ -58,11 +58,21 @@ nglp.g001.init = function (params) {
 
     let initialDateRange = getInitialDateRange();
 
+    let baseQuery = false;
+    if (params.containers) {
+        baseQuery = new es.Query({
+            must: [
+                new es.TermsFilter({field: "container.exact", values: params.containers})
+            ]
+        })
+    }
+
     nglp.g001.active[selector] = new Edge({
         selector: selector,
-        template: new nglp.g001.G001Template(),
+        template: new nglp.g001.G001Template({containers: params.containers}),
         searchUrl: search_url,
         manageUrl : false,
+        baseQuery: baseQuery,
         openingQuery: new es.Query({
             must : [
                 new es.TermsFilter({field: "event.exact", values: ["request", "investigation", "export"]}),
@@ -289,8 +299,11 @@ nglp.g001.init = function (params) {
 }
 
 nglp.g001.G001Template = class extends Template {
-    constructor() {
+    constructor(params) {
         super();
+
+        this.containers = params.containers;
+
         this.edge = false;
         this.showing = "chart";
         this.hidden = {};
@@ -302,6 +315,11 @@ nglp.g001.G001Template = class extends Template {
         let checkboxId = htmlID(this.namespace, "show-as-table");
         let printId = htmlID(this.namespace, "print");
 
+        let containersFrag = "";
+        if (this.containers) {
+            containersFrag = `<h3>Showing data for ${this.containers.join(", ")}</h3>`;
+        }
+
         let frame = `
 <div id="divToPrint">
     <div class="header header--main">
@@ -310,6 +328,7 @@ nglp.g001.G001Template = class extends Template {
                 <div class="col-md-12">
                     <h1>G001: Article  Downloads for  Unit Administrators</h1>
                     <h2>Article downloads by format, including landing page and metadata exports in aggregate</h2>
+                    ${containersFrag}
                 </div>
             </div>
         </div>

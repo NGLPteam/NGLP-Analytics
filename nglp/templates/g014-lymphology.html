@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>G014: Progress of articles through the editorial workflow</title>
+        <link rel="icon" href="data:;base64,=">
+        <link rel="stylesheet" href="/static/vendor/bootstrap-3.3.7/css/bootstrap.min.css?v={{config.version}}">
+{#        <link rel="stylesheet" href="/static/vendor/bootstrap-3.3.7/css/glyphicons.css?v={{config.version}}">#}
+        <link rel="stylesheet" href="/static/css/g014.css?v={{config.version}}">
+        <link rel="stylesheet" href="/static/vendor/nvd3-1.8.6/nv.d3.css?v={{config.version}}">
+    </head>
+    <body>
+        <div id="g014"></div>
+
+        <script type="text/javascript" src="/static/vendor/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="/static/vendor/edges/vendor/d3-3.5.17/d3.js?v={{config.version}}"></script>
+        <script type="text/javascript" src="/static/vendor/edges/vendor/nvd3-1.8.1/nv.d3.js?v={{config.version}}"></script>
+        <script type="text/javascript" src="/static/js/g014.js?v={{config.version}}"></script>
+
+        <script type="text/javascript">
+        jQuery (document).ready (function($) {
+            nglp.g014.init({
+                searchUrl : '{{ url_for("query", path="public/event") }}',
+                stateProgression: {{ config.workflow_transitions_ui_labels[source]|tojson|safe }},
+                source: "{{ source }}",
+                containers: ["0024-7766"]
+            });
+        });
+        </script>
+    </body>
+</html>

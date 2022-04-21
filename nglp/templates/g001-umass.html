@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>G001: Article Downloads for Unit Administrators</title>
+        <link rel="icon" href="data:;base64,=">
+        <link rel="stylesheet" href="/static/vendor/bootstrap-3.3.7/css/bootstrap.min.css?v={{config.version}}">
+{#        <link rel="stylesheet" href="/static/vendor/bootstrap-3.3.7/css/glyphicons.css?v={{config.version}}">#}
+        <link rel="stylesheet" href="/static/css/g001.css?v={{config.version}}">
+        <link rel="stylesheet" href="/static/vendor/nvd3-1.8.6/nv.d3.css?v={{config.version}}">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    </head>
+    <body>
+        <div id="g001"></div>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHSLLjD8UtfNlczVJluIxzTOPGFOLStyQ"></script>
+        <script type="text/javascript" src="/static/vendor/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="/static/vendor/edges/vendor/d3-3.5.17/d3.js?v={{config.version}}"></script>
+        <script type="text/javascript" src="/static/vendor/edges/vendor/nvd3-1.8.1/nv.d3.js?v={{config.version}}"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script type="text/javascript" src="/static/js/g001.js?v={{config.version}}"></script>
+{#        <script type="text/javascript" src="/static/vendor/latlon-geohash-2.0.0/latlon-geohash-2.0.0.js?v={{config.version}}"></script>#}
+
+
+        <script type="text/javascript">
+        jQuery (document).ready (function($) {
+            nglp.g001.init({
+                searchUrl : '{{ url_for("query", path="public/event") }}',
+                containers: ["1531-7714", "2604-7438"]
+            });
+        });
+        </script>
+    </body>
+</html>

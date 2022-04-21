@@ -9,16 +9,16 @@ typeof globalThis !== 'undefined'
   : typeof global !== 'undefined'
   ? global
   : {};
-function $0ace6cd118fdb36a$export$9099ad97b570f7c(self) {
+function $f483f7288df68fd0$export$9099ad97b570f7c(self) {
     if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     return self;
 }
 
-function $1d4692efe908bac5$export$9099ad97b570f7c(instance, Constructor) {
+function $10cfaf3f2f812eb4$export$9099ad97b570f7c(instance, Constructor) {
     if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
 }
 
-function $6b21f555626aa41c$var$_defineProperties(target, props) {
+function $67866ae5f3a26802$var$_defineProperties(target, props) {
     for(var i = 0; i < props.length; i++){
         var descriptor = props[i];
         descriptor.enumerable = descriptor.enumerable || false;
@@ -27,13 +27,13 @@ function $6b21f555626aa41c$var$_defineProperties(target, props) {
         Object.defineProperty(target, descriptor.key, descriptor);
     }
 }
-function $6b21f555626aa41c$export$9099ad97b570f7c(Constructor, protoProps, staticProps) {
-    if (protoProps) $6b21f555626aa41c$var$_defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) $6b21f555626aa41c$var$_defineProperties(Constructor, staticProps);
+function $67866ae5f3a26802$export$9099ad97b570f7c(Constructor, protoProps, staticProps) {
+    if (protoProps) $67866ae5f3a26802$var$_defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) $67866ae5f3a26802$var$_defineProperties(Constructor, staticProps);
     return Constructor;
 }
 
-function $0726ab3728f86779$export$9099ad97b570f7c(obj, key, value) {
+function $9b036347ace9941e$export$9099ad97b570f7c(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
         value: value,
         enumerable: true,
@@ -44,54 +44,54 @@ function $0726ab3728f86779$export$9099ad97b570f7c(obj, key, value) {
     return obj;
 }
 
-function $6f1885a119f0af4a$var$getPrototypeOf(o) {
-    $6f1885a119f0af4a$var$getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function getPrototypeOf(o1) {
+function $da23c25529bb1df4$var$getPrototypeOf(o) {
+    $da23c25529bb1df4$var$getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function getPrototypeOf(o1) {
         return o1.__proto__ || Object.getPrototypeOf(o1);
     };
-    return $6f1885a119f0af4a$var$getPrototypeOf(o);
+    return $da23c25529bb1df4$var$getPrototypeOf(o);
 }
-function $6f1885a119f0af4a$export$9099ad97b570f7c(o) {
-    return $6f1885a119f0af4a$var$getPrototypeOf(o);
+function $da23c25529bb1df4$export$9099ad97b570f7c(o) {
+    return $da23c25529bb1df4$var$getPrototypeOf(o);
 }
 
 
-function $b593bef4e8d65d9f$export$9099ad97b570f7c(object, property) {
+function $295bc66aeaa93a59$export$9099ad97b570f7c(object, property) {
     while(!Object.prototype.hasOwnProperty.call(object, property)){
-        object = $6f1885a119f0af4a$export$9099ad97b570f7c(object);
+        object = $da23c25529bb1df4$export$9099ad97b570f7c(object);
         if (object === null) break;
     }
     return object;
 }
 
 
-function $59ef20e355e8922b$var$get(target, property, receiver) {
-    if (typeof Reflect !== "undefined" && Reflect.get) $59ef20e355e8922b$var$get = Reflect.get;
-    else $59ef20e355e8922b$var$get = function get(target1, property1, receiver1) {
-        var base = $b593bef4e8d65d9f$export$9099ad97b570f7c(target1, property1);
+function $17c4d4a7c863d924$var$get(target, property, receiver) {
+    if (typeof Reflect !== "undefined" && Reflect.get) $17c4d4a7c863d924$var$get = Reflect.get;
+    else $17c4d4a7c863d924$var$get = function get(target1, property1, receiver1) {
+        var base = $295bc66aeaa93a59$export$9099ad97b570f7c(target1, property1);
         if (!base) return;
         var desc = Object.getOwnPropertyDescriptor(base, property1);
         if (desc.get) return desc.get.call(receiver1 || target1);
         return desc.value;
     };
-    return $59ef20e355e8922b$var$get(target, property, receiver);
+    return $17c4d4a7c863d924$var$get(target, property, receiver);
 }
-function $59ef20e355e8922b$export$9099ad97b570f7c(target, property, reciever) {
-    return $59ef20e355e8922b$var$get(target, property, reciever);
+function $17c4d4a7c863d924$export$9099ad97b570f7c(target, property, reciever) {
+    return $17c4d4a7c863d924$var$get(target, property, reciever);
 }
 
-function $36386457df3576da$var$setPrototypeOf(o, p) {
-    $36386457df3576da$var$setPrototypeOf = Object.setPrototypeOf || function setPrototypeOf(o1, p1) {
+function $d2fa334d58492cc2$var$setPrototypeOf(o, p) {
+    $d2fa334d58492cc2$var$setPrototypeOf = Object.setPrototypeOf || function setPrototypeOf(o1, p1) {
         o1.__proto__ = p1;
         return o1;
     };
-    return $36386457df3576da$var$setPrototypeOf(o, p);
+    return $d2fa334d58492cc2$var$setPrototypeOf(o, p);
 }
-function $36386457df3576da$export$9099ad97b570f7c(o, p) {
-    return $36386457df3576da$var$setPrototypeOf(o, p);
+function $d2fa334d58492cc2$export$9099ad97b570f7c(o, p) {
+    return $d2fa334d58492cc2$var$setPrototypeOf(o, p);
 }
 
 
-function $cb9ce7a7602b77d1$export$9099ad97b570f7c(subClass, superClass) {
+function $bca7673885229bfd$export$9099ad97b570f7c(subClass, superClass) {
     if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
     subClass.prototype = Object.create(superClass && superClass.prototype, {
         constructor: {
@@ -100,40 +100,40 @@ function $cb9ce7a7602b77d1$export$9099ad97b570f7c(subClass, superClass) {
             configurable: true
         }
     });
-    if (superClass) $36386457df3576da$export$9099ad97b570f7c(subClass, superClass);
+    if (superClass) $d2fa334d58492cc2$export$9099ad97b570f7c(subClass, superClass);
 }
 
 
-function $870d9c554f775ab9$export$9099ad97b570f7c(obj) {
+function $26bfa0c7921eea07$export$9099ad97b570f7c(obj) {
     return obj && obj.constructor === Symbol ? "symbol" : typeof obj;
 }
 
 
-function $968cbe9a7612a00d$export$9099ad97b570f7c(self, call) {
-    if (call && ($870d9c554f775ab9$export$9099ad97b570f7c(call) === "object" || typeof call === "function")) return call;
-    return $0ace6cd118fdb36a$export$9099ad97b570f7c(self);
+function $6981eb4a4ce0a3e0$export$9099ad97b570f7c(self, call) {
+    if (call && ($26bfa0c7921eea07$export$9099ad97b570f7c(call) === "object" || typeof call === "function")) return call;
+    return $f483f7288df68fd0$export$9099ad97b570f7c(self);
 }
 
-function $dc707e5b58b75f7a$export$9099ad97b570f7c(arr) {
+function $5dd06483043aa0c9$export$9099ad97b570f7c(arr) {
     if (Array.isArray(arr)) return arr;
 }
 
 
-function $9849c3158b9a2728$export$9099ad97b570f7c(iter) {
+function $f953e420d03d510c$export$9099ad97b570f7c(iter) {
     if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
 }
 
 
-function $0222784b69dbfd43$export$9099ad97b570f7c() {
+function $76c445b1cd8e0a95$export$9099ad97b570f7c() {
     throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
 
-function $3fd025669e1dbd56$export$9099ad97b570f7c(arr, i) {
-    return $dc707e5b58b75f7a$export$9099ad97b570f7c(arr) || $9849c3158b9a2728$export$9099ad97b570f7c(arr, i) || $0222784b69dbfd43$export$9099ad97b570f7c();
+function $d1ea3085410a42e5$export$9099ad97b570f7c(arr, i) {
+    return $5dd06483043aa0c9$export$9099ad97b570f7c(arr) || $f953e420d03d510c$export$9099ad97b570f7c(arr, i) || $76c445b1cd8e0a95$export$9099ad97b570f7c();
 }
 
-function $960b9d880449f042$export$9099ad97b570f7c(arr) {
+function $126bb3c74c493c98$export$9099ad97b570f7c(arr) {
     if (Array.isArray(arr)) {
         for(var i = 0, arr2 = new Array(arr.length); i < arr.length; i++)arr2[i] = arr[i];
         return arr2;
@@ -142,30 +142,30 @@ function $960b9d880449f042$export$9099ad97b570f7c(arr) {
 
 
 
-function $af05cca3b5e4897b$export$9099ad97b570f7c() {
+function $63b64529301afb9b$export$9099ad97b570f7c() {
     throw new TypeError("Invalid attempt to spread non-iterable instance");
 }
 
 
-function $631c5afe36f33b96$export$9099ad97b570f7c(arr) {
-    return $960b9d880449f042$export$9099ad97b570f7c(arr) || $9849c3158b9a2728$export$9099ad97b570f7c(arr) || $af05cca3b5e4897b$export$9099ad97b570f7c();
+function $0862162e48b32d5b$export$9099ad97b570f7c(arr) {
+    return $126bb3c74c493c98$export$9099ad97b570f7c(arr) || $f953e420d03d510c$export$9099ad97b570f7c(arr) || $63b64529301afb9b$export$9099ad97b570f7c();
 }
 
 
 
-var $aa95204b620a0ef2$export$4048ae5fe51d81b7 = window.$;
+var $99b6183ba65dae12$export$4048ae5fe51d81b7 = window.$;
 
 
 
 
-var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
+var $8d94b5f2509b6cf5$var$Aggregation = /*#__PURE__*/ function() {
     "use strict";
-    function $1f5712c12abeeb70$var$Aggregation(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $1f5712c12abeeb70$var$Aggregation);
+    function $8d94b5f2509b6cf5$var$Aggregation(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $8d94b5f2509b6cf5$var$Aggregation);
         this.name = params.name;
         this.aggs = params.aggs || [];
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($1f5712c12abeeb70$var$Aggregation, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Aggregation, [
         {
             key: "addAggregation",
             value: function addAggregation(agg) {
@@ -198,7 +198,7 @@ var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
                 if (this.aggs.length > 0) {
                     obj[this.name]["aggs"] = {
                     };
-                    for(var i = 0; i < this.aggs.length; i++)$aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(obj[this.name]["aggs"], this.aggs[i].objectify());
+                    for(var i = 0; i < this.aggs.length; i++)$99b6183ba65dae12$export$4048ae5fe51d81b7.extend(obj[this.name]["aggs"], this.aggs[i].objectify());
                 }
                 return obj;
             }
@@ -218,7 +218,7 @@ var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
                         var raw = {
                         };
                         raw[name] = agg;
-                        var oa = $1f5712c12abeeb70$export$8b446892c82de644.aggregationFactory(subtype, {
+                        var oa = $8d94b5f2509b6cf5$export$8b446892c82de644.aggregationFactory(subtype, {
                             raw: raw
                         });
                         if (oa) this.addAggregation(oa);
@@ -228,17 +228,17 @@ var $1f5712c12abeeb70$var$Aggregation = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $1f5712c12abeeb70$var$Aggregation;
+    return $8d94b5f2509b6cf5$var$Aggregation;
 }();
-$0726ab3728f86779$export$9099ad97b570f7c($1f5712c12abeeb70$var$Aggregation, "type", "aggregation");
-var $1f5712c12abeeb70$var$Filter = /*#__PURE__*/ function() {
+$9b036347ace9941e$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Aggregation, "type", "aggregation");
+var $8d94b5f2509b6cf5$var$Filter = /*#__PURE__*/ function() {
     "use strict";
-    function $1f5712c12abeeb70$var$Filter(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $1f5712c12abeeb70$var$Filter);
+    function $8d94b5f2509b6cf5$var$Filter(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $8d94b5f2509b6cf5$var$Filter);
         this.field = params.field;
         this.type_name = params.type_name;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($1f5712c12abeeb70$var$Filter, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Filter, [
         {
             key: "matches",
             value: function matches(other) {
@@ -267,15 +267,15 @@ var $1f5712c12abeeb70$var$Filter = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $1f5712c12abeeb70$var$Filter;
+    return $8d94b5f2509b6cf5$var$Filter;
 }();
-$0726ab3728f86779$export$9099ad97b570f7c($1f5712c12abeeb70$var$Filter, "type", "filter");
-function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
+$9b036347ace9941e$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Filter, "type", "filter");
+function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
     if (clazz.__proto__ === null) return false;
     if (clazz.__proto__ === ref) return true;
-    else return $1f5712c12abeeb70$var$_classExtends(clazz.__proto__, ref);
+    else return $8d94b5f2509b6cf5$var$_classExtends(clazz.__proto__, ref);
 }
-/** @namespace */ var $1f5712c12abeeb70$export$8b446892c82de644 = {
+/** @namespace */ var $8d94b5f2509b6cf5$export$8b446892c82de644 = {
     /////////////////////////////////////////////////////
     // fixed properties, like special characters, etc
     // The reserved characters in elasticsearch query strings
@@ -357,18 +357,18 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     requestMethod: "get",
     // add request headers (such as Auth) if you need to
     requestHeaders: false,
-    Filter: $1f5712c12abeeb70$var$Filter,
-    Aggregation: $1f5712c12abeeb70$var$Aggregation,
+    Filter: $8d94b5f2509b6cf5$var$Filter,
+    Aggregation: $8d94b5f2509b6cf5$var$Aggregation,
     ////////////////////////////////////////////////////
     ////////////////////////////////////////////////////
     // object factories
     aggregationFactory: function aggregationFactory(type, params) {
         var _iteratorNormalCompletion = true, _didIteratorError = false, _iteratorError = undefined;
         try {
-            for(var _iterator = Object.entries($1f5712c12abeeb70$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
-                var _value = $3fd025669e1dbd56$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
-                if ($1f5712c12abeeb70$var$_classExtends($1f5712c12abeeb70$export$8b446892c82de644[key], $1f5712c12abeeb70$var$Aggregation)) {
-                    if ($1f5712c12abeeb70$export$8b446892c82de644[key].type === type) return new $1f5712c12abeeb70$export$8b446892c82de644[key](params);
+            for(var _iterator = Object.entries($8d94b5f2509b6cf5$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
+                var _value = $d1ea3085410a42e5$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
+                if ($8d94b5f2509b6cf5$var$_classExtends($8d94b5f2509b6cf5$export$8b446892c82de644[key], $8d94b5f2509b6cf5$var$Aggregation)) {
+                    if ($8d94b5f2509b6cf5$export$8b446892c82de644[key].type === type) return new $8d94b5f2509b6cf5$export$8b446892c82de644[key](params);
                 }
             }
         } catch (err) {
@@ -388,14 +388,14 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     },
     filterFactory: function filterFactory(type, params) {
         // query string is a special case
-        if (type === "query_string") return new $1f5712c12abeeb70$export$8b446892c82de644.QueryString(params);
+        if (type === "query_string") return new $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString(params);
         var _iteratorNormalCompletion = true, _didIteratorError = false, _iteratorError = undefined;
         try {
             // otherwise auto-detect
-            for(var _iterator = Object.entries($1f5712c12abeeb70$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
-                var _value = $3fd025669e1dbd56$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
-                if ($1f5712c12abeeb70$var$_classExtends($1f5712c12abeeb70$export$8b446892c82de644[key], $1f5712c12abeeb70$var$Filter)) {
-                    if ($1f5712c12abeeb70$export$8b446892c82de644[key].type === type) return new $1f5712c12abeeb70$export$8b446892c82de644[key](params);
+            for(var _iterator = Object.entries($8d94b5f2509b6cf5$export$8b446892c82de644)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
+                var _value = $d1ea3085410a42e5$export$9099ad97b570f7c(_step.value, 2), key = _value[0], value = _value[1];
+                if ($8d94b5f2509b6cf5$var$_classExtends($8d94b5f2509b6cf5$export$8b446892c82de644[key], $8d94b5f2509b6cf5$var$Filter)) {
+                    if ($8d94b5f2509b6cf5$export$8b446892c82de644[key].type === type) return new $8d94b5f2509b6cf5$export$8b446892c82de644[key](params);
                 }
             }
         } catch (err) {
@@ -432,33 +432,33 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
      */ Query: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             if (!params) params = {
             };
             // properties that can be set directly (thought note that they may need to be read via their getters)
             this.filtered = false; // this is no longer present in es5.x+
             this.trackTotalHits = true; // FIXME: hard code this for the moment, we can introduce the ability to vary it later
-            this.size = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.size, false);
-            this.from = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.from, false);
-            this.fields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.fields, []);
-            this.aggs = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.aggs, []);
-            this.must = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.must, []);
-            this.mustNot = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.mustNot, []);
+            this.size = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.size, false);
+            this.from = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.from, false);
+            this.fields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.fields, []);
+            this.aggs = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.aggs, []);
+            this.must = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.must, []);
+            this.mustNot = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.mustNot, []);
             // defaults from properties that will be set through their setters (see the bottom
             // of the function)
             this.queryString = false;
             this.sort = [];
             // ones that we haven't used yet, so are awaiting implementation
             // NOTE: once we implement these, they also need to be considered in merge()
-            this.source = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.source, false);
-            this.should = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.should, []);
-            this.partialFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.partialField, false);
-            this.scriptFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.scriptFields, false);
-            this.minimumShouldMatch = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.minimumShouldMatch, false);
-            this.partialFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.partialFields, false);
-            this.scriptFields = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.scriptFields, false);
+            this.source = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.source, false);
+            this.should = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.should, []);
+            this.partialFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.partialField, false);
+            this.scriptFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.scriptFields, false);
+            this.minimumShouldMatch = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.minimumShouldMatch, false);
+            this.partialFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.partialFields, false);
+            this.scriptFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.scriptFields, false);
             // for old versions of ES, so are not necessarily going to be implemented
-            this.facets = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.facets, []);
+            this.facets = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.facets, []);
             ///////////////////////////////////////////////////////////
             // final part of construction - set the dynamic properties
             // via their setters
@@ -467,7 +467,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
             // finally, if we're given a raw query, parse it
             if (params.raw) this.parse(params.raw);
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 /////////////////////////////////////////////////
                 // getters and setters
@@ -487,16 +487,16 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
             {
                 key: "addField",
                 value: function addField(field) {
-                    if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(field, this.fields) === -1) this.fields.push(field);
+                    if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(field, this.fields) === -1) this.fields.push(field);
                 }
             },
             {
                 key: "setQueryString",
                 value: function setQueryString(params) {
                     var qs = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.QueryString)) {
-                        if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.isPlainObject(params)) qs = new $1f5712c12abeeb70$export$8b446892c82de644.QueryString(params);
-                        else qs = new $1f5712c12abeeb70$export$8b446892c82de644.QueryString({
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString)) {
+                        if ($99b6183ba65dae12$export$4048ae5fe51d81b7.isPlainObject(params)) qs = new $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString(params);
+                        else qs = new $8d94b5f2509b6cf5$export$8b446892c82de644.QueryString({
                             queryString: params
                         });
                     }
@@ -522,7 +522,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     this.sort = [];
                     // ensure we have a list of sort options
                     var sorts = params;
-                    if (!$aa95204b620a0ef2$export$4048ae5fe51d81b7.isArray(params)) sorts = [
+                    if (!$99b6183ba65dae12$export$4048ae5fe51d81b7.isArray(params)) sorts = [
                         params
                     ];
                     // add each one
@@ -534,7 +534,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 value: function addSortBy(params) {
                     // ensure we have an instance of es.Sort
                     var sort = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.Sort)) sort = new $1f5712c12abeeb70$export$8b446892c82de644.Sort(params);
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.Sort)) sort = new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort(params);
                     // prevent repeated sort options being added
                     for(var i = 0; i < this.sort.length; i++){
                         var so = this.sort[i];
@@ -549,7 +549,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 value: function prependSortBy(params) {
                     // ensure we have an instance of es.Sort
                     var sort = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.Sort)) sort = new $1f5712c12abeeb70$export$8b446892c82de644.Sort(params);
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.Sort)) sort = new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort(params);
                     this.removeSortBy(sort);
                     this.sort.unshift(sort);
                 }
@@ -559,7 +559,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 value: function removeSortBy(params) {
                     // ensure we have an instance of es.Sort
                     var sort = params;
-                    if (!(params instanceof $1f5712c12abeeb70$export$8b446892c82de644.Sort)) sort = new $1f5712c12abeeb70$export$8b446892c82de644.Sort(params);
+                    if (!(params instanceof $8d94b5f2509b6cf5$export$8b446892c82de644.Sort)) sort = new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort(params);
                     var removes = [];
                     for(var i = 0; i < this.sort.length; i++){
                         var so = this.sort[i];
@@ -826,7 +826,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     var bool = {
                     };
                     // query string
-                    if (this.queryString && include_query_string) $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(query_part, this.queryString.objectify());
+                    if (this.queryString && include_query_string) $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(query_part, this.queryString.objectify());
                     if (include_filters) {
                         // add any MUST filters
                         if (this.must.length > 0) {
@@ -879,7 +879,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         };
                         for(var i = 0; i < this.aggs.length; i++){
                             var agg = this.aggs[i];
-                            $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(q.aggs, agg.objectify());
+                            $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(q.aggs, agg.objectify());
                         }
                     }
                     // add the source filters
@@ -906,7 +906,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     function parseBool(bool, target) {
                         if (bool.must) for(var i = 0; i < bool.must.length; i++){
                             var type = Object.keys(bool.must[i])[0];
-                            var fil = $1f5712c12abeeb70$export$8b446892c82de644.filterFactory(type, {
+                            var fil = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
                                 raw: bool.must[i]
                             });
                             if (fil && type !== "query_string") target.addMust(fil);
@@ -915,7 +915,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         }
                         if (bool.must_not) for(var i = 0; i < bool.must_not.length; i++){
                             var type = Object.keys(bool.must_not[i])[0];
-                            var fil = $1f5712c12abeeb70$export$8b446892c82de644.filterFactory(type, {
+                            var fil = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
                                 raw: bool.must_not[i]
                             });
                             if (fil) target.addMustNot(fil);
@@ -929,7 +929,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                                 parseBool(q.bool, target);
                                 continue;
                             }
-                            var impl = $1f5712c12abeeb70$export$8b446892c82de644.filterFactory(type, {
+                            var impl = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
                                 raw: q[type]
                             });
                             if (impl) {
@@ -955,7 +955,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     if (obj.stored_fields) this.fields = obj.stored_fields;
                     if (obj.sort) for(var i = 0; i < obj.sort.length; i++){
                         var so = obj.sort[i];
-                        this.addSortBy(new $1f5712c12abeeb70$export$8b446892c82de644.Sort({
+                        this.addSortBy(new $8d94b5f2509b6cf5$export$8b446892c82de644.Sort({
                             raw: so
                         }));
                     }
@@ -969,7 +969,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             var raw = {
                             };
                             raw[name] = agg;
-                            var oa = $1f5712c12abeeb70$export$8b446892c82de644.aggregationFactory(type, {
+                            var oa = $8d94b5f2509b6cf5$export$8b446892c82de644.aggregationFactory(type, {
                                 raw: raw
                             });
                             if (oa) this.addAggregation(oa);
@@ -995,7 +995,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
             {
                 key: "clone",
                 value: function clone() {
-                    return new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+                    return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
                         raw: Object.assign({
                         }, this.objectify())
                     });
@@ -1009,17 +1009,17 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     QueryString: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             this.queryString = params.queryString || false;
             this.defaultField = params.defaultField || false;
             this.defaultOperator = params.defaultOperator || "OR";
             this.fuzzify = params.fuzzify || false; // * or ~
-            this.escapeSet = params.escapeSet || $1f5712c12abeeb70$export$8b446892c82de644.specialCharsSubSet;
-            this.pairs = params.pairs || $1f5712c12abeeb70$export$8b446892c82de644.characterPairs;
-            this.unEscapeSet = params.unEscapeSet || $1f5712c12abeeb70$export$8b446892c82de644.specialChars;
+            this.escapeSet = params.escapeSet || $8d94b5f2509b6cf5$export$8b446892c82de644.specialCharsSubSet;
+            this.pairs = params.pairs || $8d94b5f2509b6cf5$export$8b446892c82de644.characterPairs;
+            this.unEscapeSet = params.unEscapeSet || $8d94b5f2509b6cf5$export$8b446892c82de644.specialChars;
             if (params.raw) this.parse(params.raw);
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 key: "objectify",
                 value: function objectify() {
@@ -1122,12 +1122,12 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     Sort: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             this.field = params.field || "_score";
             this.order = params.order || "desc";
             if (params.raw) this.parse(params.raw);
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 key: "objectify",
                 value: function objectify() {
@@ -1154,11 +1154,11 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     TermsAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.size = params.size || 10;
                 // set the ordering for the first time
@@ -1171,7 +1171,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     // provide a method to set and normalise the ordering in future
                     key: "setOrdering",
@@ -1191,13 +1191,13 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             }
                         };
                         body.order[this.orderBy] = this.orderDir;
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation.type);
                         this.field = body.field;
                         if (body.size) this.size = body.size;
                         if (body.order) {
@@ -1208,59 +1208,59 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "terms");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "terms");
         return _class;
     }(),
     CardinalityAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
-                _this.field = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.field, false);
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
+                _this.field = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.field, false);
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             field: this.field
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.CardinalityAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.CardinalityAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.CardinalityAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.CardinalityAggregation.type);
                         this.field = body.field;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "cardinality");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "cardinality");
         return _class;
     }(),
     RangeAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.ranges = params.ranges || [];
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1268,31 +1268,31 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             field: this.field,
                             ranges: this.ranges
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.RangeAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.RangeAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.RangeAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.RangeAggregation.type);
                         this.field = body.field;
                         this.ranges = body.ranges;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "range");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "range");
         return _class;
     }(),
     GeoDistanceAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.lat = params.lat || false;
                 _this.lon = params.lon || false;
@@ -1302,7 +1302,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1316,13 +1316,13 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             distance_type: this.distance_type,
                             ranges: this.ranges
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.GeoDistanceAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.GeoDistanceAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.GeoDistanceAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.GeoDistanceAggregation.type);
                         this.field = body.field;
                         // FIXME: only handles the lat/lon object - but there are several forms
                         // this origin could take
@@ -1336,24 +1336,24 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geo_distance");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geo_distance");
         return _class;
     }(),
     GeohashGridAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.precision = params.precision || 3;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1361,108 +1361,108 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             field: this.field,
                             precision: this.precision
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.GeohashGridAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.GeohashGridAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.GeohashGridAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.GeohashGridAggregation.type);
                         this.field = body.field;
                         this.precision = body.precision;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geohash_grid");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geohash_grid");
         return _class;
     }(),
     StatsAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             field: this.field
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.StatsAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.StatsAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.StatsAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.StatsAggregation.type);
                         this.field = body.field;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "stats");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "stats");
         return _class;
     }(),
     SumAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             field: this.field
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.SumAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.SumAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.SumAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.SumAggregation.type);
                         this.field = body.field;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "sum");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "sum");
         return _class;
     }(),
     DateHistogramAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.field = params.field || false;
                 _this.interval = params.interval || "month";
                 _this.format = params.format || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1471,13 +1471,13 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                             interval: this.interval
                         };
                         if (this.format) body["format"] = this.format;
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.DateHistogramAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.DateHistogramAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.DateHistogramAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.DateHistogramAggregation.type);
                         this.field = body.field;
                         if (body.interval) this.interval = body.interval;
                         if (body.format) this.format = body.format;
@@ -1485,44 +1485,44 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "date_histogram");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "date_histogram");
         return _class;
     }(),
     FiltersAggregation: function() {
         var _class = /*#__PURE__*/ function(Aggregation) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Aggregation);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Aggregation);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.filters = params.filters || {
                 };
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
                         var body = {
                             filters: this.filters
                         };
-                        return this._make_aggregation($1f5712c12abeeb70$export$8b446892c82de644.FiltersAggregation.type, body);
+                        return this._make_aggregation($8d94b5f2509b6cf5$export$8b446892c82de644.FiltersAggregation.type, body);
                     }
                 },
                 {
                     key: "parse",
                     value: function parse(obj) {
-                        var body = this._parse_wrapper(obj, $1f5712c12abeeb70$export$8b446892c82de644.FiltersAggregation.type);
+                        var body = this._parse_wrapper(obj, $8d94b5f2509b6cf5$export$8b446892c82de644.FiltersAggregation.type);
                         this.filters = body.filters;
                     }
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Aggregation);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "filters");
+        }($8d94b5f2509b6cf5$var$Aggregation);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "filters");
         return _class;
     }(),
     ///////////////////////////////////////////////////
@@ -1530,17 +1530,17 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     TermFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.filter handled by superclass
                 _this.value = params.value || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
@@ -1573,22 +1573,22 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "term");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "term");
         return _class;
     }(),
     ExistsFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1608,25 +1608,25 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "exists");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "exists");
         return _class;
     }(),
     TermsFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.field handled by superclass
                 _this.values = params.values || false;
                 _this.execution = params.execution || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
@@ -1637,7 +1637,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         if (other.values) {
                             if (other.values.length !== this.values.length) return false;
                             for(var i = 0; i < other.values.length; i++){
-                                if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(other.values[i], this.values) === -1) return false;
+                                if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(other.values[i], this.values) === -1) return false;
                             }
                         }
                         return true;
@@ -1669,21 +1669,21 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                     key: "add_term",
                     value: function add_term(term) {
                         if (!this.values) this.values = [];
-                        if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(term, this.values) === -1) this.values.push(term);
+                        if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(term, this.values) === -1) this.values.push(term);
                     }
                 },
                 {
                     key: "has_term",
                     value: function has_term(term) {
                         if (!this.values) return false;
-                        return $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(term, this.values) >= 0;
+                        return $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(term, this.values) >= 0;
                     }
                 },
                 {
                     key: "remove_term",
                     value: function remove_term(term) {
                         if (!this.values) return;
-                        var idx = $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(term, this.values);
+                        var idx = $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(term, this.values);
                         if (idx >= 0) this.values.splice(idx, 1);
                     }
                 },
@@ -1707,23 +1707,23 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "terms");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "terms");
         return _class;
     }(),
     RangeFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.field handled by superclass
-                _this.lt = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.lt, false);
-                _this.lte = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.lte, false);
-                _this.gte = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.gte, false);
-                _this.format = $1f5712c12abeeb70$export$8b446892c82de644.getParam(params.format, false);
+                _this.lt = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.lt, false);
+                _this.lte = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.lte, false);
+                _this.gte = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.gte, false);
+                _this.format = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.format, false);
                 // normalise the values to strings
                 if (_this.lt) _this.lt = _this.lt.toString();
                 if (_this.lte) _this.lte = _this.lte.toString();
@@ -1731,12 +1731,12 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
                         // ask the parent object first
-                        var pm = $59ef20e355e8922b$export$9099ad97b570f7c($6f1885a119f0af4a$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
+                        var pm = $17c4d4a7c863d924$export$9099ad97b570f7c($da23c25529bb1df4$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
                         if (!pm) return false;
                         // ranges (if set) must match
                         if (other.lt) {
@@ -1783,18 +1783,18 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "range");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "range");
         return _class;
     }(),
     GeoDistanceRangeFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 // this.field is handled by superclass
                 _this.lt = params.lt || false;
                 _this.gte = params.gte || false;
@@ -1804,7 +1804,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "objectify",
                     value: function objectify() {
@@ -1829,8 +1829,8 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                         }
                         function splitUnits(str) {
                             var unit = false;
-                            for(var i = 0; i < $1f5712c12abeeb70$export$8b446892c82de644.distanceUnits.length; i++){
-                                var cu = $1f5712c12abeeb70$export$8b446892c82de644.distanceUnits[i];
+                            for(var i = 0; i < $8d94b5f2509b6cf5$export$8b446892c82de644.distanceUnits.length; i++){
+                                var cu = $8d94b5f2509b6cf5$export$8b446892c82de644.distanceUnits[i];
                                 if (endsWith(str, cu)) {
                                     str = str.substring(0, str.length - cu.length);
                                     unit = str.substring(str.length - cu.length);
@@ -1863,29 +1863,29 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geo_distance_range");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geo_distance_range");
         return _class;
     }(),
     GeoBoundingBoxFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
-            $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Filter);
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
             function _class(params) {
-                $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
                 var _this;
-                _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this, params));
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
                 _this.top_left = params.top_left || false;
                 _this.bottom_right = params.bottom_right || false;
                 if (params.raw) _this.parse(params.raw);
                 return _this;
             }
-            $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
                 {
                     key: "matches",
                     value: function matches(other) {
                         // ask the parent object first
-                        var pm = $59ef20e355e8922b$export$9099ad97b570f7c($6f1885a119f0af4a$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
+                        var pm = $17c4d4a7c863d924$export$9099ad97b570f7c($da23c25529bb1df4$export$9099ad97b570f7c(_class.prototype), "matches", this).call(this, other);
                         if (!pm) return false;
                         if (other.top_left && other.top_left !== this.top_left) return false;
                         if (other.bottom_right && other.bottom_right !== this.bottom_right) return false;
@@ -1917,8 +1917,8 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 }
             ]);
             return _class;
-        }($1f5712c12abeeb70$var$Filter);
-        $0726ab3728f86779$export$9099ad97b570f7c(_class, "type", "geo_bounding_box");
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "geo_bounding_box");
         return _class;
     }(),
     ////////////////////////////////////////////////////
@@ -1926,10 +1926,10 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
     Result: /*#__PURE__*/ function() {
         "use strict";
         function _class(params) {
-            $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+            $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
             this.data = params.raw;
         }
-        $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+        $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
             {
                 key: "buckets",
                 value: function buckets(agg_name) {
@@ -1978,11 +1978,11 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
         // serialise the query
         var querystring = JSON.stringify(queryobj);
         // prep the callbacks (they are connected)
-        var error_callback = $1f5712c12abeeb70$export$8b446892c82de644.queryError(error);
-        var success_callback = $1f5712c12abeeb70$export$8b446892c82de644.querySuccess(success, error_callback);
+        var error_callback = $8d94b5f2509b6cf5$export$8b446892c82de644.queryError(error);
+        var success_callback = $8d94b5f2509b6cf5$export$8b446892c82de644.querySuccess(success, error_callback);
         var ajax = {
             url: search_url,
-            headers: $1f5712c12abeeb70$export$8b446892c82de644.requestHeaders,
+            headers: $8d94b5f2509b6cf5$export$8b446892c82de644.requestHeaders,
             dataType: datatype,
             success: success_callback,
             error: error_callback,
@@ -1990,17 +1990,17 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
         };
         if (datatype !== "jsonp") ajax.jsonp = false;
         // make the call to the elasticsearch web service
-        if ($1f5712c12abeeb70$export$8b446892c82de644.requestMethod === "get") {
+        if ($8d94b5f2509b6cf5$export$8b446892c82de644.requestMethod === "get") {
             ajax.type = "get";
             ajax.data = {
                 source: querystring,
                 source_content_type: "application/json"
             };
-            $aa95204b620a0ef2$export$4048ae5fe51d81b7.ajax(ajax);
-        } else if ($1f5712c12abeeb70$export$8b446892c82de644.requestMethod === "post") {
+            $99b6183ba65dae12$export$4048ae5fe51d81b7.ajax(ajax);
+        } else if ($8d94b5f2509b6cf5$export$8b446892c82de644.requestMethod === "post") {
             ajax.type = "post";
             ajax.data = querystring;
-            $aa95204b620a0ef2$export$4048ae5fe51d81b7.ajax(ajax);
+            $99b6183ba65dae12$export$4048ae5fe51d81b7.ajax(ajax);
         } else throw "es.requestMethod must be either 'get' or 'post";
     },
     querySuccess: function querySuccess(callback, error_callback) {
@@ -2009,7 +2009,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
                 error_callback(data);
                 return;
             }
-            var result = new $1f5712c12abeeb70$export$8b446892c82de644.Result({
+            var result = new $8d94b5f2509b6cf5$export$8b446892c82de644.Result({
                 raw: data
             });
             callback(result);
@@ -2034,7 +2034,7 @@ function $1f5712c12abeeb70$var$_classExtends(clazz, ref) {
 
 
 
-function $988cca1a6a01f734$export$f628537ca2c78f9d(params, key, def) {
+function $d48cc3604bf30e24$export$f628537ca2c78f9d(params, key, def) {
     function _getDefault() {
         if (typeof def === 'function') return def();
         return def;
@@ -2043,7 +2043,7 @@ function $988cca1a6a01f734$export$f628537ca2c78f9d(params, key, def) {
     if (!params.hasOwnProperty(key)) return _getDefault();
     return params[key];
 }
-function $988cca1a6a01f734$export$6e23017c375e3c2b() {
+function $d48cc3604bf30e24$export$6e23017c375e3c2b() {
     var params = {
     };
     var url = window.location.href;
@@ -2076,19 +2076,19 @@ function $988cca1a6a01f734$export$6e23017c375e3c2b() {
     if (fragment) params['#'] = fragment;
     return params;
 }
-function $988cca1a6a01f734$export$16a194923490d008(obj) {
+function $d48cc3604bf30e24$export$16a194923490d008(obj) {
     for(var key in obj){
         if (obj.hasOwnProperty(key)) return false;
     }
     return true;
 }
-function $988cca1a6a01f734$export$367047a567f2342b(obj, fn, args, context_params) {
+function $d48cc3604bf30e24$export$367047a567f2342b(obj, fn, args, context_params) {
     return function() {
         if (args) {
             var params = {
             };
             for(var i = 0; i < args.length; i++)if (arguments.length > i) params[args[i]] = arguments[i];
-            if (context_params) params = $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(params, context_params);
+            if (context_params) params = $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(params, context_params);
             obj[fn](params);
         } else {
             var slice = Array.prototype.slice;
@@ -2098,7 +2098,7 @@ function $988cca1a6a01f734$export$367047a567f2342b(obj, fn, args, context_params
         }
     };
 }
-function $988cca1a6a01f734$export$866a93d0ccff8292(obj, fn, conditional, preventDefault) {
+function $d48cc3604bf30e24$export$866a93d0ccff8292(obj, fn, conditional, preventDefault) {
     if (preventDefault === undefined) preventDefault = true;
     return function(event) {
         if (conditional) {
@@ -2108,30 +2108,30 @@ function $988cca1a6a01f734$export$866a93d0ccff8292(obj, fn, conditional, prevent
         obj[fn](this, event);
     };
 }
-var $988cca1a6a01f734$export$a25557390a09e78a = /*#__PURE__*/ function() {
+var $d48cc3604bf30e24$export$a25557390a09e78a = /*#__PURE__*/ function() {
     "use strict";
-    function $988cca1a6a01f734$export$a25557390a09e78a(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $988cca1a6a01f734$export$a25557390a09e78a);
+    function $d48cc3604bf30e24$export$a25557390a09e78a(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $d48cc3604bf30e24$export$a25557390a09e78a);
         var _this = this;
-        $0726ab3728f86779$export$9099ad97b570f7c(this, "_finalise", function() {
+        $9b036347ace9941e$export$9099ad97b570f7c(this, "_finalise", function() {
             if (_this.finished) return;
             _this.finished = true;
             _this.functions.carryOn();
         });
-        this.list = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "list");
-        this.successCallbackArgs = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "successCallbackArgs");
-        this.errorCallbackArgs = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "errorCallbackArgs");
+        this.list = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "list");
+        this.successCallbackArgs = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "successCallbackArgs");
+        this.errorCallbackArgs = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "errorCallbackArgs");
         this.functions = {
-            action: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "action"),
-            success: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "success"),
-            carryOn: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "carryOn"),
-            error: $988cca1a6a01f734$export$f628537ca2c78f9d(params, "error")
+            action: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "action"),
+            success: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "success"),
+            carryOn: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "carryOn"),
+            error: $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "error")
         };
         this.checkList = [];
         this.finished = false;
         for(var i = 0; i < this.list.length; i++)this.checkList.push(0);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($988cca1a6a01f734$export$a25557390a09e78a, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($d48cc3604bf30e24$export$a25557390a09e78a, [
         {
             key: "process",
             value: function process(params) {
@@ -2140,8 +2140,8 @@ var $988cca1a6a01f734$export$a25557390a09e78a = /*#__PURE__*/ function() {
                     var context = {
                         index: i
                     };
-                    var success_callback = $988cca1a6a01f734$export$367047a567f2342b(this, "_actionSuccess", this.successCallbackArgs, context);
-                    var error_callback = $988cca1a6a01f734$export$367047a567f2342b(this, "_actionError", this.successCallbackArgs, context);
+                    var success_callback = $d48cc3604bf30e24$export$367047a567f2342b(this, "_actionSuccess", this.successCallbackArgs, context);
+                    var error_callback = $d48cc3604bf30e24$export$367047a567f2342b(this, "_actionError", this.successCallbackArgs, context);
                     var complete_callback = false;
                     this.functions.action({
                         entry: this.list[i],
@@ -2182,20 +2182,20 @@ var $988cca1a6a01f734$export$a25557390a09e78a = /*#__PURE__*/ function() {
         {
             key: "_isComplete",
             value: function _isComplete() {
-                return $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(0, this.checkList) === -1;
+                return $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(0, this.checkList) === -1;
             }
         }
     ]);
-    return $988cca1a6a01f734$export$a25557390a09e78a;
+    return $d48cc3604bf30e24$export$a25557390a09e78a;
 }();
-function $988cca1a6a01f734$export$60c5182d88d767f8(block, element, modifier) {
+function $d48cc3604bf30e24$export$60c5182d88d767f8(block, element, modifier) {
     var bemClass = block;
     if (element) bemClass += "__" + element;
     if (modifier) bemClass += "--" + modifier;
     return bemClass;
 }
-function $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
+function $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
     var cl = namespace;
     if (field) cl += "_" + field;
     if (instance_name) {
@@ -2205,9 +2205,9 @@ function $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_na
     }
     return cl;
 }
-function $988cca1a6a01f734$export$5be7444ab39fbaa3(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
-    var styles = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_name);
+function $d48cc3604bf30e24$export$5be7444ab39fbaa3(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
+    var styles = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, field, instance_name);
     var jsClasses = "";
     var bits = styles.split(" ");
     for(var i = 0; i < bits.length; i++){
@@ -2216,37 +2216,37 @@ function $988cca1a6a01f734$export$5be7444ab39fbaa3(namespace, field, instance_na
     }
     return jsClasses;
 }
-function $988cca1a6a01f734$export$e516ebba864be69d(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
-    var styles = $988cca1a6a01f734$export$8820e1fbe507f6aa(namespace, field, instance_name);
-    var js = $988cca1a6a01f734$export$5be7444ab39fbaa3(namespace, field, instance_name);
+function $d48cc3604bf30e24$export$e516ebba864be69d(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
+    var styles = $d48cc3604bf30e24$export$8820e1fbe507f6aa(namespace, field, instance_name);
+    var js = $d48cc3604bf30e24$export$5be7444ab39fbaa3(namespace, field, instance_name);
     return styles + " " + js;
 }
-function $988cca1a6a01f734$export$b1157bd4df096bce(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
+function $d48cc3604bf30e24$export$b1157bd4df096bce(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
     var sel = ".js-" + namespace;
     if (instance_name) sel += "_" + instance_name;
     if (field) sel += "_" + field;
     return sel;
 }
-function $988cca1a6a01f734$export$bf52b203d82ff901(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
+function $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
     var id = namespace;
     if (instance_name) id += "_" + instance_name;
     if (field) id += "_" + field;
     return id;
 }
-function $988cca1a6a01f734$export$5d5492dec79280f1(namespace, field, instance_name) {
-    instance_name = $988cca1a6a01f734$var$_normaliseInstanceName(instance_name);
-    return "#" + $988cca1a6a01f734$export$bf52b203d82ff901(namespace, field, instance_name);
+function $d48cc3604bf30e24$export$5d5492dec79280f1(namespace, field, instance_name) {
+    instance_name = $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name);
+    return "#" + $d48cc3604bf30e24$export$bf52b203d82ff901(namespace, field, instance_name);
 }
-function $988cca1a6a01f734$var$_normaliseInstanceName(instance_name) {
+function $d48cc3604bf30e24$var$_normaliseInstanceName(instance_name) {
     if (typeof instance_name === "string") return instance_name;
     // FIXME: check this doesn't cause a circular import issue
-    if (instance_name instanceof $97ca9eea36c86bb4$export$ea71c44d9cb0d048) return instance_name.id;
-    if (instance_name instanceof $97ca9eea36c86bb4$export$a695173e2ecfa9b) return instance_name.component.id;
+    if (instance_name instanceof $6cf4dc301226cb87$export$ea71c44d9cb0d048) return instance_name.id;
+    if (instance_name instanceof $6cf4dc301226cb87$export$a695173e2ecfa9b) return instance_name.component.id;
 }
-function $988cca1a6a01f734$export$5e20d0a3120d6c07(unsafe, def) {
+function $d48cc3604bf30e24$export$5e20d0a3120d6c07(unsafe, def) {
     if (def === undefined) def = "";
     if (unsafe === undefined || unsafe == null) return def;
     try {
@@ -2256,17 +2256,17 @@ function $988cca1a6a01f734$export$5e20d0a3120d6c07(unsafe, def) {
         return def;
     }
 }
-function $988cca1a6a01f734$export$63ba8ea1e92c906(unsafe) {
+function $d48cc3604bf30e24$export$63ba8ea1e92c906(unsafe) {
     return unsafe.replace(/&/g, "_").replace(/</g, "_").replace(/>/g, "_").replace(/"/g, "_").replace(/'/g, "_").replace(/\./gi, '_').replace(/\:/gi, '_').replace(/\s/gi, "_");
 }
-function $988cca1a6a01f734$export$48334dba1de70fbe(params) {
-    var reflectNonNumbers = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "reflectNonNumbers", false);
-    var prefix = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "prefix", "");
-    var zeroPadding = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "zeroPadding", false);
-    var decimalPlaces = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "decimalPlaces", false);
-    var thousandsSeparator = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "thousandsSeparator", false);
-    var decimalSeparator = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "decimalSeparator", ".");
-    var suffix = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "suffix", "");
+function $d48cc3604bf30e24$export$48334dba1de70fbe(params) {
+    var reflectNonNumbers = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "reflectNonNumbers", false);
+    var prefix = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "prefix", "");
+    var zeroPadding = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "zeroPadding", false);
+    var decimalPlaces = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "decimalPlaces", false);
+    var thousandsSeparator = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "thousandsSeparator", false);
+    var decimalSeparator = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "decimalSeparator", ".");
+    var suffix = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "suffix", "");
     return function(number) {
         // ensure this is really a number
         var num = parseFloat(number);
@@ -2291,7 +2291,7 @@ function $988cca1a6a01f734$export$48334dba1de70fbe(params) {
         else return prefix + bits[0] + decimalSeparator + bits[1] + suffix;
     };
 }
-function $988cca1a6a01f734$export$bf454bbe620fa941(params) {
+function $d48cc3604bf30e24$export$bf454bbe620fa941(params) {
     var commaRx = new RegExp(",", "g");
     return function(num) {
         num = num.trim();
@@ -2300,21 +2300,21 @@ function $988cca1a6a01f734$export$bf454bbe620fa941(params) {
         return parseFloat(num);
     };
 }
-function $988cca1a6a01f734$export$b4cd8de5710bc55c(selector, event, caller, targetFunction, delay, conditional, preventDefault) {
+function $d48cc3604bf30e24$export$b4cd8de5710bc55c(selector, event, caller, targetFunction, delay, conditional, preventDefault) {
     if (preventDefault === undefined) preventDefault = true;
     // if the caller has an inner component (i.e. it is a Renderer), use the component's id
     // otherwise, if it has a namespace (which is true of Renderers or Templates) use that
     if (caller.component && caller.component.id) event = event + "." + caller.component.id;
     else if (caller.namespace) event = event + "." + caller.namespace;
     // create the closure to be called on the event
-    var clos = $988cca1a6a01f734$export$866a93d0ccff8292(caller, targetFunction, conditional, preventDefault);
+    var clos = $d48cc3604bf30e24$export$866a93d0ccff8292(caller, targetFunction, conditional, preventDefault);
     // now bind the closure directly or with delay
     // if the caller has an inner component (i.e. it is a Renderer) use the components jQuery selector
     // otherwise, if it has an inner, use the selector on that.
     if (delay) {
         if (caller.component) caller.component.jq(selector).bindWithDelay(event, clos, delay);
         else if (caller.edge) caller.edge.jq(selector).bindWithDelay(event, clos, delay);
-        else $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector).bindWithDelay(event, clos, delay);
+        else $99b6183ba65dae12$export$4048ae5fe51d81b7(selector).bindWithDelay(event, clos, delay);
     } else {
         if (caller.component) {
             var element = caller.component.jq(selector);
@@ -2325,13 +2325,13 @@ function $988cca1a6a01f734$export$b4cd8de5710bc55c(selector, event, caller, targ
             element.off(event);
             element.on(event, clos);
         } else {
-            var element = $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector);
+            var element = $99b6183ba65dae12$export$4048ae5fe51d81b7(selector);
             element.off(event);
             element.on(event, clos);
         }
     }
 }
-function $988cca1a6a01f734$export$27450a6de0750f89(selector, event, caller) {
+function $d48cc3604bf30e24$export$27450a6de0750f89(selector, event, caller) {
     // if the caller has an inner component (i.e. it is a Renderer), use the component's id
     // otherwise, if it has a namespace (which is true of Renderers or Templates) use that
     if (caller.component && caller.component.id) event = event + "." + caller.component.id;
@@ -2343,7 +2343,7 @@ function $988cca1a6a01f734$export$27450a6de0750f89(selector, event, caller) {
         var element = caller.edge.jq(selector);
         element.off(event);
     } else {
-        var element = $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector);
+        var element = $99b6183ba65dae12$export$4048ae5fe51d81b7(selector);
         element.off(event);
     }
 }
@@ -2351,31 +2351,31 @@ function $988cca1a6a01f734$export$27450a6de0750f89(selector, event, caller) {
 
 
 
-var $e2d80b3b87810ca2$export$15b4933e9118d714 = /*#__PURE__*/ function() {
+var $e11cce7d2432c447$export$15b4933e9118d714 = /*#__PURE__*/ function() {
     "use strict";
-    function $e2d80b3b87810ca2$export$15b4933e9118d714() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $e2d80b3b87810ca2$export$15b4933e9118d714);
+    function $e11cce7d2432c447$export$15b4933e9118d714() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $e11cce7d2432c447$export$15b4933e9118d714);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($e2d80b3b87810ca2$export$15b4933e9118d714, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($e11cce7d2432c447$export$15b4933e9118d714, [
         {
             key: "doQuery",
             value: function doQuery(params) {
             }
         }
     ]);
-    return $e2d80b3b87810ca2$export$15b4933e9118d714;
+    return $e11cce7d2432c447$export$15b4933e9118d714;
 }();
 
 
 
-var $2f87dfa78e983121$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdapter) {
+var $c08f5147382318be$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdapter) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($2f87dfa78e983121$export$4ddc7050cc680aeb, QueryAdapter);
-    function $2f87dfa78e983121$export$4ddc7050cc680aeb() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $2f87dfa78e983121$export$4ddc7050cc680aeb);
-        return $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($2f87dfa78e983121$export$4ddc7050cc680aeb).apply(this, arguments));
+    $bca7673885229bfd$export$9099ad97b570f7c($c08f5147382318be$export$4ddc7050cc680aeb, QueryAdapter);
+    function $c08f5147382318be$export$4ddc7050cc680aeb() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $c08f5147382318be$export$4ddc7050cc680aeb);
+        return $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($c08f5147382318be$export$4ddc7050cc680aeb).apply(this, arguments));
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($2f87dfa78e983121$export$4ddc7050cc680aeb, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($c08f5147382318be$export$4ddc7050cc680aeb, [
         {
             key: "doQuery",
             value: function doQuery(params) {
@@ -2384,7 +2384,7 @@ var $2f87dfa78e983121$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdap
                 var success = params.success;
                 var error = params.error;
                 if (!query) query = edge.currentQuery;
-                $1f5712c12abeeb70$export$8b446892c82de644.doQuery({
+                $8d94b5f2509b6cf5$export$8b446892c82de644.doQuery({
                     search_url: edge.searchUrl,
                     queryobj: query.objectify(),
                     datatype: edge.datatype,
@@ -2394,38 +2394,38 @@ var $2f87dfa78e983121$export$4ddc7050cc680aeb = /*#__PURE__*/ function(QueryAdap
             }
         }
     ]);
-    return $2f87dfa78e983121$export$4ddc7050cc680aeb;
-}($e2d80b3b87810ca2$export$15b4933e9118d714);
+    return $c08f5147382318be$export$4ddc7050cc680aeb;
+}($e11cce7d2432c447$export$15b4933e9118d714);
 
 
 
 
-var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$22ad9a5707a07e9c(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$22ad9a5707a07e9c);
+    function $6cf4dc301226cb87$export$22ad9a5707a07e9c(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$22ad9a5707a07e9c);
         /////////////////////////////////////////////
         // parameters that can be set via params arg
         // the jquery selector for the element where the edge will be deployed
-        this.selector = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "selector", "body");
+        this.selector = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "selector", "body");
         // the base search url which will respond to elasticsearch queries.  Generally ends with _search
-        this.searchUrl = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "searchUrl", false);
+        this.searchUrl = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "searchUrl", false);
         // datatype for ajax requests to use - overall recommend using jsonp and proxying ES requests
         // through a back end that can provide that
-        this.datatype = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "datatype", "jsonp");
+        this.datatype = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "datatype", "jsonp");
         // dictionary of queries to be run before the primary query is executed
         // {"<preflight id>" : new es.Query(....)}
         // results will appear with the same ids in this.preflightResults
         // preflight queries are /not/ subject to the base query
-        this.preflightQueries = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "preflightQueries", false);
+        this.preflightQueries = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "preflightQueries", false);
         // query that forms the basis of all queries that are assembled and run
         // Note that baseQuery is inviolable - it's requirements will always be enforced
-        this.baseQuery = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "baseQuery", false);
+        this.baseQuery = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "baseQuery", false);
         // query to use to initialise the search.  Use this to set your opening
         // values for things like page size, initial search terms, etc.  Any request to
         // reset the interface will return to this query
-        this.openingQuery = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "openingQuery", function() {
-            return typeof $1f5712c12abeeb70$export$8b446892c82de644 !== 'undefined' ? new $1f5712c12abeeb70$export$8b446892c82de644.Query() : false;
+        this.openingQuery = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "openingQuery", function() {
+            return typeof $8d94b5f2509b6cf5$export$8b446892c82de644 !== 'undefined' ? new $8d94b5f2509b6cf5$export$8b446892c82de644.Query() : false;
         });
         // dictionary of functions that will generate secondary queries which also need to be
         // run at the point that cycle() is called.  These functions and their resulting
@@ -2434,37 +2434,37 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         // secondary queries are not subject the base query, although the functions
         // may of course apply the base query too if they wish
         // {"<secondary id>" : function() }
-        this.secondaryQueries = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "secondaryQueries", false);
+        this.secondaryQueries = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "secondaryQueries", false);
         // dictionary mapping keys to urls that will be used for search.  These should be
         // the same keys as used in secondaryQueries, if those secondary queries should be
         // issued against different urls than the primary search_url.
-        this.secondaryUrls = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "secondaryUrls", false);
+        this.secondaryUrls = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "secondaryUrls", false);
         // should the init process do a search
-        this.initialSearch = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "initialSearch", true);
+        this.initialSearch = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "initialSearch", true);
         // list of static files (e.g. data files) to be loaded at startup, and made available
         // on the object for use by components
         // {"id" : "<internal id to give the file>", "url" : "<file url>", "processor" : edges.csv.newObjectByRow, "datatype" : "text", "opening" : <function to be run after processing for initial state>}
-        this.staticFiles = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "staticFiles", []);
+        this.staticFiles = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "staticFiles", []);
         // should the search url be synchronised with the browser's url bar after search
         // and should queries be retrieved from the url on init
-        this.manageUrl = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "manageUrl", false);
+        this.manageUrl = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "manageUrl", false);
         // query parameter in which the query for this edge instance will be stored
-        this.urlQuerySource = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "urlQuerySource", "source");
+        this.urlQuerySource = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "urlQuerySource", "source");
         // options to be passed to es.Query.objectify when prepping the query to be placed in the URL
-        this.urlQueryOptions = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "urlQueryOptions", false);
+        this.urlQueryOptions = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "urlQueryOptions", false);
         // template object that will be used to draw the frame for the edge.  May be left
         // blank, in which case the edge will assume that the elements are already rendered
         // on the page by the caller
-        this.template = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "template", false);
+        this.template = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "template", false);
         // list of all the components that are involved in this edge
-        this.components = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "components", []);
+        this.components = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "components", []);
         // the query adapter
-        this.queryAdapter = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "queryAdapter", function() {
-            return new $2f87dfa78e983121$export$4ddc7050cc680aeb();
+        this.queryAdapter = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "queryAdapter", function() {
+            return new $c08f5147382318be$export$4ddc7050cc680aeb();
         });
         // list of callbacks to be run synchronously with the edge instance as the argument
         // (these bind at the same points as all the events are triggered, and are keyed the same way)
-        this.callbacks = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "callbacks", {
+        this.callbacks = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "callbacks", {
         });
         /////////////////////////////////////////////
         // operational properties
@@ -2504,21 +2504,21 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         // now kick off the edge
         this.startup();
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$22ad9a5707a07e9c, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$22ad9a5707a07e9c, [
         {
             //////////////////////////////////////////////////
             // Startup
             key: "startup",
             value: function startup() {
                 // obtain the jquery context for all our operations
-                this.context = $aa95204b620a0ef2$export$4048ae5fe51d81b7(this.selector);
+                this.context = $99b6183ba65dae12$export$4048ae5fe51d81b7(this.selector);
                 // trigger the edges:init event
                 this.trigger("edges:pre-init");
                 // if we are to manage the URL, attempt to pull a query from it
                 if (this.manageUrl) {
-                    var urlParams = $988cca1a6a01f734$export$6e23017c375e3c2b();
+                    var urlParams = $d48cc3604bf30e24$export$6e23017c375e3c2b();
                     if (this.urlQuerySource in urlParams) {
-                        this.urlQuery = new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+                        this.urlQuery = new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
                             raw: urlParams[this.urlQuerySource]
                         });
                         delete urlParams[this.urlQuerySource];
@@ -2637,7 +2637,7 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                     return;
                 }
                 var that = this;
-                var pg = new $988cca1a6a01f734$export$a25557390a09e78a({
+                var pg = new $d48cc3604bf30e24$export$a25557390a09e78a({
                     list: this.staticFiles,
                     action: function action(params) {
                         var entry = params.entry;
@@ -2646,7 +2646,7 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                         var id = entry.id;
                         var url = entry.url;
                         var datatype = edges.getParam(entry.datatype, "text");
-                        $aa95204b620a0ef2$export$4048ae5fe51d81b7.ajax({
+                        $99b6183ba65dae12$export$4048ae5fe51d81b7.ajax({
                             type: "get",
                             url: url,
                             dataType: datatype,
@@ -2705,13 +2705,13 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                     });
                 }
                 var that = this;
-                var pg = new $988cca1a6a01f734$export$a25557390a09e78a({
+                var pg = new $d48cc3604bf30e24$export$a25557390a09e78a({
                     list: entries,
                     action: function action(params) {
                         var entry = params.entry;
                         var success = params.success_callback;
                         var error = params.error_callback;
-                        $1f5712c12abeeb70$export$8b446892c82de644.doQuery({
+                        $8d94b5f2509b6cf5$export$8b446892c82de644.doQuery({
                             search_url: that.searchUrl,
                             queryobj: entry.query.objectify(),
                             datatype: that.datatype,
@@ -2751,10 +2751,10 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                 };
                 this.queryAdapter.doQuery({
                     edge: this,
-                    success: $988cca1a6a01f734$export$367047a567f2342b(this, "querySuccess", [
+                    success: $d48cc3604bf30e24$export$367047a567f2342b(this, "querySuccess", [
                         "result"
                     ], context),
-                    error: $988cca1a6a01f734$export$367047a567f2342b(this, "queryFail", [
+                    error: $d48cc3604bf30e24$export$367047a567f2342b(this, "queryFail", [
                         "response"
                     ], context)
                 });
@@ -2782,13 +2782,13 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
                     this.realisedSecondaryQueries[key] = entry.query;
                 }
                 var that = this;
-                var pg = new $988cca1a6a01f734$export$a25557390a09e78a({
+                var pg = new $d48cc3604bf30e24$export$a25557390a09e78a({
                     list: entries,
                     action: function action(params) {
                         var entry = params.entry;
                         var success = params.success_callback;
                         var error = params.error_callback;
-                        $1f5712c12abeeb70$export$8b446892c82de644.doQuery({
+                        $8d94b5f2509b6cf5$export$8b446892c82de644.doQuery({
                             search_url: entry.searchUrl,
                             queryobj: entry.query.objectify(),
                             datatype: that.datatype,
@@ -2837,14 +2837,14 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
             key: "cloneBaseQuery",
             value: function cloneBaseQuery() {
                 if (this.baseQuery) return this.baseQuery.clone();
-                return new $1f5712c12abeeb70$export$8b446892c82de644.Query();
+                return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query();
             }
         },
         {
             key: "cloneOpeningQuery",
             value: function cloneOpeningQuery() {
                 if (this.openingQuery) return this.openingQuery.clone();
-                return new $1f5712c12abeeb70$export$8b446892c82de644.Query();
+                return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query();
             }
         },
         {
@@ -2906,9 +2906,9 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         {
             key: "fullQueryArgs",
             value: function fullQueryArgs() {
-                var args = $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(true, {
+                var args = $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(true, {
                 }, this.urlParams);
-                $aa95204b620a0ef2$export$4048ae5fe51d81b7.extend(args, this.urlQueryArg());
+                $99b6183ba65dae12$export$4048ae5fe51d81b7.extend(args, this.urlQueryArg());
                 return args;
             }
         },
@@ -3041,35 +3041,35 @@ var $97ca9eea36c86bb4$export$22ad9a5707a07e9c = /*#__PURE__*/ function() {
         {
             key: "jq",
             value: function jq(selector) {
-                return $aa95204b620a0ef2$export$4048ae5fe51d81b7(selector, this.context);
+                return $99b6183ba65dae12$export$4048ae5fe51d81b7(selector, this.context);
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$22ad9a5707a07e9c;
+    return $6cf4dc301226cb87$export$22ad9a5707a07e9c;
 }();
-var $97ca9eea36c86bb4$export$93af88fe68eea917 = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$93af88fe68eea917 = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$93af88fe68eea917() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$93af88fe68eea917);
+    function $6cf4dc301226cb87$export$93af88fe68eea917() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$93af88fe68eea917);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$93af88fe68eea917, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$93af88fe68eea917, [
         {
             key: "draw",
             value: function draw(edge) {
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$93af88fe68eea917;
+    return $6cf4dc301226cb87$export$93af88fe68eea917;
 }();
-var $97ca9eea36c86bb4$export$ea71c44d9cb0d048 = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$ea71c44d9cb0d048 = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$ea71c44d9cb0d048(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$ea71c44d9cb0d048);
-        this.id = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "id");
-        this.renderer = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "renderer");
-        this.category = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "category", false);
+    function $6cf4dc301226cb87$export$ea71c44d9cb0d048(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$ea71c44d9cb0d048);
+        this.id = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "id");
+        this.renderer = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "renderer");
+        this.category = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "category", false);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$ea71c44d9cb0d048, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$ea71c44d9cb0d048, [
         {
             key: "init",
             value: function init(edge) {
@@ -3115,14 +3115,14 @@ var $97ca9eea36c86bb4$export$ea71c44d9cb0d048 = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$ea71c44d9cb0d048;
+    return $6cf4dc301226cb87$export$ea71c44d9cb0d048;
 }();
-var $97ca9eea36c86bb4$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
+var $6cf4dc301226cb87$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
     "use strict";
-    function $97ca9eea36c86bb4$export$a695173e2ecfa9b() {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    function $6cf4dc301226cb87$export$a695173e2ecfa9b() {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $6cf4dc301226cb87$export$a695173e2ecfa9b);
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($97ca9eea36c86bb4$export$a695173e2ecfa9b, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($6cf4dc301226cb87$export$a695173e2ecfa9b, [
         {
             key: "init",
             value: function init(component) {
@@ -3145,7 +3145,7 @@ var $97ca9eea36c86bb4$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
             }
         }
     ]);
-    return $97ca9eea36c86bb4$export$a695173e2ecfa9b;
+    return $6cf4dc301226cb87$export$a695173e2ecfa9b;
 }();
 
 
@@ -3153,13 +3153,13 @@ var $97ca9eea36c86bb4$export$a695173e2ecfa9b = /*#__PURE__*/ function() {
 
 
 var _finalBuckets;
-var $9cbb252f768bd5d6$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component) {
+var $ae46249d8a2a7b6d$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($9cbb252f768bd5d6$export$7decb792461ef5a9, Component);
-    function $9cbb252f768bd5d6$export$7decb792461ef5a9(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $9cbb252f768bd5d6$export$7decb792461ef5a9);
+    $bca7673885229bfd$export$9099ad97b570f7c($ae46249d8a2a7b6d$export$7decb792461ef5a9, Component);
+    function $ae46249d8a2a7b6d$export$7decb792461ef5a9(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $ae46249d8a2a7b6d$export$7decb792461ef5a9);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($9cbb252f768bd5d6$export$7decb792461ef5a9).call(this, params));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($ae46249d8a2a7b6d$export$7decb792461ef5a9).call(this, params));
         // actual data series that the renderer will render
         // data series is of the form
         // [
@@ -3173,19 +3173,19 @@ var $9cbb252f768bd5d6$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component
         //
         // For example
         // [{ key: "power output", values: [{label: 1980, value: 100}, {label: 1981, value: 200}]
-        _this.dataSeries = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "dataSeries", false);
+        _this.dataSeries = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "dataSeries", false);
         // function which will generate the data series, which will be
         // written to this.dataSeries if that is not provided
-        _this.dataFunction = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "dataFunction", false);
+        _this.dataFunction = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "dataFunction", false);
         // should we enforce a rectangular shape on the data series for when there is
         // more than one series to be displayed?
-        _this.rectangulate = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "rectangulate", false);
+        _this.rectangulate = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "rectangulate", false);
         // function which will sort the values of a series, used when rectangulate is
         // set to true
-        _this.seriesSort = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "seriesSort", false);
+        _this.seriesSort = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "seriesSort", false);
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($9cbb252f768bd5d6$export$7decb792461ef5a9, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($ae46249d8a2a7b6d$export$7decb792461ef5a9, [
         {
             key: "synchronise",
             value: function synchronise() {
@@ -3227,9 +3227,9 @@ var $9cbb252f768bd5d6$export$7decb792461ef5a9 = /*#__PURE__*/ function(Component
             }
         }
     ]);
-    return $9cbb252f768bd5d6$export$7decb792461ef5a9;
-}($97ca9eea36c86bb4$export$ea71c44d9cb0d048);
-function $9cbb252f768bd5d6$export$8c0eec9b15d1897d(params) {
+    return $ae46249d8a2a7b6d$export$7decb792461ef5a9;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
+function $ae46249d8a2a7b6d$export$8c0eec9b15d1897d(params) {
     var agg = params.agg;
     var seriesName = params.seriesName;
     return function(component) {
@@ -3251,7 +3251,7 @@ function $9cbb252f768bd5d6$export$8c0eec9b15d1897d(params) {
         ];
     };
 }
-function $9cbb252f768bd5d6$export$d99c821b0fb86668(params) {
+function $ae46249d8a2a7b6d$export$d99c821b0fb86668(params) {
     var histogramAgg = params.histogramAgg;
     var termsAgg = params.termsAgg;
     var seriesNameMap = params.seriesNameMap;
@@ -3285,9 +3285,9 @@ function $9cbb252f768bd5d6$export$d99c821b0fb86668(params) {
         return dataSeries;
     };
 }
-function $9cbb252f768bd5d6$export$4c2a251a86bb620b(params) {
-    var aggs = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "aggs", []);
-    var seriesName = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "seriesName", "series");
+function $ae46249d8a2a7b6d$export$4c2a251a86bb620b(params) {
+    var aggs = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "aggs", []);
+    var seriesName = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "seriesName", "series");
     return function(component) {
         // for each aggregation, get the results and add them to the data series
         var data_series = [];
@@ -3307,7 +3307,7 @@ function $9cbb252f768bd5d6$export$4c2a251a86bb620b(params) {
                     for(var j = 0; j < nested.length; j++){
                         var nest = nested[j];
                         var bs = recurse(agg[key].aggs, nest);
-                        (_finalBuckets = finalBuckets).push.apply(_finalBuckets, $631c5afe36f33b96$export$9099ad97b570f7c(bs));
+                        (_finalBuckets = finalBuckets).push.apply(_finalBuckets, $0862162e48b32d5b$export$9099ad97b570f7c(bs));
                     }
                 }
             }
@@ -3335,16 +3335,16 @@ function $9cbb252f768bd5d6$export$4c2a251a86bb620b(params) {
 
 
 
-var $3bc6b949b00e2a58$export$8698b599d6b7d9a0 = window.nv;
+var $b76ad79e27dc7523$export$8698b599d6b7d9a0 = window.nv;
 
 
-var $e4a0ccd89c102736$export$6343839093e1c21d = window.d3;
+var $f5a419d63f8f3762$export$6343839093e1c21d = window.d3;
 
 
 
 
 
-function $530e6b01b500d249$export$af206d707775bac7(data_series) {
+function $fdccde0d4dd41d73$export$af206d707775bac7(data_series) {
     var new_series = [];
     for(var i = 0; i < data_series.length; i++){
         var os = data_series[i];
@@ -3363,7 +3363,7 @@ function $530e6b01b500d249$export$af206d707775bac7(data_series) {
     }
     return new_series;
 }
-function $530e6b01b500d249$export$e89b2486fe14568(dataSeries) {
+function $fdccde0d4dd41d73$export$e89b2486fe14568(dataSeries) {
     if (!dataSeries) return false;
     if (dataSeries.length === 0) return false;
     var emptyCount = 0;
@@ -3374,7 +3374,7 @@ function $530e6b01b500d249$export$e89b2486fe14568(dataSeries) {
     if (emptyCount === dataSeries.length) return false;
     return true;
 }
-function $530e6b01b500d249$export$e85e6981b6330071(params) {
+function $fdccde0d4dd41d73$export$e85e6981b6330071(params) {
     var axisSelector = params.axisSelector;
     var maxWidth = params.maxWidth;
     var maxHeight = params.maxHeight;
@@ -3385,21 +3385,21 @@ function $530e6b01b500d249$export$e85e6981b6330071(params) {
     ];
     var minChunkSize = params.minHyphenSize || 3;
     function _isMidWord(currentLine, remainder) {
-        var leftChar = $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(currentLine[currentLine.length - 1], wordBreaks) === -1;
-        var rightChar = $aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(remainder[0], wordBreaks) === -1;
+        var leftChar = $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(currentLine[currentLine.length - 1], wordBreaks) === -1;
+        var rightChar = $99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(remainder[0], wordBreaks) === -1;
         return leftChar && rightChar;
     }
     function _toPrevSpace(currentLine) {
         for(var i = currentLine.length - 1; i >= 0; i--){
             var char = currentLine[i];
-            if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return currentLine.length - i;
+            if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return currentLine.length - i;
         }
         return -1;
     }
     function _toNextSpace(remainder) {
         for(var i = 0; i < remainder.length; i++){
             var char = remainder[i];
-            if ($aa95204b620a0ef2$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return i + 1;
+            if ($99b6183ba65dae12$export$4048ae5fe51d81b7.inArray(char, wordBreaks) !== -1) return i + 1;
         }
         return -1;
     }
@@ -3499,45 +3499,45 @@ function $530e6b01b500d249$export$e85e6981b6330071(params) {
 }
 
 
-var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer) {
+var $8ff5b3d2c2ab6201$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($bd1d5a355545d6ff$export$6d5fb309d07d7299, Renderer);
-    function $bd1d5a355545d6ff$export$6d5fb309d07d7299(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $bd1d5a355545d6ff$export$6d5fb309d07d7299);
+    $bca7673885229bfd$export$9099ad97b570f7c($8ff5b3d2c2ab6201$export$6d5fb309d07d7299, Renderer);
+    function $8ff5b3d2c2ab6201$export$6d5fb309d07d7299(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $8ff5b3d2c2ab6201$export$6d5fb309d07d7299);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($bd1d5a355545d6ff$export$6d5fb309d07d7299).call(this, params));
-        _this.title = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "title", false);
-        _this.showValues = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showValues", true);
-        _this.toolTips = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "toolTips", true);
-        _this.controls = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "controls", false);
-        _this.stacked = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "stacked", false);
-        _this.legend = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "legend", true);
-        _this.color = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "color", false);
-        _this.barColor = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "barColor", false);
-        _this.noDataMessage = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "noDataMessage", false);
-        _this.transitionDuration = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "transitionDuration", 500);
-        _this.marginTop = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginTop", 30);
-        _this.marginRight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginRight", 50);
-        _this.marginBottom = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginBottom", 50);
-        _this.marginLeft = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginLeft", 200);
-        _this.yTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yTickFormat", ",.0f");
-        _this.xTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xTickFormat", false);
-        _this.valueFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueFormat", false);
-        _this.showXAxis = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showXAxis", true);
-        _this.showYAxis, $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showYAxes", true);
-        _this.xAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xAxisLabel", false);
-        _this.yAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yAxisLabel", false);
-        _this.xAxisLabelWrap = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xAxisLabelWrap", false);
-        _this.tooltipGenerator = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "tooltipGenerator", false);
-        _this.dynamicHeight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "dynamicHeight", false);
-        _this.barHeight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "barHeight", 0);
-        _this.reserveAbove = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "reserveAbove", 0);
-        _this.reserveBelow = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "reserveBelow", 0);
-        _this.groupSpacing = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "groupSpacing", false);
-        _this.hideIfNoData = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "hideIfNoData", false);
-        _this.onHide = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onHide", false);
-        _this.onShow = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onShow", false);
-        _this.onUpdate = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "onUpdate", false);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($8ff5b3d2c2ab6201$export$6d5fb309d07d7299).call(this, params));
+        _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", false);
+        _this.showValues = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showValues", true);
+        _this.toolTips = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "toolTips", true);
+        _this.controls = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "controls", false);
+        _this.stacked = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "stacked", false);
+        _this.legend = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "legend", true);
+        _this.color = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "color", false);
+        _this.barColor = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "barColor", false);
+        _this.noDataMessage = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "noDataMessage", false);
+        _this.transitionDuration = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "transitionDuration", 500);
+        _this.marginTop = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginTop", 30);
+        _this.marginRight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginRight", 50);
+        _this.marginBottom = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginBottom", 50);
+        _this.marginLeft = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginLeft", 200);
+        _this.yTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yTickFormat", ",.0f");
+        _this.xTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xTickFormat", false);
+        _this.valueFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueFormat", false);
+        _this.showXAxis = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showXAxis", true);
+        _this.showYAxis, $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showYAxes", true);
+        _this.xAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xAxisLabel", false);
+        _this.yAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yAxisLabel", false);
+        _this.xAxisLabelWrap = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xAxisLabelWrap", false);
+        _this.tooltipGenerator = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "tooltipGenerator", false);
+        _this.dynamicHeight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "dynamicHeight", false);
+        _this.barHeight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "barHeight", 0);
+        _this.reserveAbove = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "reserveAbove", 0);
+        _this.reserveBelow = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "reserveBelow", 0);
+        _this.groupSpacing = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "groupSpacing", false);
+        _this.hideIfNoData = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "hideIfNoData", false);
+        _this.onHide = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onHide", false);
+        _this.onShow = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onShow", false);
+        _this.onUpdate = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "onUpdate", false);
         _this.namespace = "edges-nvd3-horizontal-multibar";
         _this.draw = function() {
             // no need for data conversion on this graph type
@@ -3548,7 +3548,7 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
             if (!data_series) data_series = [];
             // now decide if we are going to continue
             if (_this.hideIfNoData) {
-                if (!$530e6b01b500d249$export$e89b2486fe14568(data_series)) {
+                if (!$fdccde0d4dd41d73$export$e89b2486fe14568(data_series)) {
                     _this.component.context.html("");
                     _this.component.context.hide();
                     if (_this.onHide) _this.onHide();
@@ -3569,15 +3569,15 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
             }
             var title = "";
             if (_this.title !== false) {
-                var titleClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(_this.namespace, "title", $0ace6cd118fdb36a$export$9099ad97b570f7c(_this));
+                var titleClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(_this.namespace, "title", $f483f7288df68fd0$export$9099ad97b570f7c(_this));
                 title = "<h4 class=\"".concat(titleClass, "\">").concat(_this.title, "</h4>");
             }
-            var svgId = $988cca1a6a01f734$export$bf52b203d82ff901(_this.namespace, "svg", $0ace6cd118fdb36a$export$9099ad97b570f7c(_this));
-            var svgSelector = $988cca1a6a01f734$export$5d5492dec79280f1(_this.namespace, "svg", $0ace6cd118fdb36a$export$9099ad97b570f7c(_this));
+            var svgId = $d48cc3604bf30e24$export$bf52b203d82ff901(_this.namespace, "svg", $f483f7288df68fd0$export$9099ad97b570f7c(_this));
+            var svgSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(_this.namespace, "svg", $f483f7288df68fd0$export$9099ad97b570f7c(_this));
             _this.component.context.html(title + '<div ' + customAttributes + '><svg id="' + svgId + '"></svg></div>');
-            var that = $0ace6cd118fdb36a$export$9099ad97b570f7c(_this);
-            $3bc6b949b00e2a58$export$8698b599d6b7d9a0.addGraph(function() {
-                var chart = $3bc6b949b00e2a58$export$8698b599d6b7d9a0.models.multiBarHorizontalChart().x(function(d) {
+            var that = $f483f7288df68fd0$export$9099ad97b570f7c(_this);
+            $b76ad79e27dc7523$export$8698b599d6b7d9a0.addGraph(function() {
+                var chart = $b76ad79e27dc7523$export$8698b599d6b7d9a0.models.multiBarHorizontalChart().x(function(d) {
                     return d.label;
                 }).y(function(d) {
                     return d.value;
@@ -3591,20 +3591,20 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
                 if (that.stacked) chart.multibar.stacked(that.stacked);
                 if (that.yTickFormat) {
                     var fn = that.yTickFormat;
-                    if (typeof that.yTickFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.yTickFormat);
+                    if (typeof that.yTickFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.yTickFormat);
                     chart.yAxis.tickFormat(fn);
                 }
                 if (that.yAxisLabel) chart.yAxis.axisLabel(that.yAxisLabel);
                 if (that.xTickFormat) {
                     var fn = that.xTickFormat;
-                    if (typeof that.xTickFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.xTickFormat);
+                    if (typeof that.xTickFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.xTickFormat);
                     chart.xAxis.tickFormat(fn);
                 }
                 if (that.xAxisLabel) chart.xAxis.axisLabel(that.xAxisLabel);
                 if (that.valueFormat) {
                     // set it on the chart
                     var fn = that.valueFormat;
-                    if (typeof that.valueFormat === "string") fn = $e4a0ccd89c102736$export$6343839093e1c21d.format(that.valueFormat);
+                    if (typeof that.valueFormat === "string") fn = $f5a419d63f8f3762$export$6343839093e1c21d.format(that.valueFormat);
                     chart.valueFormat(fn);
                     // set it on the tooltip
                     chart.tooltip.valueFormatter(fn);
@@ -3613,8 +3613,8 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
                 if (that.color) chart.color(that.color);
                 if (that.tooltipGenerator) chart.tooltip.contentGenerator(that.tooltipGenerator);
                 if (that.groupSpacing) chart.groupSpacing(that.groupSpacing);
-                $e4a0ccd89c102736$export$6343839093e1c21d.select(svgSelector).datum(data_series).transition().duration(that.transitionDuration).call(chart);
-                if (that.xAxisLabelWrap) $530e6b01b500d249$export$e85e6981b6330071({
+                $f5a419d63f8f3762$export$6343839093e1c21d.select(svgSelector).datum(data_series).transition().duration(that.transitionDuration).call(chart);
+                if (that.xAxisLabelWrap) $fdccde0d4dd41d73$export$e85e6981b6330071({
                     axisSelector: svgSelector + " .nv-x.nv-axis",
                     maxWidth: that.marginLeft - 5,
                     maxHeight: that.barHeight
@@ -3622,42 +3622,42 @@ var $bd1d5a355545d6ff$export$6d5fb309d07d7299 = /*#__PURE__*/ function(Renderer)
                 if (that.onUpdate) that.onUpdate();
                 function updateChart() {
                     chart.update();
-                    if (that.xAxisLabelWrap) $530e6b01b500d249$export$e85e6981b6330071({
+                    if (that.xAxisLabelWrap) $fdccde0d4dd41d73$export$e85e6981b6330071({
                         axisSelector: svgSelector + " .nv-x.nv-axis",
                         maxWidth: that.marginLeft - 5,
                         maxHeight: that.barHeight
                     });
                     if (that.onUpdate) that.onUpdate();
                 }
-                $3bc6b949b00e2a58$export$8698b599d6b7d9a0.utils.windowResize(updateChart);
+                $b76ad79e27dc7523$export$8698b599d6b7d9a0.utils.windowResize(updateChart);
                 return chart;
             });
         };
         return _this;
     }
-    return $bd1d5a355545d6ff$export$6d5fb309d07d7299;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $8ff5b3d2c2ab6201$export$6d5fb309d07d7299;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
 
 
-var $e78f2dafe7eed7ae$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer) {
+var $26b66f4c4ad5f83b$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($e78f2dafe7eed7ae$export$dda19d2613327857, Renderer);
-    function $e78f2dafe7eed7ae$export$dda19d2613327857(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $e78f2dafe7eed7ae$export$dda19d2613327857);
+    $bca7673885229bfd$export$9099ad97b570f7c($26b66f4c4ad5f83b$export$dda19d2613327857, Renderer);
+    function $26b66f4c4ad5f83b$export$dda19d2613327857(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $26b66f4c4ad5f83b$export$dda19d2613327857);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($e78f2dafe7eed7ae$export$dda19d2613327857).call(this));
-        _this.includeHeaderRow = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "includeHeaderRow", true);
-        _this.valueFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "valueFormat", false);
-        _this.labelFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "labelFormat", false);
-        _this.headerFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "headerFormat", false);
-        _this.seriesOrderFunction = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "seriesOrderFunction", false);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($26b66f4c4ad5f83b$export$dda19d2613327857).call(this));
+        _this.includeHeaderRow = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "includeHeaderRow", true);
+        _this.valueFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueFormat", false);
+        _this.labelFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "labelFormat", false);
+        _this.headerFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "headerFormat", false);
+        _this.seriesOrderFunction = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "seriesOrderFunction", false);
         _this.namespace = "edges-bs3-chartdatatable";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($e78f2dafe7eed7ae$export$dda19d2613327857, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($26b66f4c4ad5f83b$export$dda19d2613327857, [
         {
             key: "draw",
             value: function draw() {
@@ -3679,7 +3679,7 @@ var $e78f2dafe7eed7ae$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer)
                     var row = tableData.body[i];
                     bodyFrag += "<tr><td>" + row.join("</td><td>") + "</td></tr>";
                 }
-                var tableClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "table", this);
+                var tableClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "table", this);
                 var frag = "\n            <table class=\"".concat(tableClass, "\">\n                ").concat(headFrag, "\n                <tbody>").concat(bodyFrag, "</tbody>\n            </table>\n        ");
                 this.component.context.html(frag);
             }
@@ -3733,26 +3733,26 @@ var $e78f2dafe7eed7ae$export$dda19d2613327857 = /*#__PURE__*/ function(Renderer)
             }
         }
     ]);
-    return $e78f2dafe7eed7ae$export$dda19d2613327857;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $26b66f4c4ad5f83b$export$dda19d2613327857;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
 
 
-var $0e394795a4b308cd$export$f378f3259fa0dca8 = /*#__PURE__*/ function(Component) {
+var $9b74310943fd261d$export$f378f3259fa0dca8 = /*#__PURE__*/ function(Component) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($0e394795a4b308cd$export$f378f3259fa0dca8, Component);
-    function $0e394795a4b308cd$export$f378f3259fa0dca8(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $0e394795a4b308cd$export$f378f3259fa0dca8);
+    $bca7673885229bfd$export$9099ad97b570f7c($9b74310943fd261d$export$f378f3259fa0dca8, Component);
+    function $9b74310943fd261d$export$f378f3259fa0dca8(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $9b74310943fd261d$export$f378f3259fa0dca8);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($0e394795a4b308cd$export$f378f3259fa0dca8).call(this, params));
-        _this.main = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "main", false);
-        _this.second = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "second", false);
-        _this.calculate = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "calculate", false);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($9b74310943fd261d$export$f378f3259fa0dca8).call(this, params));
+        _this.main = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "main", false);
+        _this.second = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "second", false);
+        _this.calculate = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "calculate", false);
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($0e394795a4b308cd$export$f378f3259fa0dca8, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($9b74310943fd261d$export$f378f3259fa0dca8, [
         {
             key: "synchronise",
             value: function synchronise() {
@@ -3766,58 +3766,58 @@ var $0e394795a4b308cd$export$f378f3259fa0dca8 = /*#__PURE__*/ function(Component
             }
         }
     ]);
-    return $0e394795a4b308cd$export$f378f3259fa0dca8;
-}($97ca9eea36c86bb4$export$ea71c44d9cb0d048);
+    return $9b74310943fd261d$export$f378f3259fa0dca8;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
 
 
 
 
 
-var $81356a5152a7c47b$export$e26cebb6d948b61a = /*#__PURE__*/ function(Renderer) {
+var $420906a4991ac6e0$export$e26cebb6d948b61a = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($81356a5152a7c47b$export$e26cebb6d948b61a, Renderer);
-    function $81356a5152a7c47b$export$e26cebb6d948b61a(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $81356a5152a7c47b$export$e26cebb6d948b61a);
+    $bca7673885229bfd$export$9099ad97b570f7c($420906a4991ac6e0$export$e26cebb6d948b61a, Renderer);
+    function $420906a4991ac6e0$export$e26cebb6d948b61a(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $420906a4991ac6e0$export$e26cebb6d948b61a);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($81356a5152a7c47b$export$e26cebb6d948b61a).call(this, params));
-        _this.title = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "title", false);
-        _this.backgroundImg = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "backgroundImg", false);
-        _this.mainNumberFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "mainNumberFormat", false);
-        _this.secondNumberFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "secondNumberFormat", false);
-        _this.resizeHandler = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "resizeHandler", false);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($420906a4991ac6e0$export$e26cebb6d948b61a).call(this, params));
+        _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", false);
+        _this.backgroundImg = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "backgroundImg", false);
+        _this.mainNumberFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "mainNumberFormat", false);
+        _this.secondNumberFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "secondNumberFormat", false);
+        _this.resizeHandler = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "resizeHandler", false);
         //////////////////////////////////////////////
         // variables for internal state
         _this.namespace = "edges-html-important-numbers";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($81356a5152a7c47b$export$e26cebb6d948b61a, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($420906a4991ac6e0$export$e26cebb6d948b61a, [
         {
             key: "draw",
             value: function draw() {
-                var containerClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "container", this);
-                var graphicClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "graphic", this);
+                var containerClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "container", this);
+                var graphicClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "graphic", this);
                 var titleFrag = "";
                 if (this.title !== false) {
-                    var titleClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "title", this);
+                    var titleClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "title", this);
                     titleFrag = '<div class="' + titleClass + '">' + this.title + '</div>';
                 }
                 var backgroundFrag = "";
                 if (this.backgroundImg !== false) {
-                    var backgroundClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "img", this);
+                    var backgroundClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "img", this);
                     backgroundFrag += '<div class="' + backgroundClass + '"><img src="' + this.backgroundImg + '"></div>';
                 }
                 var mainFrag = "";
                 if (this.component.main !== false) {
                     var val = this.component.main;
                     if (this.mainNumberFormat !== false) val = this.mainNumberFormat(val);
-                    var mainClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "main", this);
+                    var mainClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "main", this);
                     mainFrag = '<div class="' + mainClass + '">' + val + '</div>';
                 }
                 var secondFrag = "";
                 if (this.component.second !== false) {
                     var val = this.component.second;
                     if (this.secondNumberFormat !== false) val = this.secondNumberFormat(val);
-                    var secondClass = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "second", this);
+                    var secondClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "second", this);
                     secondFrag = '<div class="' + secondClass + '">' + val + '</div>';
                 }
                 var frag = '<div class="' + containerClass + '">' + titleFrag + '<div class="' + graphicClass + '">' + backgroundFrag + mainFrag + '</div>' + secondFrag + '</div>';
@@ -3831,8 +3831,8 @@ var $81356a5152a7c47b$export$e26cebb6d948b61a = /*#__PURE__*/ function(Renderer)
             }
         }
     ]);
-    return $81356a5152a7c47b$export$e26cebb6d948b61a;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $420906a4991ac6e0$export$e26cebb6d948b61a;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
 
@@ -3840,44 +3840,44 @@ var $81356a5152a7c47b$export$e26cebb6d948b61a = /*#__PURE__*/ function(Renderer)
 
 
 
-var $750e1fe26412523a$export$aee0d0b293b2739 = /*#__PURE__*/ function(Renderer) {
+var $e2db652327571723$export$aee0d0b293b2739 = /*#__PURE__*/ function(Renderer) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c($750e1fe26412523a$export$aee0d0b293b2739, Renderer);
-    function $750e1fe26412523a$export$aee0d0b293b2739(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, $750e1fe26412523a$export$aee0d0b293b2739);
+    $bca7673885229bfd$export$9099ad97b570f7c($e2db652327571723$export$aee0d0b293b2739, Renderer);
+    function $e2db652327571723$export$aee0d0b293b2739(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $e2db652327571723$export$aee0d0b293b2739);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c($750e1fe26412523a$export$aee0d0b293b2739).call(this, params));
-        _this.title = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "title", false);
-        _this.useInteractiveGuideline = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "useInteractiveGuideline", true);
-        _this.xTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xTickFormat", false);
-        _this.yTickFormat = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yTickFormat", false);
-        _this.transitionDuration = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "transitionDuration", 500);
-        _this.showLegend = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "showLegend", true);
-        _this.controls = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "controls", true);
-        _this.color = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "color", false);
-        _this.xAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "xAxisLabel", "");
-        _this.yAxisLabel = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yAxisLabel", "");
-        _this.yAxisLabelDistance = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "yAxisLabelDistance", 0);
-        _this.marginTop = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginTop", 30);
-        _this.marginRight = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginRight", 60);
-        _this.marginBottom = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginBottom", 50);
-        _this.marginLeft = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "marginLeft", 60);
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($e2db652327571723$export$aee0d0b293b2739).call(this, params));
+        _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", false);
+        _this.useInteractiveGuideline = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "useInteractiveGuideline", true);
+        _this.xTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xTickFormat", false);
+        _this.yTickFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yTickFormat", false);
+        _this.transitionDuration = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "transitionDuration", 500);
+        _this.showLegend = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showLegend", true);
+        _this.controls = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "controls", true);
+        _this.color = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "color", false);
+        _this.xAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "xAxisLabel", "");
+        _this.yAxisLabel = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yAxisLabel", "");
+        _this.yAxisLabelDistance = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "yAxisLabelDistance", 0);
+        _this.marginTop = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginTop", 30);
+        _this.marginRight = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginRight", 60);
+        _this.marginBottom = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginBottom", 50);
+        _this.marginLeft = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "marginLeft", 60);
         _this.namespace = "edges-nvd3-stacked-area-chart";
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c($750e1fe26412523a$export$aee0d0b293b2739, [
+    $67866ae5f3a26802$export$9099ad97b570f7c($e2db652327571723$export$aee0d0b293b2739, [
         {
             key: "draw",
             value: function draw() {
-                var displayClasses = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "display", this);
+                var displayClasses = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "display", this);
                 var displayFrag = "";
                 if (this.title) displayFrag = '<span class="' + displayClasses + '">' + this.title + '</span><br>';
-                var svgId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "svg", this);
-                var svgSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "svg", this);
+                var svgId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "svg", this);
+                var svgSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "svg", this);
                 this.component.context.html(displayFrag + '<svg id="' + svgId + '"></svg>');
                 var data_series = this.component.dataSeries;
                 if (!data_series) data_series = [];
-                var ds = $530e6b01b500d249$export$af206d707775bac7(data_series);
+                var ds = $fdccde0d4dd41d73$export$af206d707775bac7(data_series);
                 var outer = this;
                 nv.addGraph(function() {
                     var chart = nv.models.stackedAreaChart().useInteractiveGuideline(outer.useInteractiveGuideline).showLegend(outer.showLegend).margin({
@@ -3910,11 +3910,11 @@ var $750e1fe26412523a$export$aee0d0b293b2739 = /*#__PURE__*/ function(Renderer) 
             }
         }
     ]);
-    return $750e1fe26412523a$export$aee0d0b293b2739;
-}($97ca9eea36c86bb4$export$a695173e2ecfa9b);
+    return $e2db652327571723$export$aee0d0b293b2739;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
 
 
-function $3102f9a7574bfd6e$export$8e8129eda99077(sheetName, paletteSelector) {
+function $4002aa3570a5e3f8$export$8e8129eda99077(sheetName, paletteSelector) {
     if (!paletteSelector) paletteSelector = "#palette";
     var palette = {
     };
@@ -3943,10 +3943,10 @@ nglp.g014.init = function(params) {
     };
     var selector = params.selector || "#g014";
     var search_url = params.searchUrl;
-    var countFormat = $988cca1a6a01f734$export$48334dba1de70fbe({
+    var countFormat = $d48cc3604bf30e24$export$48334dba1de70fbe({
         thousandsSeparator: ","
     });
-    var stateProgression = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "stateProgression", [
+    var stateProgression = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "stateProgression", [
         [
             "submit",
             "Submitted"
@@ -3970,8 +3970,8 @@ nglp.g014.init = function(params) {
     ]);
     // FIXME: if there's no source we default to the test source, which is probably
     // fine but a bit weird
-    var source = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "source", "http://cottagelabs.com");
-    var wfPalette = $3102f9a7574bfd6e$export$8e8129eda99077("g014.css", "#workflowpalette");
+    var source = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "source", "http://cottagelabs.com");
+    var wfPalette = $4002aa3570a5e3f8$export$8e8129eda99077("g014.css", "#workflowpalette");
     var wfPaletteKeys = Object.keys(wfPalette);
     wfPaletteKeys = wfPaletteKeys.sort();
     // distribute the palette cyclically over the state progressions
@@ -3979,14 +3979,14 @@ nglp.g014.init = function(params) {
         var state = stateProgression[i];
         state.push(wfPalette[wfPaletteKeys[i % wfPaletteKeys.length]]);
     }
-    var agePalette = $3102f9a7574bfd6e$export$8e8129eda99077("g014.css", "#agepalette");
+    var agePalette = $4002aa3570a5e3f8$export$8e8129eda99077("g014.css", "#agepalette");
     var agePaletteKeys = Object.keys(agePalette);
     agePaletteKeys = agePaletteKeys.sort();
     var ageBarColours = [];
     for(var i1 = 0; i1 < agePaletteKeys.length; i1++)ageBarColours.push(agePalette[agePaletteKeys[i1]]);
     // Current workflow load
     var currentComponents = [];
-    for(var i2 = 0; i2 < stateProgression.length; i2++)currentComponents.push(new $0e394795a4b308cd$export$f378f3259fa0dca8({
+    for(var i2 = 0; i2 < stateProgression.length; i2++)currentComponents.push(new $9b74310943fd261d$export$f378f3259fa0dca8({
         id: "g014-total-" + stateProgression[i2][0],
         calculate: function(state) {
             return function(component) {
@@ -4004,12 +4004,12 @@ nglp.g014.init = function(params) {
                 };
             };
         }(stateProgression[i2][0]),
-        renderer: new $81356a5152a7c47b$export$e26cebb6d948b61a({
+        renderer: new $420906a4991ac6e0$export$e26cebb6d948b61a({
             mainNumberFormat: countFormat
         })
     }));
     var transitionComponents = [];
-    for(var i3 = 0; i3 < stateProgression.length - 1; i3++)transitionComponents.push(new $0e394795a4b308cd$export$f378f3259fa0dca8({
+    for(var i3 = 0; i3 < stateProgression.length - 1; i3++)transitionComponents.push(new $9b74310943fd261d$export$f378f3259fa0dca8({
         id: "g014-mean-" + stateProgression[i3][0],
         calculate: function(state) {
             var secondsPerDay = 86400;
@@ -4028,7 +4028,7 @@ nglp.g014.init = function(params) {
                 };
             };
         }(stateProgression[i3][0]),
-        renderer: new $81356a5152a7c47b$export$e26cebb6d948b61a({
+        renderer: new $420906a4991ac6e0$export$e26cebb6d948b61a({
             mainNumberFormat: function mainNumberFormat(num) {
                 return countFormat(num) + " days";
             }
@@ -4036,10 +4036,10 @@ nglp.g014.init = function(params) {
     }));
     // Note: I've moved this out to a separate function, because the parcel compiler
     // was having trouble with it inline (for reasons unknown https://github.com/parcel-bundler/parcel/issues/7252 )
-    var ageComponents = $a6903b24010fe051$var$getAgeComponents(stateProgression, countFormat, ageBarColours);
+    var ageComponents = $6ec8c71f816e3f1f$var$getAgeComponents(stateProgression, countFormat, ageBarColours);
     // workflow capacity
     var yearmillis = 31536000000;
-    var ranges = $a6903b24010fe051$var$rangeGenerator({
+    var ranges = $6ec8c71f816e3f1f$var$rangeGenerator({
         start: new Date(new Date().getTime() - yearmillis),
         end: new Date(),
         count: 12
@@ -4070,10 +4070,10 @@ nglp.g014.init = function(params) {
         };
     }
     var workflowComponents = [
-        new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+        new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
             id: "g014-workflow-capacity-chart",
-            dataFunction: $a6903b24010fe051$var$workflowCapacityDataFunction,
-            renderer: new $750e1fe26412523a$export$aee0d0b293b2739({
+            dataFunction: $6ec8c71f816e3f1f$var$workflowCapacityDataFunction,
+            renderer: new $e2db652327571723$export$aee0d0b293b2739({
                 xTickFormat: function xTickFormat(d) {
                     return d3.time.format('%B %Y')(new Date(d));
                 },
@@ -4087,10 +4087,10 @@ nglp.g014.init = function(params) {
                 }
             })
         }),
-        new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+        new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
             id: "g014-workflow-capacity-table",
-            dataFunction: $a6903b24010fe051$var$workflowCapacityDataFunction,
-            renderer: new $e78f2dafe7eed7ae$export$dda19d2613327857({
+            dataFunction: $6ec8c71f816e3f1f$var$workflowCapacityDataFunction,
+            renderer: new $26b66f4c4ad5f83b$export$dda19d2613327857({
                 labelFormat: function labelFormat(d) {
                     return d3.time.format('%b %y')(new Date(d));
                 },
@@ -4105,32 +4105,38 @@ nglp.g014.init = function(params) {
             })
         })
     ];
-    nglp.g014.active[selector] = new $97ca9eea36c86bb4$export$22ad9a5707a07e9c({
+    var baseQueryMusts = [
+        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+            field: "source.identifier.exact",
+            values: [
+                source
+            ]
+        })
+    ];
+    if (params.containers) baseQueryMusts.push(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+        field: "container.exact",
+        values: params.containers
+    }));
+    nglp.g014.active[selector] = new $6cf4dc301226cb87$export$22ad9a5707a07e9c({
         selector: selector,
         template: new nglp.g014.G014Template({
-            stateProgression: stateProgression
+            stateProgression: stateProgression,
+            containers: params.containers
         }),
         searchUrl: search_url,
         manageUrl: false,
-        baseQuery: new $1f5712c12abeeb70$export$8b446892c82de644.Query({
-            must: [
-                new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
-                    field: "source.identifier.exact",
-                    values: [
-                        source
-                    ]
-                })
-            ]
+        baseQuery: new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
+            must: baseQueryMusts
         }),
-        openingQuery: new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+        openingQuery: new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
             must: [
-                new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: "category.exact",
                     values: [
                         "workflow"
                     ]
                 }),
-                new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                     field: "object_type.exact",
                     values: [
                         "article"
@@ -4138,22 +4144,22 @@ nglp.g014.init = function(params) {
                 }), 
             ],
             mustNot: [
-                new $1f5712c12abeeb70$export$8b446892c82de644.ExistsFilter({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.ExistsFilter({
                     field: "workflow.followed_by.state"
                 })
             ],
             size: 0,
             aggs: [
-                new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation({
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
                     name: "states",
                     field: "event.exact",
                     size: stateProgression.length,
                     aggs: [
-                        new $1f5712c12abeeb70$export$8b446892c82de644.DateHistogramAggregation({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.DateHistogramAggregation({
                             name: "age",
                             field: "occurred_at"
                         }),
-                        new $1f5712c12abeeb70$export$8b446892c82de644.FiltersAggregation({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.FiltersAggregation({
                             name: "time",
                             filters: filters
                         })
@@ -4165,32 +4171,32 @@ nglp.g014.init = function(params) {
             // FIXME: we should add a date constraint to this, so we only look at data from a sensible
             // period
             "transitions": function(edge) {
-                return new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+                return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
                     must: [
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                             field: "category.exact",
                             values: [
                                 "workflow"
                             ]
                         }),
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                             field: "object_type.exact",
                             values: [
                                 "article"
                             ]
                         }),
-                        new $1f5712c12abeeb70$export$8b446892c82de644.ExistsFilter({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.ExistsFilter({
                             field: "workflow.follows.state"
                         }), 
                     ],
                     size: 0,
                     aggs: [
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
                             name: "states",
                             field: "workflow.follows.state.exact",
                             size: stateProgression.length,
                             aggs: [
-                                new $1f5712c12abeeb70$export$8b446892c82de644.StatsAggregation({
+                                new $8d94b5f2509b6cf5$export$8b446892c82de644.StatsAggregation({
                                     name: "time",
                                     field: "workflow.follows.transition_time"
                                 })
@@ -4200,21 +4206,21 @@ nglp.g014.init = function(params) {
                 });
             },
             "capacity": function(edge) {
-                return new $1f5712c12abeeb70$export$8b446892c82de644.Query({
+                return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
                     must: [
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                             field: "category.exact",
                             values: [
                                 "workflow"
                             ]
                         }),
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsFilter({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
                             field: "object_type.exact",
                             values: [
                                 "article"
                             ]
                         }),
-                        new $1f5712c12abeeb70$export$8b446892c82de644.RangeFilter({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
                             field: "occurred_at",
                             gte: "2020-07-01",
                             lte: "2021-07-01"
@@ -4222,12 +4228,12 @@ nglp.g014.init = function(params) {
                     ],
                     size: 0,
                     aggs: [
-                        new $1f5712c12abeeb70$export$8b446892c82de644.TermsAggregation({
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
                             name: "states",
                             field: "event.exact",
                             size: stateProgression.length,
                             aggs: [
-                                new $1f5712c12abeeb70$export$8b446892c82de644.FiltersAggregation({
+                                new $8d94b5f2509b6cf5$export$8b446892c82de644.FiltersAggregation({
                                     name: "time",
                                     filters: filters
                                 })
@@ -4242,33 +4248,34 @@ nglp.g014.init = function(params) {
 };
 nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
     "use strict";
-    $cb9ce7a7602b77d1$export$9099ad97b570f7c(_class, Template);
+    $bca7673885229bfd$export$9099ad97b570f7c(_class, Template);
     function _class(params) {
-        $1d4692efe908bac5$export$9099ad97b570f7c(this, _class);
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
         var _this;
-        _this = $968cbe9a7612a00d$export$9099ad97b570f7c(this, $6f1885a119f0af4a$export$9099ad97b570f7c(_class).call(this));
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this));
         _this.edge = false;
         _this.showingAge = "chart";
         _this.showingCapacity = "chart";
         _this.namespace = "g014-template";
-        _this.stateProgression = $988cca1a6a01f734$export$f628537ca2c78f9d(params, "stateProgression", []);
+        _this.stateProgression = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "stateProgression", []);
+        _this.containers = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "containers", false);
         return _this;
     }
-    $6b21f555626aa41c$export$9099ad97b570f7c(_class, [
+    $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
         {
             key: "draw",
             value: function draw(edge) {
                 this.edge = edge;
-                var ageId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "age-show-as-table");
-                var capacityId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "capacity-show-as-table");
-                var capacityLegendId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "capacity-legend--container");
-                var printId = $988cca1a6a01f734$export$bf52b203d82ff901(this.namespace, "print");
-                var tableClasses = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "stats");
-                var ageChartClasses = $988cca1a6a01f734$export$e516ebba864be69d(this.namespace, "age-chart");
-                var ageTableClasses = $988cca1a6a01f734$export$5be7444ab39fbaa3(this.namespace, "age-table");
-                var legendClasses = $988cca1a6a01f734$export$e516ebba864be69d(this.namespace, "legend");
-                var legendBoxClasses = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "legend-box");
-                var showAsTableClasses = $988cca1a6a01f734$export$8820e1fbe507f6aa(this.namespace, "sat");
+                var ageId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "age-show-as-table");
+                var capacityId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "capacity-show-as-table");
+                var capacityLegendId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "capacity-legend--container");
+                var printId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "print");
+                var tableClasses = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "stats");
+                var ageChartClasses = $d48cc3604bf30e24$export$e516ebba864be69d(this.namespace, "age-chart");
+                var ageTableClasses = $d48cc3604bf30e24$export$5be7444ab39fbaa3(this.namespace, "age-table");
+                var legendClasses = $d48cc3604bf30e24$export$e516ebba864be69d(this.namespace, "legend");
+                var legendBoxClasses = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "legend-box");
+                var showAsTableClasses = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "sat");
                 var tableRows = "";
                 for(var i = 0; i < this.stateProgression.length; i++){
                     var state = this.stateProgression[i];
@@ -4279,14 +4286,16 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
                     var state = this.stateProgression[i1];
                     capacityChartLegend += "\n                <div class=\"".concat(legendClasses, "\">\n                    <div class=\"").concat(legendBoxClasses, "\"><span style=\"color: ").concat(state[2], ";\">&#9632;</span><span class=\"").concat(legendBoxClasses, "-label\">").concat(state[1], "</span></div>\n                </div>\n            ");
                 }
-                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G014: Progress of articles through the editorial workflow</h1>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"".concat(printId, "\" href=\"#\">Print this view</a>\n                        </li> -->\n                    </ul>\n                </div>\n            </nav>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row report-area justify-content-between\">\n            <div class=\"col-md-12\">\n                <div>\n                    <h3 class=\"data-label\">Statistics per workflow state</h3>\n                    <table class=\"").concat(tableClasses, " data-area\">\n                        <thead>\n                            <tr>\n                                <td></td>\n                                <td>In Total Today</td>\n                                <td>Mean Time to Progress</td>\n                                <td>\n                                    Age of Items<br/>\n                                    <input type=\"checkbox\" name=\"").concat(ageId, "\" id=\"").concat(ageId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(ageId, "\">Show as table</label>\n                                </td>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            ").concat(tableRows, "\n                        </tbody>\n                    </table>\n                </div>\n                <div>\n                    <h3 class=\"data-label\">Workflow Capacity</h3>\n                    <div class=\"row\">\n                        <div class=\"col-md-12\">\n                            <input type=\"checkbox\" name=\"").concat(capacityId, "\" id=\"").concat(capacityId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(capacityId, "\">Show as table</label>\n                        </div>\n                    </div>\n                    <div class=\"row\" class=\"").concat(showAsTableClasses, "\" id=\"g014-workflow-capacity-chart--container\">\n                        <div class=\"col-md-2\">\n                            <div id=\"").concat(capacityLegendId, "\">\n                                ").concat(capacityChartLegend, "\n                            </div>  \n                        </div>\n                        <div class=\"col-md-10\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-chart\"></div>\n                        </div>\n                    </div>\n                    <div class=\"row\" id=\"g014-workflow-capacity-table--container\" style=\"display: none\">\n                        <div class=\"col-md-12\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-table\"></div>\n                        </div>\n                    </div>\n                </div>\n            \n            </div>\n        </div>\n    </div>\n</div>");
+                var containersFrag = "";
+                if (this.containers) containersFrag = "<h3>Showing data for ".concat(this.containers.join(", "), "</h3>");
+                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G014: Progress of articles through the editorial workflow</h1>\n                    ".concat(containersFrag, "\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"").concat(printId, "\" href=\"#\">Print this view</a>\n                        </li> -->\n                    </ul>\n                </div>\n            </nav>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row report-area justify-content-between\">\n            <div class=\"col-md-12\">\n                <div>\n                    <h3 class=\"data-label\">Statistics per workflow state</h3>\n                    <table class=\"").concat(tableClasses, " data-area\">\n                        <thead>\n                            <tr>\n                                <td></td>\n                                <td>In Total Today</td>\n                                <td>Mean Time to Progress</td>\n                                <td>\n                                    Age of Items<br/>\n                                    <input type=\"checkbox\" name=\"").concat(ageId, "\" id=\"").concat(ageId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(ageId, "\">Show as table</label>\n                                </td>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            ").concat(tableRows, "\n                        </tbody>\n                    </table>\n                </div>\n                <div>\n                    <h3 class=\"data-label\">Workflow Capacity</h3>\n                    <div class=\"row\">\n                        <div class=\"col-md-12\">\n                            <input type=\"checkbox\" name=\"").concat(capacityId, "\" id=\"").concat(capacityId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(capacityId, "\">Show as table</label>\n                        </div>\n                    </div>\n                    <div class=\"row\" class=\"").concat(showAsTableClasses, "\" id=\"g014-workflow-capacity-chart--container\">\n                        <div class=\"col-md-2\">\n                            <div id=\"").concat(capacityLegendId, "\">\n                                ").concat(capacityChartLegend, "\n                            </div>  \n                        </div>\n                        <div class=\"col-md-10\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-chart\"></div>\n                        </div>\n                    </div>\n                    <div class=\"row\" id=\"g014-workflow-capacity-table--container\" style=\"display: none\">\n                        <div class=\"col-md-12\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-table\"></div>\n                        </div>\n                    </div>\n                </div>\n            \n            </div>\n        </div>\n    </div>\n</div>");
                 edge.context.html(frame);
-                var ageSelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "age-show-as-table");
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(ageSelector, "change", this, "toggleAgeTables");
-                var capacitySelector = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "capacity-show-as-table");
-                $988cca1a6a01f734$export$b4cd8de5710bc55c(capacitySelector, "change", this, "toggleCapacityTable");
-                var printBtn = $988cca1a6a01f734$export$5d5492dec79280f1(this.namespace, "print");
-                $aa95204b620a0ef2$export$4048ae5fe51d81b7(printBtn).on("click", function(e) {
+                var ageSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "age-show-as-table");
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(ageSelector, "change", this, "toggleAgeTables");
+                var capacitySelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "capacity-show-as-table");
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c(capacitySelector, "change", this, "toggleCapacityTable");
+                var printBtn = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "print");
+                $99b6183ba65dae12$export$4048ae5fe51d81b7(printBtn).on("click", function(e) {
                     e.preventDefault();
                     // window.print();
                     var win = window.open('', '', 'left=0,top=0,toolbar=0,status =0');
@@ -4304,7 +4313,7 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
         {
             key: "toggleCapacityTable",
             value: function toggleCapacityTable() {
-                var legendSelector = $988cca1a6a01f734$export$b1157bd4df096bce(this.namespace, "legend");
+                var legendSelector = $d48cc3604bf30e24$export$b1157bd4df096bce(this.namespace, "legend");
                 var chart = this.edge.jq("#g014-workflow-capacity-chart--container");
                 var table = this.edge.jq("#g014-workflow-capacity-table--container");
                 var legend = this.edge.jq(legendSelector);
@@ -4322,8 +4331,8 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
         {
             key: "toggleAgeTables",
             value: function toggleAgeTables() {
-                var chartSelector = $988cca1a6a01f734$export$b1157bd4df096bce(this.namespace, "age-chart");
-                var tableSelector = $988cca1a6a01f734$export$b1157bd4df096bce(this.namespace, "age-table");
+                var chartSelector = $d48cc3604bf30e24$export$b1157bd4df096bce(this.namespace, "age-chart");
+                var tableSelector = $d48cc3604bf30e24$export$b1157bd4df096bce(this.namespace, "age-table");
                 var charts = this.edge.jq(chartSelector);
                 var tables = this.edge.jq(tableSelector);
                 if (this.showingAge === "chart") {
@@ -4339,8 +4348,8 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
         }
     ]);
     return _class;
-})($97ca9eea36c86bb4$export$93af88fe68eea917);
-function $a6903b24010fe051$var$stateDataFunction(state) {
+})($6cf4dc301226cb87$export$93af88fe68eea917);
+function $6ec8c71f816e3f1f$var$stateDataFunction(state) {
     var ageRanges = [
         "<1 m",
         "1-2 m",
@@ -4385,14 +4394,14 @@ function $a6903b24010fe051$var$stateDataFunction(state) {
         ];
     };
 }
-function $a6903b24010fe051$var$getAgeComponents(stateProgression, countFormat, ageBarColours) {
+function $6ec8c71f816e3f1f$var$getAgeComponents(stateProgression, countFormat, ageBarColours) {
     // Age distribution
     var ageComponents = [];
     for(var j = 0; j < stateProgression.length; j++){
-        ageComponents.push(new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+        ageComponents.push(new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
             id: "g014-age-chart-" + stateProgression[j][0],
-            dataFunction: $a6903b24010fe051$var$stateDataFunction(stateProgression[j][0]),
-            renderer: new $bd1d5a355545d6ff$export$6d5fb309d07d7299({
+            dataFunction: $6ec8c71f816e3f1f$var$stateDataFunction(stateProgression[j][0]),
+            renderer: new $8ff5b3d2c2ab6201$export$6d5fb309d07d7299({
                 legend: false,
                 controls: false,
                 valueFormat: countFormat,
@@ -4403,10 +4412,10 @@ function $a6903b24010fe051$var$getAgeComponents(stateProgression, countFormat, a
                 barColor: ageBarColours
             })
         }));
-        ageComponents.push(new $9cbb252f768bd5d6$export$7decb792461ef5a9({
+        ageComponents.push(new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
             id: "g014-age-table-" + stateProgression[j][0],
-            dataFunction: $a6903b24010fe051$var$stateDataFunction(stateProgression[j][0]),
-            renderer: new $e78f2dafe7eed7ae$export$dda19d2613327857({
+            dataFunction: $6ec8c71f816e3f1f$var$stateDataFunction(stateProgression[j][0]),
+            renderer: new $26b66f4c4ad5f83b$export$dda19d2613327857({
                 valueFormat: countFormat,
                 includeHeaderRow: false
             })
@@ -4414,7 +4423,7 @@ function $a6903b24010fe051$var$getAgeComponents(stateProgression, countFormat, a
     }
     return ageComponents;
 }
-function $a6903b24010fe051$var$rangeGenerator(params) {
+function $6ec8c71f816e3f1f$var$rangeGenerator(params) {
     var start = params.start;
     var end = params.end;
     var count = params.count;
@@ -4428,14 +4437,14 @@ function $a6903b24010fe051$var$rangeGenerator(params) {
         ranges.push({
             start_millis: bstart,
             end_millis: bend,
-            start: $a6903b24010fe051$var$isoDateStr(new Date(bstart)),
-            end: $a6903b24010fe051$var$isoDateStr(new Date(bend))
+            start: $6ec8c71f816e3f1f$var$isoDateStr(new Date(bstart)),
+            end: $6ec8c71f816e3f1f$var$isoDateStr(new Date(bend))
         });
     }
     return ranges;
 }
-function $a6903b24010fe051$var$isoDateStr(date) {
-    var padder = $988cca1a6a01f734$export$48334dba1de70fbe({
+function $6ec8c71f816e3f1f$var$isoDateStr(date) {
+    var padder = $d48cc3604bf30e24$export$48334dba1de70fbe({
         zeroPadding: 2
     });
     var y = date.getUTCFullYear();
@@ -4451,7 +4460,7 @@ function $a6903b24010fe051$var$isoDateStr(date) {
     S = padder(S);
     return y + "-" + m + "-" + d + "T" + H + ":" + M + ":" + S + "Z";
 }
-function $a6903b24010fe051$var$workflowCapacityDataFunction(component) {
+function $6ec8c71f816e3f1f$var$workflowCapacityDataFunction(component) {
     var dataset = [];
     var states = component.edge.secondaryResults["capacity"].aggregation("states");
     for(var i = 0; i < states.buckets.length; i++){
@@ -4475,7 +4484,7 @@ function $a6903b24010fe051$var$workflowCapacityDataFunction(component) {
     }
     return dataset;
 }
-var $a6903b24010fe051$export$9099ad97b570f7c = nglp;
+var $6ec8c71f816e3f1f$export$9099ad97b570f7c = nglp;
 
 })();
 //# sourceMappingURL=g014.js.map
