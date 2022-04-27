@@ -71,13 +71,13 @@ class DataGenerator:
     dg.write_data()
     """
 
-    def __init__(self, event_type, number_of_records, is_core=False, container_specified=False, container=None,
+    def __init__(self, event_type, number_of_records, is_core=False, container=None,
                  data_fill='mix',
                  add_records_with_error=False, error_if_model_unsupported=True, filename=None):
         self.event_type = event_type
         self.number_of_records = number_of_records
         self.is_core = is_core
-        self.container_specified = container_specified
+        self.container_specified = container is not None
         self.container = container
         self.data_fill = data_fill
         self.add_records_with_error = add_records_with_error
@@ -126,7 +126,7 @@ class DataGenerator:
         random_data_by_type = {
             'event': [self.event_type],
             'object_type': random.choices(OBJECT_TYPES[self.event_type], k=length),
-            'object_id': random.choices([xeger(REGEX[id_list[num]]) for num in range(length)], k=length),
+            'object_id': [x[:30] if len(x) > 30 else x for x in random.choices([xeger(REGEX[id_list[num]]) for num in range(length)], k=length)],
             'ip': random.choices([self.fake.ipv4(), self.fake.ipv6()], weights=[0.7, 0.3], k=length),
             'source.type': random.choices(data_dictionaries.DATA_SOURCE_TYPES, k=length),
             'container': [container if container != None else random.choices([self.fake.hexify(text="^^^^^"),
@@ -322,11 +322,11 @@ class DataGenerator:
                     distance = random.randint(1, len(WORKFLOW))
                     workflow_start = self.fake.date_time_between(start_date="-1y")
                     object_id = None
-                    container = None
+                    #container = None
                     entries = []
                     for j in range(0, distance):
                         workflow_status = WORKFLOW[j]
-                        data = next(self.generate_data())
+                        data = next(self.generate_data(val))
                         data["event"] = workflow_status
                         data['occurred_at'] = datetime.datetime.strftime(workflow_start, "%Y-%m-%dT%H:%M:%SZ")
 
@@ -335,10 +335,10 @@ class DataGenerator:
                         else:
                             object_id = data["object_id"]
 
-                        if container is not None:
-                            data["container"] = container
-                        else:
-                            container = data.get("container")
+                        # if container is not None:
+                        #     data["container"] = container
+                        # else:
+                        #     container = data.get("container")
 
                         workflow_start = self.fake.date_time_between(start_date=workflow_start)
                         entries.append(data)
@@ -368,7 +368,7 @@ class DataGenerator:
                                 }
 
                     workflow_set = ",\n".join([json.dumps(e, indent=2) for e in entries])
-                    output.write(workflow_set)
+                    output.write(workflow_set + "\n")
 
                     count += 1
                     print('.', end="", flush=True) if count % pulse == 0 else ''
@@ -431,8 +431,9 @@ class DataGenerator:
               show_default=True,
               help='specified ISSN to set as container')
 def generate_test_data(event_type, number_of_records, is_core=False, data_fill='mix', add_records_with_error=False,
-                       error_if_model_unsupported=True, filename=None):
-    dg = DataGenerator(event_type, number_of_records, is_core, data_fill, add_records_with_error,
+                       error_if_model_unsupported=True, filename=None, container=None):
+
+    dg = DataGenerator(event_type, number_of_records, is_core, [container], data_fill, add_records_with_error,
                        error_if_model_unsupported, filename)
 
     if event_type == "workflow_transition":
