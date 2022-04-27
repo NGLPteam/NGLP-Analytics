@@ -4039,10 +4039,10 @@ nglp.g014.init = function(params) {
     var ageComponents = $6ec8c71f816e3f1f$var$getAgeComponents(stateProgression, countFormat, ageBarColours);
     // workflow capacity
     var yearmillis = 31536000000;
+    var yearago = new Date(new Date().getTime() - yearmillis);
     var ranges = $6ec8c71f816e3f1f$var$rangeGenerator({
-        start: new Date(new Date().getTime() - yearmillis),
-        end: new Date(),
-        count: 12
+        start: yearago,
+        end: new Date() //,
     });
     var filters = {
     };
@@ -4057,11 +4057,13 @@ nglp.g014.init = function(params) {
                                 "lte": range.end
                             }
                         }
-                    },
+                    }
+                ],
+                "must_not": [
                     {
                         "range": {
                             "workflow.followed_by.date": {
-                                "gte": range.start
+                                "lte": range.start
                             }
                         }
                     }
@@ -4219,12 +4221,7 @@ nglp.g014.init = function(params) {
                             values: [
                                 "article"
                             ]
-                        }),
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
-                            field: "occurred_at",
-                            gte: "2020-07-01",
-                            lte: "2021-07-01"
-                        }) // FIXME: these will need to be wired up to a date selector
+                        }) //,
                     ],
                     size: 0,
                     aggs: [
@@ -4350,19 +4347,42 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
     return _class;
 })($6cf4dc301226cb87$export$93af88fe68eea917);
 function $6ec8c71f816e3f1f$var$stateDataFunction(state) {
+    var now = new Date();
+    var month = 2592000000;
     var ageRanges = [
-        "<1 m",
-        "1-2 m",
-        "2-3 m",
-        "3-4 m",
-        "4-5 m",
-        ">5 m"
+        {
+            label: "<1 m",
+            gte: now.getTime() - month
+        },
+        {
+            label: "1-2 m",
+            gte: now.getTime() - 2 * month,
+            lt: now.getTime() - month
+        },
+        {
+            label: "2-3 m",
+            gte: now.getTime() - 3 * month,
+            lt: now.getTime() - 2 * month
+        },
+        {
+            label: "3-4 m",
+            gte: now.getTime() - 4 * month,
+            lt: now.getTime() - 3 * month
+        },
+        {
+            label: "4-5 m",
+            gte: now.getTime() - 5 * month,
+            lt: now.getTime() - 4 * month
+        },
+        {
+            label: ">5 m",
+            lt: now.getTime() - 5 * month
+        }
     ];
     return function(component) {
         var histogram = false;
         var states = component.edge.result.aggregation("states");
         var values = [];
-        var longTail = 0;
         for(var i = 0; i < states.buckets.length; i++){
             var bucket = states.buckets[i];
             if (bucket.key === state) {
@@ -4370,21 +4390,32 @@ function $6ec8c71f816e3f1f$var$stateDataFunction(state) {
                 break;
             }
         }
-        if (histogram) for(var i1 = 0; i1 < histogram.buckets.length; i1++){
-            var bucket = histogram.buckets[i1];
-            if (i1 < ageRanges.length - 1) values.push({
-                label: ageRanges[i1],
-                value: bucket.doc_count
+        if (histogram) for(var i1 = 0; i1 < ageRanges.length; i1++){
+            var range = ageRanges[i1];
+            var found = false;
+            for(var j = 0; j < histogram.buckets.length; j++){
+                var bucket = histogram.buckets[j];
+                if ((range.gte && bucket.key >= range.gte || !range.gte) && (range.lt && bucket.key < range.lt || !range.lt)) {
+                    var existingLabel = false;
+                    for(var k = 0; k < values.length; k++)if (values[k].label === range.label) {
+                        values[k].value += bucket.doc_count;
+                        existingLabel = true;
+                    }
+                    if (!existingLabel) values.push({
+                        label: range.label,
+                        value: bucket.doc_count
+                    });
+                    found = true;
+                }
+            }
+            if (!found) values.push({
+                label: range.label,
+                value: 0
             });
-            else longTail += bucket.doc_count;
         }
         else for(var k = 0; k < ageRanges.length - 1; k++)values.push({
-            label: ageRanges[k],
+            label: ageRanges[k].label,
             value: 0
-        });
-        values.push({
-            label: ageRanges[ageRanges.length - 1],
-            value: longTail
         });
         return [
             {
@@ -4427,20 +4458,63 @@ function $6ec8c71f816e3f1f$var$rangeGenerator(params) {
     var start = params.start;
     var end = params.end;
     var count = params.count;
-    var sms = start.getTime();
-    var ems = end.getTime();
-    var bucketSize = Math.round((ems - sms) / count);
-    var ranges = [];
-    for(var i = 0; i < count; i++){
-        var bstart = sms + i * bucketSize;
-        var bend = bstart + bucketSize;
-        ranges.push({
-            start_millis: bstart,
-            end_millis: bend,
-            start: $6ec8c71f816e3f1f$var$isoDateStr(new Date(bstart)),
-            end: $6ec8c71f816e3f1f$var$isoDateStr(new Date(bend))
-        });
+    var padder = $d48cc3604bf30e24$export$48334dba1de70fbe({
+        zeroPadding: 2
+    });
+    var startiso = start.getUTCFullYear() + "-" + padder(start.getUTCMonth() + 1) + "-01T00:00:00Z";
+    var points = [
+        startiso
+    ];
+    var offset = 1;
+    var startYear = start.getUTCFullYear();
+    var startMonth = start.getUTCMonth() + 1;
+    while(true){
+        var newYear = startYear;
+        var newMonth = startMonth + offset;
+        offset++;
+        if (newMonth > 12) {
+            startMonth = 1;
+            newMonth = 1;
+            newYear++;
+            startYear++;
+            offset = 1;
+        }
+        points.push(newYear + "-" + padder(newMonth) + "-01T00:00:00Z");
+        if (new Date(points[points.length - 1]) > end) break;
+    // if (points.length > count) {
+    //     break
+    // }
+    // ranges.push({
+    //     start_millis: false,
+    //     end_millis: false,
+    //     start: newYear + "-" + padder(newMonth) + "-01T00:00:00Z",
+    //     end: newYear
+    // })
     }
+    var ranges = [];
+    for(var i = 0; i < points.length - 1; i++)ranges.push({
+        start_millis: new Date(points[i]).getTime(),
+        end_millis: new Date(points[i + 1]).getTime(),
+        start: points[i],
+        end: points[i + 1]
+    });
+    // let count = params.count;
+    //
+    // let sms = start.getTime();
+    // let ems = end.getTime();
+    // let bucketSize = Math.round((ems - sms) / count)
+    //
+    // let ranges = [];
+    // for (let i = 0; i < count; i++) {
+    //     let bstart = sms + (i * bucketSize);
+    //     let bend = bstart + bucketSize;
+    //     ranges.push({
+    //         start_millis: bstart,
+    //         end_millis: bend,
+    //         start: isoDateStr(new Date(bstart)),
+    //         end: isoDateStr(new Date(bend))
+    //     });
+    // }
     return ranges;
 }
 function $6ec8c71f816e3f1f$var$isoDateStr(date) {

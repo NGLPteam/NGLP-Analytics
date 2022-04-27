@@ -117,10 +117,11 @@ nglp.g014.init = function (params) {
 
     // workflow capacity
     let yearmillis = 1000*60*60*24*365;
+    let yearago =  new Date((new Date()).getTime() - yearmillis)
+
     let ranges = rangeGenerator({
-        start: new Date((new Date()).getTime() - yearmillis),
-        end: new Date(),
-        count: 12
+        start: yearago,
+        end: new Date()
     })
     let filters = {};
     for (let i = 0; i < ranges.length; i++) {
@@ -128,8 +129,10 @@ nglp.g014.init = function (params) {
         filters[range.start_millis.toString()] = {
             "bool" : {
                 "must" : [
-                    {"range" : {"occurred_at" : {"lte" : range.end}}},
-                    {"range" : {"workflow.followed_by.date" : {"gte" : range.start}}}
+                    {"range" : {"occurred_at" : {"lte" : range.end}}}
+                ],
+                "must_not" : [
+                    {"range" : {"workflow.followed_by.date" : {"lte" : range.start}}}
                 ]
             }
         }
@@ -248,8 +251,8 @@ nglp.g014.init = function (params) {
                 return new es.Query({
                     must : [
                         new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
-                        new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
-                        new es.RangeFilter({field : "occurred_at", gte: "2020-07-01", lte: "2021-07-01"})    // FIXME: these will need to be wired up to a date selector
+                        new es.TermsFilter({field: "object_type.exact", values: ["article"]})//,
+                        // new es.RangeFilter({field : "occurred_at", gte: isoDateStr(yearago), lte: isoDateStr(new Date())})
                     ],
                     size: 0,
                     aggs: [
@@ -472,12 +475,21 @@ nglp.g014.G014Template = class extends Template {
 }
 
 function stateDataFunction(state) {
-    let ageRanges = ["<1 m", "1-2 m", "2-3 m", "3-4 m", "4-5 m", ">5 m"]
+    let now = new Date();
+    let month = 1000 * 60 * 60 * 24 * 30;
+
+    let ageRanges = [
+        {label: "<1 m", gte: now.getTime() - month},
+        {label: "1-2 m", gte: now.getTime() - 2*month, lt: now.getTime() - month},
+        {label: "2-3 m", gte: now.getTime() - 3*month, lt: now.getTime() - 2*month},
+        {label: "3-4 m", gte: now.getTime() - 4*month, lt: now.getTime() - 3*month},
+        {label: "4-5 m", gte: now.getTime() - 5*month, lt: now.getTime() - 4*month},
+        {label: ">5 m", lt: now.getTime() - 5*month}
+    ]
     return function (component) {
         let histogram = false;
         let states = component.edge.result.aggregation("states");
         let values = [];
-        let longTail = 0;
 
         for (let i = 0; i < states.buckets.length; i++) {
             let bucket = states.buckets[i];
@@ -488,21 +500,38 @@ function stateDataFunction(state) {
         }
 
         if (histogram) {
-            for (let i = 0; i < histogram.buckets.length; i++) {
-                let bucket = histogram.buckets[i];
-                if (i < ageRanges.length - 1) {
-                    values.push({label: ageRanges[i], value: bucket.doc_count});
-                } else {
-                    longTail += bucket.doc_count;
+            for (let i = 0; i < ageRanges.length; i++) {
+                let range = ageRanges[i];
+                let found = false;
+                for (let j = 0; j < histogram.buckets.length; j++) {
+                    let bucket = histogram.buckets[j];
+                    if (((range.gte && bucket.key >= range.gte) || !range.gte) &&
+                            ((range.lt && bucket.key < range.lt) || !range.lt)) {
+
+                        let existingLabel = false;
+                        for (let k = 0; k < values.length; k++) {
+                            if (values[k].label === range.label) {
+                                values[k].value += bucket.doc_count;
+                                existingLabel = true;
+                            }
+                        }
+
+                        if (!existingLabel) {
+                            values.push({label: range.label, value: bucket.doc_count});
+                        }
+
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    values.push({label: range.label, value: 0});
                 }
             }
         } else {
             for (let k = 0; k < ageRanges.length - 1; k++) {
-                values.push({label: ageRanges[k], value: 0});
+                values.push({label: ageRanges[k].label, value: 0});
             }
         }
-
-        values.push({label: ageRanges[ageRanges.length - 1], value: longTail});
 
         return [{key: state, values: values}]
     }
@@ -548,20 +577,40 @@ function rangeGenerator(params) {
     let end = params.end;
     let count = params.count;
 
-    let sms = start.getTime();
-    let ems = end.getTime();
-    let bucketSize = Math.round((ems - sms) / count)
+    let padder = numFormat({zeroPadding: 2});
+    let startiso = start.getUTCFullYear() + "-" + padder(start.getUTCMonth() + 1) + "-01T00:00:00Z"
 
-    let ranges = [];
-    for (let i = 0; i < count; i++) {
-        let bstart = sms + (i * bucketSize);
-        let bend = bstart + bucketSize;
+    let points = [startiso];
+    let offset = 1
+    let startYear = start.getUTCFullYear()
+    let startMonth = start.getUTCMonth() + 1
+    while (true) {
+
+        let newYear = startYear;
+        let newMonth = startMonth + offset;
+        offset++;
+        if (newMonth > 12) {
+            startMonth = 1;
+            newMonth = 1;
+            newYear++
+            startYear++
+            offset = 1;
+        }
+        points.push(newYear + "-" + padder(newMonth) + "-01T00:00:00Z");
+
+        if (new Date(points[points.length - 1]) > end) {
+            break
+        }
+    }
+
+    let ranges = []
+    for (let i = 0; i < points.length - 1; i++) {
         ranges.push({
-            start_millis: bstart,
-            end_millis: bend,
-            start: isoDateStr(new Date(bstart)),
-            end: isoDateStr(new Date(bend))
-        });
+            start_millis: (new Date(points[i])).getTime(),
+            end_millis: (new Date(points[i+1])).getTime(),
+            start: points[i],
+            end: points[i+1]
+        })
     }
 
     return ranges;

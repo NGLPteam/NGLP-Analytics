@@ -305,7 +305,7 @@ class DataGenerator:
             self.set_filename()
 
 
-    def write_workflow_data(self, join_events=True):
+    def write_workflow_data(self, join_events=True, source_id=None):
         for val in self.container:
             print(f"Starting data generation for {self.event_type}")
             start = datetime.datetime.now()
@@ -320,7 +320,7 @@ class DataGenerator:
                         output.write(',')
 
                     distance = random.randint(1, len(WORKFLOW))
-                    workflow_start = self.fake.date_time_between(start_date="-1y")
+                    workflow_start = self.fake.date_time_between(start_date="-2y")
                     object_id = None
                     #container = None
                     entries = []
@@ -334,6 +334,9 @@ class DataGenerator:
                             data["object_id"] = object_id
                         else:
                             object_id = data["object_id"]
+
+                        if source_id is not None:
+                            data["source"]["identifier"] = source_id
 
                         # if container is not None:
                         #     data["container"] = container
@@ -437,7 +440,7 @@ def generate_test_data(event_type, number_of_records, is_core=False, data_fill='
                        error_if_model_unsupported, filename)
 
     if event_type == "workflow_transition":
-        dg.write_workflow_data()
+        dg.write_workflow_data(source_id="http://example.com/wdp")
     else:
         dg.write_usage_data()
 
