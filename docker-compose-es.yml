@@ -1,0 +1,50 @@
+version: '2.4'
+services:
+  elasticsearch:
+    image: amazon/opendistro-for-elasticsearch:1.13.3
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true # along with the memlock settings below, disables swapping
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m" # minimum and maximum Java heap size, recommend setting both to
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65535
+        hard: 65535
+    ports:
+      - 9200:9200
+      - 9600:9600 # required for Performance Analyzer
+    healthcheck:
+      test: ["CMD", "curl", "-XGET", "https://localhost:9200", "-u", "admin:admin", "--insecure"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+
+  analytics:
+    env_file: env.docker
+    depends_on:
+      kafka:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+    restart: on-failure
+    volumes:
+      - ${PWD}/:/app
+
+  kafka:
+    environment:
+      - KAFKA_CFG_ADVERTISED_LISTENERS=CLIENT://kafka:9103,EXTERNAL://kafka:9092,,INTERNAL://kafka:19092
+
+  nglp-events-consumer:
+    env_file: env.docker
+    restart: on-failure
+    volumes:
+      - ${PWD}/:/app
+
+  nglp-oids-consumer:
+    env_file: env.docker
+    restart: on-failure
+    volumes:
+      - ${PWD}/:/app

@@ -61,6 +61,7 @@ REGEX = {
     "HTTP_URL": regex.HTTP_URL,
 }
 
+
 class DataGenerator:
     """
     used to generate data for the event models
@@ -70,11 +71,14 @@ class DataGenerator:
     dg.write_data()
     """
 
-    def __init__(self, event_type, number_of_records, is_core=False, data_fill='mix', add_records_with_error=False,
-                 error_if_model_unsupported=True, filename=None):
+    def __init__(self, event_type, number_of_records, is_core=False, container=None,
+                 data_fill='mix',
+                 add_records_with_error=False, error_if_model_unsupported=True, filename=None):
         self.event_type = event_type
         self.number_of_records = number_of_records
         self.is_core = is_core
+        self.container_specified = container is not None
+        self.container = container
         self.data_fill = data_fill
         self.add_records_with_error = add_records_with_error
         self.filename = filename
@@ -108,7 +112,7 @@ class DataGenerator:
         dt = '{date:%Y-%m-%d_%H:%M:%S}'.format(date=datetime.datetime.now())
         self.filename = f"testdata-{self.event_type}-{self.number_of_records}{with_errors}-{dt}.json"
 
-    def get_fake_data(self, data_type, single=True, allowed_values=None):
+    def get_fake_data(self, data_type, single=True, allowed_values=None, container=None):
         length = 1
         if not single:
             # generate a list of random length, with the max set by max_len
@@ -122,10 +126,12 @@ class DataGenerator:
         random_data_by_type = {
             'event': [self.event_type],
             'object_type': random.choices(OBJECT_TYPES[self.event_type], k=length),
-            'object_id': random.choices([xeger(REGEX[id_list[num]]) for num in range(length)], k=length),
+            'object_id': [x[:30] if len(x) > 30 else x for x in random.choices([xeger(REGEX[id_list[num]]) for num in range(length)], k=length)],
             'ip': random.choices([self.fake.ipv4(), self.fake.ipv6()], weights=[0.7, 0.3], k=length),
             'source.type': random.choices(data_dictionaries.DATA_SOURCE_TYPES, k=length),
-            'container': random.choices([self.fake.hexify(text="^^^^^"), self.fake.hexify(text="^^^^^"), self.fake.hexify(text="^^^^^^^^")], k=length),
+            'container': [container if container != None else random.choices([self.fake.hexify(text="^^^^^"),
+                                                                        self.fake.hexify(text="^^^^^"),
+                                         self.fake.hexify(text="^^^^^^^^")], k=length)],
             'method': random.choices(HTTP_METHODS[self.event_type], k=length)
         }
         fake_data_by_type = {
@@ -176,11 +182,11 @@ class DataGenerator:
 
         return fake_data[0] if (single and fake_data) else fake_data
 
-    def recurse_field(self, key, val, path, data, stored_data):
+    def recurse_field(self, key, val, path, data, stored_data, container):
         field = None
 
         fd = self.get_fake_data(".".join(path + [key]), single=True, allowed_values=val.get(
-            'allowed_values', None))
+            'allowed_values', None), container=container)
         if fd:
             field = fd
 
@@ -208,7 +214,7 @@ class DataGenerator:
         else:
             return field
 
-    def recurse(self, struct, path, data_fill, stored_data=None):
+    def recurse(self, struct, path, data_fill, container, stored_data=None):
         # This method will generate fake data for all the fields in the model
         data = {}
         if stored_data == None:
@@ -218,7 +224,7 @@ class DataGenerator:
             if data_fill == "minimal":
                 if key not in struct.required:
                     continue
-            field = self.recurse_field(key, val, path, data, stored_data)
+            field = self.recurse_field(key, val, path, data, stored_data, container)
             if field is not None:
                 data[key] = field
                 stored_data[key] = field
@@ -230,7 +236,7 @@ class DataGenerator:
                 if key not in struct.required:
                     continue
             fd = self.get_fake_data(".".join(path + [key]), single=False,
-                                    allowed_values=val.get('allowed_values', None))
+                                    allowed_values=val.get('allowed_values', None), container=container)
             if fd:
                 data[key] = fd
         for key in struct.substructs.keys():
@@ -238,14 +244,14 @@ class DataGenerator:
                 if key not in struct.required:
                     continue
             substruct = struct.substruct(key)
-            fd = self.recurse(substruct, path + [key], data_fill, stored_data=stored_data)
+            fd = self.recurse(substruct, path + [key], data_fill, stored_data=stored_data, container=container)
             if fd:
                 data[key] = fd
         return data
 
-    def data_generator(self, data_fill):
+    def data_generator(self, data_fill, container):
         path = []
-        result = self.recurse(self.model.__seamless_struct__, path, data_fill)
+        result = self.recurse(self.model.__seamless_struct__, path, data_fill, container)
         return result
 
     def minimal_data_generator(self):
@@ -253,127 +259,133 @@ class DataGenerator:
         data = self.recurse(self.model.__seamless_struct__, path)
         return data
 
-    def generate_data(self):
+    def generate_data(self, container=None):
         if self.data_fill == 'full':
             for i in range(self.number_of_records):
-                yield self.data_generator("full")
+                yield self.data_generator("full", container)
         elif self.data_fill == 'minimal':
             for i in range(self.number_of_records):
-                yield self.data_generator("minimal")
+                yield self.data_generator("minimal", container)
         else:
             # data_fill is mix
             for i in range(self.number_of_records):
-                yield random.choices([self.data_generator("full"), self.data_generator("minimal")])[0]
+                yield random.choices([self.data_generator("full", container), self.data_generator("minimal",
+                                                                                                  container)])[0]
 
     def write_usage_data(self):
-        print(f"Starting data generation for {self.event_type}")
-        start = datetime.datetime.now()
-        print(f"Start time: {start}")
-        count = 0
-        pulse = self.number_of_records // 100 if self.number_of_records > 100 else 1
-        with open(self.filename, 'w') as output:
-            output.write('[')
-            first = True
-            for data in self.generate_data():
-                if not first:
-                    output.write(',')
-                first = False
-                json.dump(data, output, indent=2)
-                count += 1
-                print('.', end="", flush=True) if count % pulse == 0 else ''
-            output.write(']')
-        end = datetime.datetime.now()
-        print()
-        print("Data generation completed.")
-        print(f"File name: {self.filename}")
-        print(f"Count: {count}")
-        print(f"End time: {end}")
-        diff = end - start
-        hours = diff.days * 24 + diff.seconds // 3600
-        minutes = (diff.seconds % 3600) // 60
-        seconds = diff.seconds % 60
-        print("Time taken: {:0>2d}:{:0>2d}:{:0>2d}".format(hours, minutes, seconds))
+        for val in self.container:
+            print(f"Starting data generation for {self.event_type}")
+            start = datetime.datetime.now()
+            print(f"Start time: {start}")
+            count = 0
+            pulse = self.number_of_records // 100 if self.number_of_records > 100 else 1
+            with open(self.filename, 'w') as output:
+                output.write('[')
+                first = True
+                for data in self.generate_data(val):
+                    if not first:
+                        output.write(',')
+                    first = False
+                    json.dump(data, output, indent=2)
+                    count += 1
+                    print('.', end="", flush=True) if count % pulse == 0 else ''
+                output.write(']')
+            end = datetime.datetime.now()
+            print()
+            print("Data generation completed.")
+            print(f"File name: {self.filename}")
+            print(f"Count: {count}")
+            print(f"End time: {end}")
+            diff = end - start
+            hours = diff.days * 24 + diff.seconds // 3600
+            minutes = (diff.seconds % 3600) // 60
+            seconds = diff.seconds % 60
+            print("Time taken: {:0>2d}:{:0>2d}:{:0>2d}".format(hours, minutes, seconds))
+            self.filename = self.event_type + "-" + '{date:%Y-%m-%d_%H:%M:%S}'.format(date=datetime.datetime.now())
+            self.set_filename()
 
 
     def write_workflow_data(self, join_events=True):
-        print(f"Starting data generation for {self.event_type}")
-        start = datetime.datetime.now()
-        print(f"Start time: {start}")
-        count = 0
-        pulse = self.number_of_records // 100 if self.number_of_records > 100 else 1
+        for val in self.container:
+            print(f"Starting data generation for {self.event_type}")
+            start = datetime.datetime.now()
+            print(f"Start time: {start}")
+            count = 0
+            pulse = self.number_of_records // 100 if self.number_of_records > 100 else 1
 
-        with open(self.filename, 'w') as output:
-            output.write('[')
-            for i in range(self.number_of_records):
-                if i > 0:
-                    output.write(',')
+            with open(self.filename, 'w') as output:
+                output.write('[')
+                for i in range(self.number_of_records):
+                    if i > 0:
+                        output.write(',')
 
-                distance = random.randint(1, len(WORKFLOW))
-                workflow_start = self.fake.date_time_between(start_date="-1y")
-                object_id = None
-                container = None
-                entries = []
-                for j in range(0, distance):
-                    workflow_status = WORKFLOW[j]
-                    data = next(self.generate_data())
-                    data["event"] = workflow_status
-                    data['occurred_at'] = datetime.datetime.strftime(workflow_start, "%Y-%m-%dT%H:%M:%SZ")
+                    distance = random.randint(1, len(WORKFLOW))
+                    workflow_start = self.fake.date_time_between(start_date="-1y")
+                    object_id = None
+                    #container = None
+                    entries = []
+                    for j in range(0, distance):
+                        workflow_status = WORKFLOW[j]
+                        data = next(self.generate_data(val))
+                        data["event"] = workflow_status
+                        data['occurred_at'] = datetime.datetime.strftime(workflow_start, "%Y-%m-%dT%H:%M:%SZ")
 
-                    if object_id is not None:
-                        data["object_id"] = object_id
-                    else:
-                        object_id = data["object_id"]
+                        if object_id is not None:
+                            data["object_id"] = object_id
+                        else:
+                            object_id = data["object_id"]
 
-                    if container is not None:
-                        data["container"] = container
-                    else:
-                        container = data.get("container")
+                        # if container is not None:
+                        #     data["container"] = container
+                        # else:
+                        #     container = data.get("container")
 
-                    workflow_start = self.fake.date_time_between(start_date=workflow_start)
-                    entries.append(data)
+                        workflow_start = self.fake.date_time_between(start_date=workflow_start)
+                        entries.append(data)
 
-                if join_events:
-                    for j in range(len(entries)):
-                        entry = entries[j]
+                    if join_events:
+                        for j in range(len(entries)):
+                            entry = entries[j]
 
-                        # if there is a following event
-                        if len(entries) > j + 1:
-                            followed_by = entries[j + 1]
-                            if "workflow" not in entry:
-                                entry["workflow"] = {"followed_by" : {}}
-                            entry["workflow"]["followed_by"] = {
-                                "state" : followed_by["event"],
-                                "date": followed_by["occurred_at"]
-                            }
+                            # if there is a following event
+                            if len(entries) > j + 1:
+                                followed_by = entries[j + 1]
+                                if "workflow" not in entry:
+                                    entry["workflow"] = {"followed_by" : {}}
+                                entry["workflow"]["followed_by"] = {
+                                    "state" : followed_by["event"],
+                                    "date": followed_by["occurred_at"]
+                                }
 
-                        # if there is a previous event
-                        if j > 0:
-                            follows = entries[j - 1]
-                            if "workflow" not in entry:
-                                entry["workflow"] = {"follows" : {}}
-                            entry["workflow"]["follows"] = {
-                                "state" : follows["event"],
-                                "transition_time": int((datetime.datetime.strptime(entry["occurred_at"], "%Y-%m-%dT%H:%M:%SZ") - datetime.datetime.strptime(follows["occurred_at"], "%Y-%m-%dT%H:%M:%SZ")).total_seconds())
-                            }
+                            # if there is a previous event
+                            if j > 0:
+                                follows = entries[j - 1]
+                                if "workflow" not in entry:
+                                    entry["workflow"] = {"follows" : {}}
+                                entry["workflow"]["follows"] = {
+                                    "state" : follows["event"],
+                                    "transition_time": int((datetime.datetime.strptime(entry["occurred_at"], "%Y-%m-%dT%H:%M:%SZ") - datetime.datetime.strptime(follows["occurred_at"], "%Y-%m-%dT%H:%M:%SZ")).total_seconds())
+                                }
 
-                workflow_set = ",\n".join([json.dumps(e, indent=2) for e in entries])
-                output.write(workflow_set)
+                    workflow_set = ",\n".join([json.dumps(e, indent=2) for e in entries])
+                    output.write(workflow_set + "\n")
 
-                count += 1
-                print('.', end="", flush=True) if count % pulse == 0 else ''
-            output.write(']')
+                    count += 1
+                    print('.', end="", flush=True) if count % pulse == 0 else ''
+                output.write(']')
 
-        end = datetime.datetime.now()
-        print()
-        print("Data generation completed.")
-        print(f"File name: {self.filename}")
-        print(f"Count: {count}")
-        print(f"End time: {end}")
-        diff = end - start
-        hours = diff.days * 24 + diff.seconds // 3600
-        minutes = (diff.seconds % 3600) // 60
-        seconds = diff.seconds % 60
-        print("Time taken: {:0>2d}:{:0>2d}:{:0>2d}".format(hours, minutes, seconds))
+            end = datetime.datetime.now()
+            print()
+            print("Data generation completed.")
+            print(f"File name: {self.filename}")
+            print(f"Count: {count}")
+            print(f"End time: {end}")
+            diff = end - start
+            hours = diff.days * 24 + diff.seconds // 3600
+            minutes = (diff.seconds % 3600) // 60
+            seconds = diff.seconds % 60
+            print("Time taken: {:0>2d}:{:0>2d}:{:0>2d}".format(hours, minutes, seconds))
+            self.set_filename()
 
 
 
@@ -414,9 +426,14 @@ class DataGenerator:
               help='Filename to save the json generated test data. '
                    'If no filename is provided, the default filename has the pattern '
                    'testdata-{event_type}-{number_of_records}-{dt} or {event_type}-{number_of_records}-with-errors-{dt}.json')
+@click.option('-y', '--container',
+              default=None,
+              show_default=True,
+              help='specified ISSN to set as container')
 def generate_test_data(event_type, number_of_records, is_core=False, data_fill='mix', add_records_with_error=False,
-                       error_if_model_unsupported=True, filename=None):
-    dg = DataGenerator(event_type, number_of_records, is_core, data_fill, add_records_with_error,
+                       error_if_model_unsupported=True, filename=None, container=None):
+
+    dg = DataGenerator(event_type, number_of_records, is_core, [container], data_fill, add_records_with_error,
                        error_if_model_unsupported, filename)
 
     if event_type == "workflow_transition":
