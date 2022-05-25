@@ -11,7 +11,7 @@ import {ImportantNumbersRenderer} from "../vendor/edges2/src/renderers/html/Impo
 import {styleClasses} from "../vendor/edges2/src/utils";
 import {StackedAreaChart} from "../vendor/edges2/src/renderers/nvd3/StackedAreaChart";
 
-import {extractPalette} from "./nglpcommon";
+import {extractPalette, getContainerMetadata} from "./nglpcommon";
 
 global.nglp = {}
 nglp.g014 = {
@@ -328,7 +328,12 @@ nglp.g014.G014Template = class extends Template {
 
         let containersFrag = "";
         if (this.containers) {
-            containersFrag = `<h3>Showing data for ${this.containers.join(", ")}</h3>`;
+            let containersMeta = getContainerMetadata(this.containers);
+            let containersFrags = [];
+            for (let ident in containersMeta) {
+                containersFrags.push("'" + containersMeta[ident].title +  "' (id:" + ident + ")");
+            }
+            containersFrag = `<h3>Showing data for ${containersFrags.join(", ")}</h3>`;
         }
 
         let frame = `

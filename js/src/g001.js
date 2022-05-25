@@ -15,7 +15,7 @@ import {FixedSelectionCheckboxORTermSelector} from "../vendor/edges2/src/rendere
 import {HorizontalMultibarRenderer} from "../vendor/edges2/src/renderers/nvd3/HorizontalMultibarRenderer";
 import {ChartDataTable} from "../vendor/edges2/src/renderers/bs3/ChartDataTable";
 
-import {extractPalette} from "./nglpcommon";
+import {extractPalette, getContainerMetadata} from "./nglpcommon";
 import {RelativeSizeBars} from "../vendor/edges2/src/renderers/html/RelativeSizeBars";
 import {MultiDateRangeEntry} from "../vendor/edges2/src/components/MultiDateRangeEntry";
 import {MultiDateRangeCombineSelector} from "../vendor/edges2/src/renderers/bs3/MultiDateRangeCombineSelector";
@@ -39,21 +39,40 @@ nglp.g001.init = function (params) {
 
     let interactionValueMap = {
         "investigation" : "VIEWS",
-        "export" : "EXPORTS",
+        "export" : "METADATA EXPORT",
         "request" : "DOWNLOADS"
     }
 
     // this is the reverse of the above, which is required to map the palette onto the
     let valueInteractionMap = {
         "VIEWS" : "investigation",
-        "EXPORTS" : "export",
+        "METADATA EXPORT" : "export",
         "DOWNLOADS" : "request"
+    }
+
+    let interactionToolTips = {
+        "investigation" : "How many times article landing pages were viewed in the journal",
+        "export": "How many times article metadata was exported in a reference manager format",
+        "request": "How many times the fulltext of the article was downloaded"
+    }
+
+    let formatMap = {
+        "application/x-endnote-style" : "Endnote",
+        "application/x-research-info-systems": "Research Information Systems",
+        "image/gif": "GIF",
+        "image/png": "PNG",
+        "image/svg+xml": "SVG",
+        "image/jpeg": "JPEG",
+        "text/html": "HTML",
+        "text/plain": "Plain Text",
+        "application/json": "JSON",
+        "application/pdf": "PDF"
     }
 
     let presentationOrder = [
         "investigation",
-        "export",
-        "request"
+        "request",
+        "export"
     ];
 
     let initialDateRange = getInitialDateRange();
@@ -247,8 +266,8 @@ nglp.g001.init = function (params) {
                     togglable: false,
                     showCount: true,
                     countFormat: countFormat,
-                    fixedTerms : presentationOrder
-
+                    fixedTerms : presentationOrder,
+                    valueToolTips: interactionToolTips
                 })
             }),
             new UpdatingORTermSelector({
@@ -257,9 +276,10 @@ nglp.g001.init = function (params) {
                 updateType: "fresh",
                 orderBy: "count",
                 orderDir: "desc",
-                valueFunction : (v) => {
-                    return v.toUpperCase();
-                },
+                // valueFunction : (v) => {
+                //     return v.toUpperCase();
+                // },
+                valueMap: formatMap,
                 renderer: new CheckboxORTermSelector({
                     title: "Format",
                     open: true,
@@ -278,7 +298,8 @@ nglp.g001.init = function (params) {
                 }),
                 renderer: new RelativeSizeBars({
                     title: "Downloads",
-                    countFormat: countFormat
+                    countFormat: countFormat,
+                    valueMap: formatMap
                 })
             }),
             new Chart({
@@ -290,8 +311,9 @@ nglp.g001.init = function (params) {
                     seriesName: "export"
                 }),
                 renderer: new RelativeSizeBars({
-                    title: "Exports",
-                    countFormat: countFormat
+                    title: "Metadata Export",
+                    countFormat: countFormat,
+                    valueMap: formatMap
                 })
             })
         ]
@@ -317,7 +339,12 @@ nglp.g001.G001Template = class extends Template {
 
         let containersFrag = "";
         if (this.containers) {
-            containersFrag = `<h3>Showing data for ${this.containers.join(", ")}</h3>`;
+            let containersMeta = getContainerMetadata(this.containers);
+            let containersFrags = [];
+            for (let ident in containersMeta) {
+                containersFrags.push("'" + containersMeta[ident].title +  "' (id:" + ident + ")");
+            }
+            containersFrag = `<h3>Showing data for ${containersFrags.join(", ")}</h3>`;
         }
 
         let frame = `
@@ -366,6 +393,8 @@ nglp.g001.G001Template = class extends Template {
                     <div class="data-area" id="g001-interactions-map"></div>
                     <div class="data-area" class="row formats-header">
                         <h3 class="data-label">Top 3 Formats</h3>
+                        <p>Of all the file formats downloaded or exported to a reference manager, this section shows the 
+                            top 3 most used file formats for each of those operations, and their relative usage.</p>
                         <div class="row">
                             <div class="col-md-4">
                                 <div id="g001-top-downloads"></div>

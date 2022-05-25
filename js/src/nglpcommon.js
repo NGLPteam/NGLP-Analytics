@@ -18,3 +18,23 @@ export function extractPalette(sheetName, paletteSelector) {
     }
     return palette;
 }
+
+
+let DEMO_CONTAINERS = {
+    "1531-7714" : "Practical assessment, research & evaluation",
+    "2604-7438" : "Translat library",
+    "0024-7766" : "Lymphology"
+}
+
+/* This function is a dumb function for the purposes of demo.  The real thing should be able to look up
+or otherwise return data about the containers
+ */
+export function getContainerMetadata(containers) {
+    let meta = {};
+    for (let c of containers) {
+        meta[c] = {
+            title: c in DEMO_CONTAINERS ? DEMO_CONTAINERS[c] : "Unknown title"
+        }
+    }
+    return meta;
+}

@@ -8928,6 +8928,8 @@ var $2039d36394fce070$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
         _this.showCount = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showCount", false);
         _this.countFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "countFormat", false);
         _this.fixedTerms = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "fixedTerms", []);
+        _this.valueToolTips = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueToolTips", {
+        });
         _this.openIcon = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "openIcon", "glyphicon glyphicon-plus");
         _this.closeIcon = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "closeIcon", "glyphicon glyphicon-minus");
         // don't display the facet at all if there is no data to display
@@ -8972,18 +8974,22 @@ var $2039d36394fce070$export$d3ad1026b19abbfd = /*#__PURE__*/ function(Renderer)
                             var count = "";
                             if (this.showCount) count = ' <span class="' + countClass + '">(' + this._formatCount(val.count) + ')</span>';
                             var id = $d48cc3604bf30e24$export$63ba8ea1e92c906(val.term);
+                            var tooltip = "";
+                            if (val.term in this.valueToolTips) tooltip = " title=\"".concat(this.valueToolTips[val.term], "\" ");
                             results += '<li>\
                         <input class="' + checkboxClass + '" data-key="' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(val.term) + '" id="' + id + '" type="checkbox" name="' + id + '"' + checked + '>\
-                        <label for="' + id + '" class="' + labelClass + '" id="' + id + '_label"">' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(val.display) + count + '</label>\
+                        <label for="' + id + '" class="' + labelClass + '" id="' + id + '_label"' + tooltip + '>' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(val.display) + count + '</label>\
                     </li>';
                         }
                     }
                     if (!found) {
                         var display = this.component.translate(ft);
                         var id = $d48cc3604bf30e24$export$63ba8ea1e92c906(ft);
+                        var tooltip = "";
+                        if (ft in this.valueToolTips) tooltip = " title=\"".concat(this.valueToolTips[ft], "\" ");
                         results += '<li>\
                     <input class="' + checkboxClass + '" data-key="' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(ft) + '" id="' + id + '" type="checkbox" name="' + id + '" disabled="disabled">\
-                    <label for="' + id + '" class="' + labelClass + '">' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(display) + '</label>\
+                    <label for="' + id + '" class="' + labelClass + '"' + tooltip + '>' + $d48cc3604bf30e24$export$5e20d0a3120d6c07(display) + '</label>\
                 </li>';
                     }
                 }
@@ -9344,6 +9350,38 @@ function $4002aa3570a5e3f8$export$8e8129eda99077(sheetName, paletteSelector) {
     }
     return palette;
 }
+var $4002aa3570a5e3f8$var$DEMO_CONTAINERS = {
+    "1531-7714": "Practical assessment, research & evaluation",
+    "2604-7438": "Translat library",
+    "0024-7766": "Lymphology"
+};
+function $4002aa3570a5e3f8$export$4bd2ebaeac3531b0(containers) {
+    var meta = {
+    };
+    var _iteratorNormalCompletion = true, _didIteratorError = false, _iteratorError = undefined;
+    try {
+        for(var _iterator = containers[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
+            var c = _step.value;
+            meta[c] = {
+                title: c in $4002aa3570a5e3f8$var$DEMO_CONTAINERS ? $4002aa3570a5e3f8$var$DEMO_CONTAINERS[c] : "Unknown title"
+            };
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally{
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return != null) {
+                _iterator.return();
+            }
+        } finally{
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
+    return meta;
+}
 
 
 
@@ -9359,6 +9397,7 @@ var $beec1707b43a9eb2$export$2a05ec748c9cb22d = /*#__PURE__*/ function(Renderer)
         _this.title = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "title", false);
         _this.countFormat = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "countFormat", false);
         _this.noResultsText = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "noResultsText", "No data to display");
+        _this.valueMap = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueMap", false);
         _this.namespace = "edges-html-relativesizebars";
         return _this;
     }
@@ -9394,7 +9433,11 @@ var $beec1707b43a9eb2$export$2a05ec748c9cb22d = /*#__PURE__*/ function(Renderer)
                     var prog = this._calculateProgress(value.value, max);
                     var count = value.value;
                     if (this.countFormat) count = this.countFormat(count);
-                    var label = "".concat(value.label, " (").concat(count, ")");
+                    var valueLabel = value.label;
+                    if (this.valueMap) {
+                        if (valueLabel in this.valueMap) valueLabel = this.valueMap[valueLabel];
+                    }
+                    var label = "".concat(valueLabel, " (").concat(count, ")");
                     rows += "<tr><td>\n                <progress value=\"".concat(prog, "\" max=\"100\">").concat(prog, "</progress><br>\n                ").concat(label, "\n            </td></tr>");
                 }
                 var tableClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "table", this);
@@ -9853,19 +9896,36 @@ nglp.g001.init = function(params) {
     var palette = $4002aa3570a5e3f8$export$8e8129eda99077("g001.css");
     var interactionValueMap = {
         "investigation": "VIEWS",
-        "export": "EXPORTS",
+        "export": "METADATA EXPORT",
         "request": "DOWNLOADS"
     };
     // this is the reverse of the above, which is required to map the palette onto the
     var valueInteractionMap = {
         "VIEWS": "investigation",
-        "EXPORTS": "export",
+        "METADATA EXPORT": "export",
         "DOWNLOADS": "request"
+    };
+    var interactionToolTips = {
+        "investigation": "How many times article landing pages were viewed in the journal",
+        "export": "How many times article metadata was exported in a reference manager format",
+        "request": "How many times the fulltext of the article was downloaded"
+    };
+    var formatMap = {
+        "application/x-endnote-style": "Endnote",
+        "application/x-research-info-systems": "Research Information Systems",
+        "image/gif": "GIF",
+        "image/png": "PNG",
+        "image/svg+xml": "SVG",
+        "image/jpeg": "JPEG",
+        "text/html": "HTML",
+        "text/plain": "Plain Text",
+        "application/json": "JSON",
+        "application/pdf": "PDF"
     };
     var presentationOrder = [
         "investigation",
-        "export",
-        "request"
+        "request",
+        "export"
     ];
     var initialDateRange = $9aa3b42083a3eab8$var$getInitialDateRange();
     var baseQuery = false;
@@ -10073,7 +10133,8 @@ nglp.g001.init = function(params) {
                     togglable: false,
                     showCount: true,
                     countFormat: countFormat,
-                    fixedTerms: presentationOrder
+                    fixedTerms: presentationOrder,
+                    valueToolTips: interactionToolTips
                 })
             }),
             new $58e70bcc9ea9714f$export$6175c660df807dd({
@@ -10082,9 +10143,10 @@ nglp.g001.init = function(params) {
                 updateType: "fresh",
                 orderBy: "count",
                 orderDir: "desc",
-                valueFunction: function(v) {
-                    return v.toUpperCase();
-                },
+                // valueFunction : (v) => {
+                //     return v.toUpperCase();
+                // },
+                valueMap: formatMap,
                 renderer: new $135bcb32af9eb45d$export$4b392426dd40333d({
                     title: "Format",
                     open: true,
@@ -10112,7 +10174,8 @@ nglp.g001.init = function(params) {
                 }),
                 renderer: new $beec1707b43a9eb2$export$2a05ec748c9cb22d({
                     title: "Downloads",
-                    countFormat: countFormat
+                    countFormat: countFormat,
+                    valueMap: formatMap
                 })
             }),
             new $ae46249d8a2a7b6d$export$7decb792461ef5a9({
@@ -10133,8 +10196,9 @@ nglp.g001.init = function(params) {
                     seriesName: "export"
                 }),
                 renderer: new $beec1707b43a9eb2$export$2a05ec748c9cb22d({
-                    title: "Exports",
-                    countFormat: countFormat
+                    title: "Metadata Export",
+                    countFormat: countFormat,
+                    valueMap: formatMap
                 })
             })
         ]
@@ -10163,8 +10227,13 @@ nglp.g001.G001Template = /*#__PURE__*/ (function(Template) {
                 var checkboxId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "show-as-table");
                 var printId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "print");
                 var containersFrag = "";
-                if (this.containers) containersFrag = "<h3>Showing data for ".concat(this.containers.join(", "), "</h3>");
-                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G001: Article  Downloads for  Unit Administrators</h1>\n                    <h2>Article downloads by format, including landing page and metadata exports in aggregate</h2>\n                    ".concat(containersFrag, "\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"").concat(printId, "\" href=\"#\">Print this view</a>\n                        </li>-->\n                    </ul>\n                    <form class=\"navbar-form navbar-right\">\n                        <div class=\"form-group\" id=\"g001-date-range\"></div>\n                    </form>\n                </div>\n            </nav>\n        </div>\n    </div>\n    \n    <div class=\"container\">\n            <div class=\"row report-area justify-content-between\">\n                <div class=\"col-md-3\">\n                    <div class=\"facet\" id=\"g001-interactions\"></div>\n                    <div class=\"facet facet-format\" id=\"g001-format\"></div>\n                </div>\n                <div class=\"col-md-9\">\n                    <p class=\"showtable\"><input type=\"checkbox\" name=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "_label\">Show as table</label></p>\n                    <div class=\"data-area\" id=\"g001-interactions-chart\"></div>\n                    <div class=\"data-area\" id=\"g001-interactions-table\" style=\"display:none\">TABLE HERE</div>\n                    <div class=\"data-area\" id=\"g001-interactions-map\"></div>\n                    <div class=\"data-area\" class=\"row formats-header\">\n                        <h3 class=\"data-label\">Top 3 Formats</h3>\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div id=\"g001-top-downloads\"></div>\n                            </div>\n                            <div class=\"col-md-4 offset-md-1\">\n                                <div id=\"g001-top-exports\"></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n    </div>\n</div>");
+                if (this.containers) {
+                    var containersMeta = $4002aa3570a5e3f8$export$4bd2ebaeac3531b0(this.containers);
+                    var containersFrags = [];
+                    for(var ident in containersMeta)containersFrags.push("'" + containersMeta[ident].title + "' (id:" + ident + ")");
+                    containersFrag = "<h3>Showing data for ".concat(containersFrags.join(", "), "</h3>");
+                }
+                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G001: Article  Downloads for  Unit Administrators</h1>\n                    <h2>Article downloads by format, including landing page and metadata exports in aggregate</h2>\n                    ".concat(containersFrag, "\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"").concat(printId, "\" href=\"#\">Print this view</a>\n                        </li>-->\n                    </ul>\n                    <form class=\"navbar-form navbar-right\">\n                        <div class=\"form-group\" id=\"g001-date-range\"></div>\n                    </form>\n                </div>\n            </nav>\n        </div>\n    </div>\n    \n    <div class=\"container\">\n            <div class=\"row report-area justify-content-between\">\n                <div class=\"col-md-3\">\n                    <div class=\"facet\" id=\"g001-interactions\"></div>\n                    <div class=\"facet facet-format\" id=\"g001-format\"></div>\n                </div>\n                <div class=\"col-md-9\">\n                    <p class=\"showtable\"><input type=\"checkbox\" name=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(checkboxId, "\" id=\"").concat(checkboxId, "_label\">Show as table</label></p>\n                    <div class=\"data-area\" id=\"g001-interactions-chart\"></div>\n                    <div class=\"data-area\" id=\"g001-interactions-table\" style=\"display:none\">TABLE HERE</div>\n                    <div class=\"data-area\" id=\"g001-interactions-map\"></div>\n                    <div class=\"data-area\" class=\"row formats-header\">\n                        <h3 class=\"data-label\">Top 3 Formats</h3>\n                        <p>Of all the file formats downloaded or exported to a reference manager, this section shows the \n                            top 3 most used file formats for each of those operations, and their relative usage.</p>\n                        <div class=\"row\">\n                            <div class=\"col-md-4\">\n                                <div id=\"g001-top-downloads\"></div>\n                            </div>\n                            <div class=\"col-md-4 offset-md-1\">\n                                <div id=\"g001-top-exports\"></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n    </div>\n</div>");
                 edge.context.html(frame);
                 var checkboxSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "show-as-table");
                 $d48cc3604bf30e24$export$b4cd8de5710bc55c(checkboxSelector, "change", this, "toggleTable");

@@ -4042,7 +4042,7 @@ nglp.g014.init = function(params) {
     var yearago = new Date(new Date().getTime() - yearmillis);
     var ranges = $6ec8c71f816e3f1f$var$rangeGenerator({
         start: yearago,
-        end: new Date() //,
+        end: new Date()
     });
     var filters = {
     };
@@ -4481,15 +4481,6 @@ function $6ec8c71f816e3f1f$var$rangeGenerator(params) {
         }
         points.push(newYear + "-" + padder(newMonth) + "-01T00:00:00Z");
         if (new Date(points[points.length - 1]) > end) break;
-    // if (points.length > count) {
-    //     break
-    // }
-    // ranges.push({
-    //     start_millis: false,
-    //     end_millis: false,
-    //     start: newYear + "-" + padder(newMonth) + "-01T00:00:00Z",
-    //     end: newYear
-    // })
     }
     var ranges = [];
     for(var i = 0; i < points.length - 1; i++)ranges.push({
@@ -4498,23 +4489,6 @@ function $6ec8c71f816e3f1f$var$rangeGenerator(params) {
         start: points[i],
         end: points[i + 1]
     });
-    // let count = params.count;
-    //
-    // let sms = start.getTime();
-    // let ems = end.getTime();
-    // let bucketSize = Math.round((ems - sms) / count)
-    //
-    // let ranges = [];
-    // for (let i = 0; i < count; i++) {
-    //     let bstart = sms + (i * bucketSize);
-    //     let bend = bstart + bucketSize;
-    //     ranges.push({
-    //         start_millis: bstart,
-    //         end_millis: bend,
-    //         start: isoDateStr(new Date(bstart)),
-    //         end: isoDateStr(new Date(bend))
-    //     });
-    // }
     return ranges;
 }
 function $6ec8c71f816e3f1f$var$isoDateStr(date) {
