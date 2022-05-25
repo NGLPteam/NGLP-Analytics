@@ -178,13 +178,20 @@ nglp.g014.init = function (params) {
     ]
 
     let baseQueryMusts = [
-        new es.TermsFilter({field: "source.identifier.exact", values: [source]})
+        new es.TermsFilter({field: "source.identifier.exact", values: [source]}),
+        new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())})
     ]
     if (params.containers) {
        baseQueryMusts.push(
            new es.TermsFilter({field: "container.exact", values: params.containers})
        )
     }
+    let baseQueryShoulds = [
+        new es.RangeFilter({field: "workflow.followed_by.date", gte: isoDateStr(new Date())}),
+        new es.BoolFilter({
+            mustNot: [new es.ExistsFilter({field: "workflow.followed_by.state"})]
+        })
+    ]
 
     nglp.g014.active[selector] = new Edge({
         selector: selector,
@@ -192,16 +199,18 @@ nglp.g014.init = function (params) {
         searchUrl: search_url,
         manageUrl : false,
         baseQuery: new es.Query({
-            must : baseQueryMusts
+            must : baseQueryMusts,
+            should: baseQueryShoulds,
+            minimumShouldMatch: baseQueryShoulds.length > 0 ? 1 : false
         }),
         openingQuery: new es.Query({
             must : [
                 new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
                 new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
             ],
-            mustNot : [
-                new es.ExistsFilter({field: "workflow.followed_by.state"})
-            ],
+            // mustNot : [
+            //     new es.ExistsFilter({field: "workflow.followed_by.state"})
+            // ],
             size: 0,
             aggs: [
                 new es.TermsAggregation({
@@ -230,6 +239,7 @@ nglp.g014.init = function (params) {
                         new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
                         new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
                         new es.ExistsFilter({field: "workflow.follows.state"}),
+                        new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())})
                     ],
                     size: 0,
                     aggs: [
@@ -251,7 +261,8 @@ nglp.g014.init = function (params) {
                 return new es.Query({
                     must : [
                         new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
-                        new es.TermsFilter({field: "object_type.exact", values: ["article"]})//,
+                        new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
+                        new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())})
                         // new es.RangeFilter({field : "occurred_at", gte: isoDateStr(yearago), lte: isoDateStr(new Date())})
                     ],
                     size: 0,

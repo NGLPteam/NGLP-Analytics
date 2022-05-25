@@ -236,7 +236,6 @@ var $8d94b5f2509b6cf5$var$Filter = /*#__PURE__*/ function() {
     function $8d94b5f2509b6cf5$var$Filter(params) {
         $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $8d94b5f2509b6cf5$var$Filter);
         this.field = params.field;
-        this.type_name = params.type_name;
     }
     $67866ae5f3a26802$export$9099ad97b570f7c($8d94b5f2509b6cf5$var$Filter, [
         {
@@ -249,7 +248,7 @@ var $8d94b5f2509b6cf5$var$Filter = /*#__PURE__*/ function() {
             key: "_baseMatch",
             value: function _baseMatch(other) {
                 // type must match
-                if (other.type_name !== this.type_name) return false;
+                if (other.type !== this.type) return false;
                 // field (if set) must match
                 if (other.field && other.field !== this.field) return false;
                 // otherwise this matches
@@ -444,6 +443,8 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
             this.aggs = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.aggs, []);
             this.must = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.must, []);
             this.mustNot = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.mustNot, []);
+            this.should = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.should, []);
+            this.minimumShouldMatch = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.minimumShouldMatch, false);
             // defaults from properties that will be set through their setters (see the bottom
             // of the function)
             this.queryString = false;
@@ -451,10 +452,8 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
             // ones that we haven't used yet, so are awaiting implementation
             // NOTE: once we implement these, they also need to be considered in merge()
             this.source = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.source, false);
-            this.should = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.should, []);
             this.partialFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.partialField, false);
             this.scriptFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.scriptFields, false);
-            this.minimumShouldMatch = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.minimumShouldMatch, false);
             this.partialFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.partialFields, false);
             this.scriptFields = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.scriptFields, false);
             // for old versions of ES, so are not necessarily going to be implemented
@@ -731,6 +730,42 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
                 }
             },
             {
+                key: "addShould",
+                value: function addShould(filter) {
+                    var existing = this.listShould(filter);
+                    if (existing.length === 0) this.should.push(filter);
+                }
+            },
+            {
+                key: "listShould",
+                value: function listShould(template) {
+                    return this.listFilters({
+                        boolType: "should",
+                        template: template
+                    });
+                }
+            },
+            {
+                key: "removeShould",
+                value: function removeShould(template) {
+                    var removes = [];
+                    for(var i = 0; i < this.should.length; i++){
+                        var m = this.should[i];
+                        if (m.matches(template)) removes.push(i);
+                    }
+                    removes = removes.sort().reverse();
+                    for(var i = 0; i < removes.length; i++)this.should.splice(removes[i], 1);
+                    // return the count of filters that were removed
+                    return removes.length;
+                }
+            },
+            {
+                key: "clearShould",
+                value: function clearShould() {
+                    this.should = [];
+                }
+            },
+            {
                 /////////////////////////////////////////////////
                 // interrogative functions
                 key: "hasFilters",
@@ -777,6 +812,8 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
                     // this.aggs - append any new ones from source, overwriting any with the same name
                     // this.must - append any new ones from source
                     // this.mustNot - append any new ones from source
+                    // this.should - append any new ones from source
+                    // this.minimumShouldMatch - take from source if set
                     // this.queryString - take from source if set
                     // this.sort - prepend any from source
                     // this.source - append any new ones from source
@@ -790,6 +827,9 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
                     for(var i = 0; i < must.length; i++)this.addMust(must[i]);
                     var mustNot = source.listMustNot();
                     for(var i1 = 0; i1 < mustNot.length; i1++)this.addMustNot(mustNot[i1]);
+                    var should = source.listShould();
+                    for(var i2 = 0; i2 < should.length; i2++)this.addShould(should[i2]);
+                    if (source.minimumShouldMatch !== false) this.minimumShouldMatch = source.minimumShouldMatch;
                     if (source.getQueryString()) this.setQueryString(source.getQueryString());
                     var sorts = source.getSortBy();
                     if (sorts && sorts.length > 0) {
@@ -846,6 +886,16 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
                             }
                             bool["must_not"] = mustNots;
                         }
+                        // add any should filters
+                        if (this.should.length > 0) {
+                            var should = [];
+                            for(var i = 0; i < this.should.length; i++){
+                                var m = this.should[i];
+                                should.push(m.objectify());
+                            }
+                            bool["should"] = should;
+                        }
+                        if (this.minimumShouldMatch !== false) bool["minimum_should_match"] = this.minimumShouldMatch;
                     }
                     var qpl = Object.keys(query_part).length;
                     var bpl = Object.keys(bool).length;
@@ -920,6 +970,14 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
                             });
                             if (fil) target.addMustNot(fil);
                         }
+                        if (bool.should) for(var i = 0; i < bool.should.length; i++){
+                            var type = Object.keys(bool.should[i])[0];
+                            var fil = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
+                                raw: bool.should[i]
+                            });
+                            if (fil) target.addShould(fil);
+                        }
+                        if (bool.minimum_should_match) target.minimumShouldMatch = bool.minimum_should_match;
                     }
                     function parseQuery(q, target) {
                         var keys = Object.keys(q);
@@ -1527,6 +1585,95 @@ function $8d94b5f2509b6cf5$var$_classExtends(clazz, ref) {
     }(),
     ///////////////////////////////////////////////////
     // Filters
+    BoolFilter: function() {
+        var _class = /*#__PURE__*/ function(Filter) {
+            "use strict";
+            $bca7673885229bfd$export$9099ad97b570f7c(_class, Filter);
+            function _class(params) {
+                $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, _class);
+                var _this;
+                params["field"] = "_bool"; // this filter does not have a field, so we set a placeholder
+                _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c(_class).call(this, params));
+                // FIXME: for the moment this only supports must_not as it's all we need
+                // at the time of implementation
+                _this.mustNot = $8d94b5f2509b6cf5$export$8b446892c82de644.getParam(params.mustNot, []);
+                if (params.raw) _this.parse(params.raw);
+                return _this;
+            }
+            $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
+                {
+                    key: "objectify",
+                    value: function objectify() {
+                        var obj = {
+                            bool: {
+                            }
+                        };
+                        if (this.mustNot.length > 0) {
+                            var mustNots = [];
+                            for(var i = 0; i < this.mustNot.length; i++){
+                                var m = this.mustNot[i];
+                                mustNots.push(m.objectify());
+                            }
+                            obj.bool["must_not"] = mustNots;
+                        }
+                        return obj;
+                    }
+                },
+                {
+                    key: "parse",
+                    value: function parse(obj) {
+                        if (obj.bool.must_not) for(var i = 0; i < obj.bool.must_not.length; i++){
+                            var type = Object.keys(obj.bool.must_not[i])[0];
+                            var fil = $8d94b5f2509b6cf5$export$8b446892c82de644.filterFactory(type, {
+                                raw: obj.bool.must_not[i]
+                            });
+                            if (fil) this.addMustNot(fil);
+                        }
+                    }
+                },
+                {
+                    key: "addMustNot",
+                    value: function addMustNot(filter) {
+                        var existing = this.listMustNot(filter);
+                        if (existing.length === 0) this.mustNot.push(filter);
+                    }
+                },
+                {
+                    key: "listMustNot",
+                    value: function listMustNot(template) {
+                        return this.listFilters({
+                            boolType: "must_not",
+                            template: template
+                        });
+                    }
+                },
+                {
+                    key: "listFilters",
+                    value: function listFilters(params) {
+                        var boolType = params.boolType || "must";
+                        var template = params.template || false;
+                        //var field = params.field || false;
+                        //var filterType = params.filterType || false;
+                        // first get the boolean filter field that we're going to look in
+                        var bool = [];
+                        if (boolType === "must") bool = this.must;
+                        else if (boolType === "should") bool = this.should;
+                        else if (boolType === "must_not") bool = this.mustNot;
+                        if (!template) return bool;
+                        var l = [];
+                        for(var i = 0; i < bool.length; i++){
+                            var m = bool[i];
+                            if (m.matches(template)) l.push(m);
+                        }
+                        return l;
+                    }
+                }
+            ]);
+            return _class;
+        }($8d94b5f2509b6cf5$var$Filter);
+        $9b036347ace9941e$export$9099ad97b570f7c(_class, "type", "bool");
+        return _class;
+    }(),
     TermFilter: function() {
         var _class = /*#__PURE__*/ function(Filter) {
             "use strict";
@@ -3930,6 +4077,38 @@ function $4002aa3570a5e3f8$export$8e8129eda99077(sheetName, paletteSelector) {
     }
     return palette;
 }
+var $4002aa3570a5e3f8$var$DEMO_CONTAINERS = {
+    "1531-7714": "Practical assessment, research & evaluation",
+    "2604-7438": "Translat library",
+    "0024-7766": "Lymphology"
+};
+function $4002aa3570a5e3f8$export$4bd2ebaeac3531b0(containers) {
+    var meta = {
+    };
+    var _iteratorNormalCompletion = true, _didIteratorError = false, _iteratorError = undefined;
+    try {
+        for(var _iterator = containers[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true){
+            var c = _step.value;
+            meta[c] = {
+                title: c in $4002aa3570a5e3f8$var$DEMO_CONTAINERS ? $4002aa3570a5e3f8$var$DEMO_CONTAINERS[c] : "Unknown title"
+            };
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally{
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return != null) {
+                _iterator.return();
+            }
+        } finally{
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
+    return meta;
+}
 
 
 $parcel$global.nglp = {
@@ -4113,12 +4292,29 @@ nglp.g014.init = function(params) {
             values: [
                 source
             ]
+        }),
+        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
+            field: "occurred_at",
+            lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
         })
     ];
     if (params.containers) baseQueryMusts.push(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
         field: "container.exact",
         values: params.containers
     }));
+    var baseQueryShoulds = [
+        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
+            field: "workflow.followed_by.date",
+            gte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
+        }),
+        new $8d94b5f2509b6cf5$export$8b446892c82de644.BoolFilter({
+            mustNot: [
+                new $8d94b5f2509b6cf5$export$8b446892c82de644.ExistsFilter({
+                    field: "workflow.followed_by.state"
+                })
+            ]
+        })
+    ];
     nglp.g014.active[selector] = new $6cf4dc301226cb87$export$22ad9a5707a07e9c({
         selector: selector,
         template: new nglp.g014.G014Template({
@@ -4128,7 +4324,9 @@ nglp.g014.init = function(params) {
         searchUrl: search_url,
         manageUrl: false,
         baseQuery: new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
-            must: baseQueryMusts
+            must: baseQueryMusts,
+            should: baseQueryShoulds,
+            minimumShouldMatch: baseQueryShoulds.length > 0 ? 1 : false
         }),
         openingQuery: new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
             must: [
@@ -4145,11 +4343,9 @@ nglp.g014.init = function(params) {
                     ]
                 }), 
             ],
-            mustNot: [
-                new $8d94b5f2509b6cf5$export$8b446892c82de644.ExistsFilter({
-                    field: "workflow.followed_by.state"
-                })
-            ],
+            // mustNot : [
+            //     new es.ExistsFilter({field: "workflow.followed_by.state"})
+            // ],
             size: 0,
             aggs: [
                 new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
@@ -4189,7 +4385,11 @@ nglp.g014.init = function(params) {
                         }),
                         new $8d94b5f2509b6cf5$export$8b446892c82de644.ExistsFilter({
                             field: "workflow.follows.state"
-                        }), 
+                        }),
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
+                            field: "occurred_at",
+                            lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
+                        })
                     ],
                     size: 0,
                     aggs: [
@@ -4221,7 +4421,11 @@ nglp.g014.init = function(params) {
                             values: [
                                 "article"
                             ]
-                        }) //,
+                        }),
+                        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
+                            field: "occurred_at",
+                            lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
+                        })
                     ],
                     size: 0,
                     aggs: [
@@ -4284,7 +4488,12 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
                     capacityChartLegend += "\n                <div class=\"".concat(legendClasses, "\">\n                    <div class=\"").concat(legendBoxClasses, "\"><span style=\"color: ").concat(state[2], ";\">&#9632;</span><span class=\"").concat(legendBoxClasses, "-label\">").concat(state[1], "</span></div>\n                </div>\n            ");
                 }
                 var containersFrag = "";
-                if (this.containers) containersFrag = "<h3>Showing data for ".concat(this.containers.join(", "), "</h3>");
+                if (this.containers) {
+                    var containersMeta = $4002aa3570a5e3f8$export$4bd2ebaeac3531b0(this.containers);
+                    var containersFrags = [];
+                    for(var ident in containersMeta)containersFrags.push("'" + containersMeta[ident].title + "' (id:" + ident + ")");
+                    containersFrag = "<h3>Showing data for ".concat(containersFrags.join(", "), "</h3>");
+                }
                 var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G014: Progress of articles through the editorial workflow</h1>\n                    ".concat(containersFrag, "\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"").concat(printId, "\" href=\"#\">Print this view</a>\n                        </li> -->\n                    </ul>\n                </div>\n            </nav>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row report-area justify-content-between\">\n            <div class=\"col-md-12\">\n                <div>\n                    <h3 class=\"data-label\">Statistics per workflow state</h3>\n                    <table class=\"").concat(tableClasses, " data-area\">\n                        <thead>\n                            <tr>\n                                <td></td>\n                                <td>In Total Today</td>\n                                <td>Mean Time to Progress</td>\n                                <td>\n                                    Age of Items<br/>\n                                    <input type=\"checkbox\" name=\"").concat(ageId, "\" id=\"").concat(ageId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(ageId, "\">Show as table</label>\n                                </td>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            ").concat(tableRows, "\n                        </tbody>\n                    </table>\n                </div>\n                <div>\n                    <h3 class=\"data-label\">Workflow Capacity</h3>\n                    <div class=\"row\">\n                        <div class=\"col-md-12\">\n                            <input type=\"checkbox\" name=\"").concat(capacityId, "\" id=\"").concat(capacityId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(capacityId, "\">Show as table</label>\n                        </div>\n                    </div>\n                    <div class=\"row\" class=\"").concat(showAsTableClasses, "\" id=\"g014-workflow-capacity-chart--container\">\n                        <div class=\"col-md-2\">\n                            <div id=\"").concat(capacityLegendId, "\">\n                                ").concat(capacityChartLegend, "\n                            </div>  \n                        </div>\n                        <div class=\"col-md-10\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-chart\"></div>\n                        </div>\n                    </div>\n                    <div class=\"row\" id=\"g014-workflow-capacity-table--container\" style=\"display: none\">\n                        <div class=\"col-md-12\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-table\"></div>\n                        </div>\n                    </div>\n                </div>\n            \n            </div>\n        </div>\n    </div>\n</div>");
                 edge.context.html(frame);
                 var ageSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "age-show-as-table");
