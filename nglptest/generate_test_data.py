@@ -135,7 +135,7 @@ class DataGenerator:
             'method': random.choices(HTTP_METHODS[self.event_type], k=length)
         }
         fake_data_by_type = {
-            'occurred_at': datetime.datetime.strftime(self.fake.date_time_between(start_date="-1y"), "%Y-%m-%dT%H:%M:%SZ"),
+            'occurred_at': datetime.datetime.strftime(self.fake.date_time_between(start_date="-1y", end_date="+1y"), "%Y-%m-%dT%H:%M:%SZ"),
             'format': self.fake.content_type_popular(),
             'url': self.fake.uri(),
             'referrer': self.fake.uri(),
@@ -288,7 +288,7 @@ class DataGenerator:
                     first = False
                     json.dump(data, output, indent=2)
                     count += 1
-                    print('.', end="", flush=True) if count % pulse == 0 else ''
+                    print('.' + str(count), end="", flush=True) if count % pulse == 0 else ''
                 output.write(']')
             end = datetime.datetime.now()
             print()
@@ -320,7 +320,7 @@ class DataGenerator:
                         output.write(',')
 
                     distance = random.randint(1, len(WORKFLOW))
-                    workflow_start = self.fake.date_time_between(start_date="-2y")
+                    workflow_start = self.fake.date_time_between(start_date="-2y", end_date="+1y")
                     object_id = None
                     #container = None
                     entries = []
@@ -343,7 +343,7 @@ class DataGenerator:
                         # else:
                         #     container = data.get("container")
 
-                        workflow_start = self.fake.date_time_between(start_date=workflow_start)
+                        workflow_start = self.fake.date_time_between(start_date=workflow_start, end_date="+1y")
                         entries.append(data)
 
                     if join_events:
