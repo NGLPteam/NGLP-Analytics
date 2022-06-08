@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import "../vendor/edges2/sass/renderers/bs3/selected-filters";
 @import "base/palette",
         "base/grid",
         "base/body",

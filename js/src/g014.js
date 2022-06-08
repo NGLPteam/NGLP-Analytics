@@ -12,6 +12,8 @@ import {styleClasses} from "../vendor/edges2/src/utils";
 import {StackedAreaChart} from "../vendor/edges2/src/renderers/nvd3/StackedAreaChart";
 
 import {extractPalette, getContainerMetadata} from "./nglpcommon";
+import {SelectedFilters} from "../vendor/edges2/src/components/SelectedFilters";
+import {SelectedFiltersRenderer} from "../vendor/edges2/src/renderers/bs3/SelectedFiltersRenderer";
 
 global.nglp = {}
 nglp.g014 = {
@@ -59,7 +61,24 @@ nglp.g014.init = function (params) {
     }
 
     // Current workflow load
-    let currentComponents = [];
+    let currentComponents = [
+        new SelectedFilters({
+            id: "g014-selected-filters",
+            fieldDisplays: {
+                "container.exact": "Showing Data for Journals"
+            },
+            valueFunctions: {
+                "container.exact": function(value) {
+                    let md = getContainerMetadata([value]);
+                    return `${md[value].title} (issn:${value})`;
+                }
+            },
+            ignoreUnknownFilters: true,
+            renderer: new SelectedFiltersRenderer({
+                showFilterField: false
+            })
+        })
+    ];
 
     for (let i = 0; i < stateProgression.length; i++) {
         currentComponents.push(
@@ -181,10 +200,10 @@ nglp.g014.init = function (params) {
         new es.TermsFilter({field: "source.identifier.exact", values: [source]}),
         new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())})
     ]
+    let containerFilter = false;
     if (params.containers) {
-       baseQueryMusts.push(
-           new es.TermsFilter({field: "container.exact", values: params.containers})
-       )
+        containerFilter = new es.TermsFilter({field: "container.exact", values: params.containers});
+        baseQueryMusts.push(containerFilter);
     }
     let baseQueryShoulds = [
         new es.RangeFilter({field: "workflow.followed_by.date", gte: isoDateStr(new Date())}),
@@ -234,13 +253,18 @@ nglp.g014.init = function (params) {
             // FIXME: we should add a date constraint to this, so we only look at data from a sensible
             // period
             "transitions" : function(edge) {
+                let transitionMusts = [
+                    new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
+                    new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
+                    new es.ExistsFilter({field: "workflow.follows.state"}),
+                    new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())}),
+                ];
+                let existing = edge.currentQuery.listMust(new es.TermsFilter({field: "container.exact"}))
+                if (existing.length > 0) {
+                    transitionMusts.push(existing[0]);
+                }
                 return new es.Query({
-                    must: [
-                        new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
-                        new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
-                        new es.ExistsFilter({field: "workflow.follows.state"}),
-                        new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())})
-                    ],
+                    must: transitionMusts,
                     size: 0,
                     aggs: [
                         new es.TermsAggregation({
@@ -258,13 +282,18 @@ nglp.g014.init = function (params) {
                 })
             },
             "capacity" : function(edge) {
+                let capacityMusts = [
+                    new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
+                    new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
+                    new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())})
+                    // new es.RangeFilter({field : "occurred_at", gte: isoDateStr(yearago), lte: isoDateStr(new Date())})
+                ]
+                let existing = edge.currentQuery.listMust(new es.TermsFilter({field: "container.exact"}))
+                if (existing.length > 0) {
+                    capacityMusts.push(existing[0]);
+                }
                 return new es.Query({
-                    must : [
-                        new es.TermsFilter({field: "category.exact", values: ["workflow"]}),
-                        new es.TermsFilter({field: "object_type.exact", values: ["article"]}),
-                        new es.RangeFilter({field: "occurred_at", lte: isoDateStr(new Date())})
-                        // new es.RangeFilter({field : "occurred_at", gte: isoDateStr(yearago), lte: isoDateStr(new Date())})
-                    ],
+                    must : capacityMusts,
                     size: 0,
                     aggs: [
                         new es.TermsAggregation({
@@ -295,7 +324,6 @@ nglp.g014.G014Template = class extends Template {
         this.namespace = "g014-template";
 
         this.stateProgression = getParam(params, "stateProgression", []);
-        this.containers = getParam(params, "containers", false);
     }
 
     draw(edge) {
@@ -303,7 +331,6 @@ nglp.g014.G014Template = class extends Template {
         let ageId = htmlID(this.namespace, "age-show-as-table");
         let capacityId = htmlID(this.namespace, "capacity-show-as-table");
         let capacityLegendId = htmlID(this.namespace, "capacity-legend--container")
-        let printId = htmlID(this.namespace, "print");
         let tableClasses = styleClasses(this.namespace, "stats");
         let ageChartClasses = allClasses(this.namespace, "age-chart");
         let ageTableClasses = jsClasses(this.namespace, "age-table");
@@ -337,24 +364,28 @@ nglp.g014.G014Template = class extends Template {
             `
         }
 
-        let containersFrag = "";
-        if (this.containers) {
-            let containersMeta = getContainerMetadata(this.containers);
-            let containersFrags = [];
-            for (let ident in containersMeta) {
-                containersFrags.push("'" + containersMeta[ident].title +  "' (id:" + ident + ")");
-            }
-            containersFrag = `<h3>Showing data for ${containersFrags.join(", ")}</h3>`;
-        }
-
         let frame = `
 <div id="divToPrint">
     <div class="header header--main">
         <div class="container">   
             <div class="row">
-                <div class="col-md-12">
-                    <h1>G014: Progress of articles through the editorial workflow</h1>
-                    ${containersFrag}
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <select name="navigation" class="form-control" id="navigation-pulldown">
+                                <optgroup label="Usage Reports">
+                                    <option value="/g001">Aggregate Article Downloads</option>
+                                </optgroup>
+                                <optgroup label="Workflow Reports">
+                                    <option value="/g014" selected="selected">Workflow Throughput</option>
+                                </optgroup>
+                            </select>
+                        </div>                                            
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h1>Workflow Throughput</h1>
+                    <h2>Rate of progress of submissions through the publishing workflow, and workflow load variation over time</h2>
                 </div>
             </div>
         </div>
@@ -363,19 +394,32 @@ nglp.g014.G014Template = class extends Template {
         <div class="container">
             <nav class="navbar">
                 <div class="navbar navbar-default">
-                    <ul class="nav navbar-nav">
-                        <!-- <li>
-                            <a class="nav-link" href="#">Go back to Dashboard</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" id="${printId}" href="#">Print this view</a>
-                        </li> -->
-                    </ul>
+                    <div class="nav navbar-nav">
+                        <div class="form-inline navbar-form" id="g014-journal">
+                            <div class="form-group">
+                                <select name="journal" class="form-control" id="journal-to-add">
+                                    <option value="">Limit to journals...</option>
+                                    <option value="1531-7714">Practical assessment, research & evaluation</option>
+                                    <option value="2604-7438">Translat library</option>
+                                    <option value="0024-7766">Lymphology</option>
+                                </select>
+                                <button name="add-journal" class="form-control" id="add-journal">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-form navbar-right">
+                        <div class="date-range-placeholder">
+                            Data for last 12 months
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
     </div>
     <div class="container">
+        <div class="row">
+            <div id="g014-selected-filters"></div>
+        </div>
         <div class="row report-area justify-content-between">
             <div class="col-md-12">
                 <div>
@@ -453,6 +497,31 @@ nglp.g014.G014Template = class extends Template {
             win.document.write(content);
             win.document.close();
         });
+
+        on("#navigation-pulldown", "change", this, "navigate");
+
+        on("#add-journal", "click", this, "addJournal");
+    }
+
+    navigate(event) {
+        let url = $("#navigation-pulldown").find(":selected").attr("value")
+        window.location.href = url;
+    }
+
+    addJournal(element) {
+        let issn = $("#journal-to-add").find(":selected").attr("value");
+        if (!issn) {
+            return;
+        }
+        let nq = this.edge.cloneQuery();
+        let existing = nq.listMust(new es.TermsFilter({field: "container.exact"}))
+        if (existing.length === 0) {
+            nq.addMust(new es.TermsFilter({field: "container.exact", values: [issn]}));
+        } else {
+            existing[0].add_term(issn);
+        }
+        this.edge.pushQuery(nq);
+        this.edge.cycle();
     }
 
     toggleCapacityTable() {

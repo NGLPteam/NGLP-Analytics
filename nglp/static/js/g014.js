@@ -4111,6 +4111,456 @@ function $4002aa3570a5e3f8$export$4bd2ebaeac3531b0(containers) {
 }
 
 
+
+
+
+
+var $c2ae5a6eedf214d5$export$f4173892235e8dda = /*#__PURE__*/ function(Component) {
+    "use strict";
+    $bca7673885229bfd$export$9099ad97b570f7c($c2ae5a6eedf214d5$export$f4173892235e8dda, Component);
+    function $c2ae5a6eedf214d5$export$f4173892235e8dda(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $c2ae5a6eedf214d5$export$f4173892235e8dda);
+        var _this;
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($c2ae5a6eedf214d5$export$f4173892235e8dda).call(this, params));
+        //////////////////////////////////////////
+        // configuration options to be passed in
+        // mapping from fields to names to display them as
+        // if these come from a facet/selector, they should probably line up
+        _this.fieldDisplays = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "fieldDisplays", {
+        });
+        // constraints that consist of multiple filters that we want to treat as a single
+        // one {"filters" : [<es filter templates>], "display" : "...." }
+        _this.compoundDisplays = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "compoundDisplays", []);
+        // value maps on a per-field basis for Term(s) filters, to apply to values before display.
+        // if these come from a facet/selector, they should probably be the same maps
+        // {"<field>" : {"<value>" : "<display>"}}
+        _this.valueMaps = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueMaps", {
+        });
+        // value functions on a per-field basis for Term(s) filters, to apply to values before display.
+        // if these come from a facet/selector, they should probably be the same functions
+        // {"<field>" : <function>}
+        _this.valueFunctions = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "valueFunctions", {
+        });
+        // range display maps on a per-field basis for Range filters
+        // if these come from a facet/selector, they should probably be the same maps
+        // {"<field>" : [{"from" : "<from>", "to" : "<to>", "display" : "<display>"}]}
+        _this.rangeMaps = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "rangeMaps", {
+        });
+        // range display functions on a per-field basis for Range filters
+        // useful if you have a range selector which allows arbitrary ranges
+        // {"<field>" : <function (receives field name, from and to as params dict)>}
+        // must return {to: to, from: from, display: display}
+        _this.rangeFunctions = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "rangeFunctions", {
+        });
+        // function to use to format any range that does not appear in the range maps
+        _this.formatUnknownRange = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "formatUnknownRange", false);
+        // if we get a filter for a field we have no config for, should we ignore it?
+        _this.ignoreUnknownFilters = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "ignoreUnknownFilters", false);
+        //////////////////////////////////////////
+        // properties used to store internal state
+        // active filters to be rendered out
+        // each of the form:
+        /*
+         {
+         filter : "<type name of filter used>"
+         display: "<field display name>",
+         rel: "<relationship between values (e.g. AND, OR)>",
+         values: [
+         {display: "<display value>", val: "<actual value>"}
+         ]
+         }
+         */ _this.mustFilters = {
+        };
+        _this.searchString = false;
+        _this.searchField = false;
+        return _this;
+    }
+    $67866ae5f3a26802$export$9099ad97b570f7c($c2ae5a6eedf214d5$export$f4173892235e8dda, [
+        {
+            key: "synchronise",
+            value: function synchronise() {
+                // reset the state of the internal variables
+                this.mustFilters = {
+                };
+                this.searchString = false;
+                this.searchField = false;
+                if (!this.edge.currentQuery) return;
+                // first see if we can detect all the compound filters and record them
+                var inCompound = [];
+                for(var i = 0; i < this.compoundDisplays.length; i++){
+                    var cd = this.compoundDisplays[i];
+                    var count = 0;
+                    var fieldNames = [];
+                    for(var j = 0; j < cd.filters.length; j++){
+                        var filt = cd.filters[j];
+                        var existing = this.edge.currentQuery.listMust(filt);
+                        if (existing.length > 0) {
+                            count++;
+                            fieldNames.push(filt.field);
+                        }
+                    }
+                    if (count === cd.filters.length) {
+                        inCompound.concat(fieldNames);
+                        this.mustFilters["compound_" + i] = {
+                            filter: "compound",
+                            display: cd.display,
+                            query_filters: cd.filters
+                        };
+                    }
+                }
+                // now pull out all the single type queries
+                var musts = this.edge.currentQuery.listMust();
+                for(var i = 0; i < musts.length; i++){
+                    var f = musts[i];
+                    if (this.ignoreUnknownFilters && !(f.field in this.fieldDisplays) && $.inArray(f.field, inCompound) === -1) continue;
+                    if (f.constructor.type === "term") this._synchronise_term(f);
+                    else if (f.constructor.type === "terms") this._synchronise_terms(f);
+                    else if (f.constructor.type === "range") this._synchronise_range(f);
+                    else f.constructor.type;
+                }
+                var qs = this.edge.currentQuery.getQueryString();
+                if (qs) {
+                    this.searchString = qs.queryString;
+                    this.searchField = qs.defaultField;
+                }
+            }
+        },
+        {
+            key: "removeCompoundFilter",
+            value: function removeCompoundFilter(params) {
+                var compound_id = params.compound_id;
+                var filts = this.mustFilters[compound_id].query_filters;
+                var nq = this.edge.cloneQuery();
+                for(var i = 0; i < filts.length; i++){
+                    var filt = filts[i];
+                    nq.removeMust(filt);
+                }
+                // reset the page to zero and reissue the query
+                nq.from = 0;
+                this.edge.pushQuery(nq);
+                this.edge.cycle();
+            }
+        },
+        {
+            key: "removeFilter",
+            value: function removeFilter(boolType, filterType, field, value) {
+                var nq = this.edge.cloneQuery();
+                if (filterType === "term") {
+                    var template = new $8d94b5f2509b6cf5$export$8b446892c82de644.TermFilter({
+                        field: field,
+                        value: value
+                    });
+                    if (boolType === "must") nq.removeMust(template);
+                } else if (filterType === "terms") {
+                    var template = new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                        field: field
+                    });
+                    if (boolType === "must") {
+                        var filters = nq.listMust(template);
+                        for(var i = 0; i < filters.length; i++){
+                            if (filters[i].has_term(value)) filters[i].remove_term(value);
+                            // if this means the filter no longer has values, remove the filter
+                            if (!filters[i].has_terms()) nq.removeMust(filters[i]);
+                        }
+                    }
+                } else if (filterType === "range") {
+                    var params = {
+                        field: field
+                    };
+                    if (value.to) params[value.toType] = value.to;
+                    if (value.from) params[value.fromType] = value.from;
+                    var template = new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter(params);
+                    if (boolType === "must") nq.removeMust(template);
+                } else "geo_distance_range";
+                // reset the page to zero and reissue the query
+                nq.from = 0;
+                this.edge.pushQuery(nq);
+                this.edge.cycle();
+            }
+        },
+        {
+            key: "clearQueryString",
+            value: function clearQueryString() {
+                var nq = this.edge.cloneQuery();
+                nq.removeQueryString();
+                // reset the search page to the start and then trigger the next query
+                nq.from = 0;
+                this.edge.pushQuery(nq);
+                this.edge.cycle();
+            }
+        },
+        {
+            key: "clearSearch",
+            value: function clearSearch() {
+                this.edge.reset();
+            }
+        },
+        {
+            key: "_synchronise_term",
+            value: function _synchronise_term(filter) {
+                var display = this.fieldDisplays[filter.field] || filter.field;
+                // multiple term filters mean AND, so group them together here
+                if (filter.field in this.mustFilters) this.mustFilters[filter.field].values.push({
+                    val: filter.value,
+                    display: this._translate(filter.field, filter.value)
+                });
+                else this.mustFilters[filter.field] = {
+                    filter: filter.constructor.type,
+                    display: display,
+                    values: [
+                        {
+                            val: filter.value,
+                            display: this._translate(filter.field, filter.value)
+                        }
+                    ],
+                    rel: "AND"
+                };
+            }
+        },
+        {
+            key: "_synchronise_terms",
+            value: function _synchronise_terms(filter) {
+                var display = this.fieldDisplays[filter.field] || filter.field;
+                var values = [];
+                for(var i = 0; i < filter.values.length; i++){
+                    var v = filter.values[i];
+                    var d = this._translate(filter.field, v);
+                    values.push({
+                        val: v,
+                        display: d
+                    });
+                }
+                this.mustFilters[filter.field] = {
+                    filter: filter.constructor.type,
+                    display: display,
+                    values: values,
+                    rel: "OR"
+                };
+            }
+        },
+        {
+            key: "_synchronise_range",
+            value: function _synchronise_range(filter) {
+                var display = this.fieldDisplays[filter.field] || filter.field;
+                var to = filter.lt;
+                var toType = "lt";
+                if (to === false) {
+                    to = filter.lte;
+                    toType = "lte";
+                }
+                var from = filter.gte;
+                var fromType = "gte";
+                if (from === false) {
+                    from = filter.gt;
+                    fromType = "gt";
+                }
+                var r = this._getRangeDef(filter.field, from, to);
+                var values = [];
+                if (!r) values.push({
+                    to: to,
+                    toType: toType,
+                    from: from,
+                    fromType: fromType,
+                    display: this._formatUnknown(from, to)
+                });
+                else values.push(r);
+                this.mustFilters[filter.field] = {
+                    filter: filter.constructor.type,
+                    display: display,
+                    values: values
+                };
+            }
+        },
+        {
+            key: "_translate",
+            value: function _translate(field, value) {
+                if (field in this.valueMaps) {
+                    if (value in this.valueMaps[field]) return this.valueMaps[field][value];
+                } else if (field in this.valueFunctions) return this.valueFunctions[field](value);
+                return value;
+            }
+        },
+        {
+            key: "_getRangeDef",
+            value: function _getRangeDef(field, from, to) {
+                if (!this.rangeMaps[field] && !this.rangeFunctions[field]) return false;
+                if (this.rangeMaps[field]) for(var i = 0; i < this.rangeMaps[field].length; i++){
+                    var r = this.rangeMaps[field][i];
+                    var frMatch = true;
+                    var toMatch = true;
+                    // if one is set and the other not, no match
+                    if (from && !r.from || !from && r.from) frMatch = false;
+                    if (to && !r.to || !to && r.to) toMatch = false;
+                    // if both set, and they don't match, no match
+                    if (from && r.from && from !== r.from) frMatch = false;
+                    if (to && r.to && to !== r.to) toMatch = false;
+                    // both have to match for a match
+                    if (frMatch && toMatch) return r;
+                }
+                else if (this.rangeFunctions[field]) {
+                    var fn = this.rangeFunctions[field];
+                    return fn({
+                        field: field,
+                        from: from,
+                        to: to
+                    });
+                }
+                return false;
+            }
+        },
+        {
+            key: "_formatUnknown",
+            value: function _formatUnknown(from, to) {
+                if (this.formatUnknownRange) return this.formatUnknownRange(from, to);
+                else {
+                    // if they're the same just return one of them
+                    if (from !== false || to !== false) {
+                        if (from === to) return from;
+                    }
+                    // otherwise calculate the display for the range
+                    var frag = "";
+                    if (from !== false) frag += from;
+                    else frag += "< ";
+                    if (to !== false) {
+                        if (from !== false) frag += " - " + to;
+                        else frag += to;
+                    } else if (from !== false) frag += "+";
+                    else frag = "unknown";
+                    return frag;
+                }
+            }
+        }
+    ]);
+    return $c2ae5a6eedf214d5$export$f4173892235e8dda;
+}($6cf4dc301226cb87$export$ea71c44d9cb0d048);
+
+
+
+
+
+var $354d76ad0f73afe4$export$1f5e7f202ef326a1 = /*#__PURE__*/ function(Renderer) {
+    "use strict";
+    $bca7673885229bfd$export$9099ad97b570f7c($354d76ad0f73afe4$export$1f5e7f202ef326a1, Renderer);
+    function $354d76ad0f73afe4$export$1f5e7f202ef326a1(params) {
+        $10cfaf3f2f812eb4$export$9099ad97b570f7c(this, $354d76ad0f73afe4$export$1f5e7f202ef326a1);
+        var _this;
+        _this = $6981eb4a4ce0a3e0$export$9099ad97b570f7c(this, $da23c25529bb1df4$export$9099ad97b570f7c($354d76ad0f73afe4$export$1f5e7f202ef326a1).call(this, params));
+        _this.showFilterField = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showFilterField", true);
+        _this.allowRemove = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "allowRemove", true);
+        _this.showSearchString = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "showSearchString", false);
+        _this.ifNoFilters = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "ifNoFilters", false);
+        _this.namespace = "edges-bs3-selected-filters";
+        return _this;
+    }
+    $67866ae5f3a26802$export$9099ad97b570f7c($354d76ad0f73afe4$export$1f5e7f202ef326a1, [
+        {
+            key: "draw",
+            value: function draw() {
+                // for convenient short references
+                var sf = this.component;
+                var ns = this.namespace;
+                // sort out the classes we are going to use
+                var fieldClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(ns, "field", this);
+                var fieldNameClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(ns, "fieldname", this);
+                var valClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(ns, "value", this);
+                var relClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(ns, "rel", this);
+                var containerClass = $d48cc3604bf30e24$export$8820e1fbe507f6aa(ns, "container", this);
+                var filters = "";
+                if (this.showSearchString && sf.searchString) {
+                    var field = sf.searchField;
+                    var text = sf.searchString;
+                    filters += '<span class="' + fieldClass + '">';
+                    if (field) {
+                        if (field in sf.fieldDisplays) field = sf.fieldDisplays[field];
+                        filters += '<span class="' + fieldNameClass + '">' + field + ':</span>';
+                    }
+                    filters += '<span class="' + valClass + '">"' + text + '"</span>';
+                    filters += '</span>';
+                }
+                var fields = Object.keys(sf.mustFilters);
+                for(var i = 0; i < fields.length; i++){
+                    var field = fields[i];
+                    var def = sf.mustFilters[field];
+                    filters += '<span class="' + fieldClass + '">';
+                    if (this.showFilterField) filters += '<span class="' + fieldNameClass + '">' + def.display + ':</span>';
+                    for(var j = 0; j < def.values.length; j++){
+                        var val = def.values[j];
+                        filters += '<span class="' + valClass + '">' + val.display + '</span>';
+                        // the remove block looks different, depending on the kind of filter to remove
+                        if (this.allowRemove) {
+                            var removeClass = $d48cc3604bf30e24$export$e516ebba864be69d(ns, "remove", this);
+                            if (def.filter === "term" || def.filter === "terms") {
+                                filters += '<a class="' + removeClass + '" data-bool="must" data-filter="' + def.filter + '" data-field="' + field + '" data-value="' + val.val + '" alt="Remove" title="Remove" href="#">';
+                                filters += '<i class="glyphicon glyphicon-black glyphicon-remove"></i>';
+                                filters += "</a>";
+                            } else if (def.filter === "range") {
+                                var from = val.from ? ' data-' + val.fromType + '="' + val.from + '" ' : "";
+                                var to = val.to ? ' data-' + val.toType + '="' + val.to + '" ' : "";
+                                filters += '<a class="' + removeClass + '" data-bool="must" data-filter="' + def.filter + '" data-field="' + field + '" ' + from + to + ' alt="Remove" title="Remove" href="#">';
+                                filters += '<i class="glyphicon glyphicon-black glyphicon-remove"></i>';
+                                filters += "</a>";
+                            }
+                        }
+                        if (def.rel) {
+                            if (j + 1 < def.values.length) filters += '<span class="' + relClass + '">' + def.rel + '</span>';
+                        }
+                    }
+                    filters += "</span>";
+                }
+                if (filters === "" && this.ifNoFilters) filters = this.ifNoFilters;
+                if (filters !== "") {
+                    var frag = '<div class="' + containerClass + '">{{FILTERS}}</div>';
+                    frag = frag.replace(/{{FILTERS}}/g, filters);
+                    sf.context.html(frag);
+                    // click handler for when a filter remove button is clicked
+                    var removeSelector = $d48cc3604bf30e24$export$b1157bd4df096bce(ns, "remove", this);
+                    $d48cc3604bf30e24$export$b4cd8de5710bc55c(removeSelector, "click", this, "removeFilter");
+                } else sf.context.html("");
+            }
+        },
+        {
+            /////////////////////////////////////////////////////
+            // event handlers
+            key: "removeFilter",
+            value: function removeFilter(element) {
+                var el = this.component.jq(element);
+                var field = el.attr("data-field");
+                var ft = el.attr("data-filter");
+                var bool = el.attr("data-bool");
+                var value = false;
+                if (ft === "terms" || ft === "term") value = el.attr("data-value");
+                else if (ft === "range") {
+                    value = {
+                    };
+                    var from = el.attr("data-gte");
+                    var fromType = "gte";
+                    if (!from) {
+                        from = el.attr("data-gt");
+                        fromType = "gt";
+                    }
+                    var to = el.attr("data-lt");
+                    var toType = "lt";
+                    if (!to) {
+                        to = el.attr("data-lte");
+                        toType = "lte";
+                    }
+                    if (from) {
+                        value["from"] = parseInt(from);
+                        value["fromType"] = fromType;
+                    }
+                    if (to) {
+                        value["to"] = parseInt(to);
+                        value["toType"] = toType;
+                    }
+                }
+                this.component.removeFilter(bool, ft, field, value);
+            }
+        }
+    ]);
+    return $354d76ad0f73afe4$export$1f5e7f202ef326a1;
+}($6cf4dc301226cb87$export$a695173e2ecfa9b);
+
+
 $parcel$global.nglp = {
 };
 nglp.g014 = {
@@ -4164,7 +4614,26 @@ nglp.g014.init = function(params) {
     var ageBarColours = [];
     for(var i1 = 0; i1 < agePaletteKeys.length; i1++)ageBarColours.push(agePalette[agePaletteKeys[i1]]);
     // Current workflow load
-    var currentComponents = [];
+    var currentComponents = [
+        new $c2ae5a6eedf214d5$export$f4173892235e8dda({
+            id: "g014-selected-filters",
+            fieldDisplays: {
+                "container.exact": "Showing Data for Journals"
+            },
+            valueFunctions: {
+                "container.exact": function(value) {
+                    var md = $4002aa3570a5e3f8$export$4bd2ebaeac3531b0([
+                        value
+                    ]);
+                    return "".concat(md[value].title, " (issn:").concat(value, ")");
+                }
+            },
+            ignoreUnknownFilters: true,
+            renderer: new $354d76ad0f73afe4$export$1f5e7f202ef326a1({
+                showFilterField: false
+            })
+        })
+    ];
     for(var i2 = 0; i2 < stateProgression.length; i2++)currentComponents.push(new $9b74310943fd261d$export$f378f3259fa0dca8({
         id: "g014-total-" + stateProgression[i2][0],
         calculate: function(state) {
@@ -4298,10 +4767,14 @@ nglp.g014.init = function(params) {
             lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
         })
     ];
-    if (params.containers) baseQueryMusts.push(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
-        field: "container.exact",
-        values: params.containers
-    }));
+    var containerFilter = false;
+    if (params.containers) {
+        containerFilter = new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+            field: "container.exact",
+            values: params.containers
+        });
+        baseQueryMusts.push(containerFilter);
+    }
     var baseQueryShoulds = [
         new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
             field: "workflow.followed_by.date",
@@ -4369,28 +4842,33 @@ nglp.g014.init = function(params) {
             // FIXME: we should add a date constraint to this, so we only look at data from a sensible
             // period
             "transitions": function(edge) {
+                var transitionMusts = [
+                    new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                        field: "category.exact",
+                        values: [
+                            "workflow"
+                        ]
+                    }),
+                    new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                        field: "object_type.exact",
+                        values: [
+                            "article"
+                        ]
+                    }),
+                    new $8d94b5f2509b6cf5$export$8b446892c82de644.ExistsFilter({
+                        field: "workflow.follows.state"
+                    }),
+                    new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
+                        field: "occurred_at",
+                        lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
+                    }), 
+                ];
+                var existing = edge.currentQuery.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                    field: "container.exact"
+                }));
+                if (existing.length > 0) transitionMusts.push(existing[0]);
                 return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
-                    must: [
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
-                            field: "category.exact",
-                            values: [
-                                "workflow"
-                            ]
-                        }),
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
-                            field: "object_type.exact",
-                            values: [
-                                "article"
-                            ]
-                        }),
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.ExistsFilter({
-                            field: "workflow.follows.state"
-                        }),
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
-                            field: "occurred_at",
-                            lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
-                        })
-                    ],
+                    must: transitionMusts,
                     size: 0,
                     aggs: [
                         new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
@@ -4408,25 +4886,30 @@ nglp.g014.init = function(params) {
                 });
             },
             "capacity": function(edge) {
+                var capacityMusts = [
+                    new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                        field: "category.exact",
+                        values: [
+                            "workflow"
+                        ]
+                    }),
+                    new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                        field: "object_type.exact",
+                        values: [
+                            "article"
+                        ]
+                    }),
+                    new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
+                        field: "occurred_at",
+                        lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
+                    })
+                ];
+                var existing = edge.currentQuery.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                    field: "container.exact"
+                }));
+                if (existing.length > 0) capacityMusts.push(existing[0]);
                 return new $8d94b5f2509b6cf5$export$8b446892c82de644.Query({
-                    must: [
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
-                            field: "category.exact",
-                            values: [
-                                "workflow"
-                            ]
-                        }),
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
-                            field: "object_type.exact",
-                            values: [
-                                "article"
-                            ]
-                        }),
-                        new $8d94b5f2509b6cf5$export$8b446892c82de644.RangeFilter({
-                            field: "occurred_at",
-                            lte: $6ec8c71f816e3f1f$var$isoDateStr(new Date())
-                        })
-                    ],
+                    must: capacityMusts,
                     size: 0,
                     aggs: [
                         new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsAggregation({
@@ -4459,7 +4942,6 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
         _this.showingCapacity = "chart";
         _this.namespace = "g014-template";
         _this.stateProgression = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "stateProgression", []);
-        _this.containers = $d48cc3604bf30e24$export$f628537ca2c78f9d(params, "containers", false);
         return _this;
     }
     $67866ae5f3a26802$export$9099ad97b570f7c(_class, [
@@ -4470,7 +4952,6 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
                 var ageId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "age-show-as-table");
                 var capacityId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "capacity-show-as-table");
                 var capacityLegendId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "capacity-legend--container");
-                var printId = $d48cc3604bf30e24$export$bf52b203d82ff901(this.namespace, "print");
                 var tableClasses = $d48cc3604bf30e24$export$8820e1fbe507f6aa(this.namespace, "stats");
                 var ageChartClasses = $d48cc3604bf30e24$export$e516ebba864be69d(this.namespace, "age-chart");
                 var ageTableClasses = $d48cc3604bf30e24$export$5be7444ab39fbaa3(this.namespace, "age-table");
@@ -4487,14 +4968,7 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
                     var state = this.stateProgression[i1];
                     capacityChartLegend += "\n                <div class=\"".concat(legendClasses, "\">\n                    <div class=\"").concat(legendBoxClasses, "\"><span style=\"color: ").concat(state[2], ";\">&#9632;</span><span class=\"").concat(legendBoxClasses, "-label\">").concat(state[1], "</span></div>\n                </div>\n            ");
                 }
-                var containersFrag = "";
-                if (this.containers) {
-                    var containersMeta = $4002aa3570a5e3f8$export$4bd2ebaeac3531b0(this.containers);
-                    var containersFrags = [];
-                    for(var ident in containersMeta)containersFrags.push("'" + containersMeta[ident].title + "' (id:" + ident + ")");
-                    containersFrag = "<h3>Showing data for ".concat(containersFrags.join(", "), "</h3>");
-                }
-                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <h1>G014: Progress of articles through the editorial workflow</h1>\n                    ".concat(containersFrag, "\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <ul class=\"nav navbar-nav\">\n                        <!-- <li>\n                            <a class=\"nav-link\" href=\"#\">Go back to Dashboard</a>\n                        </li>\n                        <li>\n                            <a class=\"nav-link\" id=\"").concat(printId, "\" href=\"#\">Print this view</a>\n                        </li> -->\n                    </ul>\n                </div>\n            </nav>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row report-area justify-content-between\">\n            <div class=\"col-md-12\">\n                <div>\n                    <h3 class=\"data-label\">Statistics per workflow state</h3>\n                    <table class=\"").concat(tableClasses, " data-area\">\n                        <thead>\n                            <tr>\n                                <td></td>\n                                <td>In Total Today</td>\n                                <td>Mean Time to Progress</td>\n                                <td>\n                                    Age of Items<br/>\n                                    <input type=\"checkbox\" name=\"").concat(ageId, "\" id=\"").concat(ageId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(ageId, "\">Show as table</label>\n                                </td>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            ").concat(tableRows, "\n                        </tbody>\n                    </table>\n                </div>\n                <div>\n                    <h3 class=\"data-label\">Workflow Capacity</h3>\n                    <div class=\"row\">\n                        <div class=\"col-md-12\">\n                            <input type=\"checkbox\" name=\"").concat(capacityId, "\" id=\"").concat(capacityId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(capacityId, "\">Show as table</label>\n                        </div>\n                    </div>\n                    <div class=\"row\" class=\"").concat(showAsTableClasses, "\" id=\"g014-workflow-capacity-chart--container\">\n                        <div class=\"col-md-2\">\n                            <div id=\"").concat(capacityLegendId, "\">\n                                ").concat(capacityChartLegend, "\n                            </div>  \n                        </div>\n                        <div class=\"col-md-10\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-chart\"></div>\n                        </div>\n                    </div>\n                    <div class=\"row\" id=\"g014-workflow-capacity-table--container\" style=\"display: none\">\n                        <div class=\"col-md-12\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-table\"></div>\n                        </div>\n                    </div>\n                </div>\n            \n            </div>\n        </div>\n    </div>\n</div>");
+                var frame = "\n<div id=\"divToPrint\">\n    <div class=\"header header--main\">\n        <div class=\"container\">   \n            <div class=\"row\">\n                <div class=\"col-md-3\">\n                    <div class=\"form-group\">\n                        <div class=\"form-inline\">\n                            <select name=\"navigation\" class=\"form-control\" id=\"navigation-pulldown\">\n                                <optgroup label=\"Usage Reports\">\n                                    <option value=\"/g001\">Aggregate Article Downloads</option>\n                                </optgroup>\n                                <optgroup label=\"Workflow Reports\">\n                                    <option value=\"/g014\" selected=\"selected\">Workflow Throughput</option>\n                                </optgroup>\n                            </select>\n                        </div>                                            \n                    </div>\n                </div>\n                <div class=\"col-md-9\">\n                    <h1>Workflow Throughput</h1>\n                    <h2>Rate of progress of submissions through the publishing workflow, and workflow load variation over time</h2>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"header header--secondary\">\n        <div class=\"container\">\n            <nav class=\"navbar\">\n                <div class=\"navbar navbar-default\">\n                    <div class=\"nav navbar-nav\">\n                        <div class=\"form-inline navbar-form\" id=\"g014-journal\">\n                            <div class=\"form-group\">\n                                <select name=\"journal\" class=\"form-control\" id=\"journal-to-add\">\n                                    <option value=\"\">Limit to journals...</option>\n                                    <option value=\"1531-7714\">Practical assessment, research & evaluation</option>\n                                    <option value=\"2604-7438\">Translat library</option>\n                                    <option value=\"0024-7766\">Lymphology</option>\n                                </select>\n                                <button name=\"add-journal\" class=\"form-control\" id=\"add-journal\">+</button>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"navbar-form navbar-right\">\n                        <div class=\"date-range-placeholder\">\n                            Data for last 12 months\n                        </div>\n                    </div>\n                </div>\n            </nav>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div id=\"g014-selected-filters\"></div>\n        </div>\n        <div class=\"row report-area justify-content-between\">\n            <div class=\"col-md-12\">\n                <div>\n                    <h3 class=\"data-label\">Statistics per workflow state</h3>\n                    <table class=\"".concat(tableClasses, " data-area\">\n                        <thead>\n                            <tr>\n                                <td></td>\n                                <td>In Total Today</td>\n                                <td>Mean Time to Progress</td>\n                                <td>\n                                    Age of Items<br/>\n                                    <input type=\"checkbox\" name=\"").concat(ageId, "\" id=\"").concat(ageId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(ageId, "\">Show as table</label>\n                                </td>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            ").concat(tableRows, "\n                        </tbody>\n                    </table>\n                </div>\n                <div>\n                    <h3 class=\"data-label\">Workflow Capacity</h3>\n                    <div class=\"row\">\n                        <div class=\"col-md-12\">\n                            <input type=\"checkbox\" name=\"").concat(capacityId, "\" id=\"").concat(capacityId, "\" class=\"css-checkbox brand\"><label class=\"css-label brand\" for=\"").concat(capacityId, "\">Show as table</label>\n                        </div>\n                    </div>\n                    <div class=\"row\" class=\"").concat(showAsTableClasses, "\" id=\"g014-workflow-capacity-chart--container\">\n                        <div class=\"col-md-2\">\n                            <div id=\"").concat(capacityLegendId, "\">\n                                ").concat(capacityChartLegend, "\n                            </div>  \n                        </div>\n                        <div class=\"col-md-10\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-chart\"></div>\n                        </div>\n                    </div>\n                    <div class=\"row\" id=\"g014-workflow-capacity-table--container\" style=\"display: none\">\n                        <div class=\"col-md-12\">\n                            <div class=\"data-area\" id=\"g014-workflow-capacity-table\"></div>\n                        </div>\n                    </div>\n                </div>\n            \n            </div>\n        </div>\n    </div>\n</div>");
                 edge.context.html(frame);
                 var ageSelector = $d48cc3604bf30e24$export$5d5492dec79280f1(this.namespace, "age-show-as-table");
                 $d48cc3604bf30e24$export$b4cd8de5710bc55c(ageSelector, "change", this, "toggleAgeTables");
@@ -4514,6 +4988,35 @@ nglp.g014.G014Template = /*#__PURE__*/ (function(Template) {
                     win.document.write(content);
                     win.document.close();
                 });
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c("#navigation-pulldown", "change", this, "navigate");
+                $d48cc3604bf30e24$export$b4cd8de5710bc55c("#add-journal", "click", this, "addJournal");
+            }
+        },
+        {
+            key: "navigate",
+            value: function navigate(event) {
+                var url = $99b6183ba65dae12$export$4048ae5fe51d81b7("#navigation-pulldown").find(":selected").attr("value");
+                window.location.href = url;
+            }
+        },
+        {
+            key: "addJournal",
+            value: function addJournal(element) {
+                var issn = $99b6183ba65dae12$export$4048ae5fe51d81b7("#journal-to-add").find(":selected").attr("value");
+                if (!issn) return;
+                var nq = this.edge.cloneQuery();
+                var existing = nq.listMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                    field: "container.exact"
+                }));
+                if (existing.length === 0) nq.addMust(new $8d94b5f2509b6cf5$export$8b446892c82de644.TermsFilter({
+                    field: "container.exact",
+                    values: [
+                        issn
+                    ]
+                }));
+                else existing[0].add_term(issn);
+                this.edge.pushQuery(nq);
+                this.edge.cycle();
             }
         },
         {
