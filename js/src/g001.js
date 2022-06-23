@@ -58,7 +58,7 @@ nglp.g001.init = function (params) {
 
     let formatMap = {
         "application/x-endnote-style" : "Endnote",
-        "application/x-research-info-systems": "Research Information Systems",
+        "application/x-research-info-systems": "RIS",
         "image/gif": "GIF",
         "image/png": "PNG",
         "image/svg+xml": "SVG",
@@ -355,7 +355,7 @@ nglp.g001.G001Template = class extends Template {
     <div class="header header--main">
         <div class="container">   
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                     <div class="form-group">
                         <div class="form-inline">
                             <select name="navigation" class="form-control" id="navigation-pulldown">
@@ -369,7 +369,7 @@ nglp.g001.G001Template = class extends Template {
                         </div>                                            
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-lg-9 col-md-8">
                     <h1>Aggregate Article Downloads</h1>
                     <h2>Article downloads by format, including landing page and metadata exports in aggregate</h2>
                 </div>
