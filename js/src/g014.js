@@ -369,7 +369,7 @@ nglp.g014.G014Template = class extends Template {
     <div class="header header--main">
         <div class="container">   
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4">
                     <div class="form-group">
                         <div class="form-inline">
                             <select name="navigation" class="form-control" id="navigation-pulldown">
@@ -383,7 +383,7 @@ nglp.g014.G014Template = class extends Template {
                         </div>                                            
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-lg-12 col-md-8">
                     <h1>Workflow Throughput</h1>
                     <h2>Rate of progress of submissions through the publishing workflow, and workflow load variation over time</h2>
                 </div>
@@ -424,22 +424,24 @@ nglp.g014.G014Template = class extends Template {
             <div class="col-md-12">
                 <div>
                     <h3 class="data-label">Statistics per workflow state</h3>
-                    <table class="${tableClasses} data-area">
-                        <thead>
-                            <tr>
-                                <td></td>
-                                <td>In Total Today</td>
-                                <td>Mean Time to Progress</td>
-                                <td>
-                                    Age of Items<br/>
-                                    <input type="checkbox" name="${ageId}" id="${ageId}" class="css-checkbox brand"><label class="css-label brand" for="${ageId}">Show as table</label>
-                                </td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${tableRows}
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="${tableClasses} data-area table">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>In Total Today</td>
+                                    <td>Mean Time to Progress</td>
+                                    <td style="min-width: 400px">
+                                        Age of Items<br/>
+                                        <input type="checkbox" name="${ageId}" id="${ageId}" class="css-checkbox brand"><label class="css-label brand" for="${ageId}">Show as table</label>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${tableRows}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div>
                     <h3 class="data-label">Workflow Capacity</h3>
@@ -449,12 +451,12 @@ nglp.g014.G014Template = class extends Template {
                         </div>
                     </div>
                     <div class="row" class="${showAsTableClasses}" id="g014-workflow-capacity-chart--container">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div id="${capacityLegendId}">
                                 ${capacityChartLegend}
                             </div>  
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-9">
                             <div class="data-area" id="g014-workflow-capacity-chart"></div>
                         </div>
                     </div>
